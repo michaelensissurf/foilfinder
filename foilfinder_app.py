@@ -6,21 +6,7 @@ from foil_specs import FOIL_SPECS
 # CONFIG
 # =========================================================
 st.set_page_config(page_title="Foilfinder", layout="wide")
-
 DATA_FILE = "foilfinder_functional_fixed.csv"
-WIND_IRRELEVANT = ["Pronefoil", "Pumpfoil"]
-
-# =========================================================
-# SESSION STATE (WICHTIG!)
-# =========================================================
-if "result_a" not in st.session_state:
-    st.session_state.result_a = None
-
-if "result_b" not in st.session_state:
-    st.session_state.result_b = None
-
-if "selected_foil" not in st.session_state:
-    st.session_state.selected_foil = None
 
 # =========================================================
 # LOAD DATA
@@ -29,6 +15,54 @@ df = pd.read_csv(DATA_FILE)
 
 META_COLS = ["Disziplin", "Level", "Gewicht", "Kategorie", "Wind", "Wellen"]
 FOIL_NAMES = [c for c in df.columns if c not in META_COLS]
+
+# =========================================================
+# REGELN
+# =========================================================
+# Disziplinen ohne Wind
+WIND_IRRELEVANT = ["Pronefoil", "Pumpfoil", "Downwind"]  # Downwind = SUP-Foiling
+
+# Kategorien
+ALL_KATS = list(df["Kategorie"].unique())
+
+KATEGORIEN_PRO_DISZIPLIN = {
+    "Downwind": [k for k in ALL_KATS if k not in ["Jumping", "Lightwindfoil"]],
+    "Pumpfoil": [],
+    "Pronefoil": [],               # Kategorie ignoriert
+    "Wingfoil": ALL_KATS,
+    "Parawing": ALL_KATS,
+}
+
+# Wellen-Regeln
+ALL_WELLEN = list(df["Wellen"].unique())
+WELLEN_PRO_DISZIPLIN = {
+    "Pronefoil": [w for w in ALL_WELLEN if w != "Flachwasser"]
+}
+
+# =========================================================
+# UI LABEL MAPPINGS
+# =========================================================
+DISZIPLIN_LABELS = {"Downwind": "SUP-Foiling"}
+KATEGORIE_LABELS = {"Downwind": "SUP-Foiling"}
+
+def display_disziplin(d):
+    return DISZIPLIN_LABELS.get(d, d)
+
+def internal_disziplin(label):
+    return {v: k for k, v in DISZIPLIN_LABELS.items()}.get(label, label)
+
+def display_kategorie(k):
+    return KATEGORIE_LABELS.get(k, k)
+
+def internal_kategorie(label):
+    return {v: k for k, v in KATEGORIE_LABELS.items()}.get(label, label)
+
+# =========================================================
+# SESSION STATE
+# =========================================================
+for k in ["result_a", "result_b", "selected_foil"]:
+    if k not in st.session_state:
+        st.session_state[k] = None
 
 # =========================================================
 # HELPERS
@@ -40,12 +74,16 @@ def fmt(v):
 # RECOMMENDATION LOGIC
 # =========================================================
 def recommend(df, user):
+    # --- Basisfilter ---
     base = df[
         (df["Disziplin"] == user["Disziplin"]) &
         (df["Level"] == user["Level"]) &
-        (df["Gewicht"] == user["Gewicht"]) &
-        (df["Kategorie"] == user["Kategorie"])
+        (df["Gewicht"] == user["Gewicht"])
     ]
+
+    # Kategorie nur filtern, wenn relevant
+    if user["Disziplin"] not in ["Pronefoil", "Pumpfoil"]:
+        base = base[base["Kategorie"] == user["Kategorie"]]
 
     if base.empty:
         return None
@@ -54,21 +92,13 @@ def recommend(df, user):
 
     for _, r in base.iterrows():
         for f in FOIL_NAMES:
-            if r[f] == 1:
-                scores[f] += 3
-            elif r[f] == 2:
-                scores[f] += 2
-            elif r[f] == 3:
-                scores[f] += 1
+            scores[f] += {1: 3, 2: 2, 3: 1}.get(r[f], 0)
 
-        # Wind nur berücksichtigen, wenn relevant
-        if user["Disziplin"] not in WIND_IRRELEVANT:
-            if r["Wind"] == user["Wind"]:
-                for f in FOIL_NAMES:
-                    if r[f] == 1:
-                        scores[f] += 1
+        if user["Disziplin"] not in WIND_IRRELEVANT and r["Wind"] == user["Wind"]:
+            for f in FOIL_NAMES:
+                if r[f] == 1:
+                    scores[f] += 1
 
-        # Wellen immer berücksichtigen
         if r["Wellen"] == user["Wellen"]:
             for f in FOIL_NAMES:
                 if r[f] == 1:
@@ -86,10 +116,9 @@ def recommend(df, user):
 st.title("🪁 Foilfinder")
 compare_mode = st.checkbox("🔁 Vergleich Foil A / Foil B")
 
-DISZIPLINEN = df["Disziplin"].unique()
+DISZIPLINEN_UI = [display_disziplin(d) for d in df["Disziplin"].unique()]
 LEVELS = df["Level"].unique()
 GEWICHTE = df["Gewicht"].unique()
-KATEGORIEN = df["Kategorie"].unique()
 WINDE = df["Wind"].unique()
 WELLEN = df["Wellen"].unique()
 
@@ -97,121 +126,93 @@ WELLEN = df["Wellen"].unique()
 # INPUT FORM
 # =========================================================
 with st.form("finder"):
+    cols = st.columns(2) if compare_mode else [st.container()]
+    users = []
 
-    if compare_mode:
-        colA, colB = st.columns(2)
-    else:
-        colA = st.container()
+    for i, col in enumerate(cols):
+        with col:
+            tag = "A" if i == 0 else "B"
+            st.subheader(f"Foil {tag}")
 
-    # ---------------- FOIL A ----------------
-    with colA:
-        st.subheader("Foil A")
+            disz_ui = st.selectbox("Disziplin", DISZIPLINEN_UI, key=f"disz_{tag}")
+            disz = internal_disziplin(disz_ui)
 
-        disziplin = st.selectbox("Disziplin", DISZIPLINEN)
+            if disz in WIND_IRRELEVANT:
+                st.info("💡 Für diese Disziplin ist kein Wind nötig.")
 
-        if disziplin in WIND_IRRELEVANT:
-            st.info("💡 Bei Pronefoil und Pumpfoil spielt der Wind keine Rolle.")
+            lvl = st.selectbox("Level", LEVELS, key=f"lvl_{tag}")
+            gw = st.selectbox("Gewicht", GEWICHTE, key=f"gw_{tag}")
 
-        level = st.selectbox("Level", LEVELS)
-        gewicht = st.selectbox("Gewicht", GEWICHTE)
-        kategorie = st.selectbox("Kategorie", KATEGORIEN)
+            allowed_kats = KATEGORIEN_PRO_DISZIPLIN.get(disz, [])
 
-        c1, c2 = st.columns(2)
-
-        if disziplin in WIND_IRRELEVANT:
-            wind = "nicht relevant"
-        else:
-            wind = c1.selectbox("Wind", WINDE)
-
-        wellen = c2.selectbox("Wellen", WELLEN)
-
-    # ---------------- FOIL B ----------------
-    if compare_mode:
-        with colB:
-            st.subheader("Foil B")
-
-            disziplin_b = st.selectbox("Disziplin", DISZIPLINEN, key="d_b")
-
-            if disziplin_b in WIND_IRRELEVANT:
-                st.info("💡 Bei Pronefoil und Pumpfoil spielt der Wind keine Rolle.")
-
-            level_b = st.selectbox("Level", LEVELS, key="l_b")
-            gewicht_b = st.selectbox("Gewicht", GEWICHTE, key="g_b")
-            kategorie_b = st.selectbox("Kategorie", KATEGORIEN, key="k_b")
-
-            c1b, c2b = st.columns(2)
-
-            if disziplin_b in WIND_IRRELEVANT:
-                wind_b = "nicht relevant"
+            if not allowed_kats:
+                kat = "nicht relevant"
+                st.info("💡 Für diese Disziplin ist keine Kategorie nötig.")
             else:
-                wind_b = c1b.selectbox("Wind", WINDE, key="w_b")
+                kat_ui = st.selectbox(
+                    "Kategorie",
+                    [display_kategorie(k) for k in allowed_kats],
+                    key=f"kat_{tag}"
+                )
+                kat = internal_kategorie(kat_ui)
 
-            wellen_b = c2b.selectbox("Wellen", WELLEN, key="we_b")
+            if disz in WIND_IRRELEVANT:
+                wind = "nicht relevant"
+            else:
+                wind = st.selectbox("Wind", WINDE, key=f"wind_{tag}")
+
+            allowed_wellen = WELLEN_PRO_DISZIPLIN.get(disz, WELLEN)
+            wl = st.selectbox("Wellen", allowed_wellen, key=f"wl_{tag}")
+
+            users.append(
+                dict(
+                    Disziplin=disz,
+                    Level=lvl,
+                    Gewicht=gw,
+                    Kategorie=kat,
+                    Wind=wind,
+                    Wellen=wl,
+                )
+            )
 
     submit = st.form_submit_button("🔍 Foil berechnen")
 
 # =========================================================
-# CALCULATION (STATEFUL!)
+# CALCULATION
 # =========================================================
 if submit:
-    user_a = {
-        "Disziplin": disziplin,
-        "Level": level,
-        "Gewicht": gewicht,
-        "Kategorie": kategorie,
-        "Wind": wind,
-        "Wellen": wellen,
-    }
-
-    st.session_state.result_a = recommend(df, user_a)
-
-    if compare_mode:
-        user_b = {
-            "Disziplin": disziplin_b,
-            "Level": level_b,
-            "Gewicht": gewicht_b,
-            "Kategorie": kategorie_b,
-            "Wind": wind_b,
-            "Wellen": wellen_b,
-        }
-        st.session_state.result_b = recommend(df, user_b)
-    else:
-        st.session_state.result_b = None
+    st.session_state.result_a = recommend(df, users[0])
+    st.session_state.result_b = recommend(df, users[1]) if compare_mode else None
 
 # =========================================================
 # RESULTS
 # =========================================================
 if st.session_state.result_a is not None:
-
-    result_a = st.session_state.result_a
-    result_b = st.session_state.result_b
-
     st.divider()
     medals = ["🥇", "🥈", "🥉"]
 
-    if compare_mode and result_b is not None:
+    if compare_mode and st.session_state.result_b is not None:
         ca, cb = st.columns(2)
 
         with ca:
             st.subheader("🏆 Foil A – Top 3")
-            for i, r in result_a.head(3).iterrows():
+            for i, r in st.session_state.result_a.head(3).iterrows():
                 if st.button(f"{medals[i]} {r['Foil']}", key=f"a_{r['Foil']}"):
                     st.session_state.selected_foil = r["Foil"]
 
         with cb:
             st.subheader("🏆 Foil B – Top 3")
-            for i, r in result_b.head(3).iterrows():
+            for i, r in st.session_state.result_b.head(3).iterrows():
                 if st.button(f"{medals[i]} {r['Foil']}", key=f"b_{r['Foil']}"):
                     st.session_state.selected_foil = r["Foil"]
-
     else:
         st.subheader("🏆 Top-Empfehlungen")
-        for i, r in result_a.head(3).iterrows():
+        for i, r in st.session_state.result_a.head(3).iterrows():
             if st.button(f"{medals[i]} {r['Foil']}", key=f"s_{r['Foil']}"):
                 st.session_state.selected_foil = r["Foil"]
 
 # =========================================================
-# FOIL SPECS (CLICK-STABLE)
+# FOIL SPECS
 # =========================================================
 if st.session_state.selected_foil:
     foil = st.session_state.selected_foil
