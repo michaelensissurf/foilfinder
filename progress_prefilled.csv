@@ -1,0 +1,568 @@
+Level,Gewicht,Disziplin,Wind,Wellen,Infinity Ace 540,Infinity Ace 690,Infinity Ace 840,Infinity Ace 990,Infinity Ace 1140,Infinity Ace 1390,Stride Ace 1360,Stride Ace 1740,Stride 2050,Pacer 950,Pacer 1250,Pacer 1550,Pacer 1850,Pacer 2200,Flow 720,Flow 900,Flow 1080,Flow 1260
+Discovers,bis 70 kg,Freeride,Schwachwind,Flachwasser,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Discovers,bis 70 kg,Freeride,Schwachwind,Kleine Wellen,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Discovers,bis 70 kg,Freeride,Schwachwind,Grosse Wellen,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Discovers,bis 70 kg,Freeride,Medium Wind,Flachwasser,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Discovers,bis 70 kg,Freeride,Medium Wind,Kleine Wellen,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Discovers,bis 70 kg,Freeride,Medium Wind,Grosse Wellen,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Discovers,bis 70 kg,Freeride,Starkwind,Flachwasser,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Discovers,bis 70 kg,Freeride,Starkwind,Kleine Wellen,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Discovers,bis 70 kg,Freeride,Starkwind,Grosse Wellen,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Discovers,bis 70 kg,Downwind-Wave,Schwachwind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,bis 70 kg,Downwind-Wave,Schwachwind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,bis 70 kg,Downwind-Wave,Schwachwind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,bis 70 kg,Downwind-Wave,Medium Wind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,bis 70 kg,Downwind-Wave,Medium Wind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,bis 70 kg,Downwind-Wave,Medium Wind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,bis 70 kg,Downwind-Wave,Starkwind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,bis 70 kg,Downwind-Wave,Starkwind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,bis 70 kg,Downwind-Wave,Starkwind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,bis 70 kg,Wavesurfing,Schwachwind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,bis 70 kg,Wavesurfing,Schwachwind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,bis 70 kg,Wavesurfing,Schwachwind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,bis 70 kg,Wavesurfing,Medium Wind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,bis 70 kg,Wavesurfing,Medium Wind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,bis 70 kg,Wavesurfing,Medium Wind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,bis 70 kg,Wavesurfing,Starkwind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,bis 70 kg,Wavesurfing,Starkwind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,bis 70 kg,Wavesurfing,Starkwind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,bis 70 kg,Jumping,Schwachwind,Flachwasser,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers,bis 70 kg,Jumping,Schwachwind,Kleine Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers,bis 70 kg,Jumping,Schwachwind,Grosse Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers,bis 70 kg,Jumping,Medium Wind,Flachwasser,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers,bis 70 kg,Jumping,Medium Wind,Kleine Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers,bis 70 kg,Jumping,Medium Wind,Grosse Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers,bis 70 kg,Jumping,Starkwind,Flachwasser,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers,bis 70 kg,Jumping,Starkwind,Kleine Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers,bis 70 kg,Jumping,Starkwind,Grosse Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers,bis 70 kg,Lightwindfoil,Schwachwind,Flachwasser,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Discovers,bis 70 kg,Lightwindfoil,Schwachwind,Kleine Wellen,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Discovers,bis 70 kg,Lightwindfoil,Schwachwind,Grosse Wellen,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Discovers,bis 70 kg,Lightwindfoil,Medium Wind,Flachwasser,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Discovers,bis 70 kg,Lightwindfoil,Medium Wind,Kleine Wellen,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Discovers,bis 70 kg,Lightwindfoil,Medium Wind,Grosse Wellen,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Discovers,bis 70 kg,Lightwindfoil,Starkwind,Flachwasser,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Discovers,bis 70 kg,Lightwindfoil,Starkwind,Kleine Wellen,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Discovers,bis 70 kg,Lightwindfoil,Starkwind,Grosse Wellen,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Discovers,bis 70 kg,Flatwater,Schwachwind,Flachwasser,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers,bis 70 kg,Flatwater,Schwachwind,Kleine Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers,bis 70 kg,Flatwater,Schwachwind,Grosse Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers,bis 70 kg,Flatwater,Medium Wind,Flachwasser,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers,bis 70 kg,Flatwater,Medium Wind,Kleine Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers,bis 70 kg,Flatwater,Medium Wind,Grosse Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers,bis 70 kg,Flatwater,Starkwind,Flachwasser,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers,bis 70 kg,Flatwater,Starkwind,Kleine Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers,bis 70 kg,Flatwater,Starkwind,Grosse Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers,bis 70 kg,Race,Schwachwind,Flachwasser,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers,bis 70 kg,Race,Schwachwind,Kleine Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers,bis 70 kg,Race,Schwachwind,Grosse Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers,bis 70 kg,Race,Medium Wind,Flachwasser,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers,bis 70 kg,Race,Medium Wind,Kleine Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers,bis 70 kg,Race,Medium Wind,Grosse Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers,bis 70 kg,Race,Starkwind,Flachwasser,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers,bis 70 kg,Race,Starkwind,Kleine Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers,bis 70 kg,Race,Starkwind,Grosse Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers,70–90 kg,Freeride,Schwachwind,Flachwasser,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Discovers,70–90 kg,Freeride,Schwachwind,Kleine Wellen,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Discovers,70–90 kg,Freeride,Schwachwind,Grosse Wellen,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Discovers,70–90 kg,Freeride,Medium Wind,Flachwasser,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Discovers,70–90 kg,Freeride,Medium Wind,Kleine Wellen,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Discovers,70–90 kg,Freeride,Medium Wind,Grosse Wellen,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Discovers,70–90 kg,Freeride,Starkwind,Flachwasser,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Discovers,70–90 kg,Freeride,Starkwind,Kleine Wellen,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Discovers,70–90 kg,Freeride,Starkwind,Grosse Wellen,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Discovers,70–90 kg,Downwind-Wave,Schwachwind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,70–90 kg,Downwind-Wave,Schwachwind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,70–90 kg,Downwind-Wave,Schwachwind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,70–90 kg,Downwind-Wave,Medium Wind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,70–90 kg,Downwind-Wave,Medium Wind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,70–90 kg,Downwind-Wave,Medium Wind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,70–90 kg,Downwind-Wave,Starkwind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,70–90 kg,Downwind-Wave,Starkwind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,70–90 kg,Downwind-Wave,Starkwind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,70–90 kg,Wavesurfing,Schwachwind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,70–90 kg,Wavesurfing,Schwachwind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,70–90 kg,Wavesurfing,Schwachwind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,70–90 kg,Wavesurfing,Medium Wind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,70–90 kg,Wavesurfing,Medium Wind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,70–90 kg,Wavesurfing,Medium Wind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,70–90 kg,Wavesurfing,Starkwind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,70–90 kg,Wavesurfing,Starkwind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,70–90 kg,Wavesurfing,Starkwind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,70–90 kg,Jumping,Schwachwind,Flachwasser,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers,70–90 kg,Jumping,Schwachwind,Kleine Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers,70–90 kg,Jumping,Schwachwind,Grosse Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers,70–90 kg,Jumping,Medium Wind,Flachwasser,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers,70–90 kg,Jumping,Medium Wind,Kleine Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers,70–90 kg,Jumping,Medium Wind,Grosse Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers,70–90 kg,Jumping,Starkwind,Flachwasser,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers,70–90 kg,Jumping,Starkwind,Kleine Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers,70–90 kg,Jumping,Starkwind,Grosse Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers,70–90 kg,Lightwindfoil,Schwachwind,Flachwasser,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Discovers,70–90 kg,Lightwindfoil,Schwachwind,Kleine Wellen,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Discovers,70–90 kg,Lightwindfoil,Schwachwind,Grosse Wellen,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Discovers,70–90 kg,Lightwindfoil,Medium Wind,Flachwasser,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Discovers,70–90 kg,Lightwindfoil,Medium Wind,Kleine Wellen,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Discovers,70–90 kg,Lightwindfoil,Medium Wind,Grosse Wellen,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Discovers,70–90 kg,Lightwindfoil,Starkwind,Flachwasser,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Discovers,70–90 kg,Lightwindfoil,Starkwind,Kleine Wellen,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Discovers,70–90 kg,Lightwindfoil,Starkwind,Grosse Wellen,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Discovers,70–90 kg,Flatwater,Schwachwind,Flachwasser,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers,70–90 kg,Flatwater,Schwachwind,Kleine Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers,70–90 kg,Flatwater,Schwachwind,Grosse Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers,70–90 kg,Flatwater,Medium Wind,Flachwasser,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers,70–90 kg,Flatwater,Medium Wind,Kleine Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers,70–90 kg,Flatwater,Medium Wind,Grosse Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers,70–90 kg,Flatwater,Starkwind,Flachwasser,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers,70–90 kg,Flatwater,Starkwind,Kleine Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers,70–90 kg,Flatwater,Starkwind,Grosse Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers,70–90 kg,Race,Schwachwind,Flachwasser,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers,70–90 kg,Race,Schwachwind,Kleine Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers,70–90 kg,Race,Schwachwind,Grosse Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers,70–90 kg,Race,Medium Wind,Flachwasser,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers,70–90 kg,Race,Medium Wind,Kleine Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers,70–90 kg,Race,Medium Wind,Grosse Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers,70–90 kg,Race,Starkwind,Flachwasser,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers,70–90 kg,Race,Starkwind,Kleine Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers,70–90 kg,Race,Starkwind,Grosse Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers,grösser 90 kg,Freeride,Schwachwind,Flachwasser,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Discovers,grösser 90 kg,Freeride,Schwachwind,Kleine Wellen,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Discovers,grösser 90 kg,Freeride,Schwachwind,Grosse Wellen,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Discovers,grösser 90 kg,Freeride,Medium Wind,Flachwasser,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Discovers,grösser 90 kg,Freeride,Medium Wind,Kleine Wellen,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Discovers,grösser 90 kg,Freeride,Medium Wind,Grosse Wellen,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Discovers,grösser 90 kg,Freeride,Starkwind,Flachwasser,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Discovers,grösser 90 kg,Freeride,Starkwind,Kleine Wellen,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Discovers,grösser 90 kg,Freeride,Starkwind,Grosse Wellen,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Discovers,grösser 90 kg,Downwind-Wave,Schwachwind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,grösser 90 kg,Downwind-Wave,Schwachwind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,grösser 90 kg,Downwind-Wave,Schwachwind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,grösser 90 kg,Downwind-Wave,Medium Wind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,grösser 90 kg,Downwind-Wave,Medium Wind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,grösser 90 kg,Downwind-Wave,Medium Wind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,grösser 90 kg,Downwind-Wave,Starkwind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,grösser 90 kg,Downwind-Wave,Starkwind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,grösser 90 kg,Downwind-Wave,Starkwind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,grösser 90 kg,Wavesurfing,Schwachwind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,grösser 90 kg,Wavesurfing,Schwachwind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,grösser 90 kg,Wavesurfing,Schwachwind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,grösser 90 kg,Wavesurfing,Medium Wind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,grösser 90 kg,Wavesurfing,Medium Wind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,grösser 90 kg,Wavesurfing,Medium Wind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,grösser 90 kg,Wavesurfing,Starkwind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,grösser 90 kg,Wavesurfing,Starkwind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,grösser 90 kg,Wavesurfing,Starkwind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers,grösser 90 kg,Jumping,Schwachwind,Flachwasser,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers,grösser 90 kg,Jumping,Schwachwind,Kleine Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers,grösser 90 kg,Jumping,Schwachwind,Grosse Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers,grösser 90 kg,Jumping,Medium Wind,Flachwasser,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers,grösser 90 kg,Jumping,Medium Wind,Kleine Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers,grösser 90 kg,Jumping,Medium Wind,Grosse Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers,grösser 90 kg,Jumping,Starkwind,Flachwasser,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers,grösser 90 kg,Jumping,Starkwind,Kleine Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers,grösser 90 kg,Jumping,Starkwind,Grosse Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers,grösser 90 kg,Lightwindfoil,Schwachwind,Flachwasser,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Discovers,grösser 90 kg,Lightwindfoil,Schwachwind,Kleine Wellen,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Discovers,grösser 90 kg,Lightwindfoil,Schwachwind,Grosse Wellen,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Discovers,grösser 90 kg,Lightwindfoil,Medium Wind,Flachwasser,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Discovers,grösser 90 kg,Lightwindfoil,Medium Wind,Kleine Wellen,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Discovers,grösser 90 kg,Lightwindfoil,Medium Wind,Grosse Wellen,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Discovers,grösser 90 kg,Lightwindfoil,Starkwind,Flachwasser,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Discovers,grösser 90 kg,Lightwindfoil,Starkwind,Kleine Wellen,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Discovers,grösser 90 kg,Lightwindfoil,Starkwind,Grosse Wellen,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Discovers,grösser 90 kg,Flatwater,Schwachwind,Flachwasser,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers,grösser 90 kg,Flatwater,Schwachwind,Kleine Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers,grösser 90 kg,Flatwater,Schwachwind,Grosse Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers,grösser 90 kg,Flatwater,Medium Wind,Flachwasser,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers,grösser 90 kg,Flatwater,Medium Wind,Kleine Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers,grösser 90 kg,Flatwater,Medium Wind,Grosse Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers,grösser 90 kg,Flatwater,Starkwind,Flachwasser,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers,grösser 90 kg,Flatwater,Starkwind,Kleine Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers,grösser 90 kg,Flatwater,Starkwind,Grosse Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers,grösser 90 kg,Race,Schwachwind,Flachwasser,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers,grösser 90 kg,Race,Schwachwind,Kleine Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers,grösser 90 kg,Race,Schwachwind,Grosse Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers,grösser 90 kg,Race,Medium Wind,Flachwasser,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers,grösser 90 kg,Race,Medium Wind,Kleine Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers,grösser 90 kg,Race,Medium Wind,Grosse Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers,grösser 90 kg,Race,Starkwind,Flachwasser,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers,grösser 90 kg,Race,Starkwind,Kleine Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers,grösser 90 kg,Race,Starkwind,Grosse Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers to Intermediate,bis 70 kg,Freeride,Schwachwind,Flachwasser,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Discovers to Intermediate,bis 70 kg,Freeride,Schwachwind,Kleine Wellen,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Discovers to Intermediate,bis 70 kg,Freeride,Schwachwind,Grosse Wellen,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Discovers to Intermediate,bis 70 kg,Freeride,Medium Wind,Flachwasser,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Discovers to Intermediate,bis 70 kg,Freeride,Medium Wind,Kleine Wellen,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Discovers to Intermediate,bis 70 kg,Freeride,Medium Wind,Grosse Wellen,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Discovers to Intermediate,bis 70 kg,Freeride,Starkwind,Flachwasser,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Discovers to Intermediate,bis 70 kg,Freeride,Starkwind,Kleine Wellen,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Discovers to Intermediate,bis 70 kg,Freeride,Starkwind,Grosse Wellen,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Discovers to Intermediate,bis 70 kg,Downwind-Wave,Schwachwind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,bis 70 kg,Downwind-Wave,Schwachwind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,bis 70 kg,Downwind-Wave,Schwachwind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,bis 70 kg,Downwind-Wave,Medium Wind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,bis 70 kg,Downwind-Wave,Medium Wind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,bis 70 kg,Downwind-Wave,Medium Wind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,bis 70 kg,Downwind-Wave,Starkwind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,bis 70 kg,Downwind-Wave,Starkwind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,bis 70 kg,Downwind-Wave,Starkwind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,bis 70 kg,Wavesurfing,Schwachwind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,bis 70 kg,Wavesurfing,Schwachwind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,bis 70 kg,Wavesurfing,Schwachwind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,bis 70 kg,Wavesurfing,Medium Wind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,bis 70 kg,Wavesurfing,Medium Wind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,bis 70 kg,Wavesurfing,Medium Wind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,bis 70 kg,Wavesurfing,Starkwind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,bis 70 kg,Wavesurfing,Starkwind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,bis 70 kg,Wavesurfing,Starkwind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,bis 70 kg,Jumping,Schwachwind,Flachwasser,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers to Intermediate,bis 70 kg,Jumping,Schwachwind,Kleine Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers to Intermediate,bis 70 kg,Jumping,Schwachwind,Grosse Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers to Intermediate,bis 70 kg,Jumping,Medium Wind,Flachwasser,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers to Intermediate,bis 70 kg,Jumping,Medium Wind,Kleine Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers to Intermediate,bis 70 kg,Jumping,Medium Wind,Grosse Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers to Intermediate,bis 70 kg,Jumping,Starkwind,Flachwasser,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers to Intermediate,bis 70 kg,Jumping,Starkwind,Kleine Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers to Intermediate,bis 70 kg,Jumping,Starkwind,Grosse Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers to Intermediate,bis 70 kg,Lightwindfoil,Schwachwind,Flachwasser,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Discovers to Intermediate,bis 70 kg,Lightwindfoil,Schwachwind,Kleine Wellen,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Discovers to Intermediate,bis 70 kg,Lightwindfoil,Schwachwind,Grosse Wellen,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Discovers to Intermediate,bis 70 kg,Lightwindfoil,Medium Wind,Flachwasser,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Discovers to Intermediate,bis 70 kg,Lightwindfoil,Medium Wind,Kleine Wellen,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Discovers to Intermediate,bis 70 kg,Lightwindfoil,Medium Wind,Grosse Wellen,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Discovers to Intermediate,bis 70 kg,Lightwindfoil,Starkwind,Flachwasser,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Discovers to Intermediate,bis 70 kg,Lightwindfoil,Starkwind,Kleine Wellen,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Discovers to Intermediate,bis 70 kg,Lightwindfoil,Starkwind,Grosse Wellen,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Discovers to Intermediate,bis 70 kg,Flatwater,Schwachwind,Flachwasser,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers to Intermediate,bis 70 kg,Flatwater,Schwachwind,Kleine Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers to Intermediate,bis 70 kg,Flatwater,Schwachwind,Grosse Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers to Intermediate,bis 70 kg,Flatwater,Medium Wind,Flachwasser,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers to Intermediate,bis 70 kg,Flatwater,Medium Wind,Kleine Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers to Intermediate,bis 70 kg,Flatwater,Medium Wind,Grosse Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers to Intermediate,bis 70 kg,Flatwater,Starkwind,Flachwasser,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers to Intermediate,bis 70 kg,Flatwater,Starkwind,Kleine Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers to Intermediate,bis 70 kg,Flatwater,Starkwind,Grosse Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers to Intermediate,bis 70 kg,Race,Schwachwind,Flachwasser,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers to Intermediate,bis 70 kg,Race,Schwachwind,Kleine Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers to Intermediate,bis 70 kg,Race,Schwachwind,Grosse Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers to Intermediate,bis 70 kg,Race,Medium Wind,Flachwasser,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers to Intermediate,bis 70 kg,Race,Medium Wind,Kleine Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers to Intermediate,bis 70 kg,Race,Medium Wind,Grosse Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers to Intermediate,bis 70 kg,Race,Starkwind,Flachwasser,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers to Intermediate,bis 70 kg,Race,Starkwind,Kleine Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers to Intermediate,bis 70 kg,Race,Starkwind,Grosse Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers to Intermediate,70–90 kg,Freeride,Schwachwind,Flachwasser,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Discovers to Intermediate,70–90 kg,Freeride,Schwachwind,Kleine Wellen,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Discovers to Intermediate,70–90 kg,Freeride,Schwachwind,Grosse Wellen,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Discovers to Intermediate,70–90 kg,Freeride,Medium Wind,Flachwasser,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Discovers to Intermediate,70–90 kg,Freeride,Medium Wind,Kleine Wellen,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Discovers to Intermediate,70–90 kg,Freeride,Medium Wind,Grosse Wellen,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Discovers to Intermediate,70–90 kg,Freeride,Starkwind,Flachwasser,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Discovers to Intermediate,70–90 kg,Freeride,Starkwind,Kleine Wellen,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Discovers to Intermediate,70–90 kg,Freeride,Starkwind,Grosse Wellen,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Discovers to Intermediate,70–90 kg,Downwind-Wave,Schwachwind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,70–90 kg,Downwind-Wave,Schwachwind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,70–90 kg,Downwind-Wave,Schwachwind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,70–90 kg,Downwind-Wave,Medium Wind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,70–90 kg,Downwind-Wave,Medium Wind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,70–90 kg,Downwind-Wave,Medium Wind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,70–90 kg,Downwind-Wave,Starkwind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,70–90 kg,Downwind-Wave,Starkwind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,70–90 kg,Downwind-Wave,Starkwind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,70–90 kg,Wavesurfing,Schwachwind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,70–90 kg,Wavesurfing,Schwachwind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,70–90 kg,Wavesurfing,Schwachwind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,70–90 kg,Wavesurfing,Medium Wind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,70–90 kg,Wavesurfing,Medium Wind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,70–90 kg,Wavesurfing,Medium Wind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,70–90 kg,Wavesurfing,Starkwind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,70–90 kg,Wavesurfing,Starkwind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,70–90 kg,Wavesurfing,Starkwind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,70–90 kg,Jumping,Schwachwind,Flachwasser,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers to Intermediate,70–90 kg,Jumping,Schwachwind,Kleine Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers to Intermediate,70–90 kg,Jumping,Schwachwind,Grosse Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers to Intermediate,70–90 kg,Jumping,Medium Wind,Flachwasser,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers to Intermediate,70–90 kg,Jumping,Medium Wind,Kleine Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers to Intermediate,70–90 kg,Jumping,Medium Wind,Grosse Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers to Intermediate,70–90 kg,Jumping,Starkwind,Flachwasser,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers to Intermediate,70–90 kg,Jumping,Starkwind,Kleine Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers to Intermediate,70–90 kg,Jumping,Starkwind,Grosse Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers to Intermediate,70–90 kg,Lightwindfoil,Schwachwind,Flachwasser,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Discovers to Intermediate,70–90 kg,Lightwindfoil,Schwachwind,Kleine Wellen,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Discovers to Intermediate,70–90 kg,Lightwindfoil,Schwachwind,Grosse Wellen,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Discovers to Intermediate,70–90 kg,Lightwindfoil,Medium Wind,Flachwasser,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Discovers to Intermediate,70–90 kg,Lightwindfoil,Medium Wind,Kleine Wellen,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Discovers to Intermediate,70–90 kg,Lightwindfoil,Medium Wind,Grosse Wellen,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Discovers to Intermediate,70–90 kg,Lightwindfoil,Starkwind,Flachwasser,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Discovers to Intermediate,70–90 kg,Lightwindfoil,Starkwind,Kleine Wellen,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Discovers to Intermediate,70–90 kg,Lightwindfoil,Starkwind,Grosse Wellen,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Discovers to Intermediate,70–90 kg,Flatwater,Schwachwind,Flachwasser,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers to Intermediate,70–90 kg,Flatwater,Schwachwind,Kleine Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers to Intermediate,70–90 kg,Flatwater,Schwachwind,Grosse Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers to Intermediate,70–90 kg,Flatwater,Medium Wind,Flachwasser,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers to Intermediate,70–90 kg,Flatwater,Medium Wind,Kleine Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers to Intermediate,70–90 kg,Flatwater,Medium Wind,Grosse Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers to Intermediate,70–90 kg,Flatwater,Starkwind,Flachwasser,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers to Intermediate,70–90 kg,Flatwater,Starkwind,Kleine Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers to Intermediate,70–90 kg,Flatwater,Starkwind,Grosse Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers to Intermediate,70–90 kg,Race,Schwachwind,Flachwasser,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers to Intermediate,70–90 kg,Race,Schwachwind,Kleine Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers to Intermediate,70–90 kg,Race,Schwachwind,Grosse Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers to Intermediate,70–90 kg,Race,Medium Wind,Flachwasser,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers to Intermediate,70–90 kg,Race,Medium Wind,Kleine Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers to Intermediate,70–90 kg,Race,Medium Wind,Grosse Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers to Intermediate,70–90 kg,Race,Starkwind,Flachwasser,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers to Intermediate,70–90 kg,Race,Starkwind,Kleine Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers to Intermediate,70–90 kg,Race,Starkwind,Grosse Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers to Intermediate,grösser 90 kg,Freeride,Schwachwind,Flachwasser,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Discovers to Intermediate,grösser 90 kg,Freeride,Schwachwind,Kleine Wellen,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Discovers to Intermediate,grösser 90 kg,Freeride,Schwachwind,Grosse Wellen,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Discovers to Intermediate,grösser 90 kg,Freeride,Medium Wind,Flachwasser,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Discovers to Intermediate,grösser 90 kg,Freeride,Medium Wind,Kleine Wellen,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Discovers to Intermediate,grösser 90 kg,Freeride,Medium Wind,Grosse Wellen,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Discovers to Intermediate,grösser 90 kg,Freeride,Starkwind,Flachwasser,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Discovers to Intermediate,grösser 90 kg,Freeride,Starkwind,Kleine Wellen,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Discovers to Intermediate,grösser 90 kg,Freeride,Starkwind,Grosse Wellen,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Discovers to Intermediate,grösser 90 kg,Downwind-Wave,Schwachwind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,grösser 90 kg,Downwind-Wave,Schwachwind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,grösser 90 kg,Downwind-Wave,Schwachwind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,grösser 90 kg,Downwind-Wave,Medium Wind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,grösser 90 kg,Downwind-Wave,Medium Wind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,grösser 90 kg,Downwind-Wave,Medium Wind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,grösser 90 kg,Downwind-Wave,Starkwind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,grösser 90 kg,Downwind-Wave,Starkwind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,grösser 90 kg,Downwind-Wave,Starkwind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,grösser 90 kg,Wavesurfing,Schwachwind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,grösser 90 kg,Wavesurfing,Schwachwind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,grösser 90 kg,Wavesurfing,Schwachwind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,grösser 90 kg,Wavesurfing,Medium Wind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,grösser 90 kg,Wavesurfing,Medium Wind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,grösser 90 kg,Wavesurfing,Medium Wind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,grösser 90 kg,Wavesurfing,Starkwind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,grösser 90 kg,Wavesurfing,Starkwind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,grösser 90 kg,Wavesurfing,Starkwind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Discovers to Intermediate,grösser 90 kg,Jumping,Schwachwind,Flachwasser,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers to Intermediate,grösser 90 kg,Jumping,Schwachwind,Kleine Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers to Intermediate,grösser 90 kg,Jumping,Schwachwind,Grosse Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers to Intermediate,grösser 90 kg,Jumping,Medium Wind,Flachwasser,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers to Intermediate,grösser 90 kg,Jumping,Medium Wind,Kleine Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers to Intermediate,grösser 90 kg,Jumping,Medium Wind,Grosse Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers to Intermediate,grösser 90 kg,Jumping,Starkwind,Flachwasser,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers to Intermediate,grösser 90 kg,Jumping,Starkwind,Kleine Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers to Intermediate,grösser 90 kg,Jumping,Starkwind,Grosse Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Discovers to Intermediate,grösser 90 kg,Lightwindfoil,Schwachwind,Flachwasser,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Discovers to Intermediate,grösser 90 kg,Lightwindfoil,Schwachwind,Kleine Wellen,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Discovers to Intermediate,grösser 90 kg,Lightwindfoil,Schwachwind,Grosse Wellen,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Discovers to Intermediate,grösser 90 kg,Lightwindfoil,Medium Wind,Flachwasser,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Discovers to Intermediate,grösser 90 kg,Lightwindfoil,Medium Wind,Kleine Wellen,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Discovers to Intermediate,grösser 90 kg,Lightwindfoil,Medium Wind,Grosse Wellen,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Discovers to Intermediate,grösser 90 kg,Lightwindfoil,Starkwind,Flachwasser,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Discovers to Intermediate,grösser 90 kg,Lightwindfoil,Starkwind,Kleine Wellen,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Discovers to Intermediate,grösser 90 kg,Lightwindfoil,Starkwind,Grosse Wellen,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Discovers to Intermediate,grösser 90 kg,Flatwater,Schwachwind,Flachwasser,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers to Intermediate,grösser 90 kg,Flatwater,Schwachwind,Kleine Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers to Intermediate,grösser 90 kg,Flatwater,Schwachwind,Grosse Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers to Intermediate,grösser 90 kg,Flatwater,Medium Wind,Flachwasser,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers to Intermediate,grösser 90 kg,Flatwater,Medium Wind,Kleine Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers to Intermediate,grösser 90 kg,Flatwater,Medium Wind,Grosse Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers to Intermediate,grösser 90 kg,Flatwater,Starkwind,Flachwasser,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers to Intermediate,grösser 90 kg,Flatwater,Starkwind,Kleine Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers to Intermediate,grösser 90 kg,Flatwater,Starkwind,Grosse Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Discovers to Intermediate,grösser 90 kg,Race,Schwachwind,Flachwasser,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers to Intermediate,grösser 90 kg,Race,Schwachwind,Kleine Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers to Intermediate,grösser 90 kg,Race,Schwachwind,Grosse Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers to Intermediate,grösser 90 kg,Race,Medium Wind,Flachwasser,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers to Intermediate,grösser 90 kg,Race,Medium Wind,Kleine Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers to Intermediate,grösser 90 kg,Race,Medium Wind,Grosse Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers to Intermediate,grösser 90 kg,Race,Starkwind,Flachwasser,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers to Intermediate,grösser 90 kg,Race,Starkwind,Kleine Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Discovers to Intermediate,grösser 90 kg,Race,Starkwind,Grosse Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Intermediate to Experts,bis 70 kg,Freeride,Schwachwind,Flachwasser,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Intermediate to Experts,bis 70 kg,Freeride,Schwachwind,Kleine Wellen,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Intermediate to Experts,bis 70 kg,Freeride,Schwachwind,Grosse Wellen,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Intermediate to Experts,bis 70 kg,Freeride,Medium Wind,Flachwasser,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Intermediate to Experts,bis 70 kg,Freeride,Medium Wind,Kleine Wellen,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Intermediate to Experts,bis 70 kg,Freeride,Medium Wind,Grosse Wellen,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Intermediate to Experts,bis 70 kg,Freeride,Starkwind,Flachwasser,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Intermediate to Experts,bis 70 kg,Freeride,Starkwind,Kleine Wellen,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Intermediate to Experts,bis 70 kg,Freeride,Starkwind,Grosse Wellen,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Intermediate to Experts,bis 70 kg,Downwind-Wave,Schwachwind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,bis 70 kg,Downwind-Wave,Schwachwind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,bis 70 kg,Downwind-Wave,Schwachwind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,bis 70 kg,Downwind-Wave,Medium Wind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,bis 70 kg,Downwind-Wave,Medium Wind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,bis 70 kg,Downwind-Wave,Medium Wind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,bis 70 kg,Downwind-Wave,Starkwind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,bis 70 kg,Downwind-Wave,Starkwind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,bis 70 kg,Downwind-Wave,Starkwind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,bis 70 kg,Wavesurfing,Schwachwind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,bis 70 kg,Wavesurfing,Schwachwind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,bis 70 kg,Wavesurfing,Schwachwind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,bis 70 kg,Wavesurfing,Medium Wind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,bis 70 kg,Wavesurfing,Medium Wind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,bis 70 kg,Wavesurfing,Medium Wind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,bis 70 kg,Wavesurfing,Starkwind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,bis 70 kg,Wavesurfing,Starkwind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,bis 70 kg,Wavesurfing,Starkwind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,bis 70 kg,Jumping,Schwachwind,Flachwasser,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Intermediate to Experts,bis 70 kg,Jumping,Schwachwind,Kleine Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Intermediate to Experts,bis 70 kg,Jumping,Schwachwind,Grosse Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Intermediate to Experts,bis 70 kg,Jumping,Medium Wind,Flachwasser,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Intermediate to Experts,bis 70 kg,Jumping,Medium Wind,Kleine Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Intermediate to Experts,bis 70 kg,Jumping,Medium Wind,Grosse Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Intermediate to Experts,bis 70 kg,Jumping,Starkwind,Flachwasser,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Intermediate to Experts,bis 70 kg,Jumping,Starkwind,Kleine Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Intermediate to Experts,bis 70 kg,Jumping,Starkwind,Grosse Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Intermediate to Experts,bis 70 kg,Lightwindfoil,Schwachwind,Flachwasser,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Intermediate to Experts,bis 70 kg,Lightwindfoil,Schwachwind,Kleine Wellen,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Intermediate to Experts,bis 70 kg,Lightwindfoil,Schwachwind,Grosse Wellen,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Intermediate to Experts,bis 70 kg,Lightwindfoil,Medium Wind,Flachwasser,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Intermediate to Experts,bis 70 kg,Lightwindfoil,Medium Wind,Kleine Wellen,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Intermediate to Experts,bis 70 kg,Lightwindfoil,Medium Wind,Grosse Wellen,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Intermediate to Experts,bis 70 kg,Lightwindfoil,Starkwind,Flachwasser,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Intermediate to Experts,bis 70 kg,Lightwindfoil,Starkwind,Kleine Wellen,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Intermediate to Experts,bis 70 kg,Lightwindfoil,Starkwind,Grosse Wellen,0,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0
+Intermediate to Experts,bis 70 kg,Flatwater,Schwachwind,Flachwasser,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Intermediate to Experts,bis 70 kg,Flatwater,Schwachwind,Kleine Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Intermediate to Experts,bis 70 kg,Flatwater,Schwachwind,Grosse Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Intermediate to Experts,bis 70 kg,Flatwater,Medium Wind,Flachwasser,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Intermediate to Experts,bis 70 kg,Flatwater,Medium Wind,Kleine Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Intermediate to Experts,bis 70 kg,Flatwater,Medium Wind,Grosse Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Intermediate to Experts,bis 70 kg,Flatwater,Starkwind,Flachwasser,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Intermediate to Experts,bis 70 kg,Flatwater,Starkwind,Kleine Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Intermediate to Experts,bis 70 kg,Flatwater,Starkwind,Grosse Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Intermediate to Experts,bis 70 kg,Race,Schwachwind,Flachwasser,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Intermediate to Experts,bis 70 kg,Race,Schwachwind,Kleine Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Intermediate to Experts,bis 70 kg,Race,Schwachwind,Grosse Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Intermediate to Experts,bis 70 kg,Race,Medium Wind,Flachwasser,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Intermediate to Experts,bis 70 kg,Race,Medium Wind,Kleine Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Intermediate to Experts,bis 70 kg,Race,Medium Wind,Grosse Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Intermediate to Experts,bis 70 kg,Race,Starkwind,Flachwasser,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Intermediate to Experts,bis 70 kg,Race,Starkwind,Kleine Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Intermediate to Experts,bis 70 kg,Race,Starkwind,Grosse Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Intermediate to Experts,70–90 kg,Freeride,Schwachwind,Flachwasser,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Intermediate to Experts,70–90 kg,Freeride,Schwachwind,Kleine Wellen,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Intermediate to Experts,70–90 kg,Freeride,Schwachwind,Grosse Wellen,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Intermediate to Experts,70–90 kg,Freeride,Medium Wind,Flachwasser,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Intermediate to Experts,70–90 kg,Freeride,Medium Wind,Kleine Wellen,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Intermediate to Experts,70–90 kg,Freeride,Medium Wind,Grosse Wellen,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Intermediate to Experts,70–90 kg,Freeride,Starkwind,Flachwasser,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Intermediate to Experts,70–90 kg,Freeride,Starkwind,Kleine Wellen,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Intermediate to Experts,70–90 kg,Freeride,Starkwind,Grosse Wellen,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Intermediate to Experts,70–90 kg,Downwind-Wave,Schwachwind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,70–90 kg,Downwind-Wave,Schwachwind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,70–90 kg,Downwind-Wave,Schwachwind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,70–90 kg,Downwind-Wave,Medium Wind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,70–90 kg,Downwind-Wave,Medium Wind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,70–90 kg,Downwind-Wave,Medium Wind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,70–90 kg,Downwind-Wave,Starkwind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,70–90 kg,Downwind-Wave,Starkwind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,70–90 kg,Downwind-Wave,Starkwind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,70–90 kg,Wavesurfing,Schwachwind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,70–90 kg,Wavesurfing,Schwachwind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,70–90 kg,Wavesurfing,Schwachwind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,70–90 kg,Wavesurfing,Medium Wind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,70–90 kg,Wavesurfing,Medium Wind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,70–90 kg,Wavesurfing,Medium Wind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,70–90 kg,Wavesurfing,Starkwind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,70–90 kg,Wavesurfing,Starkwind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,70–90 kg,Wavesurfing,Starkwind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,70–90 kg,Jumping,Schwachwind,Flachwasser,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Intermediate to Experts,70–90 kg,Jumping,Schwachwind,Kleine Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Intermediate to Experts,70–90 kg,Jumping,Schwachwind,Grosse Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Intermediate to Experts,70–90 kg,Jumping,Medium Wind,Flachwasser,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Intermediate to Experts,70–90 kg,Jumping,Medium Wind,Kleine Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Intermediate to Experts,70–90 kg,Jumping,Medium Wind,Grosse Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Intermediate to Experts,70–90 kg,Jumping,Starkwind,Flachwasser,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Intermediate to Experts,70–90 kg,Jumping,Starkwind,Kleine Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Intermediate to Experts,70–90 kg,Jumping,Starkwind,Grosse Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Intermediate to Experts,70–90 kg,Lightwindfoil,Schwachwind,Flachwasser,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Intermediate to Experts,70–90 kg,Lightwindfoil,Schwachwind,Kleine Wellen,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Intermediate to Experts,70–90 kg,Lightwindfoil,Schwachwind,Grosse Wellen,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Intermediate to Experts,70–90 kg,Lightwindfoil,Medium Wind,Flachwasser,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Intermediate to Experts,70–90 kg,Lightwindfoil,Medium Wind,Kleine Wellen,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Intermediate to Experts,70–90 kg,Lightwindfoil,Medium Wind,Grosse Wellen,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Intermediate to Experts,70–90 kg,Lightwindfoil,Starkwind,Flachwasser,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Intermediate to Experts,70–90 kg,Lightwindfoil,Starkwind,Kleine Wellen,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Intermediate to Experts,70–90 kg,Lightwindfoil,Starkwind,Grosse Wellen,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0,0
+Intermediate to Experts,70–90 kg,Flatwater,Schwachwind,Flachwasser,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Intermediate to Experts,70–90 kg,Flatwater,Schwachwind,Kleine Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Intermediate to Experts,70–90 kg,Flatwater,Schwachwind,Grosse Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Intermediate to Experts,70–90 kg,Flatwater,Medium Wind,Flachwasser,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Intermediate to Experts,70–90 kg,Flatwater,Medium Wind,Kleine Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Intermediate to Experts,70–90 kg,Flatwater,Medium Wind,Grosse Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Intermediate to Experts,70–90 kg,Flatwater,Starkwind,Flachwasser,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Intermediate to Experts,70–90 kg,Flatwater,Starkwind,Kleine Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Intermediate to Experts,70–90 kg,Flatwater,Starkwind,Grosse Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Intermediate to Experts,70–90 kg,Race,Schwachwind,Flachwasser,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Intermediate to Experts,70–90 kg,Race,Schwachwind,Kleine Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Intermediate to Experts,70–90 kg,Race,Schwachwind,Grosse Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Intermediate to Experts,70–90 kg,Race,Medium Wind,Flachwasser,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Intermediate to Experts,70–90 kg,Race,Medium Wind,Kleine Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Intermediate to Experts,70–90 kg,Race,Medium Wind,Grosse Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Intermediate to Experts,70–90 kg,Race,Starkwind,Flachwasser,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Intermediate to Experts,70–90 kg,Race,Starkwind,Kleine Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Intermediate to Experts,70–90 kg,Race,Starkwind,Grosse Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Intermediate to Experts,grösser 90 kg,Freeride,Schwachwind,Flachwasser,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Intermediate to Experts,grösser 90 kg,Freeride,Schwachwind,Kleine Wellen,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Intermediate to Experts,grösser 90 kg,Freeride,Schwachwind,Grosse Wellen,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Intermediate to Experts,grösser 90 kg,Freeride,Medium Wind,Flachwasser,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Intermediate to Experts,grösser 90 kg,Freeride,Medium Wind,Kleine Wellen,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Intermediate to Experts,grösser 90 kg,Freeride,Medium Wind,Grosse Wellen,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Intermediate to Experts,grösser 90 kg,Freeride,Starkwind,Flachwasser,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Intermediate to Experts,grösser 90 kg,Freeride,Starkwind,Kleine Wellen,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Intermediate to Experts,grösser 90 kg,Freeride,Starkwind,Grosse Wellen,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Intermediate to Experts,grösser 90 kg,Downwind-Wave,Schwachwind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,grösser 90 kg,Downwind-Wave,Schwachwind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,grösser 90 kg,Downwind-Wave,Schwachwind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,grösser 90 kg,Downwind-Wave,Medium Wind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,grösser 90 kg,Downwind-Wave,Medium Wind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,grösser 90 kg,Downwind-Wave,Medium Wind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,grösser 90 kg,Downwind-Wave,Starkwind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,grösser 90 kg,Downwind-Wave,Starkwind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,grösser 90 kg,Downwind-Wave,Starkwind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,grösser 90 kg,Wavesurfing,Schwachwind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,grösser 90 kg,Wavesurfing,Schwachwind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,grösser 90 kg,Wavesurfing,Schwachwind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,grösser 90 kg,Wavesurfing,Medium Wind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,grösser 90 kg,Wavesurfing,Medium Wind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,grösser 90 kg,Wavesurfing,Medium Wind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,grösser 90 kg,Wavesurfing,Starkwind,Flachwasser,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,grösser 90 kg,Wavesurfing,Starkwind,Kleine Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,grösser 90 kg,Wavesurfing,Starkwind,Grosse Wellen,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+Intermediate to Experts,grösser 90 kg,Jumping,Schwachwind,Flachwasser,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Intermediate to Experts,grösser 90 kg,Jumping,Schwachwind,Kleine Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Intermediate to Experts,grösser 90 kg,Jumping,Schwachwind,Grosse Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Intermediate to Experts,grösser 90 kg,Jumping,Medium Wind,Flachwasser,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Intermediate to Experts,grösser 90 kg,Jumping,Medium Wind,Kleine Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Intermediate to Experts,grösser 90 kg,Jumping,Medium Wind,Grosse Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Intermediate to Experts,grösser 90 kg,Jumping,Starkwind,Flachwasser,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Intermediate to Experts,grösser 90 kg,Jumping,Starkwind,Kleine Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Intermediate to Experts,grösser 90 kg,Jumping,Starkwind,Grosse Wellen,0,2,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Intermediate to Experts,grösser 90 kg,Lightwindfoil,Schwachwind,Flachwasser,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Intermediate to Experts,grösser 90 kg,Lightwindfoil,Schwachwind,Kleine Wellen,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Intermediate to Experts,grösser 90 kg,Lightwindfoil,Schwachwind,Grosse Wellen,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Intermediate to Experts,grösser 90 kg,Lightwindfoil,Medium Wind,Flachwasser,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Intermediate to Experts,grösser 90 kg,Lightwindfoil,Medium Wind,Kleine Wellen,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Intermediate to Experts,grösser 90 kg,Lightwindfoil,Medium Wind,Grosse Wellen,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Intermediate to Experts,grösser 90 kg,Lightwindfoil,Starkwind,Flachwasser,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Intermediate to Experts,grösser 90 kg,Lightwindfoil,Starkwind,Kleine Wellen,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Intermediate to Experts,grösser 90 kg,Lightwindfoil,Starkwind,Grosse Wellen,0,0,0,0,0,0,0,0,3,0,0,0,2,1,0,0,0,0
+Intermediate to Experts,grösser 90 kg,Flatwater,Schwachwind,Flachwasser,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Intermediate to Experts,grösser 90 kg,Flatwater,Schwachwind,Kleine Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Intermediate to Experts,grösser 90 kg,Flatwater,Schwachwind,Grosse Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Intermediate to Experts,grösser 90 kg,Flatwater,Medium Wind,Flachwasser,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Intermediate to Experts,grösser 90 kg,Flatwater,Medium Wind,Kleine Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Intermediate to Experts,grösser 90 kg,Flatwater,Medium Wind,Grosse Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Intermediate to Experts,grösser 90 kg,Flatwater,Starkwind,Flachwasser,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Intermediate to Experts,grösser 90 kg,Flatwater,Starkwind,Kleine Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Intermediate to Experts,grösser 90 kg,Flatwater,Starkwind,Grosse Wellen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Intermediate to Experts,grösser 90 kg,Race,Schwachwind,Flachwasser,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Intermediate to Experts,grösser 90 kg,Race,Schwachwind,Kleine Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Intermediate to Experts,grösser 90 kg,Race,Schwachwind,Grosse Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Intermediate to Experts,grösser 90 kg,Race,Medium Wind,Flachwasser,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Intermediate to Experts,grösser 90 kg,Race,Medium Wind,Kleine Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Intermediate to Experts,grösser 90 kg,Race,Medium Wind,Grosse Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Intermediate to Experts,grösser 90 kg,Race,Starkwind,Flachwasser,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Intermediate to Experts,grösser 90 kg,Race,Starkwind,Kleine Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+Intermediate to Experts,grösser 90 kg,Race,Starkwind,Grosse Wellen,0,3,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0

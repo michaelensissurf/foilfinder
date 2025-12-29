@@ -1,0 +1,1945 @@
+Level;Gewicht;Disziplin;Kategorie;Wind;Wellen;Empf1_Foil;Empf1_Grösse;Empf2_Foil;Empf2_Grösse;Empf3_Foil;Empf3_Grösse
+Discover;<70;Downwind;Freeride;Schwach;Flach;Stride;2050;Infinity;1140;;
+Discover;<70;Downwind;Freeride;Schwach;Klein;Stride;2050;Infinity;1140;;
+Discover;<70;Downwind;Freeride;Schwach;Gross;Stride;2050;Infinity;990;;
+Discover;<70;Downwind;Freeride;Mittel;Flach;Stride;2050;Infinity;990;;
+Discover;<70;Downwind;Freeride;Mittel;Klein;Stride;2050;Infinity;990;;
+Discover;<70;Downwind;Freeride;Mittel;Gross;Stride;2050;Infinity;840;;
+Discover;<70;Downwind;Freeride;Stark;Flach;Stride;2050;Infinity;990;;
+Discover;<70;Downwind;Freeride;Stark;Klein;Stride;2050;Infinity;990;;
+Discover;<70;Downwind;Freeride;Stark;Gross;Stride;2050;Infinity;840;;
+Discover;<70;Downwind;Jumping;Schwach;Flach;Stride;2050;Infinity;1140;;
+Discover;<70;Downwind;Jumping;Schwach;Klein;Stride;2050;Infinity;1140;;
+Discover;<70;Downwind;Jumping;Schwach;Gross;Stride;2050;Infinity;990;;
+Discover;<70;Downwind;Jumping;Mittel;Flach;Stride;2050;Infinity;990;;
+Discover;<70;Downwind;Jumping;Mittel;Klein;Stride;2050;Infinity;990;;
+Discover;<70;Downwind;Jumping;Mittel;Gross;Stride;2050;Infinity;840;;
+Discover;<70;Downwind;Jumping;Stark;Flach;Stride;2050;Infinity;990;;
+Discover;<70;Downwind;Jumping;Stark;Klein;Stride;2050;Infinity;990;;
+Discover;<70;Downwind;Jumping;Stark;Gross;Stride;2050;Infinity;840;;
+Discover;<70;Downwind;Flatwater;Schwach;Flach;Stride;2050;Infinity;1140;;
+Discover;<70;Downwind;Flatwater;Schwach;Klein;Stride;2050;Infinity;1140;;
+Discover;<70;Downwind;Flatwater;Schwach;Gross;Stride;2050;Infinity;990;;
+Discover;<70;Downwind;Flatwater;Mittel;Flach;Stride;2050;Infinity;990;;
+Discover;<70;Downwind;Flatwater;Mittel;Klein;Stride;2050;Infinity;990;;
+Discover;<70;Downwind;Flatwater;Mittel;Gross;Stride;2050;Infinity;840;;
+Discover;<70;Downwind;Flatwater;Stark;Flach;Stride;2050;Infinity;990;;
+Discover;<70;Downwind;Flatwater;Stark;Klein;Stride;2050;Infinity;990;;
+Discover;<70;Downwind;Flatwater;Stark;Gross;Stride;2050;Infinity;840;;
+Discover;<70;Downwind;Race;Schwach;Flach;Stride;2050;Infinity;1140;;
+Discover;<70;Downwind;Race;Schwach;Klein;Stride;2050;Infinity;1140;;
+Discover;<70;Downwind;Race;Schwach;Gross;Stride;2050;Infinity;990;;
+Discover;<70;Downwind;Race;Mittel;Flach;Stride;2050;Infinity;990;;
+Discover;<70;Downwind;Race;Mittel;Klein;Stride;2050;Infinity;990;;
+Discover;<70;Downwind;Race;Mittel;Gross;Stride;2050;Infinity;840;;
+Discover;<70;Downwind;Race;Stark;Flach;Stride;2050;Infinity;990;;
+Discover;<70;Downwind;Race;Stark;Klein;Stride;2050;Infinity;990;;
+Discover;<70;Downwind;Race;Stark;Gross;Stride;2050;Infinity;840;;
+Discover;<70;Wingfoil Freeride;Freeride;Schwach;Flach;Infinity;990;Pacer;1550;Infinity;840
+Discover;<70;Wingfoil Freeride;Freeride;Schwach;Klein;Infinity;990;Pacer;1550;Infinity;840
+Discover;<70;Wingfoil Freeride;Freeride;Schwach;Gross;Infinity;840;Pacer;1250;Infinity;690
+Discover;<70;Wingfoil Freeride;Freeride;Mittel;Flach;Infinity;840;Pacer;1250;Infinity;690
+Discover;<70;Wingfoil Freeride;Freeride;Mittel;Klein;Infinity;840;Pacer;1250;Infinity;690
+Discover;<70;Wingfoil Freeride;Freeride;Mittel;Gross;Infinity;690;Pacer;950;Infinity;540
+Discover;<70;Wingfoil Freeride;Freeride;Stark;Flach;Infinity;840;Pacer;1250;Infinity;690
+Discover;<70;Wingfoil Freeride;Freeride;Stark;Klein;Infinity;840;Pacer;1250;Infinity;690
+Discover;<70;Wingfoil Freeride;Freeride;Stark;Gross;Infinity;690;Pacer;950;Infinity;540
+Discover;<70;Wingfoil Freeride;Jumping;Schwach;Flach;Infinity;990;Pacer;1550;Infinity;840
+Discover;<70;Wingfoil Freeride;Jumping;Schwach;Klein;Infinity;990;Pacer;1550;Infinity;840
+Discover;<70;Wingfoil Freeride;Jumping;Schwach;Gross;Infinity;840;Pacer;1250;Infinity;690
+Discover;<70;Wingfoil Freeride;Jumping;Mittel;Flach;Infinity;840;Pacer;1250;Infinity;690
+Discover;<70;Wingfoil Freeride;Jumping;Mittel;Klein;Infinity;840;Pacer;1250;Infinity;690
+Discover;<70;Wingfoil Freeride;Jumping;Mittel;Gross;Infinity;690;Pacer;950;Infinity;540
+Discover;<70;Wingfoil Freeride;Jumping;Stark;Flach;Infinity;840;Pacer;1250;Infinity;690
+Discover;<70;Wingfoil Freeride;Jumping;Stark;Klein;Infinity;840;Pacer;1250;Infinity;690
+Discover;<70;Wingfoil Freeride;Jumping;Stark;Gross;Infinity;690;Pacer;950;Infinity;540
+Discover;<70;Wingfoil Freeride;Flatwater;Schwach;Flach;Infinity;990;Pacer;1550;Infinity;840
+Discover;<70;Wingfoil Freeride;Flatwater;Schwach;Klein;Infinity;990;Pacer;1550;Infinity;840
+Discover;<70;Wingfoil Freeride;Flatwater;Schwach;Gross;Infinity;840;Pacer;1250;Infinity;690
+Discover;<70;Wingfoil Freeride;Flatwater;Mittel;Flach;Infinity;840;Pacer;1250;Infinity;690
+Discover;<70;Wingfoil Freeride;Flatwater;Mittel;Klein;Infinity;840;Pacer;1250;Infinity;690
+Discover;<70;Wingfoil Freeride;Flatwater;Mittel;Gross;Infinity;690;Pacer;950;Infinity;540
+Discover;<70;Wingfoil Freeride;Flatwater;Stark;Flach;Infinity;840;Pacer;1250;Infinity;690
+Discover;<70;Wingfoil Freeride;Flatwater;Stark;Klein;Infinity;840;Pacer;1250;Infinity;690
+Discover;<70;Wingfoil Freeride;Flatwater;Stark;Gross;Infinity;690;Pacer;950;Infinity;540
+Discover;<70;Wingfoil Freeride;Race;Schwach;Flach;Infinity;990;Stride;2050;Infinity;840
+Discover;<70;Wingfoil Freeride;Race;Schwach;Klein;Infinity;990;Stride;2050;Infinity;840
+Discover;<70;Wingfoil Freeride;Race;Schwach;Gross;Infinity;840;Stride;2050;Infinity;690
+Discover;<70;Wingfoil Freeride;Race;Mittel;Flach;Infinity;840;Stride;2050;Infinity;690
+Discover;<70;Wingfoil Freeride;Race;Mittel;Klein;Infinity;840;Stride;2050;Infinity;690
+Discover;<70;Wingfoil Freeride;Race;Mittel;Gross;Infinity;690;Stride;2050;Infinity;540
+Discover;<70;Wingfoil Freeride;Race;Stark;Flach;Infinity;840;Stride;2050;Infinity;690
+Discover;<70;Wingfoil Freeride;Race;Stark;Klein;Infinity;840;Stride;2050;Infinity;690
+Discover;<70;Wingfoil Freeride;Race;Stark;Gross;Infinity;690;Stride;2050;Infinity;540
+Discover;<70;Wavesurfing;Freeride;Schwach;Flach;Infinity;990;Pacer;1550;Infinity;840
+Discover;<70;Wavesurfing;Freeride;Schwach;Klein;Infinity;990;Pacer;1550;Infinity;840
+Discover;<70;Wavesurfing;Freeride;Schwach;Gross;Infinity;840;Pacer;1250;Infinity;690
+Discover;<70;Wavesurfing;Freeride;Mittel;Flach;Infinity;840;Pacer;1250;Infinity;690
+Discover;<70;Wavesurfing;Freeride;Mittel;Klein;Infinity;840;Pacer;1250;Infinity;690
+Discover;<70;Wavesurfing;Freeride;Mittel;Gross;Infinity;690;Pacer;950;Infinity;540
+Discover;<70;Wavesurfing;Freeride;Stark;Flach;Infinity;840;Pacer;1250;Infinity;690
+Discover;<70;Wavesurfing;Freeride;Stark;Klein;Infinity;840;Pacer;1250;Infinity;690
+Discover;<70;Wavesurfing;Freeride;Stark;Gross;Infinity;690;Pacer;950;Infinity;540
+Discover;<70;Wavesurfing;Jumping;Schwach;Flach;Infinity;990;Pacer;1550;Infinity;840
+Discover;<70;Wavesurfing;Jumping;Schwach;Klein;Infinity;990;Pacer;1550;Infinity;840
+Discover;<70;Wavesurfing;Jumping;Schwach;Gross;Infinity;840;Pacer;1250;Infinity;690
+Discover;<70;Wavesurfing;Jumping;Mittel;Flach;Infinity;840;Pacer;1250;Infinity;690
+Discover;<70;Wavesurfing;Jumping;Mittel;Klein;Infinity;840;Pacer;1250;Infinity;690
+Discover;<70;Wavesurfing;Jumping;Mittel;Gross;Infinity;690;Pacer;950;Infinity;540
+Discover;<70;Wavesurfing;Jumping;Stark;Flach;Infinity;840;Pacer;1250;Infinity;690
+Discover;<70;Wavesurfing;Jumping;Stark;Klein;Infinity;840;Pacer;1250;Infinity;690
+Discover;<70;Wavesurfing;Jumping;Stark;Gross;Infinity;690;Pacer;950;Infinity;540
+Discover;<70;Wavesurfing;Flatwater;Schwach;Flach;Infinity;990;Pacer;1550;Infinity;840
+Discover;<70;Wavesurfing;Flatwater;Schwach;Klein;Infinity;990;Pacer;1550;Infinity;840
+Discover;<70;Wavesurfing;Flatwater;Schwach;Gross;Infinity;840;Pacer;1250;Infinity;690
+Discover;<70;Wavesurfing;Flatwater;Mittel;Flach;Infinity;840;Pacer;1250;Infinity;690
+Discover;<70;Wavesurfing;Flatwater;Mittel;Klein;Infinity;840;Pacer;1250;Infinity;690
+Discover;<70;Wavesurfing;Flatwater;Mittel;Gross;Infinity;690;Pacer;950;Infinity;540
+Discover;<70;Wavesurfing;Flatwater;Stark;Flach;Infinity;840;Pacer;1250;Infinity;690
+Discover;<70;Wavesurfing;Flatwater;Stark;Klein;Infinity;840;Pacer;1250;Infinity;690
+Discover;<70;Wavesurfing;Flatwater;Stark;Gross;Infinity;690;Pacer;950;Infinity;540
+Discover;<70;Wavesurfing;Race;Schwach;Flach;Infinity;990;Stride;2050;Infinity;840
+Discover;<70;Wavesurfing;Race;Schwach;Klein;Infinity;990;Stride;2050;Infinity;840
+Discover;<70;Wavesurfing;Race;Schwach;Gross;Infinity;840;Stride;2050;Infinity;690
+Discover;<70;Wavesurfing;Race;Mittel;Flach;Infinity;840;Stride;2050;Infinity;690
+Discover;<70;Wavesurfing;Race;Mittel;Klein;Infinity;840;Stride;2050;Infinity;690
+Discover;<70;Wavesurfing;Race;Mittel;Gross;Infinity;690;Stride;2050;Infinity;540
+Discover;<70;Wavesurfing;Race;Stark;Flach;Infinity;840;Stride;2050;Infinity;690
+Discover;<70;Wavesurfing;Race;Stark;Klein;Infinity;840;Stride;2050;Infinity;690
+Discover;<70;Wavesurfing;Race;Stark;Gross;Infinity;690;Stride;2050;Infinity;540
+Discover;<70;Lightwind;Freeride;Schwach;Flach;Stride;2050;Infinity;1140;;
+Discover;<70;Lightwind;Freeride;Schwach;Klein;Stride;2050;Infinity;1140;;
+Discover;<70;Lightwind;Freeride;Schwach;Gross;Stride;2050;Infinity;990;;
+Discover;<70;Lightwind;Freeride;Mittel;Flach;Stride;2050;Infinity;990;;
+Discover;<70;Lightwind;Freeride;Mittel;Klein;Stride;2050;Infinity;990;;
+Discover;<70;Lightwind;Freeride;Mittel;Gross;Stride;2050;Infinity;840;;
+Discover;<70;Lightwind;Freeride;Stark;Flach;Stride;2050;Infinity;990;;
+Discover;<70;Lightwind;Freeride;Stark;Klein;Stride;2050;Infinity;990;;
+Discover;<70;Lightwind;Freeride;Stark;Gross;Stride;2050;Infinity;840;;
+Discover;<70;Lightwind;Jumping;Schwach;Flach;Stride;2050;Infinity;1140;;
+Discover;<70;Lightwind;Jumping;Schwach;Klein;Stride;2050;Infinity;1140;;
+Discover;<70;Lightwind;Jumping;Schwach;Gross;Stride;2050;Infinity;990;;
+Discover;<70;Lightwind;Jumping;Mittel;Flach;Stride;2050;Infinity;990;;
+Discover;<70;Lightwind;Jumping;Mittel;Klein;Stride;2050;Infinity;990;;
+Discover;<70;Lightwind;Jumping;Mittel;Gross;Stride;2050;Infinity;840;;
+Discover;<70;Lightwind;Jumping;Stark;Flach;Stride;2050;Infinity;990;;
+Discover;<70;Lightwind;Jumping;Stark;Klein;Stride;2050;Infinity;990;;
+Discover;<70;Lightwind;Jumping;Stark;Gross;Stride;2050;Infinity;840;;
+Discover;<70;Lightwind;Flatwater;Schwach;Flach;Stride;2050;Infinity;1140;;
+Discover;<70;Lightwind;Flatwater;Schwach;Klein;Stride;2050;Infinity;1140;;
+Discover;<70;Lightwind;Flatwater;Schwach;Gross;Stride;2050;Infinity;990;;
+Discover;<70;Lightwind;Flatwater;Mittel;Flach;Stride;2050;Infinity;990;;
+Discover;<70;Lightwind;Flatwater;Mittel;Klein;Stride;2050;Infinity;990;;
+Discover;<70;Lightwind;Flatwater;Mittel;Gross;Stride;2050;Infinity;840;;
+Discover;<70;Lightwind;Flatwater;Stark;Flach;Stride;2050;Infinity;990;;
+Discover;<70;Lightwind;Flatwater;Stark;Klein;Stride;2050;Infinity;990;;
+Discover;<70;Lightwind;Flatwater;Stark;Gross;Stride;2050;Infinity;840;;
+Discover;<70;Lightwind;Race;Schwach;Flach;Stride;2050;Infinity;1140;;
+Discover;<70;Lightwind;Race;Schwach;Klein;Stride;2050;Infinity;1140;;
+Discover;<70;Lightwind;Race;Schwach;Gross;Stride;2050;Infinity;990;;
+Discover;<70;Lightwind;Race;Mittel;Flach;Stride;2050;Infinity;990;;
+Discover;<70;Lightwind;Race;Mittel;Klein;Stride;2050;Infinity;990;;
+Discover;<70;Lightwind;Race;Mittel;Gross;Stride;2050;Infinity;840;;
+Discover;<70;Lightwind;Race;Stark;Flach;Stride;2050;Infinity;990;;
+Discover;<70;Lightwind;Race;Stark;Klein;Stride;2050;Infinity;990;;
+Discover;<70;Lightwind;Race;Stark;Gross;Stride;2050;Infinity;840;;
+Discover;<70;Pumpfoil;Freeride;Schwach;Flach;Stride;2050;Infinity;1140;;
+Discover;<70;Pumpfoil;Freeride;Schwach;Klein;Stride;2050;Infinity;1140;;
+Discover;<70;Pumpfoil;Freeride;Schwach;Gross;Stride;2050;Infinity;990;;
+Discover;<70;Pumpfoil;Freeride;Mittel;Flach;Stride;2050;Infinity;990;;
+Discover;<70;Pumpfoil;Freeride;Mittel;Klein;Stride;2050;Infinity;990;;
+Discover;<70;Pumpfoil;Freeride;Mittel;Gross;Stride;2050;Infinity;840;;
+Discover;<70;Pumpfoil;Freeride;Stark;Flach;Stride;2050;Infinity;990;;
+Discover;<70;Pumpfoil;Freeride;Stark;Klein;Stride;2050;Infinity;990;;
+Discover;<70;Pumpfoil;Freeride;Stark;Gross;Stride;2050;Infinity;840;;
+Discover;<70;Pumpfoil;Jumping;Schwach;Flach;Stride;2050;Infinity;1140;;
+Discover;<70;Pumpfoil;Jumping;Schwach;Klein;Stride;2050;Infinity;1140;;
+Discover;<70;Pumpfoil;Jumping;Schwach;Gross;Stride;2050;Infinity;990;;
+Discover;<70;Pumpfoil;Jumping;Mittel;Flach;Stride;2050;Infinity;990;;
+Discover;<70;Pumpfoil;Jumping;Mittel;Klein;Stride;2050;Infinity;990;;
+Discover;<70;Pumpfoil;Jumping;Mittel;Gross;Stride;2050;Infinity;840;;
+Discover;<70;Pumpfoil;Jumping;Stark;Flach;Stride;2050;Infinity;990;;
+Discover;<70;Pumpfoil;Jumping;Stark;Klein;Stride;2050;Infinity;990;;
+Discover;<70;Pumpfoil;Jumping;Stark;Gross;Stride;2050;Infinity;840;;
+Discover;<70;Pumpfoil;Flatwater;Schwach;Flach;Stride;2050;Infinity;1140;;
+Discover;<70;Pumpfoil;Flatwater;Schwach;Klein;Stride;2050;Infinity;1140;;
+Discover;<70;Pumpfoil;Flatwater;Schwach;Gross;Stride;2050;Infinity;990;;
+Discover;<70;Pumpfoil;Flatwater;Mittel;Flach;Stride;2050;Infinity;990;;
+Discover;<70;Pumpfoil;Flatwater;Mittel;Klein;Stride;2050;Infinity;990;;
+Discover;<70;Pumpfoil;Flatwater;Mittel;Gross;Stride;2050;Infinity;840;;
+Discover;<70;Pumpfoil;Flatwater;Stark;Flach;Stride;2050;Infinity;990;;
+Discover;<70;Pumpfoil;Flatwater;Stark;Klein;Stride;2050;Infinity;990;;
+Discover;<70;Pumpfoil;Flatwater;Stark;Gross;Stride;2050;Infinity;840;;
+Discover;<70;Pumpfoil;Race;Schwach;Flach;Stride;2050;Infinity;1140;;
+Discover;<70;Pumpfoil;Race;Schwach;Klein;Stride;2050;Infinity;1140;;
+Discover;<70;Pumpfoil;Race;Schwach;Gross;Stride;2050;Infinity;990;;
+Discover;<70;Pumpfoil;Race;Mittel;Flach;Stride;2050;Infinity;990;;
+Discover;<70;Pumpfoil;Race;Mittel;Klein;Stride;2050;Infinity;990;;
+Discover;<70;Pumpfoil;Race;Mittel;Gross;Stride;2050;Infinity;840;;
+Discover;<70;Pumpfoil;Race;Stark;Flach;Stride;2050;Infinity;990;;
+Discover;<70;Pumpfoil;Race;Stark;Klein;Stride;2050;Infinity;990;;
+Discover;<70;Pumpfoil;Race;Stark;Gross;Stride;2050;Infinity;840;;
+Discover;<70;Parawing;Freeride;Schwach;Flach;Stride;2050;Infinity;1140;;
+Discover;<70;Parawing;Freeride;Schwach;Klein;Stride;2050;Infinity;1140;;
+Discover;<70;Parawing;Freeride;Schwach;Gross;Stride;2050;Infinity;990;;
+Discover;<70;Parawing;Freeride;Mittel;Flach;Stride;2050;Infinity;990;;
+Discover;<70;Parawing;Freeride;Mittel;Klein;Stride;2050;Infinity;990;;
+Discover;<70;Parawing;Freeride;Mittel;Gross;Stride;2050;Infinity;840;;
+Discover;<70;Parawing;Freeride;Stark;Flach;Stride;2050;Infinity;990;;
+Discover;<70;Parawing;Freeride;Stark;Klein;Stride;2050;Infinity;990;;
+Discover;<70;Parawing;Freeride;Stark;Gross;Stride;2050;Infinity;840;;
+Discover;<70;Parawing;Jumping;Schwach;Flach;Stride;2050;Infinity;1140;;
+Discover;<70;Parawing;Jumping;Schwach;Klein;Stride;2050;Infinity;1140;;
+Discover;<70;Parawing;Jumping;Schwach;Gross;Stride;2050;Infinity;990;;
+Discover;<70;Parawing;Jumping;Mittel;Flach;Stride;2050;Infinity;990;;
+Discover;<70;Parawing;Jumping;Mittel;Klein;Stride;2050;Infinity;990;;
+Discover;<70;Parawing;Jumping;Mittel;Gross;Stride;2050;Infinity;840;;
+Discover;<70;Parawing;Jumping;Stark;Flach;Stride;2050;Infinity;990;;
+Discover;<70;Parawing;Jumping;Stark;Klein;Stride;2050;Infinity;990;;
+Discover;<70;Parawing;Jumping;Stark;Gross;Stride;2050;Infinity;840;;
+Discover;<70;Parawing;Flatwater;Schwach;Flach;Stride;2050;Infinity;1140;;
+Discover;<70;Parawing;Flatwater;Schwach;Klein;Stride;2050;Infinity;1140;;
+Discover;<70;Parawing;Flatwater;Schwach;Gross;Stride;2050;Infinity;990;;
+Discover;<70;Parawing;Flatwater;Mittel;Flach;Stride;2050;Infinity;990;;
+Discover;<70;Parawing;Flatwater;Mittel;Klein;Stride;2050;Infinity;990;;
+Discover;<70;Parawing;Flatwater;Mittel;Gross;Stride;2050;Infinity;840;;
+Discover;<70;Parawing;Flatwater;Stark;Flach;Stride;2050;Infinity;990;;
+Discover;<70;Parawing;Flatwater;Stark;Klein;Stride;2050;Infinity;990;;
+Discover;<70;Parawing;Flatwater;Stark;Gross;Stride;2050;Infinity;840;;
+Discover;<70;Parawing;Race;Schwach;Flach;Stride;2050;Infinity;1140;;
+Discover;<70;Parawing;Race;Schwach;Klein;Stride;2050;Infinity;1140;;
+Discover;<70;Parawing;Race;Schwach;Gross;Stride;2050;Infinity;990;;
+Discover;<70;Parawing;Race;Mittel;Flach;Stride;2050;Infinity;990;;
+Discover;<70;Parawing;Race;Mittel;Klein;Stride;2050;Infinity;990;;
+Discover;<70;Parawing;Race;Mittel;Gross;Stride;2050;Infinity;840;;
+Discover;<70;Parawing;Race;Stark;Flach;Stride;2050;Infinity;990;;
+Discover;<70;Parawing;Race;Stark;Klein;Stride;2050;Infinity;990;;
+Discover;<70;Parawing;Race;Stark;Gross;Stride;2050;Infinity;840;;
+Discover;70-90;Downwind;Freeride;Schwach;Flach;Stride;2050;Infinity;1390;;
+Discover;70-90;Downwind;Freeride;Schwach;Klein;Stride;2050;Infinity;1390;;
+Discover;70-90;Downwind;Freeride;Schwach;Gross;Stride;2050;Infinity;1140;;
+Discover;70-90;Downwind;Freeride;Mittel;Flach;Stride;2050;Infinity;1140;;
+Discover;70-90;Downwind;Freeride;Mittel;Klein;Stride;2050;Infinity;1140;;
+Discover;70-90;Downwind;Freeride;Mittel;Gross;Stride;2050;Infinity;990;;
+Discover;70-90;Downwind;Freeride;Stark;Flach;Stride;2050;Infinity;1140;;
+Discover;70-90;Downwind;Freeride;Stark;Klein;Stride;2050;Infinity;1140;;
+Discover;70-90;Downwind;Freeride;Stark;Gross;Stride;2050;Infinity;990;;
+Discover;70-90;Downwind;Jumping;Schwach;Flach;Stride;2050;Infinity;1390;;
+Discover;70-90;Downwind;Jumping;Schwach;Klein;Stride;2050;Infinity;1390;;
+Discover;70-90;Downwind;Jumping;Schwach;Gross;Stride;2050;Infinity;1140;;
+Discover;70-90;Downwind;Jumping;Mittel;Flach;Stride;2050;Infinity;1140;;
+Discover;70-90;Downwind;Jumping;Mittel;Klein;Stride;2050;Infinity;1140;;
+Discover;70-90;Downwind;Jumping;Mittel;Gross;Stride;2050;Infinity;990;;
+Discover;70-90;Downwind;Jumping;Stark;Flach;Stride;2050;Infinity;1140;;
+Discover;70-90;Downwind;Jumping;Stark;Klein;Stride;2050;Infinity;1140;;
+Discover;70-90;Downwind;Jumping;Stark;Gross;Stride;2050;Infinity;990;;
+Discover;70-90;Downwind;Flatwater;Schwach;Flach;Stride;2050;Infinity;1390;;
+Discover;70-90;Downwind;Flatwater;Schwach;Klein;Stride;2050;Infinity;1390;;
+Discover;70-90;Downwind;Flatwater;Schwach;Gross;Stride;2050;Infinity;1140;;
+Discover;70-90;Downwind;Flatwater;Mittel;Flach;Stride;2050;Infinity;1140;;
+Discover;70-90;Downwind;Flatwater;Mittel;Klein;Stride;2050;Infinity;1140;;
+Discover;70-90;Downwind;Flatwater;Mittel;Gross;Stride;2050;Infinity;990;;
+Discover;70-90;Downwind;Flatwater;Stark;Flach;Stride;2050;Infinity;1140;;
+Discover;70-90;Downwind;Flatwater;Stark;Klein;Stride;2050;Infinity;1140;;
+Discover;70-90;Downwind;Flatwater;Stark;Gross;Stride;2050;Infinity;990;;
+Discover;70-90;Downwind;Race;Schwach;Flach;Stride;2050;Infinity;1390;;
+Discover;70-90;Downwind;Race;Schwach;Klein;Stride;2050;Infinity;1390;;
+Discover;70-90;Downwind;Race;Schwach;Gross;Stride;2050;Infinity;1140;;
+Discover;70-90;Downwind;Race;Mittel;Flach;Stride;2050;Infinity;1140;;
+Discover;70-90;Downwind;Race;Mittel;Klein;Stride;2050;Infinity;1140;;
+Discover;70-90;Downwind;Race;Mittel;Gross;Stride;2050;Infinity;990;;
+Discover;70-90;Downwind;Race;Stark;Flach;Stride;2050;Infinity;1140;;
+Discover;70-90;Downwind;Race;Stark;Klein;Stride;2050;Infinity;1140;;
+Discover;70-90;Downwind;Race;Stark;Gross;Stride;2050;Infinity;990;;
+Discover;70-90;Wingfoil Freeride;Freeride;Schwach;Flach;Infinity;1140;Pacer;1850;Infinity;990
+Discover;70-90;Wingfoil Freeride;Freeride;Schwach;Klein;Infinity;1140;Pacer;1850;Infinity;990
+Discover;70-90;Wingfoil Freeride;Freeride;Schwach;Gross;Infinity;990;Pacer;1550;Infinity;840
+Discover;70-90;Wingfoil Freeride;Freeride;Mittel;Flach;Infinity;990;Pacer;1550;Infinity;840
+Discover;70-90;Wingfoil Freeride;Freeride;Mittel;Klein;Infinity;990;Pacer;1550;Infinity;840
+Discover;70-90;Wingfoil Freeride;Freeride;Mittel;Gross;Infinity;840;Pacer;1250;Infinity;690
+Discover;70-90;Wingfoil Freeride;Freeride;Stark;Flach;Infinity;990;Pacer;1550;Infinity;840
+Discover;70-90;Wingfoil Freeride;Freeride;Stark;Klein;Infinity;990;Pacer;1550;Infinity;840
+Discover;70-90;Wingfoil Freeride;Freeride;Stark;Gross;Infinity;840;Pacer;1250;Infinity;690
+Discover;70-90;Wingfoil Freeride;Jumping;Schwach;Flach;Infinity;1140;Pacer;1850;Infinity;990
+Discover;70-90;Wingfoil Freeride;Jumping;Schwach;Klein;Infinity;1140;Pacer;1850;Infinity;990
+Discover;70-90;Wingfoil Freeride;Jumping;Schwach;Gross;Infinity;990;Pacer;1550;Infinity;840
+Discover;70-90;Wingfoil Freeride;Jumping;Mittel;Flach;Infinity;990;Pacer;1550;Infinity;840
+Discover;70-90;Wingfoil Freeride;Jumping;Mittel;Klein;Infinity;990;Pacer;1550;Infinity;840
+Discover;70-90;Wingfoil Freeride;Jumping;Mittel;Gross;Infinity;840;Pacer;1250;Infinity;690
+Discover;70-90;Wingfoil Freeride;Jumping;Stark;Flach;Infinity;990;Pacer;1550;Infinity;840
+Discover;70-90;Wingfoil Freeride;Jumping;Stark;Klein;Infinity;990;Pacer;1550;Infinity;840
+Discover;70-90;Wingfoil Freeride;Jumping;Stark;Gross;Infinity;840;Pacer;1250;Infinity;690
+Discover;70-90;Wingfoil Freeride;Flatwater;Schwach;Flach;Infinity;1140;Pacer;1850;Infinity;990
+Discover;70-90;Wingfoil Freeride;Flatwater;Schwach;Klein;Infinity;1140;Pacer;1850;Infinity;990
+Discover;70-90;Wingfoil Freeride;Flatwater;Schwach;Gross;Infinity;990;Pacer;1550;Infinity;840
+Discover;70-90;Wingfoil Freeride;Flatwater;Mittel;Flach;Infinity;990;Pacer;1550;Infinity;840
+Discover;70-90;Wingfoil Freeride;Flatwater;Mittel;Klein;Infinity;990;Pacer;1550;Infinity;840
+Discover;70-90;Wingfoil Freeride;Flatwater;Mittel;Gross;Infinity;840;Pacer;1250;Infinity;690
+Discover;70-90;Wingfoil Freeride;Flatwater;Stark;Flach;Infinity;990;Pacer;1550;Infinity;840
+Discover;70-90;Wingfoil Freeride;Flatwater;Stark;Klein;Infinity;990;Pacer;1550;Infinity;840
+Discover;70-90;Wingfoil Freeride;Flatwater;Stark;Gross;Infinity;840;Pacer;1250;Infinity;690
+Discover;70-90;Wingfoil Freeride;Race;Schwach;Flach;Infinity;1140;Stride;2050;Infinity;990
+Discover;70-90;Wingfoil Freeride;Race;Schwach;Klein;Infinity;1140;Stride;2050;Infinity;990
+Discover;70-90;Wingfoil Freeride;Race;Schwach;Gross;Infinity;990;Stride;2050;Infinity;840
+Discover;70-90;Wingfoil Freeride;Race;Mittel;Flach;Infinity;990;Stride;2050;Infinity;840
+Discover;70-90;Wingfoil Freeride;Race;Mittel;Klein;Infinity;990;Stride;2050;Infinity;840
+Discover;70-90;Wingfoil Freeride;Race;Mittel;Gross;Infinity;840;Stride;2050;Infinity;690
+Discover;70-90;Wingfoil Freeride;Race;Stark;Flach;Infinity;990;Stride;2050;Infinity;840
+Discover;70-90;Wingfoil Freeride;Race;Stark;Klein;Infinity;990;Stride;2050;Infinity;840
+Discover;70-90;Wingfoil Freeride;Race;Stark;Gross;Infinity;840;Stride;2050;Infinity;690
+Discover;70-90;Wavesurfing;Freeride;Schwach;Flach;Infinity;1140;Pacer;1850;Infinity;990
+Discover;70-90;Wavesurfing;Freeride;Schwach;Klein;Infinity;1140;Pacer;1850;Infinity;990
+Discover;70-90;Wavesurfing;Freeride;Schwach;Gross;Infinity;990;Pacer;1550;Infinity;840
+Discover;70-90;Wavesurfing;Freeride;Mittel;Flach;Infinity;990;Pacer;1550;Infinity;840
+Discover;70-90;Wavesurfing;Freeride;Mittel;Klein;Infinity;990;Pacer;1550;Infinity;840
+Discover;70-90;Wavesurfing;Freeride;Mittel;Gross;Infinity;840;Pacer;1250;Infinity;690
+Discover;70-90;Wavesurfing;Freeride;Stark;Flach;Infinity;990;Pacer;1550;Infinity;840
+Discover;70-90;Wavesurfing;Freeride;Stark;Klein;Infinity;990;Pacer;1550;Infinity;840
+Discover;70-90;Wavesurfing;Freeride;Stark;Gross;Infinity;840;Pacer;1250;Infinity;690
+Discover;70-90;Wavesurfing;Jumping;Schwach;Flach;Infinity;1140;Pacer;1850;Infinity;990
+Discover;70-90;Wavesurfing;Jumping;Schwach;Klein;Infinity;1140;Pacer;1850;Infinity;990
+Discover;70-90;Wavesurfing;Jumping;Schwach;Gross;Infinity;990;Pacer;1550;Infinity;840
+Discover;70-90;Wavesurfing;Jumping;Mittel;Flach;Infinity;990;Pacer;1550;Infinity;840
+Discover;70-90;Wavesurfing;Jumping;Mittel;Klein;Infinity;990;Pacer;1550;Infinity;840
+Discover;70-90;Wavesurfing;Jumping;Mittel;Gross;Infinity;840;Pacer;1250;Infinity;690
+Discover;70-90;Wavesurfing;Jumping;Stark;Flach;Infinity;990;Pacer;1550;Infinity;840
+Discover;70-90;Wavesurfing;Jumping;Stark;Klein;Infinity;990;Pacer;1550;Infinity;840
+Discover;70-90;Wavesurfing;Jumping;Stark;Gross;Infinity;840;Pacer;1250;Infinity;690
+Discover;70-90;Wavesurfing;Flatwater;Schwach;Flach;Infinity;1140;Pacer;1850;Infinity;990
+Discover;70-90;Wavesurfing;Flatwater;Schwach;Klein;Infinity;1140;Pacer;1850;Infinity;990
+Discover;70-90;Wavesurfing;Flatwater;Schwach;Gross;Infinity;990;Pacer;1550;Infinity;840
+Discover;70-90;Wavesurfing;Flatwater;Mittel;Flach;Infinity;990;Pacer;1550;Infinity;840
+Discover;70-90;Wavesurfing;Flatwater;Mittel;Klein;Infinity;990;Pacer;1550;Infinity;840
+Discover;70-90;Wavesurfing;Flatwater;Mittel;Gross;Infinity;840;Pacer;1250;Infinity;690
+Discover;70-90;Wavesurfing;Flatwater;Stark;Flach;Infinity;990;Pacer;1550;Infinity;840
+Discover;70-90;Wavesurfing;Flatwater;Stark;Klein;Infinity;990;Pacer;1550;Infinity;840
+Discover;70-90;Wavesurfing;Flatwater;Stark;Gross;Infinity;840;Pacer;1250;Infinity;690
+Discover;70-90;Wavesurfing;Race;Schwach;Flach;Infinity;1140;Stride;2050;Infinity;990
+Discover;70-90;Wavesurfing;Race;Schwach;Klein;Infinity;1140;Stride;2050;Infinity;990
+Discover;70-90;Wavesurfing;Race;Schwach;Gross;Infinity;990;Stride;2050;Infinity;840
+Discover;70-90;Wavesurfing;Race;Mittel;Flach;Infinity;990;Stride;2050;Infinity;840
+Discover;70-90;Wavesurfing;Race;Mittel;Klein;Infinity;990;Stride;2050;Infinity;840
+Discover;70-90;Wavesurfing;Race;Mittel;Gross;Infinity;840;Stride;2050;Infinity;690
+Discover;70-90;Wavesurfing;Race;Stark;Flach;Infinity;990;Stride;2050;Infinity;840
+Discover;70-90;Wavesurfing;Race;Stark;Klein;Infinity;990;Stride;2050;Infinity;840
+Discover;70-90;Wavesurfing;Race;Stark;Gross;Infinity;840;Stride;2050;Infinity;690
+Discover;70-90;Lightwind;Freeride;Schwach;Flach;Stride;2050;Infinity;1390;;
+Discover;70-90;Lightwind;Freeride;Schwach;Klein;Stride;2050;Infinity;1390;;
+Discover;70-90;Lightwind;Freeride;Schwach;Gross;Stride;2050;Infinity;1140;;
+Discover;70-90;Lightwind;Freeride;Mittel;Flach;Stride;2050;Infinity;1140;;
+Discover;70-90;Lightwind;Freeride;Mittel;Klein;Stride;2050;Infinity;1140;;
+Discover;70-90;Lightwind;Freeride;Mittel;Gross;Stride;2050;Infinity;990;;
+Discover;70-90;Lightwind;Freeride;Stark;Flach;Stride;2050;Infinity;1140;;
+Discover;70-90;Lightwind;Freeride;Stark;Klein;Stride;2050;Infinity;1140;;
+Discover;70-90;Lightwind;Freeride;Stark;Gross;Stride;2050;Infinity;990;;
+Discover;70-90;Lightwind;Jumping;Schwach;Flach;Stride;2050;Infinity;1390;;
+Discover;70-90;Lightwind;Jumping;Schwach;Klein;Stride;2050;Infinity;1390;;
+Discover;70-90;Lightwind;Jumping;Schwach;Gross;Stride;2050;Infinity;1140;;
+Discover;70-90;Lightwind;Jumping;Mittel;Flach;Stride;2050;Infinity;1140;;
+Discover;70-90;Lightwind;Jumping;Mittel;Klein;Stride;2050;Infinity;1140;;
+Discover;70-90;Lightwind;Jumping;Mittel;Gross;Stride;2050;Infinity;990;;
+Discover;70-90;Lightwind;Jumping;Stark;Flach;Stride;2050;Infinity;1140;;
+Discover;70-90;Lightwind;Jumping;Stark;Klein;Stride;2050;Infinity;1140;;
+Discover;70-90;Lightwind;Jumping;Stark;Gross;Stride;2050;Infinity;990;;
+Discover;70-90;Lightwind;Flatwater;Schwach;Flach;Stride;2050;Infinity;1390;;
+Discover;70-90;Lightwind;Flatwater;Schwach;Klein;Stride;2050;Infinity;1390;;
+Discover;70-90;Lightwind;Flatwater;Schwach;Gross;Stride;2050;Infinity;1140;;
+Discover;70-90;Lightwind;Flatwater;Mittel;Flach;Stride;2050;Infinity;1140;;
+Discover;70-90;Lightwind;Flatwater;Mittel;Klein;Stride;2050;Infinity;1140;;
+Discover;70-90;Lightwind;Flatwater;Mittel;Gross;Stride;2050;Infinity;990;;
+Discover;70-90;Lightwind;Flatwater;Stark;Flach;Stride;2050;Infinity;1140;;
+Discover;70-90;Lightwind;Flatwater;Stark;Klein;Stride;2050;Infinity;1140;;
+Discover;70-90;Lightwind;Flatwater;Stark;Gross;Stride;2050;Infinity;990;;
+Discover;70-90;Lightwind;Race;Schwach;Flach;Stride;2050;Infinity;1390;;
+Discover;70-90;Lightwind;Race;Schwach;Klein;Stride;2050;Infinity;1390;;
+Discover;70-90;Lightwind;Race;Schwach;Gross;Stride;2050;Infinity;1140;;
+Discover;70-90;Lightwind;Race;Mittel;Flach;Stride;2050;Infinity;1140;;
+Discover;70-90;Lightwind;Race;Mittel;Klein;Stride;2050;Infinity;1140;;
+Discover;70-90;Lightwind;Race;Mittel;Gross;Stride;2050;Infinity;990;;
+Discover;70-90;Lightwind;Race;Stark;Flach;Stride;2050;Infinity;1140;;
+Discover;70-90;Lightwind;Race;Stark;Klein;Stride;2050;Infinity;1140;;
+Discover;70-90;Lightwind;Race;Stark;Gross;Stride;2050;Infinity;990;;
+Discover;70-90;Pumpfoil;Freeride;Schwach;Flach;Stride;2050;Infinity;1390;;
+Discover;70-90;Pumpfoil;Freeride;Schwach;Klein;Stride;2050;Infinity;1390;;
+Discover;70-90;Pumpfoil;Freeride;Schwach;Gross;Stride;2050;Infinity;1140;;
+Discover;70-90;Pumpfoil;Freeride;Mittel;Flach;Stride;2050;Infinity;1140;;
+Discover;70-90;Pumpfoil;Freeride;Mittel;Klein;Stride;2050;Infinity;1140;;
+Discover;70-90;Pumpfoil;Freeride;Mittel;Gross;Stride;2050;Infinity;990;;
+Discover;70-90;Pumpfoil;Freeride;Stark;Flach;Stride;2050;Infinity;1140;;
+Discover;70-90;Pumpfoil;Freeride;Stark;Klein;Stride;2050;Infinity;1140;;
+Discover;70-90;Pumpfoil;Freeride;Stark;Gross;Stride;2050;Infinity;990;;
+Discover;70-90;Pumpfoil;Jumping;Schwach;Flach;Stride;2050;Infinity;1390;;
+Discover;70-90;Pumpfoil;Jumping;Schwach;Klein;Stride;2050;Infinity;1390;;
+Discover;70-90;Pumpfoil;Jumping;Schwach;Gross;Stride;2050;Infinity;1140;;
+Discover;70-90;Pumpfoil;Jumping;Mittel;Flach;Stride;2050;Infinity;1140;;
+Discover;70-90;Pumpfoil;Jumping;Mittel;Klein;Stride;2050;Infinity;1140;;
+Discover;70-90;Pumpfoil;Jumping;Mittel;Gross;Stride;2050;Infinity;990;;
+Discover;70-90;Pumpfoil;Jumping;Stark;Flach;Stride;2050;Infinity;1140;;
+Discover;70-90;Pumpfoil;Jumping;Stark;Klein;Stride;2050;Infinity;1140;;
+Discover;70-90;Pumpfoil;Jumping;Stark;Gross;Stride;2050;Infinity;990;;
+Discover;70-90;Pumpfoil;Flatwater;Schwach;Flach;Stride;2050;Infinity;1390;;
+Discover;70-90;Pumpfoil;Flatwater;Schwach;Klein;Stride;2050;Infinity;1390;;
+Discover;70-90;Pumpfoil;Flatwater;Schwach;Gross;Stride;2050;Infinity;1140;;
+Discover;70-90;Pumpfoil;Flatwater;Mittel;Flach;Stride;2050;Infinity;1140;;
+Discover;70-90;Pumpfoil;Flatwater;Mittel;Klein;Stride;2050;Infinity;1140;;
+Discover;70-90;Pumpfoil;Flatwater;Mittel;Gross;Stride;2050;Infinity;990;;
+Discover;70-90;Pumpfoil;Flatwater;Stark;Flach;Stride;2050;Infinity;1140;;
+Discover;70-90;Pumpfoil;Flatwater;Stark;Klein;Stride;2050;Infinity;1140;;
+Discover;70-90;Pumpfoil;Flatwater;Stark;Gross;Stride;2050;Infinity;990;;
+Discover;70-90;Pumpfoil;Race;Schwach;Flach;Stride;2050;Infinity;1390;;
+Discover;70-90;Pumpfoil;Race;Schwach;Klein;Stride;2050;Infinity;1390;;
+Discover;70-90;Pumpfoil;Race;Schwach;Gross;Stride;2050;Infinity;1140;;
+Discover;70-90;Pumpfoil;Race;Mittel;Flach;Stride;2050;Infinity;1140;;
+Discover;70-90;Pumpfoil;Race;Mittel;Klein;Stride;2050;Infinity;1140;;
+Discover;70-90;Pumpfoil;Race;Mittel;Gross;Stride;2050;Infinity;990;;
+Discover;70-90;Pumpfoil;Race;Stark;Flach;Stride;2050;Infinity;1140;;
+Discover;70-90;Pumpfoil;Race;Stark;Klein;Stride;2050;Infinity;1140;;
+Discover;70-90;Pumpfoil;Race;Stark;Gross;Stride;2050;Infinity;990;;
+Discover;70-90;Parawing;Freeride;Schwach;Flach;Stride;2050;Infinity;1390;;
+Discover;70-90;Parawing;Freeride;Schwach;Klein;Stride;2050;Infinity;1390;;
+Discover;70-90;Parawing;Freeride;Schwach;Gross;Stride;2050;Infinity;1140;;
+Discover;70-90;Parawing;Freeride;Mittel;Flach;Stride;2050;Infinity;1140;;
+Discover;70-90;Parawing;Freeride;Mittel;Klein;Stride;2050;Infinity;1140;;
+Discover;70-90;Parawing;Freeride;Mittel;Gross;Stride;2050;Infinity;990;;
+Discover;70-90;Parawing;Freeride;Stark;Flach;Stride;2050;Infinity;1140;;
+Discover;70-90;Parawing;Freeride;Stark;Klein;Stride;2050;Infinity;1140;;
+Discover;70-90;Parawing;Freeride;Stark;Gross;Stride;2050;Infinity;990;;
+Discover;70-90;Parawing;Jumping;Schwach;Flach;Stride;2050;Infinity;1390;;
+Discover;70-90;Parawing;Jumping;Schwach;Klein;Stride;2050;Infinity;1390;;
+Discover;70-90;Parawing;Jumping;Schwach;Gross;Stride;2050;Infinity;1140;;
+Discover;70-90;Parawing;Jumping;Mittel;Flach;Stride;2050;Infinity;1140;;
+Discover;70-90;Parawing;Jumping;Mittel;Klein;Stride;2050;Infinity;1140;;
+Discover;70-90;Parawing;Jumping;Mittel;Gross;Stride;2050;Infinity;990;;
+Discover;70-90;Parawing;Jumping;Stark;Flach;Stride;2050;Infinity;1140;;
+Discover;70-90;Parawing;Jumping;Stark;Klein;Stride;2050;Infinity;1140;;
+Discover;70-90;Parawing;Jumping;Stark;Gross;Stride;2050;Infinity;990;;
+Discover;70-90;Parawing;Flatwater;Schwach;Flach;Stride;2050;Infinity;1390;;
+Discover;70-90;Parawing;Flatwater;Schwach;Klein;Stride;2050;Infinity;1390;;
+Discover;70-90;Parawing;Flatwater;Schwach;Gross;Stride;2050;Infinity;1140;;
+Discover;70-90;Parawing;Flatwater;Mittel;Flach;Stride;2050;Infinity;1140;;
+Discover;70-90;Parawing;Flatwater;Mittel;Klein;Stride;2050;Infinity;1140;;
+Discover;70-90;Parawing;Flatwater;Mittel;Gross;Stride;2050;Infinity;990;;
+Discover;70-90;Parawing;Flatwater;Stark;Flach;Stride;2050;Infinity;1140;;
+Discover;70-90;Parawing;Flatwater;Stark;Klein;Stride;2050;Infinity;1140;;
+Discover;70-90;Parawing;Flatwater;Stark;Gross;Stride;2050;Infinity;990;;
+Discover;70-90;Parawing;Race;Schwach;Flach;Stride;2050;Infinity;1390;;
+Discover;70-90;Parawing;Race;Schwach;Klein;Stride;2050;Infinity;1390;;
+Discover;70-90;Parawing;Race;Schwach;Gross;Stride;2050;Infinity;1140;;
+Discover;70-90;Parawing;Race;Mittel;Flach;Stride;2050;Infinity;1140;;
+Discover;70-90;Parawing;Race;Mittel;Klein;Stride;2050;Infinity;1140;;
+Discover;70-90;Parawing;Race;Mittel;Gross;Stride;2050;Infinity;990;;
+Discover;70-90;Parawing;Race;Stark;Flach;Stride;2050;Infinity;1140;;
+Discover;70-90;Parawing;Race;Stark;Klein;Stride;2050;Infinity;1140;;
+Discover;70-90;Parawing;Race;Stark;Gross;Stride;2050;Infinity;990;;
+Discover;>90;Downwind;Freeride;Schwach;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Downwind;Freeride;Schwach;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Downwind;Freeride;Schwach;Gross;Stride;2050;Infinity;1390;;
+Discover;>90;Downwind;Freeride;Mittel;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Downwind;Freeride;Mittel;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Downwind;Freeride;Mittel;Gross;Stride;2050;Infinity;1140;;
+Discover;>90;Downwind;Freeride;Stark;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Downwind;Freeride;Stark;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Downwind;Freeride;Stark;Gross;Stride;2050;Infinity;1140;;
+Discover;>90;Downwind;Jumping;Schwach;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Downwind;Jumping;Schwach;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Downwind;Jumping;Schwach;Gross;Stride;2050;Infinity;1390;;
+Discover;>90;Downwind;Jumping;Mittel;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Downwind;Jumping;Mittel;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Downwind;Jumping;Mittel;Gross;Stride;2050;Infinity;1140;;
+Discover;>90;Downwind;Jumping;Stark;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Downwind;Jumping;Stark;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Downwind;Jumping;Stark;Gross;Stride;2050;Infinity;1140;;
+Discover;>90;Downwind;Flatwater;Schwach;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Downwind;Flatwater;Schwach;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Downwind;Flatwater;Schwach;Gross;Stride;2050;Infinity;1390;;
+Discover;>90;Downwind;Flatwater;Mittel;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Downwind;Flatwater;Mittel;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Downwind;Flatwater;Mittel;Gross;Stride;2050;Infinity;1140;;
+Discover;>90;Downwind;Flatwater;Stark;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Downwind;Flatwater;Stark;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Downwind;Flatwater;Stark;Gross;Stride;2050;Infinity;1140;;
+Discover;>90;Downwind;Race;Schwach;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Downwind;Race;Schwach;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Downwind;Race;Schwach;Gross;Stride;2050;Infinity;1390;;
+Discover;>90;Downwind;Race;Mittel;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Downwind;Race;Mittel;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Downwind;Race;Mittel;Gross;Stride;2050;Infinity;1140;;
+Discover;>90;Downwind;Race;Stark;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Downwind;Race;Stark;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Downwind;Race;Stark;Gross;Stride;2050;Infinity;1140;;
+Discover;>90;Wingfoil Freeride;Freeride;Schwach;Flach;Infinity;1390;Pacer;2200;Infinity;1140
+Discover;>90;Wingfoil Freeride;Freeride;Schwach;Klein;Infinity;1390;Pacer;2200;Infinity;1140
+Discover;>90;Wingfoil Freeride;Freeride;Schwach;Gross;Infinity;1140;Pacer;1850;Infinity;990
+Discover;>90;Wingfoil Freeride;Freeride;Mittel;Flach;Infinity;1140;Pacer;1850;Infinity;990
+Discover;>90;Wingfoil Freeride;Freeride;Mittel;Klein;Infinity;1140;Pacer;1850;Infinity;990
+Discover;>90;Wingfoil Freeride;Freeride;Mittel;Gross;Infinity;990;Pacer;1550;Infinity;840
+Discover;>90;Wingfoil Freeride;Freeride;Stark;Flach;Infinity;1140;Pacer;1850;Infinity;990
+Discover;>90;Wingfoil Freeride;Freeride;Stark;Klein;Infinity;1140;Pacer;1850;Infinity;990
+Discover;>90;Wingfoil Freeride;Freeride;Stark;Gross;Infinity;990;Pacer;1550;Infinity;840
+Discover;>90;Wingfoil Freeride;Jumping;Schwach;Flach;Infinity;1390;Pacer;2200;Infinity;1140
+Discover;>90;Wingfoil Freeride;Jumping;Schwach;Klein;Infinity;1390;Pacer;2200;Infinity;1140
+Discover;>90;Wingfoil Freeride;Jumping;Schwach;Gross;Infinity;1140;Pacer;1850;Infinity;990
+Discover;>90;Wingfoil Freeride;Jumping;Mittel;Flach;Infinity;1140;Pacer;1850;Infinity;990
+Discover;>90;Wingfoil Freeride;Jumping;Mittel;Klein;Infinity;1140;Pacer;1850;Infinity;990
+Discover;>90;Wingfoil Freeride;Jumping;Mittel;Gross;Infinity;990;Pacer;1550;Infinity;840
+Discover;>90;Wingfoil Freeride;Jumping;Stark;Flach;Infinity;1140;Pacer;1850;Infinity;990
+Discover;>90;Wingfoil Freeride;Jumping;Stark;Klein;Infinity;1140;Pacer;1850;Infinity;990
+Discover;>90;Wingfoil Freeride;Jumping;Stark;Gross;Infinity;990;Pacer;1550;Infinity;840
+Discover;>90;Wingfoil Freeride;Flatwater;Schwach;Flach;Infinity;1390;Pacer;2200;Infinity;1140
+Discover;>90;Wingfoil Freeride;Flatwater;Schwach;Klein;Infinity;1390;Pacer;2200;Infinity;1140
+Discover;>90;Wingfoil Freeride;Flatwater;Schwach;Gross;Infinity;1140;Pacer;1850;Infinity;990
+Discover;>90;Wingfoil Freeride;Flatwater;Mittel;Flach;Infinity;1140;Pacer;1850;Infinity;990
+Discover;>90;Wingfoil Freeride;Flatwater;Mittel;Klein;Infinity;1140;Pacer;1850;Infinity;990
+Discover;>90;Wingfoil Freeride;Flatwater;Mittel;Gross;Infinity;990;Pacer;1550;Infinity;840
+Discover;>90;Wingfoil Freeride;Flatwater;Stark;Flach;Infinity;1140;Pacer;1850;Infinity;990
+Discover;>90;Wingfoil Freeride;Flatwater;Stark;Klein;Infinity;1140;Pacer;1850;Infinity;990
+Discover;>90;Wingfoil Freeride;Flatwater;Stark;Gross;Infinity;990;Pacer;1550;Infinity;840
+Discover;>90;Wingfoil Freeride;Race;Schwach;Flach;Infinity;1390;Stride;2050;Infinity;1140
+Discover;>90;Wingfoil Freeride;Race;Schwach;Klein;Infinity;1390;Stride;2050;Infinity;1140
+Discover;>90;Wingfoil Freeride;Race;Schwach;Gross;Infinity;1140;Stride;2050;Infinity;990
+Discover;>90;Wingfoil Freeride;Race;Mittel;Flach;Infinity;1140;Stride;2050;Infinity;990
+Discover;>90;Wingfoil Freeride;Race;Mittel;Klein;Infinity;1140;Stride;2050;Infinity;990
+Discover;>90;Wingfoil Freeride;Race;Mittel;Gross;Infinity;990;Stride;2050;Infinity;840
+Discover;>90;Wingfoil Freeride;Race;Stark;Flach;Infinity;1140;Stride;2050;Infinity;990
+Discover;>90;Wingfoil Freeride;Race;Stark;Klein;Infinity;1140;Stride;2050;Infinity;990
+Discover;>90;Wingfoil Freeride;Race;Stark;Gross;Infinity;990;Stride;2050;Infinity;840
+Discover;>90;Wavesurfing;Freeride;Schwach;Flach;Infinity;1390;Pacer;2200;Infinity;1140
+Discover;>90;Wavesurfing;Freeride;Schwach;Klein;Infinity;1390;Pacer;2200;Infinity;1140
+Discover;>90;Wavesurfing;Freeride;Schwach;Gross;Infinity;1140;Pacer;1850;Infinity;990
+Discover;>90;Wavesurfing;Freeride;Mittel;Flach;Infinity;1140;Pacer;1850;Infinity;990
+Discover;>90;Wavesurfing;Freeride;Mittel;Klein;Infinity;1140;Pacer;1850;Infinity;990
+Discover;>90;Wavesurfing;Freeride;Mittel;Gross;Infinity;990;Pacer;1550;Infinity;840
+Discover;>90;Wavesurfing;Freeride;Stark;Flach;Infinity;1140;Pacer;1850;Infinity;990
+Discover;>90;Wavesurfing;Freeride;Stark;Klein;Infinity;1140;Pacer;1850;Infinity;990
+Discover;>90;Wavesurfing;Freeride;Stark;Gross;Infinity;990;Pacer;1550;Infinity;840
+Discover;>90;Wavesurfing;Jumping;Schwach;Flach;Infinity;1390;Pacer;2200;Infinity;1140
+Discover;>90;Wavesurfing;Jumping;Schwach;Klein;Infinity;1390;Pacer;2200;Infinity;1140
+Discover;>90;Wavesurfing;Jumping;Schwach;Gross;Infinity;1140;Pacer;1850;Infinity;990
+Discover;>90;Wavesurfing;Jumping;Mittel;Flach;Infinity;1140;Pacer;1850;Infinity;990
+Discover;>90;Wavesurfing;Jumping;Mittel;Klein;Infinity;1140;Pacer;1850;Infinity;990
+Discover;>90;Wavesurfing;Jumping;Mittel;Gross;Infinity;990;Pacer;1550;Infinity;840
+Discover;>90;Wavesurfing;Jumping;Stark;Flach;Infinity;1140;Pacer;1850;Infinity;990
+Discover;>90;Wavesurfing;Jumping;Stark;Klein;Infinity;1140;Pacer;1850;Infinity;990
+Discover;>90;Wavesurfing;Jumping;Stark;Gross;Infinity;990;Pacer;1550;Infinity;840
+Discover;>90;Wavesurfing;Flatwater;Schwach;Flach;Infinity;1390;Pacer;2200;Infinity;1140
+Discover;>90;Wavesurfing;Flatwater;Schwach;Klein;Infinity;1390;Pacer;2200;Infinity;1140
+Discover;>90;Wavesurfing;Flatwater;Schwach;Gross;Infinity;1140;Pacer;1850;Infinity;990
+Discover;>90;Wavesurfing;Flatwater;Mittel;Flach;Infinity;1140;Pacer;1850;Infinity;990
+Discover;>90;Wavesurfing;Flatwater;Mittel;Klein;Infinity;1140;Pacer;1850;Infinity;990
+Discover;>90;Wavesurfing;Flatwater;Mittel;Gross;Infinity;990;Pacer;1550;Infinity;840
+Discover;>90;Wavesurfing;Flatwater;Stark;Flach;Infinity;1140;Pacer;1850;Infinity;990
+Discover;>90;Wavesurfing;Flatwater;Stark;Klein;Infinity;1140;Pacer;1850;Infinity;990
+Discover;>90;Wavesurfing;Flatwater;Stark;Gross;Infinity;990;Pacer;1550;Infinity;840
+Discover;>90;Wavesurfing;Race;Schwach;Flach;Infinity;1390;Stride;2050;Infinity;1140
+Discover;>90;Wavesurfing;Race;Schwach;Klein;Infinity;1390;Stride;2050;Infinity;1140
+Discover;>90;Wavesurfing;Race;Schwach;Gross;Infinity;1140;Stride;2050;Infinity;990
+Discover;>90;Wavesurfing;Race;Mittel;Flach;Infinity;1140;Stride;2050;Infinity;990
+Discover;>90;Wavesurfing;Race;Mittel;Klein;Infinity;1140;Stride;2050;Infinity;990
+Discover;>90;Wavesurfing;Race;Mittel;Gross;Infinity;990;Stride;2050;Infinity;840
+Discover;>90;Wavesurfing;Race;Stark;Flach;Infinity;1140;Stride;2050;Infinity;990
+Discover;>90;Wavesurfing;Race;Stark;Klein;Infinity;1140;Stride;2050;Infinity;990
+Discover;>90;Wavesurfing;Race;Stark;Gross;Infinity;990;Stride;2050;Infinity;840
+Discover;>90;Lightwind;Freeride;Schwach;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Lightwind;Freeride;Schwach;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Lightwind;Freeride;Schwach;Gross;Stride;2050;Infinity;1390;;
+Discover;>90;Lightwind;Freeride;Mittel;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Lightwind;Freeride;Mittel;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Lightwind;Freeride;Mittel;Gross;Stride;2050;Infinity;1140;;
+Discover;>90;Lightwind;Freeride;Stark;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Lightwind;Freeride;Stark;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Lightwind;Freeride;Stark;Gross;Stride;2050;Infinity;1140;;
+Discover;>90;Lightwind;Jumping;Schwach;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Lightwind;Jumping;Schwach;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Lightwind;Jumping;Schwach;Gross;Stride;2050;Infinity;1390;;
+Discover;>90;Lightwind;Jumping;Mittel;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Lightwind;Jumping;Mittel;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Lightwind;Jumping;Mittel;Gross;Stride;2050;Infinity;1140;;
+Discover;>90;Lightwind;Jumping;Stark;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Lightwind;Jumping;Stark;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Lightwind;Jumping;Stark;Gross;Stride;2050;Infinity;1140;;
+Discover;>90;Lightwind;Flatwater;Schwach;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Lightwind;Flatwater;Schwach;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Lightwind;Flatwater;Schwach;Gross;Stride;2050;Infinity;1390;;
+Discover;>90;Lightwind;Flatwater;Mittel;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Lightwind;Flatwater;Mittel;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Lightwind;Flatwater;Mittel;Gross;Stride;2050;Infinity;1140;;
+Discover;>90;Lightwind;Flatwater;Stark;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Lightwind;Flatwater;Stark;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Lightwind;Flatwater;Stark;Gross;Stride;2050;Infinity;1140;;
+Discover;>90;Lightwind;Race;Schwach;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Lightwind;Race;Schwach;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Lightwind;Race;Schwach;Gross;Stride;2050;Infinity;1390;;
+Discover;>90;Lightwind;Race;Mittel;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Lightwind;Race;Mittel;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Lightwind;Race;Mittel;Gross;Stride;2050;Infinity;1140;;
+Discover;>90;Lightwind;Race;Stark;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Lightwind;Race;Stark;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Lightwind;Race;Stark;Gross;Stride;2050;Infinity;1140;;
+Discover;>90;Pumpfoil;Freeride;Schwach;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Pumpfoil;Freeride;Schwach;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Pumpfoil;Freeride;Schwach;Gross;Stride;2050;Infinity;1390;;
+Discover;>90;Pumpfoil;Freeride;Mittel;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Pumpfoil;Freeride;Mittel;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Pumpfoil;Freeride;Mittel;Gross;Stride;2050;Infinity;1140;;
+Discover;>90;Pumpfoil;Freeride;Stark;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Pumpfoil;Freeride;Stark;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Pumpfoil;Freeride;Stark;Gross;Stride;2050;Infinity;1140;;
+Discover;>90;Pumpfoil;Jumping;Schwach;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Pumpfoil;Jumping;Schwach;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Pumpfoil;Jumping;Schwach;Gross;Stride;2050;Infinity;1390;;
+Discover;>90;Pumpfoil;Jumping;Mittel;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Pumpfoil;Jumping;Mittel;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Pumpfoil;Jumping;Mittel;Gross;Stride;2050;Infinity;1140;;
+Discover;>90;Pumpfoil;Jumping;Stark;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Pumpfoil;Jumping;Stark;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Pumpfoil;Jumping;Stark;Gross;Stride;2050;Infinity;1140;;
+Discover;>90;Pumpfoil;Flatwater;Schwach;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Pumpfoil;Flatwater;Schwach;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Pumpfoil;Flatwater;Schwach;Gross;Stride;2050;Infinity;1390;;
+Discover;>90;Pumpfoil;Flatwater;Mittel;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Pumpfoil;Flatwater;Mittel;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Pumpfoil;Flatwater;Mittel;Gross;Stride;2050;Infinity;1140;;
+Discover;>90;Pumpfoil;Flatwater;Stark;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Pumpfoil;Flatwater;Stark;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Pumpfoil;Flatwater;Stark;Gross;Stride;2050;Infinity;1140;;
+Discover;>90;Pumpfoil;Race;Schwach;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Pumpfoil;Race;Schwach;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Pumpfoil;Race;Schwach;Gross;Stride;2050;Infinity;1390;;
+Discover;>90;Pumpfoil;Race;Mittel;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Pumpfoil;Race;Mittel;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Pumpfoil;Race;Mittel;Gross;Stride;2050;Infinity;1140;;
+Discover;>90;Pumpfoil;Race;Stark;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Pumpfoil;Race;Stark;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Pumpfoil;Race;Stark;Gross;Stride;2050;Infinity;1140;;
+Discover;>90;Parawing;Freeride;Schwach;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Parawing;Freeride;Schwach;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Parawing;Freeride;Schwach;Gross;Stride;2050;Infinity;1390;;
+Discover;>90;Parawing;Freeride;Mittel;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Parawing;Freeride;Mittel;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Parawing;Freeride;Mittel;Gross;Stride;2050;Infinity;1140;;
+Discover;>90;Parawing;Freeride;Stark;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Parawing;Freeride;Stark;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Parawing;Freeride;Stark;Gross;Stride;2050;Infinity;1140;;
+Discover;>90;Parawing;Jumping;Schwach;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Parawing;Jumping;Schwach;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Parawing;Jumping;Schwach;Gross;Stride;2050;Infinity;1390;;
+Discover;>90;Parawing;Jumping;Mittel;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Parawing;Jumping;Mittel;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Parawing;Jumping;Mittel;Gross;Stride;2050;Infinity;1140;;
+Discover;>90;Parawing;Jumping;Stark;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Parawing;Jumping;Stark;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Parawing;Jumping;Stark;Gross;Stride;2050;Infinity;1140;;
+Discover;>90;Parawing;Flatwater;Schwach;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Parawing;Flatwater;Schwach;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Parawing;Flatwater;Schwach;Gross;Stride;2050;Infinity;1390;;
+Discover;>90;Parawing;Flatwater;Mittel;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Parawing;Flatwater;Mittel;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Parawing;Flatwater;Mittel;Gross;Stride;2050;Infinity;1140;;
+Discover;>90;Parawing;Flatwater;Stark;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Parawing;Flatwater;Stark;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Parawing;Flatwater;Stark;Gross;Stride;2050;Infinity;1140;;
+Discover;>90;Parawing;Race;Schwach;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Parawing;Race;Schwach;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Parawing;Race;Schwach;Gross;Stride;2050;Infinity;1390;;
+Discover;>90;Parawing;Race;Mittel;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Parawing;Race;Mittel;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Parawing;Race;Mittel;Gross;Stride;2050;Infinity;1140;;
+Discover;>90;Parawing;Race;Stark;Flach;Stride;2050;Infinity;1390;;
+Discover;>90;Parawing;Race;Stark;Klein;Stride;2050;Infinity;1390;;
+Discover;>90;Parawing;Race;Stark;Gross;Stride;2050;Infinity;1140;;
+Intermediate;<70;Downwind;Freeride;Schwach;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;<70;Downwind;Freeride;Schwach;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;<70;Downwind;Freeride;Schwach;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Downwind;Freeride;Mittel;Flach;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Downwind;Freeride;Mittel;Klein;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Downwind;Freeride;Mittel;Gross;Stride Ace;1360;Flow;720;Stride Ace;1740
+Intermediate;<70;Downwind;Freeride;Stark;Flach;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Downwind;Freeride;Stark;Klein;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Downwind;Freeride;Stark;Gross;Stride Ace;1360;Flow;720;Stride Ace;1740
+Intermediate;<70;Downwind;Jumping;Schwach;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;<70;Downwind;Jumping;Schwach;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;<70;Downwind;Jumping;Schwach;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Downwind;Jumping;Mittel;Flach;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Downwind;Jumping;Mittel;Klein;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Downwind;Jumping;Mittel;Gross;Stride Ace;1360;Flow;720;Stride Ace;1740
+Intermediate;<70;Downwind;Jumping;Stark;Flach;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Downwind;Jumping;Stark;Klein;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Downwind;Jumping;Stark;Gross;Stride Ace;1360;Flow;720;Stride Ace;1740
+Intermediate;<70;Downwind;Flatwater;Schwach;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;<70;Downwind;Flatwater;Schwach;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;<70;Downwind;Flatwater;Schwach;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Downwind;Flatwater;Mittel;Flach;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Downwind;Flatwater;Mittel;Klein;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Downwind;Flatwater;Mittel;Gross;Stride Ace;1360;Flow;720;Stride Ace;1740
+Intermediate;<70;Downwind;Flatwater;Stark;Flach;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Downwind;Flatwater;Stark;Klein;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Downwind;Flatwater;Stark;Gross;Stride Ace;1360;Flow;720;Stride Ace;1740
+Intermediate;<70;Downwind;Race;Schwach;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;<70;Downwind;Race;Schwach;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;<70;Downwind;Race;Schwach;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Downwind;Race;Mittel;Flach;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Downwind;Race;Mittel;Klein;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Downwind;Race;Mittel;Gross;Stride Ace;1360;Flow;720;Stride Ace;1740
+Intermediate;<70;Downwind;Race;Stark;Flach;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Downwind;Race;Stark;Klein;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Downwind;Race;Stark;Gross;Stride Ace;1360;Flow;720;Stride Ace;1740
+Intermediate;<70;Wingfoil Freeride;Freeride;Schwach;Flach;Infinity;990;Pacer;1550;Infinity;840
+Intermediate;<70;Wingfoil Freeride;Freeride;Schwach;Klein;Infinity;990;Pacer;1550;Infinity;840
+Intermediate;<70;Wingfoil Freeride;Freeride;Schwach;Gross;Infinity;840;Pacer;1250;Infinity;690
+Intermediate;<70;Wingfoil Freeride;Freeride;Mittel;Flach;Infinity;840;Pacer;1250;Infinity;690
+Intermediate;<70;Wingfoil Freeride;Freeride;Mittel;Klein;Infinity;840;Pacer;1250;Infinity;690
+Intermediate;<70;Wingfoil Freeride;Freeride;Mittel;Gross;Infinity;690;Pacer;950;Infinity;540
+Intermediate;<70;Wingfoil Freeride;Freeride;Stark;Flach;Infinity;840;Pacer;1250;Infinity;690
+Intermediate;<70;Wingfoil Freeride;Freeride;Stark;Klein;Infinity;840;Pacer;1250;Infinity;690
+Intermediate;<70;Wingfoil Freeride;Freeride;Stark;Gross;Infinity;690;Pacer;950;Infinity;540
+Intermediate;<70;Wingfoil Freeride;Jumping;Schwach;Flach;Infinity;990;Pacer;1550;Infinity;840
+Intermediate;<70;Wingfoil Freeride;Jumping;Schwach;Klein;Infinity;990;Pacer;1550;Infinity;840
+Intermediate;<70;Wingfoil Freeride;Jumping;Schwach;Gross;Infinity;840;Pacer;1250;Infinity;690
+Intermediate;<70;Wingfoil Freeride;Jumping;Mittel;Flach;Infinity;840;Pacer;1250;Infinity;690
+Intermediate;<70;Wingfoil Freeride;Jumping;Mittel;Klein;Infinity;840;Pacer;1250;Infinity;690
+Intermediate;<70;Wingfoil Freeride;Jumping;Mittel;Gross;Infinity;690;Pacer;950;Infinity;540
+Intermediate;<70;Wingfoil Freeride;Jumping;Stark;Flach;Infinity;840;Pacer;1250;Infinity;690
+Intermediate;<70;Wingfoil Freeride;Jumping;Stark;Klein;Infinity;840;Pacer;1250;Infinity;690
+Intermediate;<70;Wingfoil Freeride;Jumping;Stark;Gross;Infinity;690;Pacer;950;Infinity;540
+Intermediate;<70;Wingfoil Freeride;Flatwater;Schwach;Flach;Infinity;990;Pacer;1550;Infinity;840
+Intermediate;<70;Wingfoil Freeride;Flatwater;Schwach;Klein;Infinity;990;Pacer;1550;Infinity;840
+Intermediate;<70;Wingfoil Freeride;Flatwater;Schwach;Gross;Infinity;840;Pacer;1250;Infinity;690
+Intermediate;<70;Wingfoil Freeride;Flatwater;Mittel;Flach;Infinity;840;Pacer;1250;Infinity;690
+Intermediate;<70;Wingfoil Freeride;Flatwater;Mittel;Klein;Infinity;840;Pacer;1250;Infinity;690
+Intermediate;<70;Wingfoil Freeride;Flatwater;Mittel;Gross;Infinity;690;Pacer;950;Infinity;540
+Intermediate;<70;Wingfoil Freeride;Flatwater;Stark;Flach;Infinity;840;Pacer;1250;Infinity;690
+Intermediate;<70;Wingfoil Freeride;Flatwater;Stark;Klein;Infinity;840;Pacer;1250;Infinity;690
+Intermediate;<70;Wingfoil Freeride;Flatwater;Stark;Gross;Infinity;690;Pacer;950;Infinity;540
+Intermediate;<70;Wingfoil Freeride;Race;Schwach;Flach;Infinity;990;Flow;900;Infinity;840
+Intermediate;<70;Wingfoil Freeride;Race;Schwach;Klein;Infinity;990;Flow;900;Infinity;840
+Intermediate;<70;Wingfoil Freeride;Race;Schwach;Gross;Infinity;840;Flow;720;Infinity;690
+Intermediate;<70;Wingfoil Freeride;Race;Mittel;Flach;Infinity;840;Flow;720;Infinity;690
+Intermediate;<70;Wingfoil Freeride;Race;Mittel;Klein;Infinity;840;Flow;720;Infinity;690
+Intermediate;<70;Wingfoil Freeride;Race;Mittel;Gross;Infinity;690;Flow;720;Infinity;540
+Intermediate;<70;Wingfoil Freeride;Race;Stark;Flach;Infinity;840;Flow;720;Infinity;690
+Intermediate;<70;Wingfoil Freeride;Race;Stark;Klein;Infinity;840;Flow;720;Infinity;690
+Intermediate;<70;Wingfoil Freeride;Race;Stark;Gross;Infinity;690;Flow;720;Infinity;540
+Intermediate;<70;Wavesurfing;Freeride;Schwach;Flach;Infinity;990;Flow;900;Infinity;840
+Intermediate;<70;Wavesurfing;Freeride;Schwach;Klein;Infinity;990;Flow;900;Infinity;840
+Intermediate;<70;Wavesurfing;Freeride;Schwach;Gross;Infinity;840;Flow;720;Infinity;690
+Intermediate;<70;Wavesurfing;Freeride;Mittel;Flach;Infinity;840;Flow;720;Infinity;690
+Intermediate;<70;Wavesurfing;Freeride;Mittel;Klein;Infinity;840;Flow;720;Infinity;690
+Intermediate;<70;Wavesurfing;Freeride;Mittel;Gross;Infinity;690;Flow;720;Infinity;540
+Intermediate;<70;Wavesurfing;Freeride;Stark;Flach;Infinity;840;Flow;720;Infinity;690
+Intermediate;<70;Wavesurfing;Freeride;Stark;Klein;Infinity;840;Flow;720;Infinity;690
+Intermediate;<70;Wavesurfing;Freeride;Stark;Gross;Infinity;690;Flow;720;Infinity;540
+Intermediate;<70;Wavesurfing;Jumping;Schwach;Flach;Infinity;990;Flow;900;Infinity;840
+Intermediate;<70;Wavesurfing;Jumping;Schwach;Klein;Infinity;990;Flow;900;Infinity;840
+Intermediate;<70;Wavesurfing;Jumping;Schwach;Gross;Infinity;840;Flow;720;Infinity;690
+Intermediate;<70;Wavesurfing;Jumping;Mittel;Flach;Infinity;840;Flow;720;Infinity;690
+Intermediate;<70;Wavesurfing;Jumping;Mittel;Klein;Infinity;840;Flow;720;Infinity;690
+Intermediate;<70;Wavesurfing;Jumping;Mittel;Gross;Infinity;690;Flow;720;Infinity;540
+Intermediate;<70;Wavesurfing;Jumping;Stark;Flach;Infinity;840;Flow;720;Infinity;690
+Intermediate;<70;Wavesurfing;Jumping;Stark;Klein;Infinity;840;Flow;720;Infinity;690
+Intermediate;<70;Wavesurfing;Jumping;Stark;Gross;Infinity;690;Flow;720;Infinity;540
+Intermediate;<70;Wavesurfing;Flatwater;Schwach;Flach;Infinity;990;Flow;900;Infinity;840
+Intermediate;<70;Wavesurfing;Flatwater;Schwach;Klein;Infinity;990;Flow;900;Infinity;840
+Intermediate;<70;Wavesurfing;Flatwater;Schwach;Gross;Infinity;840;Flow;720;Infinity;690
+Intermediate;<70;Wavesurfing;Flatwater;Mittel;Flach;Infinity;840;Flow;720;Infinity;690
+Intermediate;<70;Wavesurfing;Flatwater;Mittel;Klein;Infinity;840;Flow;720;Infinity;690
+Intermediate;<70;Wavesurfing;Flatwater;Mittel;Gross;Infinity;690;Flow;720;Infinity;540
+Intermediate;<70;Wavesurfing;Flatwater;Stark;Flach;Infinity;840;Flow;720;Infinity;690
+Intermediate;<70;Wavesurfing;Flatwater;Stark;Klein;Infinity;840;Flow;720;Infinity;690
+Intermediate;<70;Wavesurfing;Flatwater;Stark;Gross;Infinity;690;Flow;720;Infinity;540
+Intermediate;<70;Wavesurfing;Race;Schwach;Flach;Infinity;990;Flow;900;Infinity;840
+Intermediate;<70;Wavesurfing;Race;Schwach;Klein;Infinity;990;Flow;900;Infinity;840
+Intermediate;<70;Wavesurfing;Race;Schwach;Gross;Infinity;840;Flow;720;Infinity;690
+Intermediate;<70;Wavesurfing;Race;Mittel;Flach;Infinity;840;Flow;720;Infinity;690
+Intermediate;<70;Wavesurfing;Race;Mittel;Klein;Infinity;840;Flow;720;Infinity;690
+Intermediate;<70;Wavesurfing;Race;Mittel;Gross;Infinity;690;Flow;720;Infinity;540
+Intermediate;<70;Wavesurfing;Race;Stark;Flach;Infinity;840;Flow;720;Infinity;690
+Intermediate;<70;Wavesurfing;Race;Stark;Klein;Infinity;840;Flow;720;Infinity;690
+Intermediate;<70;Wavesurfing;Race;Stark;Gross;Infinity;690;Flow;720;Infinity;540
+Intermediate;<70;Lightwind;Freeride;Schwach;Flach;Stride;2050;Stride Ace;1740;;
+Intermediate;<70;Lightwind;Freeride;Schwach;Klein;Stride;2050;Stride Ace;1740;;
+Intermediate;<70;Lightwind;Freeride;Schwach;Gross;Stride;2050;Stride Ace;1740;;
+Intermediate;<70;Lightwind;Freeride;Mittel;Flach;Stride;2050;Stride Ace;1740;;
+Intermediate;<70;Lightwind;Freeride;Mittel;Klein;Stride;2050;Stride Ace;1740;;
+Intermediate;<70;Lightwind;Freeride;Mittel;Gross;Stride;2050;Stride Ace;1360;;
+Intermediate;<70;Lightwind;Freeride;Stark;Flach;Stride;2050;Stride Ace;1740;;
+Intermediate;<70;Lightwind;Freeride;Stark;Klein;Stride;2050;Stride Ace;1740;;
+Intermediate;<70;Lightwind;Freeride;Stark;Gross;Stride;2050;Stride Ace;1360;;
+Intermediate;<70;Lightwind;Jumping;Schwach;Flach;Stride;2050;Stride Ace;1740;;
+Intermediate;<70;Lightwind;Jumping;Schwach;Klein;Stride;2050;Stride Ace;1740;;
+Intermediate;<70;Lightwind;Jumping;Schwach;Gross;Stride;2050;Stride Ace;1740;;
+Intermediate;<70;Lightwind;Jumping;Mittel;Flach;Stride;2050;Stride Ace;1740;;
+Intermediate;<70;Lightwind;Jumping;Mittel;Klein;Stride;2050;Stride Ace;1740;;
+Intermediate;<70;Lightwind;Jumping;Mittel;Gross;Stride;2050;Stride Ace;1360;;
+Intermediate;<70;Lightwind;Jumping;Stark;Flach;Stride;2050;Stride Ace;1740;;
+Intermediate;<70;Lightwind;Jumping;Stark;Klein;Stride;2050;Stride Ace;1740;;
+Intermediate;<70;Lightwind;Jumping;Stark;Gross;Stride;2050;Stride Ace;1360;;
+Intermediate;<70;Lightwind;Flatwater;Schwach;Flach;Stride;2050;Stride Ace;1740;;
+Intermediate;<70;Lightwind;Flatwater;Schwach;Klein;Stride;2050;Stride Ace;1740;;
+Intermediate;<70;Lightwind;Flatwater;Schwach;Gross;Stride;2050;Stride Ace;1740;;
+Intermediate;<70;Lightwind;Flatwater;Mittel;Flach;Stride;2050;Stride Ace;1740;;
+Intermediate;<70;Lightwind;Flatwater;Mittel;Klein;Stride;2050;Stride Ace;1740;;
+Intermediate;<70;Lightwind;Flatwater;Mittel;Gross;Stride;2050;Stride Ace;1360;;
+Intermediate;<70;Lightwind;Flatwater;Stark;Flach;Stride;2050;Stride Ace;1740;;
+Intermediate;<70;Lightwind;Flatwater;Stark;Klein;Stride;2050;Stride Ace;1740;;
+Intermediate;<70;Lightwind;Flatwater;Stark;Gross;Stride;2050;Stride Ace;1360;;
+Intermediate;<70;Lightwind;Race;Schwach;Flach;Stride;2050;Stride Ace;1740;;
+Intermediate;<70;Lightwind;Race;Schwach;Klein;Stride;2050;Stride Ace;1740;;
+Intermediate;<70;Lightwind;Race;Schwach;Gross;Stride;2050;Stride Ace;1740;;
+Intermediate;<70;Lightwind;Race;Mittel;Flach;Stride;2050;Stride Ace;1740;;
+Intermediate;<70;Lightwind;Race;Mittel;Klein;Stride;2050;Stride Ace;1740;;
+Intermediate;<70;Lightwind;Race;Mittel;Gross;Stride;2050;Stride Ace;1360;;
+Intermediate;<70;Lightwind;Race;Stark;Flach;Stride;2050;Stride Ace;1740;;
+Intermediate;<70;Lightwind;Race;Stark;Klein;Stride;2050;Stride Ace;1740;;
+Intermediate;<70;Lightwind;Race;Stark;Gross;Stride;2050;Stride Ace;1360;;
+Intermediate;<70;Pumpfoil;Freeride;Schwach;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;<70;Pumpfoil;Freeride;Schwach;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;<70;Pumpfoil;Freeride;Schwach;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;<70;Pumpfoil;Freeride;Mittel;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;<70;Pumpfoil;Freeride;Mittel;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;<70;Pumpfoil;Freeride;Mittel;Gross;Stride Ace;1360;Stride;2050;Stride Ace;1740
+Intermediate;<70;Pumpfoil;Freeride;Stark;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;<70;Pumpfoil;Freeride;Stark;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;<70;Pumpfoil;Freeride;Stark;Gross;Stride Ace;1360;Stride;2050;Stride Ace;1740
+Intermediate;<70;Pumpfoil;Jumping;Schwach;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;<70;Pumpfoil;Jumping;Schwach;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;<70;Pumpfoil;Jumping;Schwach;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;<70;Pumpfoil;Jumping;Mittel;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;<70;Pumpfoil;Jumping;Mittel;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;<70;Pumpfoil;Jumping;Mittel;Gross;Stride Ace;1360;Stride;2050;Stride Ace;1740
+Intermediate;<70;Pumpfoil;Jumping;Stark;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;<70;Pumpfoil;Jumping;Stark;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;<70;Pumpfoil;Jumping;Stark;Gross;Stride Ace;1360;Stride;2050;Stride Ace;1740
+Intermediate;<70;Pumpfoil;Flatwater;Schwach;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;<70;Pumpfoil;Flatwater;Schwach;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;<70;Pumpfoil;Flatwater;Schwach;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;<70;Pumpfoil;Flatwater;Mittel;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;<70;Pumpfoil;Flatwater;Mittel;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;<70;Pumpfoil;Flatwater;Mittel;Gross;Stride Ace;1360;Stride;2050;Stride Ace;1740
+Intermediate;<70;Pumpfoil;Flatwater;Stark;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;<70;Pumpfoil;Flatwater;Stark;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;<70;Pumpfoil;Flatwater;Stark;Gross;Stride Ace;1360;Stride;2050;Stride Ace;1740
+Intermediate;<70;Pumpfoil;Race;Schwach;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;<70;Pumpfoil;Race;Schwach;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;<70;Pumpfoil;Race;Schwach;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;<70;Pumpfoil;Race;Mittel;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;<70;Pumpfoil;Race;Mittel;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;<70;Pumpfoil;Race;Mittel;Gross;Stride Ace;1360;Stride;2050;Stride Ace;1740
+Intermediate;<70;Pumpfoil;Race;Stark;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;<70;Pumpfoil;Race;Stark;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;<70;Pumpfoil;Race;Stark;Gross;Stride Ace;1360;Stride;2050;Stride Ace;1740
+Intermediate;<70;Parawing;Freeride;Schwach;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;<70;Parawing;Freeride;Schwach;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;<70;Parawing;Freeride;Schwach;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Parawing;Freeride;Mittel;Flach;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Parawing;Freeride;Mittel;Klein;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Parawing;Freeride;Mittel;Gross;Stride Ace;1360;Flow;720;Stride Ace;1740
+Intermediate;<70;Parawing;Freeride;Stark;Flach;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Parawing;Freeride;Stark;Klein;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Parawing;Freeride;Stark;Gross;Stride Ace;1360;Flow;720;Stride Ace;1740
+Intermediate;<70;Parawing;Jumping;Schwach;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;<70;Parawing;Jumping;Schwach;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;<70;Parawing;Jumping;Schwach;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Parawing;Jumping;Mittel;Flach;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Parawing;Jumping;Mittel;Klein;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Parawing;Jumping;Mittel;Gross;Stride Ace;1360;Flow;720;Stride Ace;1740
+Intermediate;<70;Parawing;Jumping;Stark;Flach;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Parawing;Jumping;Stark;Klein;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Parawing;Jumping;Stark;Gross;Stride Ace;1360;Flow;720;Stride Ace;1740
+Intermediate;<70;Parawing;Flatwater;Schwach;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;<70;Parawing;Flatwater;Schwach;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;<70;Parawing;Flatwater;Schwach;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Parawing;Flatwater;Mittel;Flach;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Parawing;Flatwater;Mittel;Klein;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Parawing;Flatwater;Mittel;Gross;Stride Ace;1360;Flow;720;Stride Ace;1740
+Intermediate;<70;Parawing;Flatwater;Stark;Flach;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Parawing;Flatwater;Stark;Klein;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Parawing;Flatwater;Stark;Gross;Stride Ace;1360;Flow;720;Stride Ace;1740
+Intermediate;<70;Parawing;Race;Schwach;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;<70;Parawing;Race;Schwach;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;<70;Parawing;Race;Schwach;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Parawing;Race;Mittel;Flach;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Parawing;Race;Mittel;Klein;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Parawing;Race;Mittel;Gross;Stride Ace;1360;Flow;720;Stride Ace;1740
+Intermediate;<70;Parawing;Race;Stark;Flach;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Parawing;Race;Stark;Klein;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;<70;Parawing;Race;Stark;Gross;Stride Ace;1360;Flow;720;Stride Ace;1740
+Intermediate;70-90;Downwind;Freeride;Schwach;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;70-90;Downwind;Freeride;Schwach;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;70-90;Downwind;Freeride;Schwach;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Downwind;Freeride;Mittel;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Downwind;Freeride;Mittel;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Downwind;Freeride;Mittel;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;70-90;Downwind;Freeride;Stark;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Downwind;Freeride;Stark;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Downwind;Freeride;Stark;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;70-90;Downwind;Jumping;Schwach;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;70-90;Downwind;Jumping;Schwach;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;70-90;Downwind;Jumping;Schwach;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Downwind;Jumping;Mittel;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Downwind;Jumping;Mittel;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Downwind;Jumping;Mittel;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;70-90;Downwind;Jumping;Stark;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Downwind;Jumping;Stark;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Downwind;Jumping;Stark;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;70-90;Downwind;Flatwater;Schwach;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;70-90;Downwind;Flatwater;Schwach;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;70-90;Downwind;Flatwater;Schwach;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Downwind;Flatwater;Mittel;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Downwind;Flatwater;Mittel;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Downwind;Flatwater;Mittel;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;70-90;Downwind;Flatwater;Stark;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Downwind;Flatwater;Stark;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Downwind;Flatwater;Stark;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;70-90;Downwind;Race;Schwach;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;70-90;Downwind;Race;Schwach;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;70-90;Downwind;Race;Schwach;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Downwind;Race;Mittel;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Downwind;Race;Mittel;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Downwind;Race;Mittel;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;70-90;Downwind;Race;Stark;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Downwind;Race;Stark;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Downwind;Race;Stark;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;70-90;Wingfoil Freeride;Freeride;Schwach;Flach;Infinity;1140;Pacer;1850;Infinity;990
+Intermediate;70-90;Wingfoil Freeride;Freeride;Schwach;Klein;Infinity;1140;Pacer;1850;Infinity;990
+Intermediate;70-90;Wingfoil Freeride;Freeride;Schwach;Gross;Infinity;990;Pacer;1550;Infinity;840
+Intermediate;70-90;Wingfoil Freeride;Freeride;Mittel;Flach;Infinity;990;Pacer;1550;Infinity;840
+Intermediate;70-90;Wingfoil Freeride;Freeride;Mittel;Klein;Infinity;990;Pacer;1550;Infinity;840
+Intermediate;70-90;Wingfoil Freeride;Freeride;Mittel;Gross;Infinity;840;Pacer;1250;Infinity;690
+Intermediate;70-90;Wingfoil Freeride;Freeride;Stark;Flach;Infinity;990;Pacer;1550;Infinity;840
+Intermediate;70-90;Wingfoil Freeride;Freeride;Stark;Klein;Infinity;990;Pacer;1550;Infinity;840
+Intermediate;70-90;Wingfoil Freeride;Freeride;Stark;Gross;Infinity;840;Pacer;1250;Infinity;690
+Intermediate;70-90;Wingfoil Freeride;Jumping;Schwach;Flach;Infinity;1140;Pacer;1850;Infinity;990
+Intermediate;70-90;Wingfoil Freeride;Jumping;Schwach;Klein;Infinity;1140;Pacer;1850;Infinity;990
+Intermediate;70-90;Wingfoil Freeride;Jumping;Schwach;Gross;Infinity;990;Pacer;1550;Infinity;840
+Intermediate;70-90;Wingfoil Freeride;Jumping;Mittel;Flach;Infinity;990;Pacer;1550;Infinity;840
+Intermediate;70-90;Wingfoil Freeride;Jumping;Mittel;Klein;Infinity;990;Pacer;1550;Infinity;840
+Intermediate;70-90;Wingfoil Freeride;Jumping;Mittel;Gross;Infinity;840;Pacer;1250;Infinity;690
+Intermediate;70-90;Wingfoil Freeride;Jumping;Stark;Flach;Infinity;990;Pacer;1550;Infinity;840
+Intermediate;70-90;Wingfoil Freeride;Jumping;Stark;Klein;Infinity;990;Pacer;1550;Infinity;840
+Intermediate;70-90;Wingfoil Freeride;Jumping;Stark;Gross;Infinity;840;Pacer;1250;Infinity;690
+Intermediate;70-90;Wingfoil Freeride;Flatwater;Schwach;Flach;Infinity;1140;Pacer;1850;Infinity;990
+Intermediate;70-90;Wingfoil Freeride;Flatwater;Schwach;Klein;Infinity;1140;Pacer;1850;Infinity;990
+Intermediate;70-90;Wingfoil Freeride;Flatwater;Schwach;Gross;Infinity;990;Pacer;1550;Infinity;840
+Intermediate;70-90;Wingfoil Freeride;Flatwater;Mittel;Flach;Infinity;990;Pacer;1550;Infinity;840
+Intermediate;70-90;Wingfoil Freeride;Flatwater;Mittel;Klein;Infinity;990;Pacer;1550;Infinity;840
+Intermediate;70-90;Wingfoil Freeride;Flatwater;Mittel;Gross;Infinity;840;Pacer;1250;Infinity;690
+Intermediate;70-90;Wingfoil Freeride;Flatwater;Stark;Flach;Infinity;990;Pacer;1550;Infinity;840
+Intermediate;70-90;Wingfoil Freeride;Flatwater;Stark;Klein;Infinity;990;Pacer;1550;Infinity;840
+Intermediate;70-90;Wingfoil Freeride;Flatwater;Stark;Gross;Infinity;840;Pacer;1250;Infinity;690
+Intermediate;70-90;Wingfoil Freeride;Race;Schwach;Flach;Infinity;1140;Flow;1080;Infinity;990
+Intermediate;70-90;Wingfoil Freeride;Race;Schwach;Klein;Infinity;1140;Flow;1080;Infinity;990
+Intermediate;70-90;Wingfoil Freeride;Race;Schwach;Gross;Infinity;990;Flow;900;Infinity;840
+Intermediate;70-90;Wingfoil Freeride;Race;Mittel;Flach;Infinity;990;Flow;900;Infinity;840
+Intermediate;70-90;Wingfoil Freeride;Race;Mittel;Klein;Infinity;990;Flow;900;Infinity;840
+Intermediate;70-90;Wingfoil Freeride;Race;Mittel;Gross;Infinity;840;Flow;720;Infinity;690
+Intermediate;70-90;Wingfoil Freeride;Race;Stark;Flach;Infinity;990;Flow;900;Infinity;840
+Intermediate;70-90;Wingfoil Freeride;Race;Stark;Klein;Infinity;990;Flow;900;Infinity;840
+Intermediate;70-90;Wingfoil Freeride;Race;Stark;Gross;Infinity;840;Flow;720;Infinity;690
+Intermediate;70-90;Wavesurfing;Freeride;Schwach;Flach;Infinity;1140;Flow;1080;Infinity;990
+Intermediate;70-90;Wavesurfing;Freeride;Schwach;Klein;Infinity;1140;Flow;1080;Infinity;990
+Intermediate;70-90;Wavesurfing;Freeride;Schwach;Gross;Infinity;990;Flow;900;Infinity;840
+Intermediate;70-90;Wavesurfing;Freeride;Mittel;Flach;Infinity;990;Flow;900;Infinity;840
+Intermediate;70-90;Wavesurfing;Freeride;Mittel;Klein;Infinity;990;Flow;900;Infinity;840
+Intermediate;70-90;Wavesurfing;Freeride;Mittel;Gross;Infinity;840;Flow;720;Infinity;690
+Intermediate;70-90;Wavesurfing;Freeride;Stark;Flach;Infinity;990;Flow;900;Infinity;840
+Intermediate;70-90;Wavesurfing;Freeride;Stark;Klein;Infinity;990;Flow;900;Infinity;840
+Intermediate;70-90;Wavesurfing;Freeride;Stark;Gross;Infinity;840;Flow;720;Infinity;690
+Intermediate;70-90;Wavesurfing;Jumping;Schwach;Flach;Infinity;1140;Flow;1080;Infinity;990
+Intermediate;70-90;Wavesurfing;Jumping;Schwach;Klein;Infinity;1140;Flow;1080;Infinity;990
+Intermediate;70-90;Wavesurfing;Jumping;Schwach;Gross;Infinity;990;Flow;900;Infinity;840
+Intermediate;70-90;Wavesurfing;Jumping;Mittel;Flach;Infinity;990;Flow;900;Infinity;840
+Intermediate;70-90;Wavesurfing;Jumping;Mittel;Klein;Infinity;990;Flow;900;Infinity;840
+Intermediate;70-90;Wavesurfing;Jumping;Mittel;Gross;Infinity;840;Flow;720;Infinity;690
+Intermediate;70-90;Wavesurfing;Jumping;Stark;Flach;Infinity;990;Flow;900;Infinity;840
+Intermediate;70-90;Wavesurfing;Jumping;Stark;Klein;Infinity;990;Flow;900;Infinity;840
+Intermediate;70-90;Wavesurfing;Jumping;Stark;Gross;Infinity;840;Flow;720;Infinity;690
+Intermediate;70-90;Wavesurfing;Flatwater;Schwach;Flach;Infinity;1140;Flow;1080;Infinity;990
+Intermediate;70-90;Wavesurfing;Flatwater;Schwach;Klein;Infinity;1140;Flow;1080;Infinity;990
+Intermediate;70-90;Wavesurfing;Flatwater;Schwach;Gross;Infinity;990;Flow;900;Infinity;840
+Intermediate;70-90;Wavesurfing;Flatwater;Mittel;Flach;Infinity;990;Flow;900;Infinity;840
+Intermediate;70-90;Wavesurfing;Flatwater;Mittel;Klein;Infinity;990;Flow;900;Infinity;840
+Intermediate;70-90;Wavesurfing;Flatwater;Mittel;Gross;Infinity;840;Flow;720;Infinity;690
+Intermediate;70-90;Wavesurfing;Flatwater;Stark;Flach;Infinity;990;Flow;900;Infinity;840
+Intermediate;70-90;Wavesurfing;Flatwater;Stark;Klein;Infinity;990;Flow;900;Infinity;840
+Intermediate;70-90;Wavesurfing;Flatwater;Stark;Gross;Infinity;840;Flow;720;Infinity;690
+Intermediate;70-90;Wavesurfing;Race;Schwach;Flach;Infinity;1140;Flow;1080;Infinity;990
+Intermediate;70-90;Wavesurfing;Race;Schwach;Klein;Infinity;1140;Flow;1080;Infinity;990
+Intermediate;70-90;Wavesurfing;Race;Schwach;Gross;Infinity;990;Flow;900;Infinity;840
+Intermediate;70-90;Wavesurfing;Race;Mittel;Flach;Infinity;990;Flow;900;Infinity;840
+Intermediate;70-90;Wavesurfing;Race;Mittel;Klein;Infinity;990;Flow;900;Infinity;840
+Intermediate;70-90;Wavesurfing;Race;Mittel;Gross;Infinity;840;Flow;720;Infinity;690
+Intermediate;70-90;Wavesurfing;Race;Stark;Flach;Infinity;990;Flow;900;Infinity;840
+Intermediate;70-90;Wavesurfing;Race;Stark;Klein;Infinity;990;Flow;900;Infinity;840
+Intermediate;70-90;Wavesurfing;Race;Stark;Gross;Infinity;840;Flow;720;Infinity;690
+Intermediate;70-90;Lightwind;Freeride;Schwach;Flach;Stride;2050;Stride Ace;1740;;
+Intermediate;70-90;Lightwind;Freeride;Schwach;Klein;Stride;2050;Stride Ace;1740;;
+Intermediate;70-90;Lightwind;Freeride;Schwach;Gross;Stride;2050;Stride Ace;1740;;
+Intermediate;70-90;Lightwind;Freeride;Mittel;Flach;Stride;2050;Stride Ace;1740;;
+Intermediate;70-90;Lightwind;Freeride;Mittel;Klein;Stride;2050;Stride Ace;1740;;
+Intermediate;70-90;Lightwind;Freeride;Mittel;Gross;Stride;2050;Stride Ace;1740;;
+Intermediate;70-90;Lightwind;Freeride;Stark;Flach;Stride;2050;Stride Ace;1740;;
+Intermediate;70-90;Lightwind;Freeride;Stark;Klein;Stride;2050;Stride Ace;1740;;
+Intermediate;70-90;Lightwind;Freeride;Stark;Gross;Stride;2050;Stride Ace;1740;;
+Intermediate;70-90;Lightwind;Jumping;Schwach;Flach;Stride;2050;Stride Ace;1740;;
+Intermediate;70-90;Lightwind;Jumping;Schwach;Klein;Stride;2050;Stride Ace;1740;;
+Intermediate;70-90;Lightwind;Jumping;Schwach;Gross;Stride;2050;Stride Ace;1740;;
+Intermediate;70-90;Lightwind;Jumping;Mittel;Flach;Stride;2050;Stride Ace;1740;;
+Intermediate;70-90;Lightwind;Jumping;Mittel;Klein;Stride;2050;Stride Ace;1740;;
+Intermediate;70-90;Lightwind;Jumping;Mittel;Gross;Stride;2050;Stride Ace;1740;;
+Intermediate;70-90;Lightwind;Jumping;Stark;Flach;Stride;2050;Stride Ace;1740;;
+Intermediate;70-90;Lightwind;Jumping;Stark;Klein;Stride;2050;Stride Ace;1740;;
+Intermediate;70-90;Lightwind;Jumping;Stark;Gross;Stride;2050;Stride Ace;1740;;
+Intermediate;70-90;Lightwind;Flatwater;Schwach;Flach;Stride;2050;Stride Ace;1740;;
+Intermediate;70-90;Lightwind;Flatwater;Schwach;Klein;Stride;2050;Stride Ace;1740;;
+Intermediate;70-90;Lightwind;Flatwater;Schwach;Gross;Stride;2050;Stride Ace;1740;;
+Intermediate;70-90;Lightwind;Flatwater;Mittel;Flach;Stride;2050;Stride Ace;1740;;
+Intermediate;70-90;Lightwind;Flatwater;Mittel;Klein;Stride;2050;Stride Ace;1740;;
+Intermediate;70-90;Lightwind;Flatwater;Mittel;Gross;Stride;2050;Stride Ace;1740;;
+Intermediate;70-90;Lightwind;Flatwater;Stark;Flach;Stride;2050;Stride Ace;1740;;
+Intermediate;70-90;Lightwind;Flatwater;Stark;Klein;Stride;2050;Stride Ace;1740;;
+Intermediate;70-90;Lightwind;Flatwater;Stark;Gross;Stride;2050;Stride Ace;1740;;
+Intermediate;70-90;Lightwind;Race;Schwach;Flach;Stride;2050;Stride Ace;1740;;
+Intermediate;70-90;Lightwind;Race;Schwach;Klein;Stride;2050;Stride Ace;1740;;
+Intermediate;70-90;Lightwind;Race;Schwach;Gross;Stride;2050;Stride Ace;1740;;
+Intermediate;70-90;Lightwind;Race;Mittel;Flach;Stride;2050;Stride Ace;1740;;
+Intermediate;70-90;Lightwind;Race;Mittel;Klein;Stride;2050;Stride Ace;1740;;
+Intermediate;70-90;Lightwind;Race;Mittel;Gross;Stride;2050;Stride Ace;1740;;
+Intermediate;70-90;Lightwind;Race;Stark;Flach;Stride;2050;Stride Ace;1740;;
+Intermediate;70-90;Lightwind;Race;Stark;Klein;Stride;2050;Stride Ace;1740;;
+Intermediate;70-90;Lightwind;Race;Stark;Gross;Stride;2050;Stride Ace;1740;;
+Intermediate;70-90;Pumpfoil;Freeride;Schwach;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;70-90;Pumpfoil;Freeride;Schwach;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;70-90;Pumpfoil;Freeride;Schwach;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;70-90;Pumpfoil;Freeride;Mittel;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;70-90;Pumpfoil;Freeride;Mittel;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;70-90;Pumpfoil;Freeride;Mittel;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;70-90;Pumpfoil;Freeride;Stark;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;70-90;Pumpfoil;Freeride;Stark;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;70-90;Pumpfoil;Freeride;Stark;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;70-90;Pumpfoil;Jumping;Schwach;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;70-90;Pumpfoil;Jumping;Schwach;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;70-90;Pumpfoil;Jumping;Schwach;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;70-90;Pumpfoil;Jumping;Mittel;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;70-90;Pumpfoil;Jumping;Mittel;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;70-90;Pumpfoil;Jumping;Mittel;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;70-90;Pumpfoil;Jumping;Stark;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;70-90;Pumpfoil;Jumping;Stark;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;70-90;Pumpfoil;Jumping;Stark;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;70-90;Pumpfoil;Flatwater;Schwach;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;70-90;Pumpfoil;Flatwater;Schwach;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;70-90;Pumpfoil;Flatwater;Schwach;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;70-90;Pumpfoil;Flatwater;Mittel;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;70-90;Pumpfoil;Flatwater;Mittel;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;70-90;Pumpfoil;Flatwater;Mittel;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;70-90;Pumpfoil;Flatwater;Stark;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;70-90;Pumpfoil;Flatwater;Stark;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;70-90;Pumpfoil;Flatwater;Stark;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;70-90;Pumpfoil;Race;Schwach;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;70-90;Pumpfoil;Race;Schwach;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;70-90;Pumpfoil;Race;Schwach;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;70-90;Pumpfoil;Race;Mittel;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;70-90;Pumpfoil;Race;Mittel;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;70-90;Pumpfoil;Race;Mittel;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;70-90;Pumpfoil;Race;Stark;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;70-90;Pumpfoil;Race;Stark;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;70-90;Pumpfoil;Race;Stark;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;70-90;Parawing;Freeride;Schwach;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;70-90;Parawing;Freeride;Schwach;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;70-90;Parawing;Freeride;Schwach;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Parawing;Freeride;Mittel;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Parawing;Freeride;Mittel;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Parawing;Freeride;Mittel;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;70-90;Parawing;Freeride;Stark;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Parawing;Freeride;Stark;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Parawing;Freeride;Stark;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;70-90;Parawing;Jumping;Schwach;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;70-90;Parawing;Jumping;Schwach;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;70-90;Parawing;Jumping;Schwach;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Parawing;Jumping;Mittel;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Parawing;Jumping;Mittel;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Parawing;Jumping;Mittel;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;70-90;Parawing;Jumping;Stark;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Parawing;Jumping;Stark;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Parawing;Jumping;Stark;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;70-90;Parawing;Flatwater;Schwach;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;70-90;Parawing;Flatwater;Schwach;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;70-90;Parawing;Flatwater;Schwach;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Parawing;Flatwater;Mittel;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Parawing;Flatwater;Mittel;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Parawing;Flatwater;Mittel;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;70-90;Parawing;Flatwater;Stark;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Parawing;Flatwater;Stark;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Parawing;Flatwater;Stark;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;70-90;Parawing;Race;Schwach;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;70-90;Parawing;Race;Schwach;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;70-90;Parawing;Race;Schwach;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Parawing;Race;Mittel;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Parawing;Race;Mittel;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Parawing;Race;Mittel;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;70-90;Parawing;Race;Stark;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Parawing;Race;Stark;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;70-90;Parawing;Race;Stark;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Intermediate;>90;Downwind;Freeride;Schwach;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Downwind;Freeride;Schwach;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Downwind;Freeride;Schwach;Gross;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Downwind;Freeride;Mittel;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Downwind;Freeride;Mittel;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Downwind;Freeride;Mittel;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;>90;Downwind;Freeride;Stark;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Downwind;Freeride;Stark;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Downwind;Freeride;Stark;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;>90;Downwind;Jumping;Schwach;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Downwind;Jumping;Schwach;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Downwind;Jumping;Schwach;Gross;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Downwind;Jumping;Mittel;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Downwind;Jumping;Mittel;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Downwind;Jumping;Mittel;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;>90;Downwind;Jumping;Stark;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Downwind;Jumping;Stark;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Downwind;Jumping;Stark;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;>90;Downwind;Flatwater;Schwach;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Downwind;Flatwater;Schwach;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Downwind;Flatwater;Schwach;Gross;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Downwind;Flatwater;Mittel;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Downwind;Flatwater;Mittel;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Downwind;Flatwater;Mittel;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;>90;Downwind;Flatwater;Stark;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Downwind;Flatwater;Stark;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Downwind;Flatwater;Stark;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;>90;Downwind;Race;Schwach;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Downwind;Race;Schwach;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Downwind;Race;Schwach;Gross;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Downwind;Race;Mittel;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Downwind;Race;Mittel;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Downwind;Race;Mittel;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;>90;Downwind;Race;Stark;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Downwind;Race;Stark;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Downwind;Race;Stark;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;>90;Wingfoil Freeride;Freeride;Schwach;Flach;Infinity;1390;Pacer;2200;Infinity;1140
+Intermediate;>90;Wingfoil Freeride;Freeride;Schwach;Klein;Infinity;1390;Pacer;2200;Infinity;1140
+Intermediate;>90;Wingfoil Freeride;Freeride;Schwach;Gross;Infinity;1140;Pacer;1850;Infinity;990
+Intermediate;>90;Wingfoil Freeride;Freeride;Mittel;Flach;Infinity;1140;Pacer;1850;Infinity;990
+Intermediate;>90;Wingfoil Freeride;Freeride;Mittel;Klein;Infinity;1140;Pacer;1850;Infinity;990
+Intermediate;>90;Wingfoil Freeride;Freeride;Mittel;Gross;Infinity;990;Pacer;1550;Infinity;840
+Intermediate;>90;Wingfoil Freeride;Freeride;Stark;Flach;Infinity;1140;Pacer;1850;Infinity;990
+Intermediate;>90;Wingfoil Freeride;Freeride;Stark;Klein;Infinity;1140;Pacer;1850;Infinity;990
+Intermediate;>90;Wingfoil Freeride;Freeride;Stark;Gross;Infinity;990;Pacer;1550;Infinity;840
+Intermediate;>90;Wingfoil Freeride;Jumping;Schwach;Flach;Infinity;1390;Pacer;2200;Infinity;1140
+Intermediate;>90;Wingfoil Freeride;Jumping;Schwach;Klein;Infinity;1390;Pacer;2200;Infinity;1140
+Intermediate;>90;Wingfoil Freeride;Jumping;Schwach;Gross;Infinity;1140;Pacer;1850;Infinity;990
+Intermediate;>90;Wingfoil Freeride;Jumping;Mittel;Flach;Infinity;1140;Pacer;1850;Infinity;990
+Intermediate;>90;Wingfoil Freeride;Jumping;Mittel;Klein;Infinity;1140;Pacer;1850;Infinity;990
+Intermediate;>90;Wingfoil Freeride;Jumping;Mittel;Gross;Infinity;990;Pacer;1550;Infinity;840
+Intermediate;>90;Wingfoil Freeride;Jumping;Stark;Flach;Infinity;1140;Pacer;1850;Infinity;990
+Intermediate;>90;Wingfoil Freeride;Jumping;Stark;Klein;Infinity;1140;Pacer;1850;Infinity;990
+Intermediate;>90;Wingfoil Freeride;Jumping;Stark;Gross;Infinity;990;Pacer;1550;Infinity;840
+Intermediate;>90;Wingfoil Freeride;Flatwater;Schwach;Flach;Infinity;1390;Pacer;2200;Infinity;1140
+Intermediate;>90;Wingfoil Freeride;Flatwater;Schwach;Klein;Infinity;1390;Pacer;2200;Infinity;1140
+Intermediate;>90;Wingfoil Freeride;Flatwater;Schwach;Gross;Infinity;1140;Pacer;1850;Infinity;990
+Intermediate;>90;Wingfoil Freeride;Flatwater;Mittel;Flach;Infinity;1140;Pacer;1850;Infinity;990
+Intermediate;>90;Wingfoil Freeride;Flatwater;Mittel;Klein;Infinity;1140;Pacer;1850;Infinity;990
+Intermediate;>90;Wingfoil Freeride;Flatwater;Mittel;Gross;Infinity;990;Pacer;1550;Infinity;840
+Intermediate;>90;Wingfoil Freeride;Flatwater;Stark;Flach;Infinity;1140;Pacer;1850;Infinity;990
+Intermediate;>90;Wingfoil Freeride;Flatwater;Stark;Klein;Infinity;1140;Pacer;1850;Infinity;990
+Intermediate;>90;Wingfoil Freeride;Flatwater;Stark;Gross;Infinity;990;Pacer;1550;Infinity;840
+Intermediate;>90;Wingfoil Freeride;Race;Schwach;Flach;Infinity;1390;Flow;1260;Infinity;1140
+Intermediate;>90;Wingfoil Freeride;Race;Schwach;Klein;Infinity;1390;Flow;1260;Infinity;1140
+Intermediate;>90;Wingfoil Freeride;Race;Schwach;Gross;Infinity;1140;Flow;1080;Infinity;990
+Intermediate;>90;Wingfoil Freeride;Race;Mittel;Flach;Infinity;1140;Flow;1080;Infinity;990
+Intermediate;>90;Wingfoil Freeride;Race;Mittel;Klein;Infinity;1140;Flow;1080;Infinity;990
+Intermediate;>90;Wingfoil Freeride;Race;Mittel;Gross;Infinity;990;Flow;900;Infinity;840
+Intermediate;>90;Wingfoil Freeride;Race;Stark;Flach;Infinity;1140;Flow;1080;Infinity;990
+Intermediate;>90;Wingfoil Freeride;Race;Stark;Klein;Infinity;1140;Flow;1080;Infinity;990
+Intermediate;>90;Wingfoil Freeride;Race;Stark;Gross;Infinity;990;Flow;900;Infinity;840
+Intermediate;>90;Wavesurfing;Freeride;Schwach;Flach;Infinity;1390;Flow;1260;Infinity;1140
+Intermediate;>90;Wavesurfing;Freeride;Schwach;Klein;Infinity;1390;Flow;1260;Infinity;1140
+Intermediate;>90;Wavesurfing;Freeride;Schwach;Gross;Infinity;1140;Flow;1080;Infinity;990
+Intermediate;>90;Wavesurfing;Freeride;Mittel;Flach;Infinity;1140;Flow;1080;Infinity;990
+Intermediate;>90;Wavesurfing;Freeride;Mittel;Klein;Infinity;1140;Flow;1080;Infinity;990
+Intermediate;>90;Wavesurfing;Freeride;Mittel;Gross;Infinity;990;Flow;900;Infinity;840
+Intermediate;>90;Wavesurfing;Freeride;Stark;Flach;Infinity;1140;Flow;1080;Infinity;990
+Intermediate;>90;Wavesurfing;Freeride;Stark;Klein;Infinity;1140;Flow;1080;Infinity;990
+Intermediate;>90;Wavesurfing;Freeride;Stark;Gross;Infinity;990;Flow;900;Infinity;840
+Intermediate;>90;Wavesurfing;Jumping;Schwach;Flach;Infinity;1390;Flow;1260;Infinity;1140
+Intermediate;>90;Wavesurfing;Jumping;Schwach;Klein;Infinity;1390;Flow;1260;Infinity;1140
+Intermediate;>90;Wavesurfing;Jumping;Schwach;Gross;Infinity;1140;Flow;1080;Infinity;990
+Intermediate;>90;Wavesurfing;Jumping;Mittel;Flach;Infinity;1140;Flow;1080;Infinity;990
+Intermediate;>90;Wavesurfing;Jumping;Mittel;Klein;Infinity;1140;Flow;1080;Infinity;990
+Intermediate;>90;Wavesurfing;Jumping;Mittel;Gross;Infinity;990;Flow;900;Infinity;840
+Intermediate;>90;Wavesurfing;Jumping;Stark;Flach;Infinity;1140;Flow;1080;Infinity;990
+Intermediate;>90;Wavesurfing;Jumping;Stark;Klein;Infinity;1140;Flow;1080;Infinity;990
+Intermediate;>90;Wavesurfing;Jumping;Stark;Gross;Infinity;990;Flow;900;Infinity;840
+Intermediate;>90;Wavesurfing;Flatwater;Schwach;Flach;Infinity;1390;Flow;1260;Infinity;1140
+Intermediate;>90;Wavesurfing;Flatwater;Schwach;Klein;Infinity;1390;Flow;1260;Infinity;1140
+Intermediate;>90;Wavesurfing;Flatwater;Schwach;Gross;Infinity;1140;Flow;1080;Infinity;990
+Intermediate;>90;Wavesurfing;Flatwater;Mittel;Flach;Infinity;1140;Flow;1080;Infinity;990
+Intermediate;>90;Wavesurfing;Flatwater;Mittel;Klein;Infinity;1140;Flow;1080;Infinity;990
+Intermediate;>90;Wavesurfing;Flatwater;Mittel;Gross;Infinity;990;Flow;900;Infinity;840
+Intermediate;>90;Wavesurfing;Flatwater;Stark;Flach;Infinity;1140;Flow;1080;Infinity;990
+Intermediate;>90;Wavesurfing;Flatwater;Stark;Klein;Infinity;1140;Flow;1080;Infinity;990
+Intermediate;>90;Wavesurfing;Flatwater;Stark;Gross;Infinity;990;Flow;900;Infinity;840
+Intermediate;>90;Wavesurfing;Race;Schwach;Flach;Infinity;1390;Flow;1260;Infinity;1140
+Intermediate;>90;Wavesurfing;Race;Schwach;Klein;Infinity;1390;Flow;1260;Infinity;1140
+Intermediate;>90;Wavesurfing;Race;Schwach;Gross;Infinity;1140;Flow;1080;Infinity;990
+Intermediate;>90;Wavesurfing;Race;Mittel;Flach;Infinity;1140;Flow;1080;Infinity;990
+Intermediate;>90;Wavesurfing;Race;Mittel;Klein;Infinity;1140;Flow;1080;Infinity;990
+Intermediate;>90;Wavesurfing;Race;Mittel;Gross;Infinity;990;Flow;900;Infinity;840
+Intermediate;>90;Wavesurfing;Race;Stark;Flach;Infinity;1140;Flow;1080;Infinity;990
+Intermediate;>90;Wavesurfing;Race;Stark;Klein;Infinity;1140;Flow;1080;Infinity;990
+Intermediate;>90;Wavesurfing;Race;Stark;Gross;Infinity;990;Flow;900;Infinity;840
+Intermediate;>90;Lightwind;Freeride;Schwach;Flach;Stride;2050;Stride Ace;1740;;
+Intermediate;>90;Lightwind;Freeride;Schwach;Klein;Stride;2050;Stride Ace;1740;;
+Intermediate;>90;Lightwind;Freeride;Schwach;Gross;Stride;2050;Stride Ace;1740;;
+Intermediate;>90;Lightwind;Freeride;Mittel;Flach;Stride;2050;Stride Ace;1740;;
+Intermediate;>90;Lightwind;Freeride;Mittel;Klein;Stride;2050;Stride Ace;1740;;
+Intermediate;>90;Lightwind;Freeride;Mittel;Gross;Stride;2050;Stride Ace;1740;;
+Intermediate;>90;Lightwind;Freeride;Stark;Flach;Stride;2050;Stride Ace;1740;;
+Intermediate;>90;Lightwind;Freeride;Stark;Klein;Stride;2050;Stride Ace;1740;;
+Intermediate;>90;Lightwind;Freeride;Stark;Gross;Stride;2050;Stride Ace;1740;;
+Intermediate;>90;Lightwind;Jumping;Schwach;Flach;Stride;2050;Stride Ace;1740;;
+Intermediate;>90;Lightwind;Jumping;Schwach;Klein;Stride;2050;Stride Ace;1740;;
+Intermediate;>90;Lightwind;Jumping;Schwach;Gross;Stride;2050;Stride Ace;1740;;
+Intermediate;>90;Lightwind;Jumping;Mittel;Flach;Stride;2050;Stride Ace;1740;;
+Intermediate;>90;Lightwind;Jumping;Mittel;Klein;Stride;2050;Stride Ace;1740;;
+Intermediate;>90;Lightwind;Jumping;Mittel;Gross;Stride;2050;Stride Ace;1740;;
+Intermediate;>90;Lightwind;Jumping;Stark;Flach;Stride;2050;Stride Ace;1740;;
+Intermediate;>90;Lightwind;Jumping;Stark;Klein;Stride;2050;Stride Ace;1740;;
+Intermediate;>90;Lightwind;Jumping;Stark;Gross;Stride;2050;Stride Ace;1740;;
+Intermediate;>90;Lightwind;Flatwater;Schwach;Flach;Stride;2050;Stride Ace;1740;;
+Intermediate;>90;Lightwind;Flatwater;Schwach;Klein;Stride;2050;Stride Ace;1740;;
+Intermediate;>90;Lightwind;Flatwater;Schwach;Gross;Stride;2050;Stride Ace;1740;;
+Intermediate;>90;Lightwind;Flatwater;Mittel;Flach;Stride;2050;Stride Ace;1740;;
+Intermediate;>90;Lightwind;Flatwater;Mittel;Klein;Stride;2050;Stride Ace;1740;;
+Intermediate;>90;Lightwind;Flatwater;Mittel;Gross;Stride;2050;Stride Ace;1740;;
+Intermediate;>90;Lightwind;Flatwater;Stark;Flach;Stride;2050;Stride Ace;1740;;
+Intermediate;>90;Lightwind;Flatwater;Stark;Klein;Stride;2050;Stride Ace;1740;;
+Intermediate;>90;Lightwind;Flatwater;Stark;Gross;Stride;2050;Stride Ace;1740;;
+Intermediate;>90;Lightwind;Race;Schwach;Flach;Stride;2050;Stride Ace;1740;;
+Intermediate;>90;Lightwind;Race;Schwach;Klein;Stride;2050;Stride Ace;1740;;
+Intermediate;>90;Lightwind;Race;Schwach;Gross;Stride;2050;Stride Ace;1740;;
+Intermediate;>90;Lightwind;Race;Mittel;Flach;Stride;2050;Stride Ace;1740;;
+Intermediate;>90;Lightwind;Race;Mittel;Klein;Stride;2050;Stride Ace;1740;;
+Intermediate;>90;Lightwind;Race;Mittel;Gross;Stride;2050;Stride Ace;1740;;
+Intermediate;>90;Lightwind;Race;Stark;Flach;Stride;2050;Stride Ace;1740;;
+Intermediate;>90;Lightwind;Race;Stark;Klein;Stride;2050;Stride Ace;1740;;
+Intermediate;>90;Lightwind;Race;Stark;Gross;Stride;2050;Stride Ace;1740;;
+Intermediate;>90;Pumpfoil;Freeride;Schwach;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;>90;Pumpfoil;Freeride;Schwach;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;>90;Pumpfoil;Freeride;Schwach;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;>90;Pumpfoil;Freeride;Mittel;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;>90;Pumpfoil;Freeride;Mittel;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;>90;Pumpfoil;Freeride;Mittel;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;>90;Pumpfoil;Freeride;Stark;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;>90;Pumpfoil;Freeride;Stark;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;>90;Pumpfoil;Freeride;Stark;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;>90;Pumpfoil;Jumping;Schwach;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;>90;Pumpfoil;Jumping;Schwach;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;>90;Pumpfoil;Jumping;Schwach;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;>90;Pumpfoil;Jumping;Mittel;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;>90;Pumpfoil;Jumping;Mittel;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;>90;Pumpfoil;Jumping;Mittel;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;>90;Pumpfoil;Jumping;Stark;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;>90;Pumpfoil;Jumping;Stark;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;>90;Pumpfoil;Jumping;Stark;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;>90;Pumpfoil;Flatwater;Schwach;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;>90;Pumpfoil;Flatwater;Schwach;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;>90;Pumpfoil;Flatwater;Schwach;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;>90;Pumpfoil;Flatwater;Mittel;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;>90;Pumpfoil;Flatwater;Mittel;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;>90;Pumpfoil;Flatwater;Mittel;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;>90;Pumpfoil;Flatwater;Stark;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;>90;Pumpfoil;Flatwater;Stark;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;>90;Pumpfoil;Flatwater;Stark;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;>90;Pumpfoil;Race;Schwach;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;>90;Pumpfoil;Race;Schwach;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;>90;Pumpfoil;Race;Schwach;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;>90;Pumpfoil;Race;Mittel;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;>90;Pumpfoil;Race;Mittel;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;>90;Pumpfoil;Race;Mittel;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;>90;Pumpfoil;Race;Stark;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;>90;Pumpfoil;Race;Stark;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;>90;Pumpfoil;Race;Stark;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Intermediate;>90;Parawing;Freeride;Schwach;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Parawing;Freeride;Schwach;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Parawing;Freeride;Schwach;Gross;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Parawing;Freeride;Mittel;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Parawing;Freeride;Mittel;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Parawing;Freeride;Mittel;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;>90;Parawing;Freeride;Stark;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Parawing;Freeride;Stark;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Parawing;Freeride;Stark;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;>90;Parawing;Jumping;Schwach;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Parawing;Jumping;Schwach;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Parawing;Jumping;Schwach;Gross;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Parawing;Jumping;Mittel;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Parawing;Jumping;Mittel;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Parawing;Jumping;Mittel;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;>90;Parawing;Jumping;Stark;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Parawing;Jumping;Stark;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Parawing;Jumping;Stark;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;>90;Parawing;Flatwater;Schwach;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Parawing;Flatwater;Schwach;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Parawing;Flatwater;Schwach;Gross;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Parawing;Flatwater;Mittel;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Parawing;Flatwater;Mittel;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Parawing;Flatwater;Mittel;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;>90;Parawing;Flatwater;Stark;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Parawing;Flatwater;Stark;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Parawing;Flatwater;Stark;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;>90;Parawing;Race;Schwach;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Parawing;Race;Schwach;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Parawing;Race;Schwach;Gross;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Parawing;Race;Mittel;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Parawing;Race;Mittel;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Parawing;Race;Mittel;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Intermediate;>90;Parawing;Race;Stark;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Parawing;Race;Stark;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Intermediate;>90;Parawing;Race;Stark;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;<70;Downwind;Freeride;Schwach;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;<70;Downwind;Freeride;Schwach;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;<70;Downwind;Freeride;Schwach;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Downwind;Freeride;Mittel;Flach;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Downwind;Freeride;Mittel;Klein;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Downwind;Freeride;Mittel;Gross;Stride Ace;1360;Flow;720;Stride Ace;1740
+Expert;<70;Downwind;Freeride;Stark;Flach;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Downwind;Freeride;Stark;Klein;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Downwind;Freeride;Stark;Gross;Stride Ace;1360;Flow;720;Stride Ace;1740
+Expert;<70;Downwind;Jumping;Schwach;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;<70;Downwind;Jumping;Schwach;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;<70;Downwind;Jumping;Schwach;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Downwind;Jumping;Mittel;Flach;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Downwind;Jumping;Mittel;Klein;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Downwind;Jumping;Mittel;Gross;Stride Ace;1360;Flow;720;Stride Ace;1740
+Expert;<70;Downwind;Jumping;Stark;Flach;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Downwind;Jumping;Stark;Klein;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Downwind;Jumping;Stark;Gross;Stride Ace;1360;Flow;720;Stride Ace;1740
+Expert;<70;Downwind;Flatwater;Schwach;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;<70;Downwind;Flatwater;Schwach;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;<70;Downwind;Flatwater;Schwach;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Downwind;Flatwater;Mittel;Flach;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Downwind;Flatwater;Mittel;Klein;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Downwind;Flatwater;Mittel;Gross;Stride Ace;1360;Flow;720;Stride Ace;1740
+Expert;<70;Downwind;Flatwater;Stark;Flach;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Downwind;Flatwater;Stark;Klein;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Downwind;Flatwater;Stark;Gross;Stride Ace;1360;Flow;720;Stride Ace;1740
+Expert;<70;Downwind;Race;Schwach;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;<70;Downwind;Race;Schwach;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;<70;Downwind;Race;Schwach;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Downwind;Race;Mittel;Flach;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Downwind;Race;Mittel;Klein;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Downwind;Race;Mittel;Gross;Stride Ace;1360;Flow;720;Stride Ace;1740
+Expert;<70;Downwind;Race;Stark;Flach;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Downwind;Race;Stark;Klein;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Downwind;Race;Stark;Gross;Stride Ace;1360;Flow;720;Stride Ace;1740
+Expert;<70;Wingfoil Freeride;Freeride;Schwach;Flach;Infinity;990;Pacer;1550;Infinity;840
+Expert;<70;Wingfoil Freeride;Freeride;Schwach;Klein;Infinity;990;Pacer;1550;Infinity;840
+Expert;<70;Wingfoil Freeride;Freeride;Schwach;Gross;Infinity;840;Pacer;1250;Infinity;690
+Expert;<70;Wingfoil Freeride;Freeride;Mittel;Flach;Infinity;840;Pacer;1250;Infinity;690
+Expert;<70;Wingfoil Freeride;Freeride;Mittel;Klein;Infinity;840;Pacer;1250;Infinity;690
+Expert;<70;Wingfoil Freeride;Freeride;Mittel;Gross;Infinity;690;Pacer;950;Infinity;540
+Expert;<70;Wingfoil Freeride;Freeride;Stark;Flach;Infinity;840;Pacer;1250;Infinity;690
+Expert;<70;Wingfoil Freeride;Freeride;Stark;Klein;Infinity;840;Pacer;1250;Infinity;690
+Expert;<70;Wingfoil Freeride;Freeride;Stark;Gross;Infinity;690;Pacer;950;Infinity;540
+Expert;<70;Wingfoil Freeride;Jumping;Schwach;Flach;Infinity;990;Pacer;1550;Infinity;840
+Expert;<70;Wingfoil Freeride;Jumping;Schwach;Klein;Infinity;990;Pacer;1550;Infinity;840
+Expert;<70;Wingfoil Freeride;Jumping;Schwach;Gross;Infinity;840;Pacer;1250;Infinity;690
+Expert;<70;Wingfoil Freeride;Jumping;Mittel;Flach;Infinity;840;Pacer;1250;Infinity;690
+Expert;<70;Wingfoil Freeride;Jumping;Mittel;Klein;Infinity;840;Pacer;1250;Infinity;690
+Expert;<70;Wingfoil Freeride;Jumping;Mittel;Gross;Infinity;690;Pacer;950;Infinity;540
+Expert;<70;Wingfoil Freeride;Jumping;Stark;Flach;Infinity;840;Pacer;1250;Infinity;690
+Expert;<70;Wingfoil Freeride;Jumping;Stark;Klein;Infinity;840;Pacer;1250;Infinity;690
+Expert;<70;Wingfoil Freeride;Jumping;Stark;Gross;Infinity;690;Pacer;950;Infinity;540
+Expert;<70;Wingfoil Freeride;Flatwater;Schwach;Flach;Infinity;990;Pacer;1550;Infinity;840
+Expert;<70;Wingfoil Freeride;Flatwater;Schwach;Klein;Infinity;990;Pacer;1550;Infinity;840
+Expert;<70;Wingfoil Freeride;Flatwater;Schwach;Gross;Infinity;840;Pacer;1250;Infinity;690
+Expert;<70;Wingfoil Freeride;Flatwater;Mittel;Flach;Infinity;840;Pacer;1250;Infinity;690
+Expert;<70;Wingfoil Freeride;Flatwater;Mittel;Klein;Infinity;840;Pacer;1250;Infinity;690
+Expert;<70;Wingfoil Freeride;Flatwater;Mittel;Gross;Infinity;690;Pacer;950;Infinity;540
+Expert;<70;Wingfoil Freeride;Flatwater;Stark;Flach;Infinity;840;Pacer;1250;Infinity;690
+Expert;<70;Wingfoil Freeride;Flatwater;Stark;Klein;Infinity;840;Pacer;1250;Infinity;690
+Expert;<70;Wingfoil Freeride;Flatwater;Stark;Gross;Infinity;690;Pacer;950;Infinity;540
+Expert;<70;Wingfoil Freeride;Race;Schwach;Flach;Infinity;990;Flow;900;Infinity;840
+Expert;<70;Wingfoil Freeride;Race;Schwach;Klein;Infinity;990;Flow;900;Infinity;840
+Expert;<70;Wingfoil Freeride;Race;Schwach;Gross;Infinity;840;Flow;720;Infinity;690
+Expert;<70;Wingfoil Freeride;Race;Mittel;Flach;Infinity;840;Flow;720;Infinity;690
+Expert;<70;Wingfoil Freeride;Race;Mittel;Klein;Infinity;840;Flow;720;Infinity;690
+Expert;<70;Wingfoil Freeride;Race;Mittel;Gross;Infinity;690;Flow;720;Infinity;540
+Expert;<70;Wingfoil Freeride;Race;Stark;Flach;Infinity;840;Flow;720;Infinity;690
+Expert;<70;Wingfoil Freeride;Race;Stark;Klein;Infinity;840;Flow;720;Infinity;690
+Expert;<70;Wingfoil Freeride;Race;Stark;Gross;Infinity;690;Flow;720;Infinity;540
+Expert;<70;Wavesurfing;Freeride;Schwach;Flach;Infinity;990;Flow;900;Infinity;840
+Expert;<70;Wavesurfing;Freeride;Schwach;Klein;Infinity;990;Flow;900;Infinity;840
+Expert;<70;Wavesurfing;Freeride;Schwach;Gross;Infinity;840;Flow;720;Infinity;690
+Expert;<70;Wavesurfing;Freeride;Mittel;Flach;Infinity;840;Flow;720;Infinity;690
+Expert;<70;Wavesurfing;Freeride;Mittel;Klein;Infinity;840;Flow;720;Infinity;690
+Expert;<70;Wavesurfing;Freeride;Mittel;Gross;Infinity;690;Flow;720;Infinity;540
+Expert;<70;Wavesurfing;Freeride;Stark;Flach;Infinity;840;Flow;720;Infinity;690
+Expert;<70;Wavesurfing;Freeride;Stark;Klein;Infinity;840;Flow;720;Infinity;690
+Expert;<70;Wavesurfing;Freeride;Stark;Gross;Infinity;690;Flow;720;Infinity;540
+Expert;<70;Wavesurfing;Jumping;Schwach;Flach;Infinity;990;Flow;900;Infinity;840
+Expert;<70;Wavesurfing;Jumping;Schwach;Klein;Infinity;990;Flow;900;Infinity;840
+Expert;<70;Wavesurfing;Jumping;Schwach;Gross;Infinity;840;Flow;720;Infinity;690
+Expert;<70;Wavesurfing;Jumping;Mittel;Flach;Infinity;840;Flow;720;Infinity;690
+Expert;<70;Wavesurfing;Jumping;Mittel;Klein;Infinity;840;Flow;720;Infinity;690
+Expert;<70;Wavesurfing;Jumping;Mittel;Gross;Infinity;690;Flow;720;Infinity;540
+Expert;<70;Wavesurfing;Jumping;Stark;Flach;Infinity;840;Flow;720;Infinity;690
+Expert;<70;Wavesurfing;Jumping;Stark;Klein;Infinity;840;Flow;720;Infinity;690
+Expert;<70;Wavesurfing;Jumping;Stark;Gross;Infinity;690;Flow;720;Infinity;540
+Expert;<70;Wavesurfing;Flatwater;Schwach;Flach;Infinity;990;Flow;900;Infinity;840
+Expert;<70;Wavesurfing;Flatwater;Schwach;Klein;Infinity;990;Flow;900;Infinity;840
+Expert;<70;Wavesurfing;Flatwater;Schwach;Gross;Infinity;840;Flow;720;Infinity;690
+Expert;<70;Wavesurfing;Flatwater;Mittel;Flach;Infinity;840;Flow;720;Infinity;690
+Expert;<70;Wavesurfing;Flatwater;Mittel;Klein;Infinity;840;Flow;720;Infinity;690
+Expert;<70;Wavesurfing;Flatwater;Mittel;Gross;Infinity;690;Flow;720;Infinity;540
+Expert;<70;Wavesurfing;Flatwater;Stark;Flach;Infinity;840;Flow;720;Infinity;690
+Expert;<70;Wavesurfing;Flatwater;Stark;Klein;Infinity;840;Flow;720;Infinity;690
+Expert;<70;Wavesurfing;Flatwater;Stark;Gross;Infinity;690;Flow;720;Infinity;540
+Expert;<70;Wavesurfing;Race;Schwach;Flach;Infinity;990;Flow;900;Infinity;840
+Expert;<70;Wavesurfing;Race;Schwach;Klein;Infinity;990;Flow;900;Infinity;840
+Expert;<70;Wavesurfing;Race;Schwach;Gross;Infinity;840;Flow;720;Infinity;690
+Expert;<70;Wavesurfing;Race;Mittel;Flach;Infinity;840;Flow;720;Infinity;690
+Expert;<70;Wavesurfing;Race;Mittel;Klein;Infinity;840;Flow;720;Infinity;690
+Expert;<70;Wavesurfing;Race;Mittel;Gross;Infinity;690;Flow;720;Infinity;540
+Expert;<70;Wavesurfing;Race;Stark;Flach;Infinity;840;Flow;720;Infinity;690
+Expert;<70;Wavesurfing;Race;Stark;Klein;Infinity;840;Flow;720;Infinity;690
+Expert;<70;Wavesurfing;Race;Stark;Gross;Infinity;690;Flow;720;Infinity;540
+Expert;<70;Lightwind;Freeride;Schwach;Flach;Stride;2050;Stride Ace;1740;;
+Expert;<70;Lightwind;Freeride;Schwach;Klein;Stride;2050;Stride Ace;1740;;
+Expert;<70;Lightwind;Freeride;Schwach;Gross;Stride;2050;Stride Ace;1740;;
+Expert;<70;Lightwind;Freeride;Mittel;Flach;Stride;2050;Stride Ace;1740;;
+Expert;<70;Lightwind;Freeride;Mittel;Klein;Stride;2050;Stride Ace;1740;;
+Expert;<70;Lightwind;Freeride;Mittel;Gross;Stride;2050;Stride Ace;1360;;
+Expert;<70;Lightwind;Freeride;Stark;Flach;Stride;2050;Stride Ace;1740;;
+Expert;<70;Lightwind;Freeride;Stark;Klein;Stride;2050;Stride Ace;1740;;
+Expert;<70;Lightwind;Freeride;Stark;Gross;Stride;2050;Stride Ace;1360;;
+Expert;<70;Lightwind;Jumping;Schwach;Flach;Stride;2050;Stride Ace;1740;;
+Expert;<70;Lightwind;Jumping;Schwach;Klein;Stride;2050;Stride Ace;1740;;
+Expert;<70;Lightwind;Jumping;Schwach;Gross;Stride;2050;Stride Ace;1740;;
+Expert;<70;Lightwind;Jumping;Mittel;Flach;Stride;2050;Stride Ace;1740;;
+Expert;<70;Lightwind;Jumping;Mittel;Klein;Stride;2050;Stride Ace;1740;;
+Expert;<70;Lightwind;Jumping;Mittel;Gross;Stride;2050;Stride Ace;1360;;
+Expert;<70;Lightwind;Jumping;Stark;Flach;Stride;2050;Stride Ace;1740;;
+Expert;<70;Lightwind;Jumping;Stark;Klein;Stride;2050;Stride Ace;1740;;
+Expert;<70;Lightwind;Jumping;Stark;Gross;Stride;2050;Stride Ace;1360;;
+Expert;<70;Lightwind;Flatwater;Schwach;Flach;Stride;2050;Stride Ace;1740;;
+Expert;<70;Lightwind;Flatwater;Schwach;Klein;Stride;2050;Stride Ace;1740;;
+Expert;<70;Lightwind;Flatwater;Schwach;Gross;Stride;2050;Stride Ace;1740;;
+Expert;<70;Lightwind;Flatwater;Mittel;Flach;Stride;2050;Stride Ace;1740;;
+Expert;<70;Lightwind;Flatwater;Mittel;Klein;Stride;2050;Stride Ace;1740;;
+Expert;<70;Lightwind;Flatwater;Mittel;Gross;Stride;2050;Stride Ace;1360;;
+Expert;<70;Lightwind;Flatwater;Stark;Flach;Stride;2050;Stride Ace;1740;;
+Expert;<70;Lightwind;Flatwater;Stark;Klein;Stride;2050;Stride Ace;1740;;
+Expert;<70;Lightwind;Flatwater;Stark;Gross;Stride;2050;Stride Ace;1360;;
+Expert;<70;Lightwind;Race;Schwach;Flach;Stride;2050;Stride Ace;1740;;
+Expert;<70;Lightwind;Race;Schwach;Klein;Stride;2050;Stride Ace;1740;;
+Expert;<70;Lightwind;Race;Schwach;Gross;Stride;2050;Stride Ace;1740;;
+Expert;<70;Lightwind;Race;Mittel;Flach;Stride;2050;Stride Ace;1740;;
+Expert;<70;Lightwind;Race;Mittel;Klein;Stride;2050;Stride Ace;1740;;
+Expert;<70;Lightwind;Race;Mittel;Gross;Stride;2050;Stride Ace;1360;;
+Expert;<70;Lightwind;Race;Stark;Flach;Stride;2050;Stride Ace;1740;;
+Expert;<70;Lightwind;Race;Stark;Klein;Stride;2050;Stride Ace;1740;;
+Expert;<70;Lightwind;Race;Stark;Gross;Stride;2050;Stride Ace;1360;;
+Expert;<70;Pumpfoil;Freeride;Schwach;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;<70;Pumpfoil;Freeride;Schwach;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;<70;Pumpfoil;Freeride;Schwach;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;<70;Pumpfoil;Freeride;Mittel;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;<70;Pumpfoil;Freeride;Mittel;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;<70;Pumpfoil;Freeride;Mittel;Gross;Stride Ace;1360;Stride;2050;Stride Ace;1740
+Expert;<70;Pumpfoil;Freeride;Stark;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;<70;Pumpfoil;Freeride;Stark;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;<70;Pumpfoil;Freeride;Stark;Gross;Stride Ace;1360;Stride;2050;Stride Ace;1740
+Expert;<70;Pumpfoil;Jumping;Schwach;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;<70;Pumpfoil;Jumping;Schwach;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;<70;Pumpfoil;Jumping;Schwach;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;<70;Pumpfoil;Jumping;Mittel;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;<70;Pumpfoil;Jumping;Mittel;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;<70;Pumpfoil;Jumping;Mittel;Gross;Stride Ace;1360;Stride;2050;Stride Ace;1740
+Expert;<70;Pumpfoil;Jumping;Stark;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;<70;Pumpfoil;Jumping;Stark;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;<70;Pumpfoil;Jumping;Stark;Gross;Stride Ace;1360;Stride;2050;Stride Ace;1740
+Expert;<70;Pumpfoil;Flatwater;Schwach;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;<70;Pumpfoil;Flatwater;Schwach;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;<70;Pumpfoil;Flatwater;Schwach;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;<70;Pumpfoil;Flatwater;Mittel;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;<70;Pumpfoil;Flatwater;Mittel;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;<70;Pumpfoil;Flatwater;Mittel;Gross;Stride Ace;1360;Stride;2050;Stride Ace;1740
+Expert;<70;Pumpfoil;Flatwater;Stark;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;<70;Pumpfoil;Flatwater;Stark;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;<70;Pumpfoil;Flatwater;Stark;Gross;Stride Ace;1360;Stride;2050;Stride Ace;1740
+Expert;<70;Pumpfoil;Race;Schwach;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;<70;Pumpfoil;Race;Schwach;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;<70;Pumpfoil;Race;Schwach;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;<70;Pumpfoil;Race;Mittel;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;<70;Pumpfoil;Race;Mittel;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;<70;Pumpfoil;Race;Mittel;Gross;Stride Ace;1360;Stride;2050;Stride Ace;1740
+Expert;<70;Pumpfoil;Race;Stark;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;<70;Pumpfoil;Race;Stark;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;<70;Pumpfoil;Race;Stark;Gross;Stride Ace;1360;Stride;2050;Stride Ace;1740
+Expert;<70;Parawing;Freeride;Schwach;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;<70;Parawing;Freeride;Schwach;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;<70;Parawing;Freeride;Schwach;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Parawing;Freeride;Mittel;Flach;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Parawing;Freeride;Mittel;Klein;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Parawing;Freeride;Mittel;Gross;Stride Ace;1360;Flow;720;Stride Ace;1740
+Expert;<70;Parawing;Freeride;Stark;Flach;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Parawing;Freeride;Stark;Klein;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Parawing;Freeride;Stark;Gross;Stride Ace;1360;Flow;720;Stride Ace;1740
+Expert;<70;Parawing;Jumping;Schwach;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;<70;Parawing;Jumping;Schwach;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;<70;Parawing;Jumping;Schwach;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Parawing;Jumping;Mittel;Flach;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Parawing;Jumping;Mittel;Klein;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Parawing;Jumping;Mittel;Gross;Stride Ace;1360;Flow;720;Stride Ace;1740
+Expert;<70;Parawing;Jumping;Stark;Flach;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Parawing;Jumping;Stark;Klein;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Parawing;Jumping;Stark;Gross;Stride Ace;1360;Flow;720;Stride Ace;1740
+Expert;<70;Parawing;Flatwater;Schwach;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;<70;Parawing;Flatwater;Schwach;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;<70;Parawing;Flatwater;Schwach;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Parawing;Flatwater;Mittel;Flach;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Parawing;Flatwater;Mittel;Klein;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Parawing;Flatwater;Mittel;Gross;Stride Ace;1360;Flow;720;Stride Ace;1740
+Expert;<70;Parawing;Flatwater;Stark;Flach;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Parawing;Flatwater;Stark;Klein;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Parawing;Flatwater;Stark;Gross;Stride Ace;1360;Flow;720;Stride Ace;1740
+Expert;<70;Parawing;Race;Schwach;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;<70;Parawing;Race;Schwach;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;<70;Parawing;Race;Schwach;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Parawing;Race;Mittel;Flach;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Parawing;Race;Mittel;Klein;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Parawing;Race;Mittel;Gross;Stride Ace;1360;Flow;720;Stride Ace;1740
+Expert;<70;Parawing;Race;Stark;Flach;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Parawing;Race;Stark;Klein;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;<70;Parawing;Race;Stark;Gross;Stride Ace;1360;Flow;720;Stride Ace;1740
+Expert;70-90;Downwind;Freeride;Schwach;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;70-90;Downwind;Freeride;Schwach;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;70-90;Downwind;Freeride;Schwach;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Downwind;Freeride;Mittel;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Downwind;Freeride;Mittel;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Downwind;Freeride;Mittel;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;70-90;Downwind;Freeride;Stark;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Downwind;Freeride;Stark;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Downwind;Freeride;Stark;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;70-90;Downwind;Jumping;Schwach;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;70-90;Downwind;Jumping;Schwach;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;70-90;Downwind;Jumping;Schwach;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Downwind;Jumping;Mittel;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Downwind;Jumping;Mittel;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Downwind;Jumping;Mittel;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;70-90;Downwind;Jumping;Stark;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Downwind;Jumping;Stark;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Downwind;Jumping;Stark;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;70-90;Downwind;Flatwater;Schwach;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;70-90;Downwind;Flatwater;Schwach;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;70-90;Downwind;Flatwater;Schwach;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Downwind;Flatwater;Mittel;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Downwind;Flatwater;Mittel;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Downwind;Flatwater;Mittel;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;70-90;Downwind;Flatwater;Stark;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Downwind;Flatwater;Stark;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Downwind;Flatwater;Stark;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;70-90;Downwind;Race;Schwach;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;70-90;Downwind;Race;Schwach;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;70-90;Downwind;Race;Schwach;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Downwind;Race;Mittel;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Downwind;Race;Mittel;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Downwind;Race;Mittel;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;70-90;Downwind;Race;Stark;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Downwind;Race;Stark;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Downwind;Race;Stark;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;70-90;Wingfoil Freeride;Freeride;Schwach;Flach;Infinity;1140;Pacer;1850;Infinity;990
+Expert;70-90;Wingfoil Freeride;Freeride;Schwach;Klein;Infinity;1140;Pacer;1850;Infinity;990
+Expert;70-90;Wingfoil Freeride;Freeride;Schwach;Gross;Infinity;990;Pacer;1550;Infinity;840
+Expert;70-90;Wingfoil Freeride;Freeride;Mittel;Flach;Infinity;990;Pacer;1550;Infinity;840
+Expert;70-90;Wingfoil Freeride;Freeride;Mittel;Klein;Infinity;990;Pacer;1550;Infinity;840
+Expert;70-90;Wingfoil Freeride;Freeride;Mittel;Gross;Infinity;840;Pacer;1250;Infinity;690
+Expert;70-90;Wingfoil Freeride;Freeride;Stark;Flach;Infinity;990;Pacer;1550;Infinity;840
+Expert;70-90;Wingfoil Freeride;Freeride;Stark;Klein;Infinity;990;Pacer;1550;Infinity;840
+Expert;70-90;Wingfoil Freeride;Freeride;Stark;Gross;Infinity;840;Pacer;1250;Infinity;690
+Expert;70-90;Wingfoil Freeride;Jumping;Schwach;Flach;Infinity;1140;Pacer;1850;Infinity;990
+Expert;70-90;Wingfoil Freeride;Jumping;Schwach;Klein;Infinity;1140;Pacer;1850;Infinity;990
+Expert;70-90;Wingfoil Freeride;Jumping;Schwach;Gross;Infinity;990;Pacer;1550;Infinity;840
+Expert;70-90;Wingfoil Freeride;Jumping;Mittel;Flach;Infinity;990;Pacer;1550;Infinity;840
+Expert;70-90;Wingfoil Freeride;Jumping;Mittel;Klein;Infinity;990;Pacer;1550;Infinity;840
+Expert;70-90;Wingfoil Freeride;Jumping;Mittel;Gross;Infinity;840;Pacer;1250;Infinity;690
+Expert;70-90;Wingfoil Freeride;Jumping;Stark;Flach;Infinity;990;Pacer;1550;Infinity;840
+Expert;70-90;Wingfoil Freeride;Jumping;Stark;Klein;Infinity;990;Pacer;1550;Infinity;840
+Expert;70-90;Wingfoil Freeride;Jumping;Stark;Gross;Infinity;840;Pacer;1250;Infinity;690
+Expert;70-90;Wingfoil Freeride;Flatwater;Schwach;Flach;Infinity;1140;Pacer;1850;Infinity;990
+Expert;70-90;Wingfoil Freeride;Flatwater;Schwach;Klein;Infinity;1140;Pacer;1850;Infinity;990
+Expert;70-90;Wingfoil Freeride;Flatwater;Schwach;Gross;Infinity;990;Pacer;1550;Infinity;840
+Expert;70-90;Wingfoil Freeride;Flatwater;Mittel;Flach;Infinity;990;Pacer;1550;Infinity;840
+Expert;70-90;Wingfoil Freeride;Flatwater;Mittel;Klein;Infinity;990;Pacer;1550;Infinity;840
+Expert;70-90;Wingfoil Freeride;Flatwater;Mittel;Gross;Infinity;840;Pacer;1250;Infinity;690
+Expert;70-90;Wingfoil Freeride;Flatwater;Stark;Flach;Infinity;990;Pacer;1550;Infinity;840
+Expert;70-90;Wingfoil Freeride;Flatwater;Stark;Klein;Infinity;990;Pacer;1550;Infinity;840
+Expert;70-90;Wingfoil Freeride;Flatwater;Stark;Gross;Infinity;840;Pacer;1250;Infinity;690
+Expert;70-90;Wingfoil Freeride;Race;Schwach;Flach;Infinity;1140;Flow;1080;Infinity;990
+Expert;70-90;Wingfoil Freeride;Race;Schwach;Klein;Infinity;1140;Flow;1080;Infinity;990
+Expert;70-90;Wingfoil Freeride;Race;Schwach;Gross;Infinity;990;Flow;900;Infinity;840
+Expert;70-90;Wingfoil Freeride;Race;Mittel;Flach;Infinity;990;Flow;900;Infinity;840
+Expert;70-90;Wingfoil Freeride;Race;Mittel;Klein;Infinity;990;Flow;900;Infinity;840
+Expert;70-90;Wingfoil Freeride;Race;Mittel;Gross;Infinity;840;Flow;720;Infinity;690
+Expert;70-90;Wingfoil Freeride;Race;Stark;Flach;Infinity;990;Flow;900;Infinity;840
+Expert;70-90;Wingfoil Freeride;Race;Stark;Klein;Infinity;990;Flow;900;Infinity;840
+Expert;70-90;Wingfoil Freeride;Race;Stark;Gross;Infinity;840;Flow;720;Infinity;690
+Expert;70-90;Wavesurfing;Freeride;Schwach;Flach;Infinity;1140;Flow;1080;Infinity;990
+Expert;70-90;Wavesurfing;Freeride;Schwach;Klein;Infinity;1140;Flow;1080;Infinity;990
+Expert;70-90;Wavesurfing;Freeride;Schwach;Gross;Infinity;990;Flow;900;Infinity;840
+Expert;70-90;Wavesurfing;Freeride;Mittel;Flach;Infinity;990;Flow;900;Infinity;840
+Expert;70-90;Wavesurfing;Freeride;Mittel;Klein;Infinity;990;Flow;900;Infinity;840
+Expert;70-90;Wavesurfing;Freeride;Mittel;Gross;Infinity;840;Flow;720;Infinity;690
+Expert;70-90;Wavesurfing;Freeride;Stark;Flach;Infinity;990;Flow;900;Infinity;840
+Expert;70-90;Wavesurfing;Freeride;Stark;Klein;Infinity;990;Flow;900;Infinity;840
+Expert;70-90;Wavesurfing;Freeride;Stark;Gross;Infinity;840;Flow;720;Infinity;690
+Expert;70-90;Wavesurfing;Jumping;Schwach;Flach;Infinity;1140;Flow;1080;Infinity;990
+Expert;70-90;Wavesurfing;Jumping;Schwach;Klein;Infinity;1140;Flow;1080;Infinity;990
+Expert;70-90;Wavesurfing;Jumping;Schwach;Gross;Infinity;990;Flow;900;Infinity;840
+Expert;70-90;Wavesurfing;Jumping;Mittel;Flach;Infinity;990;Flow;900;Infinity;840
+Expert;70-90;Wavesurfing;Jumping;Mittel;Klein;Infinity;990;Flow;900;Infinity;840
+Expert;70-90;Wavesurfing;Jumping;Mittel;Gross;Infinity;840;Flow;720;Infinity;690
+Expert;70-90;Wavesurfing;Jumping;Stark;Flach;Infinity;990;Flow;900;Infinity;840
+Expert;70-90;Wavesurfing;Jumping;Stark;Klein;Infinity;990;Flow;900;Infinity;840
+Expert;70-90;Wavesurfing;Jumping;Stark;Gross;Infinity;840;Flow;720;Infinity;690
+Expert;70-90;Wavesurfing;Flatwater;Schwach;Flach;Infinity;1140;Flow;1080;Infinity;990
+Expert;70-90;Wavesurfing;Flatwater;Schwach;Klein;Infinity;1140;Flow;1080;Infinity;990
+Expert;70-90;Wavesurfing;Flatwater;Schwach;Gross;Infinity;990;Flow;900;Infinity;840
+Expert;70-90;Wavesurfing;Flatwater;Mittel;Flach;Infinity;990;Flow;900;Infinity;840
+Expert;70-90;Wavesurfing;Flatwater;Mittel;Klein;Infinity;990;Flow;900;Infinity;840
+Expert;70-90;Wavesurfing;Flatwater;Mittel;Gross;Infinity;840;Flow;720;Infinity;690
+Expert;70-90;Wavesurfing;Flatwater;Stark;Flach;Infinity;990;Flow;900;Infinity;840
+Expert;70-90;Wavesurfing;Flatwater;Stark;Klein;Infinity;990;Flow;900;Infinity;840
+Expert;70-90;Wavesurfing;Flatwater;Stark;Gross;Infinity;840;Flow;720;Infinity;690
+Expert;70-90;Wavesurfing;Race;Schwach;Flach;Infinity;1140;Flow;1080;Infinity;990
+Expert;70-90;Wavesurfing;Race;Schwach;Klein;Infinity;1140;Flow;1080;Infinity;990
+Expert;70-90;Wavesurfing;Race;Schwach;Gross;Infinity;990;Flow;900;Infinity;840
+Expert;70-90;Wavesurfing;Race;Mittel;Flach;Infinity;990;Flow;900;Infinity;840
+Expert;70-90;Wavesurfing;Race;Mittel;Klein;Infinity;990;Flow;900;Infinity;840
+Expert;70-90;Wavesurfing;Race;Mittel;Gross;Infinity;840;Flow;720;Infinity;690
+Expert;70-90;Wavesurfing;Race;Stark;Flach;Infinity;990;Flow;900;Infinity;840
+Expert;70-90;Wavesurfing;Race;Stark;Klein;Infinity;990;Flow;900;Infinity;840
+Expert;70-90;Wavesurfing;Race;Stark;Gross;Infinity;840;Flow;720;Infinity;690
+Expert;70-90;Lightwind;Freeride;Schwach;Flach;Stride;2050;Stride Ace;1740;;
+Expert;70-90;Lightwind;Freeride;Schwach;Klein;Stride;2050;Stride Ace;1740;;
+Expert;70-90;Lightwind;Freeride;Schwach;Gross;Stride;2050;Stride Ace;1740;;
+Expert;70-90;Lightwind;Freeride;Mittel;Flach;Stride;2050;Stride Ace;1740;;
+Expert;70-90;Lightwind;Freeride;Mittel;Klein;Stride;2050;Stride Ace;1740;;
+Expert;70-90;Lightwind;Freeride;Mittel;Gross;Stride;2050;Stride Ace;1740;;
+Expert;70-90;Lightwind;Freeride;Stark;Flach;Stride;2050;Stride Ace;1740;;
+Expert;70-90;Lightwind;Freeride;Stark;Klein;Stride;2050;Stride Ace;1740;;
+Expert;70-90;Lightwind;Freeride;Stark;Gross;Stride;2050;Stride Ace;1740;;
+Expert;70-90;Lightwind;Jumping;Schwach;Flach;Stride;2050;Stride Ace;1740;;
+Expert;70-90;Lightwind;Jumping;Schwach;Klein;Stride;2050;Stride Ace;1740;;
+Expert;70-90;Lightwind;Jumping;Schwach;Gross;Stride;2050;Stride Ace;1740;;
+Expert;70-90;Lightwind;Jumping;Mittel;Flach;Stride;2050;Stride Ace;1740;;
+Expert;70-90;Lightwind;Jumping;Mittel;Klein;Stride;2050;Stride Ace;1740;;
+Expert;70-90;Lightwind;Jumping;Mittel;Gross;Stride;2050;Stride Ace;1740;;
+Expert;70-90;Lightwind;Jumping;Stark;Flach;Stride;2050;Stride Ace;1740;;
+Expert;70-90;Lightwind;Jumping;Stark;Klein;Stride;2050;Stride Ace;1740;;
+Expert;70-90;Lightwind;Jumping;Stark;Gross;Stride;2050;Stride Ace;1740;;
+Expert;70-90;Lightwind;Flatwater;Schwach;Flach;Stride;2050;Stride Ace;1740;;
+Expert;70-90;Lightwind;Flatwater;Schwach;Klein;Stride;2050;Stride Ace;1740;;
+Expert;70-90;Lightwind;Flatwater;Schwach;Gross;Stride;2050;Stride Ace;1740;;
+Expert;70-90;Lightwind;Flatwater;Mittel;Flach;Stride;2050;Stride Ace;1740;;
+Expert;70-90;Lightwind;Flatwater;Mittel;Klein;Stride;2050;Stride Ace;1740;;
+Expert;70-90;Lightwind;Flatwater;Mittel;Gross;Stride;2050;Stride Ace;1740;;
+Expert;70-90;Lightwind;Flatwater;Stark;Flach;Stride;2050;Stride Ace;1740;;
+Expert;70-90;Lightwind;Flatwater;Stark;Klein;Stride;2050;Stride Ace;1740;;
+Expert;70-90;Lightwind;Flatwater;Stark;Gross;Stride;2050;Stride Ace;1740;;
+Expert;70-90;Lightwind;Race;Schwach;Flach;Stride;2050;Stride Ace;1740;;
+Expert;70-90;Lightwind;Race;Schwach;Klein;Stride;2050;Stride Ace;1740;;
+Expert;70-90;Lightwind;Race;Schwach;Gross;Stride;2050;Stride Ace;1740;;
+Expert;70-90;Lightwind;Race;Mittel;Flach;Stride;2050;Stride Ace;1740;;
+Expert;70-90;Lightwind;Race;Mittel;Klein;Stride;2050;Stride Ace;1740;;
+Expert;70-90;Lightwind;Race;Mittel;Gross;Stride;2050;Stride Ace;1740;;
+Expert;70-90;Lightwind;Race;Stark;Flach;Stride;2050;Stride Ace;1740;;
+Expert;70-90;Lightwind;Race;Stark;Klein;Stride;2050;Stride Ace;1740;;
+Expert;70-90;Lightwind;Race;Stark;Gross;Stride;2050;Stride Ace;1740;;
+Expert;70-90;Pumpfoil;Freeride;Schwach;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;70-90;Pumpfoil;Freeride;Schwach;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;70-90;Pumpfoil;Freeride;Schwach;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;70-90;Pumpfoil;Freeride;Mittel;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;70-90;Pumpfoil;Freeride;Mittel;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;70-90;Pumpfoil;Freeride;Mittel;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;70-90;Pumpfoil;Freeride;Stark;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;70-90;Pumpfoil;Freeride;Stark;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;70-90;Pumpfoil;Freeride;Stark;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;70-90;Pumpfoil;Jumping;Schwach;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;70-90;Pumpfoil;Jumping;Schwach;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;70-90;Pumpfoil;Jumping;Schwach;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;70-90;Pumpfoil;Jumping;Mittel;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;70-90;Pumpfoil;Jumping;Mittel;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;70-90;Pumpfoil;Jumping;Mittel;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;70-90;Pumpfoil;Jumping;Stark;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;70-90;Pumpfoil;Jumping;Stark;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;70-90;Pumpfoil;Jumping;Stark;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;70-90;Pumpfoil;Flatwater;Schwach;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;70-90;Pumpfoil;Flatwater;Schwach;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;70-90;Pumpfoil;Flatwater;Schwach;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;70-90;Pumpfoil;Flatwater;Mittel;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;70-90;Pumpfoil;Flatwater;Mittel;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;70-90;Pumpfoil;Flatwater;Mittel;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;70-90;Pumpfoil;Flatwater;Stark;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;70-90;Pumpfoil;Flatwater;Stark;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;70-90;Pumpfoil;Flatwater;Stark;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;70-90;Pumpfoil;Race;Schwach;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;70-90;Pumpfoil;Race;Schwach;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;70-90;Pumpfoil;Race;Schwach;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;70-90;Pumpfoil;Race;Mittel;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;70-90;Pumpfoil;Race;Mittel;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;70-90;Pumpfoil;Race;Mittel;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;70-90;Pumpfoil;Race;Stark;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;70-90;Pumpfoil;Race;Stark;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;70-90;Pumpfoil;Race;Stark;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;70-90;Parawing;Freeride;Schwach;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;70-90;Parawing;Freeride;Schwach;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;70-90;Parawing;Freeride;Schwach;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Parawing;Freeride;Mittel;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Parawing;Freeride;Mittel;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Parawing;Freeride;Mittel;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;70-90;Parawing;Freeride;Stark;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Parawing;Freeride;Stark;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Parawing;Freeride;Stark;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;70-90;Parawing;Jumping;Schwach;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;70-90;Parawing;Jumping;Schwach;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;70-90;Parawing;Jumping;Schwach;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Parawing;Jumping;Mittel;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Parawing;Jumping;Mittel;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Parawing;Jumping;Mittel;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;70-90;Parawing;Jumping;Stark;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Parawing;Jumping;Stark;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Parawing;Jumping;Stark;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;70-90;Parawing;Flatwater;Schwach;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;70-90;Parawing;Flatwater;Schwach;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;70-90;Parawing;Flatwater;Schwach;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Parawing;Flatwater;Mittel;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Parawing;Flatwater;Mittel;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Parawing;Flatwater;Mittel;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;70-90;Parawing;Flatwater;Stark;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Parawing;Flatwater;Stark;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Parawing;Flatwater;Stark;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;70-90;Parawing;Race;Schwach;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;70-90;Parawing;Race;Schwach;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;70-90;Parawing;Race;Schwach;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Parawing;Race;Mittel;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Parawing;Race;Mittel;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Parawing;Race;Mittel;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;70-90;Parawing;Race;Stark;Flach;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Parawing;Race;Stark;Klein;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;70-90;Parawing;Race;Stark;Gross;Stride Ace;1740;Flow;900;Stride Ace;1360
+Expert;>90;Downwind;Freeride;Schwach;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Downwind;Freeride;Schwach;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Downwind;Freeride;Schwach;Gross;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Downwind;Freeride;Mittel;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Downwind;Freeride;Mittel;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Downwind;Freeride;Mittel;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;>90;Downwind;Freeride;Stark;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Downwind;Freeride;Stark;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Downwind;Freeride;Stark;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;>90;Downwind;Jumping;Schwach;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Downwind;Jumping;Schwach;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Downwind;Jumping;Schwach;Gross;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Downwind;Jumping;Mittel;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Downwind;Jumping;Mittel;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Downwind;Jumping;Mittel;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;>90;Downwind;Jumping;Stark;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Downwind;Jumping;Stark;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Downwind;Jumping;Stark;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;>90;Downwind;Flatwater;Schwach;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Downwind;Flatwater;Schwach;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Downwind;Flatwater;Schwach;Gross;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Downwind;Flatwater;Mittel;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Downwind;Flatwater;Mittel;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Downwind;Flatwater;Mittel;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;>90;Downwind;Flatwater;Stark;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Downwind;Flatwater;Stark;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Downwind;Flatwater;Stark;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;>90;Downwind;Race;Schwach;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Downwind;Race;Schwach;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Downwind;Race;Schwach;Gross;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Downwind;Race;Mittel;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Downwind;Race;Mittel;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Downwind;Race;Mittel;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;>90;Downwind;Race;Stark;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Downwind;Race;Stark;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Downwind;Race;Stark;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;>90;Wingfoil Freeride;Freeride;Schwach;Flach;Infinity;1390;Pacer;2200;Infinity;1140
+Expert;>90;Wingfoil Freeride;Freeride;Schwach;Klein;Infinity;1390;Pacer;2200;Infinity;1140
+Expert;>90;Wingfoil Freeride;Freeride;Schwach;Gross;Infinity;1140;Pacer;1850;Infinity;990
+Expert;>90;Wingfoil Freeride;Freeride;Mittel;Flach;Infinity;1140;Pacer;1850;Infinity;990
+Expert;>90;Wingfoil Freeride;Freeride;Mittel;Klein;Infinity;1140;Pacer;1850;Infinity;990
+Expert;>90;Wingfoil Freeride;Freeride;Mittel;Gross;Infinity;990;Pacer;1550;Infinity;840
+Expert;>90;Wingfoil Freeride;Freeride;Stark;Flach;Infinity;1140;Pacer;1850;Infinity;990
+Expert;>90;Wingfoil Freeride;Freeride;Stark;Klein;Infinity;1140;Pacer;1850;Infinity;990
+Expert;>90;Wingfoil Freeride;Freeride;Stark;Gross;Infinity;990;Pacer;1550;Infinity;840
+Expert;>90;Wingfoil Freeride;Jumping;Schwach;Flach;Infinity;1390;Pacer;2200;Infinity;1140
+Expert;>90;Wingfoil Freeride;Jumping;Schwach;Klein;Infinity;1390;Pacer;2200;Infinity;1140
+Expert;>90;Wingfoil Freeride;Jumping;Schwach;Gross;Infinity;1140;Pacer;1850;Infinity;990
+Expert;>90;Wingfoil Freeride;Jumping;Mittel;Flach;Infinity;1140;Pacer;1850;Infinity;990
+Expert;>90;Wingfoil Freeride;Jumping;Mittel;Klein;Infinity;1140;Pacer;1850;Infinity;990
+Expert;>90;Wingfoil Freeride;Jumping;Mittel;Gross;Infinity;990;Pacer;1550;Infinity;840
+Expert;>90;Wingfoil Freeride;Jumping;Stark;Flach;Infinity;1140;Pacer;1850;Infinity;990
+Expert;>90;Wingfoil Freeride;Jumping;Stark;Klein;Infinity;1140;Pacer;1850;Infinity;990
+Expert;>90;Wingfoil Freeride;Jumping;Stark;Gross;Infinity;990;Pacer;1550;Infinity;840
+Expert;>90;Wingfoil Freeride;Flatwater;Schwach;Flach;Infinity;1390;Pacer;2200;Infinity;1140
+Expert;>90;Wingfoil Freeride;Flatwater;Schwach;Klein;Infinity;1390;Pacer;2200;Infinity;1140
+Expert;>90;Wingfoil Freeride;Flatwater;Schwach;Gross;Infinity;1140;Pacer;1850;Infinity;990
+Expert;>90;Wingfoil Freeride;Flatwater;Mittel;Flach;Infinity;1140;Pacer;1850;Infinity;990
+Expert;>90;Wingfoil Freeride;Flatwater;Mittel;Klein;Infinity;1140;Pacer;1850;Infinity;990
+Expert;>90;Wingfoil Freeride;Flatwater;Mittel;Gross;Infinity;990;Pacer;1550;Infinity;840
+Expert;>90;Wingfoil Freeride;Flatwater;Stark;Flach;Infinity;1140;Pacer;1850;Infinity;990
+Expert;>90;Wingfoil Freeride;Flatwater;Stark;Klein;Infinity;1140;Pacer;1850;Infinity;990
+Expert;>90;Wingfoil Freeride;Flatwater;Stark;Gross;Infinity;990;Pacer;1550;Infinity;840
+Expert;>90;Wingfoil Freeride;Race;Schwach;Flach;Infinity;1390;Flow;1260;Infinity;1140
+Expert;>90;Wingfoil Freeride;Race;Schwach;Klein;Infinity;1390;Flow;1260;Infinity;1140
+Expert;>90;Wingfoil Freeride;Race;Schwach;Gross;Infinity;1140;Flow;1080;Infinity;990
+Expert;>90;Wingfoil Freeride;Race;Mittel;Flach;Infinity;1140;Flow;1080;Infinity;990
+Expert;>90;Wingfoil Freeride;Race;Mittel;Klein;Infinity;1140;Flow;1080;Infinity;990
+Expert;>90;Wingfoil Freeride;Race;Mittel;Gross;Infinity;990;Flow;900;Infinity;840
+Expert;>90;Wingfoil Freeride;Race;Stark;Flach;Infinity;1140;Flow;1080;Infinity;990
+Expert;>90;Wingfoil Freeride;Race;Stark;Klein;Infinity;1140;Flow;1080;Infinity;990
+Expert;>90;Wingfoil Freeride;Race;Stark;Gross;Infinity;990;Flow;900;Infinity;840
+Expert;>90;Wavesurfing;Freeride;Schwach;Flach;Infinity;1390;Flow;1260;Infinity;1140
+Expert;>90;Wavesurfing;Freeride;Schwach;Klein;Infinity;1390;Flow;1260;Infinity;1140
+Expert;>90;Wavesurfing;Freeride;Schwach;Gross;Infinity;1140;Flow;1080;Infinity;990
+Expert;>90;Wavesurfing;Freeride;Mittel;Flach;Infinity;1140;Flow;1080;Infinity;990
+Expert;>90;Wavesurfing;Freeride;Mittel;Klein;Infinity;1140;Flow;1080;Infinity;990
+Expert;>90;Wavesurfing;Freeride;Mittel;Gross;Infinity;990;Flow;900;Infinity;840
+Expert;>90;Wavesurfing;Freeride;Stark;Flach;Infinity;1140;Flow;1080;Infinity;990
+Expert;>90;Wavesurfing;Freeride;Stark;Klein;Infinity;1140;Flow;1080;Infinity;990
+Expert;>90;Wavesurfing;Freeride;Stark;Gross;Infinity;990;Flow;900;Infinity;840
+Expert;>90;Wavesurfing;Jumping;Schwach;Flach;Infinity;1390;Flow;1260;Infinity;1140
+Expert;>90;Wavesurfing;Jumping;Schwach;Klein;Infinity;1390;Flow;1260;Infinity;1140
+Expert;>90;Wavesurfing;Jumping;Schwach;Gross;Infinity;1140;Flow;1080;Infinity;990
+Expert;>90;Wavesurfing;Jumping;Mittel;Flach;Infinity;1140;Flow;1080;Infinity;990
+Expert;>90;Wavesurfing;Jumping;Mittel;Klein;Infinity;1140;Flow;1080;Infinity;990
+Expert;>90;Wavesurfing;Jumping;Mittel;Gross;Infinity;990;Flow;900;Infinity;840
+Expert;>90;Wavesurfing;Jumping;Stark;Flach;Infinity;1140;Flow;1080;Infinity;990
+Expert;>90;Wavesurfing;Jumping;Stark;Klein;Infinity;1140;Flow;1080;Infinity;990
+Expert;>90;Wavesurfing;Jumping;Stark;Gross;Infinity;990;Flow;900;Infinity;840
+Expert;>90;Wavesurfing;Flatwater;Schwach;Flach;Infinity;1390;Flow;1260;Infinity;1140
+Expert;>90;Wavesurfing;Flatwater;Schwach;Klein;Infinity;1390;Flow;1260;Infinity;1140
+Expert;>90;Wavesurfing;Flatwater;Schwach;Gross;Infinity;1140;Flow;1080;Infinity;990
+Expert;>90;Wavesurfing;Flatwater;Mittel;Flach;Infinity;1140;Flow;1080;Infinity;990
+Expert;>90;Wavesurfing;Flatwater;Mittel;Klein;Infinity;1140;Flow;1080;Infinity;990
+Expert;>90;Wavesurfing;Flatwater;Mittel;Gross;Infinity;990;Flow;900;Infinity;840
+Expert;>90;Wavesurfing;Flatwater;Stark;Flach;Infinity;1140;Flow;1080;Infinity;990
+Expert;>90;Wavesurfing;Flatwater;Stark;Klein;Infinity;1140;Flow;1080;Infinity;990
+Expert;>90;Wavesurfing;Flatwater;Stark;Gross;Infinity;990;Flow;900;Infinity;840
+Expert;>90;Wavesurfing;Race;Schwach;Flach;Infinity;1390;Flow;1260;Infinity;1140
+Expert;>90;Wavesurfing;Race;Schwach;Klein;Infinity;1390;Flow;1260;Infinity;1140
+Expert;>90;Wavesurfing;Race;Schwach;Gross;Infinity;1140;Flow;1080;Infinity;990
+Expert;>90;Wavesurfing;Race;Mittel;Flach;Infinity;1140;Flow;1080;Infinity;990
+Expert;>90;Wavesurfing;Race;Mittel;Klein;Infinity;1140;Flow;1080;Infinity;990
+Expert;>90;Wavesurfing;Race;Mittel;Gross;Infinity;990;Flow;900;Infinity;840
+Expert;>90;Wavesurfing;Race;Stark;Flach;Infinity;1140;Flow;1080;Infinity;990
+Expert;>90;Wavesurfing;Race;Stark;Klein;Infinity;1140;Flow;1080;Infinity;990
+Expert;>90;Wavesurfing;Race;Stark;Gross;Infinity;990;Flow;900;Infinity;840
+Expert;>90;Lightwind;Freeride;Schwach;Flach;Stride;2050;Stride Ace;1740;;
+Expert;>90;Lightwind;Freeride;Schwach;Klein;Stride;2050;Stride Ace;1740;;
+Expert;>90;Lightwind;Freeride;Schwach;Gross;Stride;2050;Stride Ace;1740;;
+Expert;>90;Lightwind;Freeride;Mittel;Flach;Stride;2050;Stride Ace;1740;;
+Expert;>90;Lightwind;Freeride;Mittel;Klein;Stride;2050;Stride Ace;1740;;
+Expert;>90;Lightwind;Freeride;Mittel;Gross;Stride;2050;Stride Ace;1740;;
+Expert;>90;Lightwind;Freeride;Stark;Flach;Stride;2050;Stride Ace;1740;;
+Expert;>90;Lightwind;Freeride;Stark;Klein;Stride;2050;Stride Ace;1740;;
+Expert;>90;Lightwind;Freeride;Stark;Gross;Stride;2050;Stride Ace;1740;;
+Expert;>90;Lightwind;Jumping;Schwach;Flach;Stride;2050;Stride Ace;1740;;
+Expert;>90;Lightwind;Jumping;Schwach;Klein;Stride;2050;Stride Ace;1740;;
+Expert;>90;Lightwind;Jumping;Schwach;Gross;Stride;2050;Stride Ace;1740;;
+Expert;>90;Lightwind;Jumping;Mittel;Flach;Stride;2050;Stride Ace;1740;;
+Expert;>90;Lightwind;Jumping;Mittel;Klein;Stride;2050;Stride Ace;1740;;
+Expert;>90;Lightwind;Jumping;Mittel;Gross;Stride;2050;Stride Ace;1740;;
+Expert;>90;Lightwind;Jumping;Stark;Flach;Stride;2050;Stride Ace;1740;;
+Expert;>90;Lightwind;Jumping;Stark;Klein;Stride;2050;Stride Ace;1740;;
+Expert;>90;Lightwind;Jumping;Stark;Gross;Stride;2050;Stride Ace;1740;;
+Expert;>90;Lightwind;Flatwater;Schwach;Flach;Stride;2050;Stride Ace;1740;;
+Expert;>90;Lightwind;Flatwater;Schwach;Klein;Stride;2050;Stride Ace;1740;;
+Expert;>90;Lightwind;Flatwater;Schwach;Gross;Stride;2050;Stride Ace;1740;;
+Expert;>90;Lightwind;Flatwater;Mittel;Flach;Stride;2050;Stride Ace;1740;;
+Expert;>90;Lightwind;Flatwater;Mittel;Klein;Stride;2050;Stride Ace;1740;;
+Expert;>90;Lightwind;Flatwater;Mittel;Gross;Stride;2050;Stride Ace;1740;;
+Expert;>90;Lightwind;Flatwater;Stark;Flach;Stride;2050;Stride Ace;1740;;
+Expert;>90;Lightwind;Flatwater;Stark;Klein;Stride;2050;Stride Ace;1740;;
+Expert;>90;Lightwind;Flatwater;Stark;Gross;Stride;2050;Stride Ace;1740;;
+Expert;>90;Lightwind;Race;Schwach;Flach;Stride;2050;Stride Ace;1740;;
+Expert;>90;Lightwind;Race;Schwach;Klein;Stride;2050;Stride Ace;1740;;
+Expert;>90;Lightwind;Race;Schwach;Gross;Stride;2050;Stride Ace;1740;;
+Expert;>90;Lightwind;Race;Mittel;Flach;Stride;2050;Stride Ace;1740;;
+Expert;>90;Lightwind;Race;Mittel;Klein;Stride;2050;Stride Ace;1740;;
+Expert;>90;Lightwind;Race;Mittel;Gross;Stride;2050;Stride Ace;1740;;
+Expert;>90;Lightwind;Race;Stark;Flach;Stride;2050;Stride Ace;1740;;
+Expert;>90;Lightwind;Race;Stark;Klein;Stride;2050;Stride Ace;1740;;
+Expert;>90;Lightwind;Race;Stark;Gross;Stride;2050;Stride Ace;1740;;
+Expert;>90;Pumpfoil;Freeride;Schwach;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;>90;Pumpfoil;Freeride;Schwach;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;>90;Pumpfoil;Freeride;Schwach;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;>90;Pumpfoil;Freeride;Mittel;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;>90;Pumpfoil;Freeride;Mittel;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;>90;Pumpfoil;Freeride;Mittel;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;>90;Pumpfoil;Freeride;Stark;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;>90;Pumpfoil;Freeride;Stark;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;>90;Pumpfoil;Freeride;Stark;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;>90;Pumpfoil;Jumping;Schwach;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;>90;Pumpfoil;Jumping;Schwach;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;>90;Pumpfoil;Jumping;Schwach;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;>90;Pumpfoil;Jumping;Mittel;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;>90;Pumpfoil;Jumping;Mittel;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;>90;Pumpfoil;Jumping;Mittel;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;>90;Pumpfoil;Jumping;Stark;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;>90;Pumpfoil;Jumping;Stark;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;>90;Pumpfoil;Jumping;Stark;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;>90;Pumpfoil;Flatwater;Schwach;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;>90;Pumpfoil;Flatwater;Schwach;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;>90;Pumpfoil;Flatwater;Schwach;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;>90;Pumpfoil;Flatwater;Mittel;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;>90;Pumpfoil;Flatwater;Mittel;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;>90;Pumpfoil;Flatwater;Mittel;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;>90;Pumpfoil;Flatwater;Stark;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;>90;Pumpfoil;Flatwater;Stark;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;>90;Pumpfoil;Flatwater;Stark;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;>90;Pumpfoil;Race;Schwach;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;>90;Pumpfoil;Race;Schwach;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;>90;Pumpfoil;Race;Schwach;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;>90;Pumpfoil;Race;Mittel;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;>90;Pumpfoil;Race;Mittel;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;>90;Pumpfoil;Race;Mittel;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;>90;Pumpfoil;Race;Stark;Flach;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;>90;Pumpfoil;Race;Stark;Klein;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;>90;Pumpfoil;Race;Stark;Gross;Stride Ace;1740;Stride;2050;Stride Ace;1360
+Expert;>90;Parawing;Freeride;Schwach;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Parawing;Freeride;Schwach;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Parawing;Freeride;Schwach;Gross;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Parawing;Freeride;Mittel;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Parawing;Freeride;Mittel;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Parawing;Freeride;Mittel;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;>90;Parawing;Freeride;Stark;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Parawing;Freeride;Stark;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Parawing;Freeride;Stark;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;>90;Parawing;Jumping;Schwach;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Parawing;Jumping;Schwach;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Parawing;Jumping;Schwach;Gross;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Parawing;Jumping;Mittel;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Parawing;Jumping;Mittel;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Parawing;Jumping;Mittel;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;>90;Parawing;Jumping;Stark;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Parawing;Jumping;Stark;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Parawing;Jumping;Stark;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;>90;Parawing;Flatwater;Schwach;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Parawing;Flatwater;Schwach;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Parawing;Flatwater;Schwach;Gross;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Parawing;Flatwater;Mittel;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Parawing;Flatwater;Mittel;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Parawing;Flatwater;Mittel;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;>90;Parawing;Flatwater;Stark;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Parawing;Flatwater;Stark;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Parawing;Flatwater;Stark;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;>90;Parawing;Race;Schwach;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Parawing;Race;Schwach;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Parawing;Race;Schwach;Gross;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Parawing;Race;Mittel;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Parawing;Race;Mittel;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Parawing;Race;Mittel;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
+Expert;>90;Parawing;Race;Stark;Flach;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Parawing;Race;Stark;Klein;Stride Ace;1740;Flow;1260;Stride Ace;1360
+Expert;>90;Parawing;Race;Stark;Gross;Stride Ace;1740;Flow;1080;Stride Ace;1360
