@@ -210,8 +210,8 @@ def get_optimal_wingfoil_size(level, weight, wind, foil_type):
     offset = calculate_wingfoil_offset(level, weight, wind)
 
     if foil_type == "Pacer":
-        # Pacer baseline: 950 (index 0)
-        base_index = 0
+        # Pacer baseline: 1250 (index 1) - allows 2200 for heavy riders in light wind
+        base_index = 1
         sizes = PACER_SIZES
     elif foil_type == "Flow":
         # Flow baseline: 900 (index 1) - analog to Infinity 990
@@ -458,7 +458,7 @@ with st.expander("ℹ️ How does the recommendation work?"):
         ### Wingfoil Freeride
 
         **Baselines:**
-        - Pacer 950 (80kg, Intermediate, Medium Wind)
+        - Pacer 1250 (80kg, Intermediate, Medium Wind)
         - Flow Ace 900 (80kg, Intermediate, Medium Wind)
         - Infinity Ace 990 (80kg, Intermediate, Medium Wind) - analog to Flow 900
 
