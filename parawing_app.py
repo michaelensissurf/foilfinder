@@ -31,7 +31,7 @@ LEVELS = ["Discover", "Intermediate", "Expert"]
 WEIGHT = ["<70", "70-90", ">90"]
 CATEGORIES = ["Freeride", "Downwind-Wave"]
 WIND = ["Light", "Medium", "Strong"]
-WAVES = ["Flat Water", "Small Waves", "Big Waves"]
+WAVES_DOWNWIND = ["Small Waves (<0.5m)", "Medium Waves (0.5-1m)", "Big Waves (>1m)"]
 
 # =========================================================
 # SESSION STATE
@@ -64,25 +64,21 @@ def calculate_flow_offset(level, weight, category, wind, waves):
     elif level == "Expert":
         offset -= 1
 
-    # Wind
-    if wind == "Light":
-        offset += 1
-    elif wind == "Strong":
-        offset -= 1
-
-    # Waves (category dependent)
-    if category == "Downwind-Wave":
-        # Waves are PRIMARY for Downwind-Wave
-        # Small Waves = easier (+1) - more important than wind
-        # Big Waves = harder (-1)
-        if waves == "Small Waves":
+    # Category-specific conditions
+    if category == "Freeride":
+        # For Freeride: Only wind matters
+        if wind and wind == "Light":
             offset += 1
-        elif waves == "Big Waves":
+        elif wind and wind == "Strong":
             offset -= 1
-    elif category == "Freeride":
-        # For Freeride: Flat water/small waves = easier (+1)
-        if waves in ["Flat Water", "Small Waves"]:
-            offset += 1
+    elif category == "Downwind-Wave":
+        # For Downwind-Wave: Only waves matter
+        if waves:
+            if "Small" in waves:
+                offset += 1
+            elif "Big" in waves:
+                offset -= 1
+            # Medium = 0 (neutral)
 
     return offset
 
@@ -95,8 +91,8 @@ def get_optimal_flow(level, weight, category, wind, waves):
 def should_recommend_stride_ace(level, weight, category, wind, waves, flow_size):
     """
     Stride Ace only for Discover in gentle conditions:
-    - No strong wind (too difficult for beginners)
-    - No big waves (too difficult for beginners)
+    - Freeride: Light wind only
+    - Downwind-Wave: Small waves only
     - Only if Flow >= 1080 (generally larger foil needed)
     """
     if level != "Discover":
@@ -105,13 +101,13 @@ def should_recommend_stride_ace(level, weight, category, wind, waves, flow_size)
     if flow_size < 1080:
         return False
 
-    # Strong wind or big waves → no Stride (too difficult)
-    if wind == "Strong" or waves == "Big Waves":
-        return False
-
-    # Stride for light wind or flat water (but not strong/big)
-    if wind == "Light" or waves == "Flat Water":
-        return True
+    # Category-specific gentle conditions check
+    if category == "Freeride":
+        # Stride only for light wind in Freeride
+        return wind == "Light"
+    elif category == "Downwind-Wave":
+        # Stride only for small waves in Downwind-Wave
+        return waves and "Small" in waves
 
     return False
 
@@ -201,21 +197,16 @@ with col2:
         weight_info = "Heavy rider"
     st.caption(f"📊 {weight_info} ({gw}kg)")
 
-# Row 3: Wind
-wind = st.selectbox("Wind", WIND)
-
-# Row 4: Waves
-# Wave options depending on category
-if kat == "Downwind-Wave":
-    wave_options = ["Small Waves", "Big Waves"]
-else:
-    wave_options = WAVES
-wl = st.selectbox("Waves", wave_options)
-
-# Info about category
+# Row 3 & 4: Category-specific inputs
 if kat == "Freeride":
-    st.info("💡 For Freeride, wave size is secondary.")
-else:
+    # For Freeride: Only wind matters
+    wind = st.selectbox("Wind", WIND)
+    wl = None  # Waves not relevant
+    st.info("💡 For Freeride, wind is primary for getting on the foil.")
+else:  # Downwind-Wave
+    # For Downwind-Wave: Only waves matter
+    wl = st.selectbox("Waves", WAVES_DOWNWIND)
+    wind = None  # Wind not relevant
     st.info("🌊 For Downwind-Wave, wave size is primary for foil selection.")
 
 # =========================================================
@@ -267,19 +258,22 @@ if st.session_state.selected_foil:
 st.divider()
 with st.expander("ℹ️ How does the recommendation work?"):
     st.markdown("""
-    **Baseline:** Flow Ace 1080 (70-90kg, Intermediate, Medium Wind, Small Waves)
+    **Baseline:** Flow Ace 1080 (70-90kg, Intermediate)
 
-    **Adjustments:**
+    **Adjustments (always applied):**
     - Lighter riders (<70kg) → smaller foil
     - Heavier riders (>90kg) → larger foil
     - Discover level → larger foil
     - Expert level → smaller foil
-    - Light wind → larger foil
-    - Strong wind → smaller foil
 
     **Categories:**
-    - **Freeride:** Wave size is secondary (no impact on recommendation)
-    - **Downwind-Wave:** Wave size is primary (big waves → smaller foil)
+    - **Freeride:** Wind is primary for getting on foil
+      - Light wind → larger foil
+      - Strong wind → smaller foil
+    - **Downwind-Wave:** Wave size is primary for foil selection
+      - Small waves (<0.5m) → larger foil
+      - Medium waves (0.5-1m) → neutral
+      - Big waves (>1m) → smaller foil
 
     **Ranking:**
     - **Rank 1:** Flow Ace (optimal for your conditions)
@@ -287,7 +281,9 @@ with st.expander("ℹ️ How does the recommendation work?"):
     - **Rank 3:** Infinity Ace (sporty alternative - more agile, slightly larger due to less lift)
 
     **Stride Ace for Discover:**
-    - In gentle conditions (light wind or flat water)
+    - Only in gentle conditions:
+      - Freeride: Light wind
+      - Downwind-Wave: Small waves (<0.5m)
     - Stride Ace 1740 for riders 70-90kg and >90kg
     - Stride Ace 1360 for riders <70kg
     - Flow/Infinity as alternative on Rank 2/3
