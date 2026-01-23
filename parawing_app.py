@@ -16,7 +16,7 @@ INFINITY_SIZES = [540, 690, 840, 990, 1140, 1390]
 FLOW_STANDARD = 1080
 FLOW_STANDARD_INDEX = FLOW_SIZES.index(FLOW_STANDARD)
 
-# Flow → Infinity Mapping (Infinity etwas größer wegen weniger Lift)
+# Flow → Infinity Mapping (Infinity slightly larger due to less lift)
 FLOW_TO_INFINITY = {
     720: 840,
     900: 990,
@@ -28,10 +28,10 @@ FLOW_TO_INFINITY = {
 # PARAMETERS
 # =========================================================
 LEVELS = ["Discover", "Intermediate", "Expert"]
-GEWICHT = ["<70", "70-90", ">90"]
-KATEGORIEN = ["Freeride", "Downwind-Wave"]
-WIND = ["Schwach", "Mittel", "Stark"]
-WELLEN = ["Flachwasser", "Kleine Wellen", "Grosse Wellen"]
+WEIGHT = ["<70", "70-90", ">90"]
+CATEGORIES = ["Freeride", "Downwind-Wave"]
+WIND = ["Light", "Medium", "Strong"]
+WAVES = ["Flat Water", "Small Waves", "Big Waves"]
 
 # =========================================================
 # SESSION STATE
@@ -49,13 +49,13 @@ def fmt(v):
 # =========================================================
 # RECOMMENDATION LOGIC
 # =========================================================
-def calculate_flow_offset(level, gewicht, kategorie, wind, wellen):
+def calculate_flow_offset(level, weight, category, wind, waves):
     offset = 0
 
-    # Gewicht
-    if gewicht == "<70":
+    # Weight
+    if weight == "<70":
         offset -= 1
-    elif gewicht == ">90":
+    elif weight == ">90":
         offset += 1
 
     # Level
@@ -65,32 +65,37 @@ def calculate_flow_offset(level, gewicht, kategorie, wind, wellen):
         offset -= 1
 
     # Wind
-    if wind == "Schwach":
+    if wind == "Light":
         offset += 1
-    elif wind == "Stark":
+    elif wind == "Strong":
         offset -= 1
 
-    # Wellen (abhängig von Kategorie)
-    if kategorie == "Downwind-Wave":
-        # Wellen sind PRIMÄR für Downwind-Wave
-        if wellen == "Grosse Wellen":
+    # Waves (category dependent)
+    if category == "Downwind-Wave":
+        # Waves are PRIMARY for Downwind-Wave
+        # Small Waves = Standard (0)
+        # Big Waves = harder (-1)
+        if waves == "Big Waves":
             offset -= 1
-    # Bei Freeride: Wellen werden ignoriert (sekundär)
+    elif category == "Freeride":
+        # For Freeride: Flat water/small waves = easier (+1)
+        if waves in ["Flat Water", "Small Waves"]:
+            offset += 1
 
     return offset
 
-def get_optimal_flow(level, gewicht, kategorie, wind, wellen):
-    offset = calculate_flow_offset(level, gewicht, kategorie, wind, wellen)
+def get_optimal_flow(level, weight, category, wind, waves):
+    offset = calculate_flow_offset(level, weight, category, wind, waves)
     target_index = FLOW_STANDARD_INDEX + offset
     target_index = max(0, min(target_index, len(FLOW_SIZES) - 1))
     return FLOW_SIZES[target_index], offset
 
-def should_recommend_stride_ace(level, gewicht, kategorie, wind, wellen, flow_size):
+def should_recommend_stride_ace(level, weight, category, wind, waves, flow_size):
     """
-    Stride Ace nur für Discover bei sanften Bedingungen:
-    - Kein starker Wind (zu schwierig für Beginner)
-    - Keine großen Wellen (zu schwierig für Beginner)
-    - Nur wenn Flow >= 1080 wäre (also grundsätzlich größerer Foil nötig)
+    Stride Ace only for Discover in gentle conditions:
+    - No strong wind (too difficult for beginners)
+    - No big waves (too difficult for beginners)
+    - Only if Flow >= 1080 (generally larger foil needed)
     """
     if level != "Discover":
         return False
@@ -98,32 +103,32 @@ def should_recommend_stride_ace(level, gewicht, kategorie, wind, wellen, flow_si
     if flow_size < 1080:
         return False
 
-    # Starker Wind oder große Wellen → kein Stride (zu schwierig)
-    if wind == "Stark" or wellen == "Grosse Wellen":
+    # Strong wind or big waves → no Stride (too difficult)
+    if wind == "Strong" or waves == "Big Waves":
         return False
 
-    # Stride bei schwachem Wind oder Flachwasser (aber nicht bei stark/groß)
-    if wind == "Schwach" or wellen == "Flachwasser":
+    # Stride for light wind or flat water (but not strong/big)
+    if wind == "Light" or waves == "Flat Water":
         return True
 
     return False
 
-def recommend_top3(level, gewicht, kategorie, wind, wellen):
-    flow_size, offset = get_optimal_flow(level, gewicht, kategorie, wind, wellen)
+def recommend_top3(level, weight, category, wind, waves):
+    flow_size, offset = get_optimal_flow(level, weight, category, wind, waves)
     flow_index = FLOW_SIZES.index(flow_size)
 
     top3 = []
 
-    # DISCOVER mit Stride Ace Präferenz
-    if should_recommend_stride_ace(level, gewicht, kategorie, wind, wellen, flow_size):
+    # DISCOVER with Stride Ace preference
+    if should_recommend_stride_ace(level, weight, category, wind, waves, flow_size):
 
-        # Schwere Rider (70-90 oder >90): Stride 1740 möglich
-        if gewicht in ["70-90", ">90"]:
+        # Heavier riders (70-90 or >90): Stride 1740 possible
+        if weight in ["70-90", ">90"]:
             top3.append({"Foil": "Stride Ace 1740", "Rank": 1})
             top3.append({"Foil": "Stride Ace 1360", "Rank": 2})
             top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 3})
 
-        # Leichte Rider (<70): Stride 1740 fällt weg
+        # Lighter riders (<70): Stride 1740 omitted
         else:
             top3.append({"Foil": "Stride Ace 1360", "Rank": 1})
             top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 2})
@@ -132,17 +137,17 @@ def recommend_top3(level, gewicht, kategorie, wind, wellen):
             elif flow_index < len(FLOW_SIZES) - 1:
                 top3.append({"Foil": f"Flow Ace {FLOW_SIZES[flow_index + 1]}", "Rank": 3})
 
-    # DISCOVER ohne Stride (bei stärkerem Wind / größeren Wellen)
+    # DISCOVER without Stride (stronger wind / bigger waves)
     elif level == "Discover":
         top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 1})
 
-        # Rang 2: Flow Nachbargröße (sichere Alternative)
+        # Rank 2: Flow neighbor size (safe alternative)
         if flow_index > 0:
             top3.append({"Foil": f"Flow Ace {FLOW_SIZES[flow_index - 1]}", "Rank": 2})
         elif flow_index < len(FLOW_SIZES) - 1:
             top3.append({"Foil": f"Flow Ace {FLOW_SIZES[flow_index + 1]}", "Rank": 2})
 
-        # Rang 3: Infinity Ace (sportliche Alternative)
+        # Rank 3: Infinity Ace (sporty alternative)
         infinity_size = FLOW_TO_INFINITY.get(flow_size)
         if infinity_size:
             top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 3})
@@ -151,13 +156,13 @@ def recommend_top3(level, gewicht, kategorie, wind, wellen):
     else:
         top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 1})
 
-        # Rang 2: Flow Nachbargröße (sichere Alternative)
+        # Rank 2: Flow neighbor size (safe alternative)
         if flow_index > 0:
             top3.append({"Foil": f"Flow Ace {FLOW_SIZES[flow_index - 1]}", "Rank": 2})
         elif flow_index < len(FLOW_SIZES) - 1:
             top3.append({"Foil": f"Flow Ace {FLOW_SIZES[flow_index + 1]}", "Rank": 2})
 
-        # Rang 3: Infinity Ace (sportliche Alternative)
+        # Rank 3: Infinity Ace (sporty alternative)
         infinity_size = FLOW_TO_INFINITY.get(flow_size)
         if infinity_size:
             top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 3})
@@ -168,7 +173,7 @@ def recommend_top3(level, gewicht, kategorie, wind, wellen):
 # UI HEADER
 # =========================================================
 st.title("🪁 Parawing Foilfinder")
-st.caption("Spezialisiert für Parawing mit Flow Ace, Infinity Ace & Stride Ace")
+st.caption("Specialized for Parawing with Flow Ace, Infinity Ace & Stride Ace")
 
 # =========================================================
 # INPUT FORM
@@ -180,10 +185,10 @@ with st.form("finder"):
         lvl = st.selectbox("Level", LEVELS)
 
     with col2:
-        gw = st.selectbox("Gewicht", GEWICHT)
+        gw = st.selectbox("Weight", WEIGHT)
 
     with col3:
-        kat = st.selectbox("Kategorie", KATEGORIEN)
+        kat = st.selectbox("Category", CATEGORIES)
 
     col4, col5 = st.columns(2)
 
@@ -191,15 +196,20 @@ with st.form("finder"):
         wind = st.selectbox("Wind", WIND)
 
     with col5:
-        wl = st.selectbox("Wellen", WELLEN)
+        # Wave options depending on category
+        if kat == "Downwind-Wave":
+            wave_options = ["Small Waves", "Big Waves"]
+        else:
+            wave_options = WAVES
+        wl = st.selectbox("Waves", wave_options)
 
-    # Info zur Kategorie
+    # Info about category
     if kat == "Freeride":
-        st.info("💡 Bei Freeride ist die Wellengröße sekundär.")
+        st.info("💡 For Freeride, wave size is secondary.")
     else:
-        st.info("🌊 Bei Downwind-Wave ist die Wellengröße primär für die Foil-Wahl.")
+        st.info("🌊 For Downwind-Wave, wave size is primary for foil selection.")
 
-    submit = st.form_submit_button("🔍 Foil berechnen", use_container_width=True)
+    submit = st.form_submit_button("🔍 Calculate Foil", use_container_width=True)
 
 # =========================================================
 # CALCULATION
@@ -249,30 +259,30 @@ if st.session_state.selected_foil:
 # INFO FOOTER
 # =========================================================
 st.divider()
-with st.expander("ℹ️ Wie funktioniert die Empfehlung?"):
+with st.expander("ℹ️ How does the recommendation work?"):
     st.markdown("""
-    **Basis:** Flow Ace 1080 (70-90kg, Intermediate, Mittel Wind, Kleine Wellen)
+    **Baseline:** Flow Ace 1080 (70-90kg, Intermediate, Medium Wind, Small Waves)
 
-    **Anpassungen:**
-    - Leichtere Rider (<70kg) → kleinerer Foil
-    - Schwerere Rider (>90kg) → größerer Foil
-    - Discover Level → größerer Foil
-    - Expert Level → kleinerer Foil
-    - Schwacher Wind → größerer Foil
-    - Starker Wind → kleinerer Foil
+    **Adjustments:**
+    - Lighter riders (<70kg) → smaller foil
+    - Heavier riders (>90kg) → larger foil
+    - Discover level → larger foil
+    - Expert level → smaller foil
+    - Light wind → larger foil
+    - Strong wind → smaller foil
 
-    **Kategorien:**
-    - **Freeride:** Wellengröße ist sekundär (hat keinen Einfluss auf Empfehlung)
-    - **Downwind-Wave:** Wellengröße ist primär (große Wellen → kleinerer Foil)
+    **Categories:**
+    - **Freeride:** Wave size is secondary (no impact on recommendation)
+    - **Downwind-Wave:** Wave size is primary (big waves → smaller foil)
 
-    **Rangierung:**
-    - **Rang 1:** Flow Ace (optimal für deine Bedingungen)
-    - **Rang 2:** Flow Ace Nachbargröße (sichere Alternative)
-    - **Rang 3:** Infinity Ace (sportliche Alternative - wendiger, etwas größer wegen weniger Lift)
+    **Ranking:**
+    - **Rank 1:** Flow Ace (optimal for your conditions)
+    - **Rank 2:** Flow Ace neighbor size (safe alternative)
+    - **Rank 3:** Infinity Ace (sporty alternative - more agile, slightly larger due to less lift)
 
-    **Stride Ace für Discover:**
-    - Bei schwachen Bedingungen (schwacher Wind oder Flachwasser)
-    - Stride Ace 1740 für Rider 70-90kg und >90kg
-    - Stride Ace 1360 für Rider <70kg
-    - Flow/Infinity als Alternative auf Platz 2/3
+    **Stride Ace for Discover:**
+    - In gentle conditions (light wind or flat water)
+    - Stride Ace 1740 for riders 70-90kg and >90kg
+    - Stride Ace 1360 for riders <70kg
+    - Flow/Infinity as alternative on Rank 2/3
     """)
