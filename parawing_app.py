@@ -73,9 +73,11 @@ def calculate_flow_offset(level, weight, category, wind, waves):
     # Waves (category dependent)
     if category == "Downwind-Wave":
         # Waves are PRIMARY for Downwind-Wave
-        # Small Waves = Standard (0)
+        # Small Waves = easier (+1) - more important than wind
         # Big Waves = harder (-1)
-        if waves == "Big Waves":
+        if waves == "Small Waves":
+            offset += 1
+        elif waves == "Big Waves":
             offset -= 1
     elif category == "Freeride":
         # For Freeride: Flat water/small waves = easier (+1)
@@ -185,7 +187,18 @@ with st.form("finder"):
         lvl = st.selectbox("Level", LEVELS)
 
     with col2:
-        gw = st.selectbox("Weight", WEIGHT)
+        weight_kg = st.slider("Weight (kg)", min_value=40, max_value=150, value=80, step=1)
+        # Map to weight category
+        if weight_kg < 70:
+            gw = "<70"
+            weight_info = "Light rider"
+        elif weight_kg <= 90:
+            gw = "70-90"
+            weight_info = "Medium rider"
+        else:
+            gw = ">90"
+            weight_info = "Heavy rider"
+        st.caption(f"📊 {weight_info} ({gw}kg)")
 
     with col3:
         kat = st.selectbox("Category", CATEGORIES)
