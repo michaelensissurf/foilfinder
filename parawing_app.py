@@ -210,15 +210,15 @@ def get_optimal_wingfoil_size(level, weight, wind, foil_type):
     offset = calculate_wingfoil_offset(level, weight, wind)
 
     if foil_type == "Pacer":
-        # Pacer baseline: 1550 (index 2)
-        base_index = 2
+        # Pacer baseline: 950 (index 0)
+        base_index = 0
         sizes = PACER_SIZES
     elif foil_type == "Flow":
-        # Flow baseline: 1080 (index 2)
-        base_index = FLOW_STANDARD_INDEX
+        # Flow baseline: 900 (index 1) - analog to Infinity 990
+        base_index = 1
         sizes = FLOW_WINGFOIL_SIZES
     else:  # Infinity
-        # Infinity baseline: 990 (index 3)
+        # Infinity baseline: 990 (index 3) - analog to Flow 900
         base_index = INFINITY_WINGFOIL_STANDARD_INDEX
         sizes = INFINITY_WINGFOIL_SIZES
 
@@ -241,16 +241,11 @@ def recommend_top3_wingfoil(level, weight, wind, style_preference):
             infinity_size = get_optimal_wingfoil_size(level, weight, wind, "Infinity")
             top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 2})
             top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 3})
-        elif style_preference == "More Maneuverability":
+        else:  # More Maneuverability
             infinity_size = get_optimal_wingfoil_size(level, weight, wind, "Infinity")
             flow_size = get_optimal_wingfoil_size(level, weight, wind, "Flow")
             top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 2})
             top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 3})
-        else:  # Balanced
-            flow_size = get_optimal_wingfoil_size(level, weight, wind, "Flow")
-            infinity_size = get_optimal_wingfoil_size(level, weight, wind, "Infinity")
-            top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 2})
-            top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 3})
 
     # Intermediate: Flow/Infinity Rank 1/2 based on slider, Pacer Rank 3
     elif level == "Intermediate":
@@ -262,13 +257,9 @@ def recommend_top3_wingfoil(level, weight, wind, style_preference):
             top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 1})
             top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 2})
             top3.append({"Foil": f"Pacer {pacer_size}", "Rank": 3})
-        elif style_preference == "More Maneuverability":
+        else:  # More Maneuverability
             top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 1})
             top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 2})
-            top3.append({"Foil": f"Pacer {pacer_size}", "Rank": 3})
-        else:  # Balanced
-            top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 1})
-            top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 2})
             top3.append({"Foil": f"Pacer {pacer_size}", "Rank": 3})
 
     # Expert: Flow/Infinity Rank 1/2 based on slider, NO Pacer
@@ -287,7 +278,7 @@ def recommend_top3_wingfoil(level, weight, wind, style_preference):
                 infinity_index = INFINITY_WINGFOIL_SIZES.index(infinity_size)
                 if infinity_index > 0:
                     top3.append({"Foil": f"Infinity Ace {INFINITY_WINGFOIL_SIZES[infinity_index - 1]}", "Rank": 3})
-        elif style_preference == "More Maneuverability":
+        else:  # More Maneuverability
             top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 1})
             top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 2})
             # Rank 3: smaller alternative (prefer Infinity for maneuverability)
@@ -298,13 +289,6 @@ def recommend_top3_wingfoil(level, weight, wind, style_preference):
                 flow_index = FLOW_WINGFOIL_SIZES.index(flow_size)
                 if flow_index > 0:
                     top3.append({"Foil": f"Flow Ace {FLOW_WINGFOIL_SIZES[flow_index - 1]}", "Rank": 3})
-        else:  # Balanced
-            top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 1})
-            top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 2})
-            # Rank 3: smaller Flow alternative
-            flow_index = FLOW_WINGFOIL_SIZES.index(flow_size)
-            if flow_index > 0:
-                top3.append({"Foil": f"Flow Ace {FLOW_WINGFOIL_SIZES[flow_index - 1]}", "Rank": 3})
 
     return top3
 
@@ -364,8 +348,8 @@ else:  # Wingfoil
     wl = None
     style_preference = st.select_slider(
         "Style Preference",
-        options=["More Glide", "Balanced", "More Maneuverability"],
-        value="Balanced"
+        options=["More Glide", "More Maneuverability"],
+        value="More Glide"
     )
     st.info("🪶 For Wingfoil Freeride, wind and style preference determine the optimal foil.")
 
@@ -458,7 +442,10 @@ with st.expander("ℹ️ How does the recommendation work?"):
         st.markdown("""
         ### Wingfoil Freeride
 
-        **Baseline:** Infinity Ace 990 (80kg, Intermediate, Medium Wind)
+        **Baselines:**
+        - Pacer 950 (80kg, Intermediate, Medium Wind)
+        - Flow Ace 900 (80kg, Intermediate, Medium Wind)
+        - Infinity Ace 990 (80kg, Intermediate, Medium Wind) - analog to Flow 900
 
         **Adjustments (always applied):**
         - Lighter riders (<70kg) → smaller foil
@@ -470,7 +457,6 @@ with st.expander("ℹ️ How does the recommendation work?"):
 
         **Style Preference:**
         - **More Glide:** Favors Flow Ace (higher aspect ratio for efficiency)
-        - **Balanced:** Equal consideration of Flow and Infinity
         - **More Maneuverability:** Favors Infinity Ace (more agile and responsive)
 
         **Ranking by Level:**
