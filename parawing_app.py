@@ -279,16 +279,22 @@ def recommend_top3_wingfoil(level, weight, wind, style_preference):
                 if infinity_index > 0:
                     top3.append({"Foil": f"Infinity Ace {INFINITY_WINGFOIL_SIZES[infinity_index - 1]}", "Rank": 3})
         else:  # More Maneuverability
-            top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 1})
-            top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 2})
-            # Rank 3: smaller alternative (prefer Infinity for maneuverability)
-            infinity_index = INFINITY_WINGFOIL_SIZES.index(infinity_size)
-            if infinity_index > 0:
-                top3.append({"Foil": f"Infinity Ace {INFINITY_WINGFOIL_SIZES[infinity_index - 1]}", "Rank": 3})
+            # Special case: Light riders + Strong wind = prefer smaller Infinity progression
+            if weight == "<70" and wind == "Strong":
+                top3.append({"Foil": "Infinity Ace 540", "Rank": 1})
+                top3.append({"Foil": "Infinity Ace 690", "Rank": 2})
+                top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 3})
             else:
-                flow_index = FLOW_WINGFOIL_SIZES.index(flow_size)
-                if flow_index > 0:
-                    top3.append({"Foil": f"Flow Ace {FLOW_WINGFOIL_SIZES[flow_index - 1]}", "Rank": 3})
+                top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 1})
+                top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 2})
+                # Rank 3: smaller alternative (prefer Infinity for maneuverability)
+                infinity_index = INFINITY_WINGFOIL_SIZES.index(infinity_size)
+                if infinity_index > 0:
+                    top3.append({"Foil": f"Infinity Ace {INFINITY_WINGFOIL_SIZES[infinity_index - 1]}", "Rank": 3})
+                else:
+                    flow_index = FLOW_WINGFOIL_SIZES.index(flow_size)
+                    if flow_index > 0:
+                        top3.append({"Foil": f"Flow Ace {FLOW_WINGFOIL_SIZES[flow_index - 1]}", "Rank": 3})
 
     return top3
 
