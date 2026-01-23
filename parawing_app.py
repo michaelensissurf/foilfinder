@@ -246,7 +246,7 @@ def recommend_top3_wingfoil(level, weight, wind, style_preference):
         # Rank 3: Another Pacer alternative
         if pacer_index > 0 and pacer_index < len(PACER_SIZES) - 1:
             # If in middle, offer smaller or larger based on previous choice
-            if len(top3) > 1 and PACER_SIZES[pacer_index + 1] in top3[1]["Foil"]:
+            if len(top3) > 1 and str(PACER_SIZES[pacer_index + 1]) in top3[1]["Foil"]:
                 top3.append({"Foil": f"Pacer {PACER_SIZES[pacer_index - 1]}", "Rank": 3})
             else:
                 top3.append({"Foil": f"Pacer {PACER_SIZES[pacer_index + 1]}", "Rank": 3})
