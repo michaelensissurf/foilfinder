@@ -4,19 +4,28 @@ from foil_specs import FOIL_SPECS
 # =========================================================
 # CONFIG
 # =========================================================
-st.set_page_config(page_title="Parawing Foilfinder", layout="wide")
+st.set_page_config(page_title="Foilfinder", layout="wide")
 
 # =========================================================
 # FOIL SIZES
 # =========================================================
+# Parawing foils
 FLOW_SIZES = [720, 900, 1080, 1260]
 STRIDE_ACE_SIZES = [1360, 1740]
-INFINITY_SIZES = [540, 690, 840, 990, 1140, 1390]
+INFINITY_PARAWING_SIZES = [540, 690, 840, 990, 1140, 1390]
 
+# Wingfoil foils
+PACER_SIZES = [950, 1250, 1550, 1850, 2200]
+INFINITY_WINGFOIL_SIZES = [540, 690, 840, 990, 1140, 1390]
+FLOW_WINGFOIL_SIZES = [720, 900, 1080, 1260]
+
+# Baselines
 FLOW_STANDARD = 1080
 FLOW_STANDARD_INDEX = FLOW_SIZES.index(FLOW_STANDARD)
+INFINITY_WINGFOIL_STANDARD = 990
+INFINITY_WINGFOIL_STANDARD_INDEX = INFINITY_WINGFOIL_SIZES.index(INFINITY_WINGFOIL_STANDARD)
 
-# Flow → Infinity Mapping (Infinity slightly larger due to less lift)
+# Flow → Infinity Mapping (for Parawing)
 FLOW_TO_INFINITY = {
     720: 840,
     900: 990,
@@ -27,9 +36,11 @@ FLOW_TO_INFINITY = {
 # =========================================================
 # PARAMETERS
 # =========================================================
+DISCIPLINES = ["Parawing", "Wingfoil"]
 LEVELS = ["Discover", "Intermediate", "Expert"]
 WEIGHT = ["<70", "70-90", ">90"]
-CATEGORIES = ["Freeride", "Downwind-Wave"]
+CATEGORIES_PARAWING = ["Freeride", "Downwind-Wave"]
+CATEGORIES_WINGFOIL = ["Freeride"]
 WIND = ["Light", "Medium", "Strong"]
 WAVES_DOWNWIND = ["Small Waves (<0.5m)", "Medium Waves (0.5-1m)", "Big Waves (>1m)"]
 
@@ -168,18 +179,154 @@ def recommend_top3(level, weight, category, wind, waves):
     return top3
 
 # =========================================================
+# WINGFOIL RECOMMENDATION LOGIC
+# =========================================================
+def calculate_wingfoil_offset(level, weight, wind):
+    """Calculate size offset for Wingfoil based on level, weight, and wind."""
+    offset = 0
+
+    # Weight
+    if weight == "<70":
+        offset -= 1
+    elif weight == ">90":
+        offset += 1
+
+    # Level
+    if level == "Discover":
+        offset += 1
+    elif level == "Expert":
+        offset -= 1
+
+    # Wind
+    if wind == "Light":
+        offset += 1
+    elif wind == "Strong":
+        offset -= 1
+
+    return offset
+
+def get_optimal_wingfoil_size(level, weight, wind, foil_type):
+    """Get optimal size for Wingfoil based on foil type (Pacer, Flow, or Infinity)."""
+    offset = calculate_wingfoil_offset(level, weight, wind)
+
+    if foil_type == "Pacer":
+        # Pacer baseline: 1550 (index 2)
+        base_index = 2
+        sizes = PACER_SIZES
+    elif foil_type == "Flow":
+        # Flow baseline: 1080 (index 2)
+        base_index = FLOW_STANDARD_INDEX
+        sizes = FLOW_WINGFOIL_SIZES
+    else:  # Infinity
+        # Infinity baseline: 990 (index 3)
+        base_index = INFINITY_WINGFOIL_STANDARD_INDEX
+        sizes = INFINITY_WINGFOIL_SIZES
+
+    target_index = base_index + offset
+    target_index = max(0, min(target_index, len(sizes) - 1))
+    return sizes[target_index]
+
+def recommend_top3_wingfoil(level, weight, wind, style_preference):
+    """Recommend top 3 foils for Wingfoil Freeride."""
+    top3 = []
+
+    # Discover: Pacer is Rank 1
+    if level == "Discover":
+        pacer_size = get_optimal_wingfoil_size(level, weight, wind, "Pacer")
+        top3.append({"Foil": f"Pacer {pacer_size}", "Rank": 1})
+
+        # Rank 2 & 3: Flow/Infinity based on slider
+        if style_preference == "More Glide":
+            flow_size = get_optimal_wingfoil_size(level, weight, wind, "Flow")
+            infinity_size = get_optimal_wingfoil_size(level, weight, wind, "Infinity")
+            top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 2})
+            top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 3})
+        elif style_preference == "More Maneuverability":
+            infinity_size = get_optimal_wingfoil_size(level, weight, wind, "Infinity")
+            flow_size = get_optimal_wingfoil_size(level, weight, wind, "Flow")
+            top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 2})
+            top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 3})
+        else:  # Balanced
+            flow_size = get_optimal_wingfoil_size(level, weight, wind, "Flow")
+            infinity_size = get_optimal_wingfoil_size(level, weight, wind, "Infinity")
+            top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 2})
+            top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 3})
+
+    # Intermediate: Flow/Infinity Rank 1/2 based on slider, Pacer Rank 3
+    elif level == "Intermediate":
+        pacer_size = get_optimal_wingfoil_size(level, weight, wind, "Pacer")
+        flow_size = get_optimal_wingfoil_size(level, weight, wind, "Flow")
+        infinity_size = get_optimal_wingfoil_size(level, weight, wind, "Infinity")
+
+        if style_preference == "More Glide":
+            top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 1})
+            top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 2})
+            top3.append({"Foil": f"Pacer {pacer_size}", "Rank": 3})
+        elif style_preference == "More Maneuverability":
+            top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 1})
+            top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 2})
+            top3.append({"Foil": f"Pacer {pacer_size}", "Rank": 3})
+        else:  # Balanced
+            top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 1})
+            top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 2})
+            top3.append({"Foil": f"Pacer {pacer_size}", "Rank": 3})
+
+    # Expert: Flow/Infinity Rank 1/2 based on slider, NO Pacer
+    else:  # Expert
+        flow_size = get_optimal_wingfoil_size(level, weight, wind, "Flow")
+        infinity_size = get_optimal_wingfoil_size(level, weight, wind, "Infinity")
+
+        if style_preference == "More Glide":
+            top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 1})
+            top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 2})
+            # Rank 3: smaller alternative (prefer Flow for glide)
+            flow_index = FLOW_WINGFOIL_SIZES.index(flow_size)
+            if flow_index > 0:
+                top3.append({"Foil": f"Flow Ace {FLOW_WINGFOIL_SIZES[flow_index - 1]}", "Rank": 3})
+            else:
+                infinity_index = INFINITY_WINGFOIL_SIZES.index(infinity_size)
+                if infinity_index > 0:
+                    top3.append({"Foil": f"Infinity Ace {INFINITY_WINGFOIL_SIZES[infinity_index - 1]}", "Rank": 3})
+        elif style_preference == "More Maneuverability":
+            top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 1})
+            top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 2})
+            # Rank 3: smaller alternative (prefer Infinity for maneuverability)
+            infinity_index = INFINITY_WINGFOIL_SIZES.index(infinity_size)
+            if infinity_index > 0:
+                top3.append({"Foil": f"Infinity Ace {INFINITY_WINGFOIL_SIZES[infinity_index - 1]}", "Rank": 3})
+            else:
+                flow_index = FLOW_WINGFOIL_SIZES.index(flow_size)
+                if flow_index > 0:
+                    top3.append({"Foil": f"Flow Ace {FLOW_WINGFOIL_SIZES[flow_index - 1]}", "Rank": 3})
+        else:  # Balanced
+            top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 1})
+            top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 2})
+            # Rank 3: smaller Flow alternative
+            flow_index = FLOW_WINGFOIL_SIZES.index(flow_size)
+            if flow_index > 0:
+                top3.append({"Foil": f"Flow Ace {FLOW_WINGFOIL_SIZES[flow_index - 1]}", "Rank": 3})
+
+    return top3
+
+# =========================================================
 # UI HEADER
 # =========================================================
-st.title("🪁 Parawing Foilfinder")
-st.caption("Specialized for Parawing with Flow Ace, Infinity Ace & Stride Ace")
+st.title("🪁 Foilfinder")
+st.caption("Find your optimal foil for Parawing or Wingfoil")
 
 # =========================================================
 # INPUT FORM
 # =========================================================
-# Row 1: Category
-kat = st.selectbox("Category", CATEGORIES)
+# Row 1: Discipline
+discipline = st.selectbox("Discipline", DISCIPLINES)
 
-# Row 2: Level & Weight
+# Row 2: Category (discipline-specific)
+if discipline == "Parawing":
+    kat = st.selectbox("Category", CATEGORIES_PARAWING)
+else:  # Wingfoil
+    kat = st.selectbox("Category", CATEGORIES_WINGFOIL)
+
+# Row 3: Level & Weight
 col1, col2 = st.columns(2)
 with col1:
     lvl = st.select_slider("Level", options=LEVELS, value="Intermediate")
@@ -197,22 +344,38 @@ with col2:
         weight_info = "Heavy rider"
     st.caption(f"📊 {weight_info} ({gw}kg)")
 
-# Row 3 & 4: Category-specific inputs
-if kat == "Freeride":
-    # For Freeride: Only wind matters
+# Row 4 & 5: Discipline + Category-specific inputs
+if discipline == "Parawing":
+    if kat == "Freeride":
+        # Parawing Freeride: Only wind matters
+        wind = st.selectbox("Wind", WIND)
+        wl = None
+        style_preference = None
+        st.info("💡 For Parawing Freeride, wind is primary for getting on the foil.")
+    else:  # Downwind-Wave
+        # Parawing Downwind-Wave: Only waves matter
+        wl = st.selectbox("Waves", WAVES_DOWNWIND)
+        wind = None
+        style_preference = None
+        st.info("🌊 For Parawing Downwind-Wave, wave size is primary for foil selection.")
+else:  # Wingfoil
+    # Wingfoil Freeride: Wind + Style slider
     wind = st.selectbox("Wind", WIND)
-    wl = None  # Waves not relevant
-    st.info("💡 For Freeride, wind is primary for getting on the foil.")
-else:  # Downwind-Wave
-    # For Downwind-Wave: Only waves matter
-    wl = st.selectbox("Waves", WAVES_DOWNWIND)
-    wind = None  # Wind not relevant
-    st.info("🌊 For Downwind-Wave, wave size is primary for foil selection.")
+    wl = None
+    style_preference = st.select_slider(
+        "Style Preference",
+        options=["More Glide", "Balanced", "More Maneuverability"],
+        value="Balanced"
+    )
+    st.info("🪶 For Wingfoil Freeride, wind and style preference determine the optimal foil.")
 
 # =========================================================
 # CALCULATION
 # =========================================================
-st.session_state.result = recommend_top3(lvl, gw, kat, wind, wl)
+if discipline == "Parawing":
+    st.session_state.result = recommend_top3(lvl, gw, kat, wind, wl)
+else:  # Wingfoil
+    st.session_state.result = recommend_top3_wingfoil(lvl, gw, wind, style_preference)
 
 # =========================================================
 # RESULTS
@@ -257,34 +420,72 @@ if st.session_state.selected_foil:
 # =========================================================
 st.divider()
 with st.expander("ℹ️ How does the recommendation work?"):
-    st.markdown("""
-    **Baseline:** Flow Ace 1080 (70-90kg, Intermediate)
+    if discipline == "Parawing":
+        st.markdown("""
+        ### Parawing
 
-    **Adjustments (always applied):**
-    - Lighter riders (<70kg) → smaller foil
-    - Heavier riders (>90kg) → larger foil
-    - Discover level → larger foil
-    - Expert level → smaller foil
+        **Baseline:** Flow Ace 1080 (70-90kg, Intermediate)
 
-    **Categories:**
-    - **Freeride:** Wind is primary for getting on foil
-      - Light wind → larger foil
-      - Strong wind → smaller foil
-    - **Downwind-Wave:** Wave size is primary for foil selection
-      - Small waves (<0.5m) → larger foil
-      - Medium waves (0.5-1m) → neutral
-      - Big waves (>1m) → smaller foil
+        **Adjustments (always applied):**
+        - Lighter riders (<70kg) → smaller foil
+        - Heavier riders (>90kg) → larger foil
+        - Discover level → larger foil
+        - Expert level → smaller foil
 
-    **Ranking:**
-    - **Rank 1:** Flow Ace (optimal for your conditions)
-    - **Rank 2:** Flow Ace neighbor size (safe alternative)
-    - **Rank 3:** Infinity Ace (sporty alternative - more agile, slightly larger due to less lift)
+        **Categories:**
+        - **Freeride:** Wind is primary for getting on foil
+          - Light wind → larger foil
+          - Strong wind → smaller foil
+        - **Downwind-Wave:** Wave size is primary for foil selection
+          - Small waves (<0.5m) → larger foil
+          - Medium waves (0.5-1m) → neutral
+          - Big waves (>1m) → smaller foil
 
-    **Stride Ace for Discover:**
-    - Only in gentle conditions:
-      - Freeride: Light wind
-      - Downwind-Wave: Small waves (<0.5m)
-    - Stride Ace 1740 for riders 70-90kg and >90kg
-    - Stride Ace 1360 for riders <70kg
-    - Flow/Infinity as alternative on Rank 2/3
-    """)
+        **Ranking:**
+        - **Rank 1:** Flow Ace (optimal for your conditions)
+        - **Rank 2:** Flow Ace neighbor size (safe alternative)
+        - **Rank 3:** Infinity Ace (sporty alternative - more agile, slightly larger due to less lift)
+
+        **Stride Ace for Discover:**
+        - Only in gentle conditions:
+          - Freeride: Light wind
+          - Downwind-Wave: Small waves (<0.5m)
+        - Stride Ace 1740 for riders 70-90kg and >90kg
+        - Stride Ace 1360 for riders <70kg
+        - Flow/Infinity as alternative on Rank 2/3
+        """)
+    else:  # Wingfoil
+        st.markdown("""
+        ### Wingfoil Freeride
+
+        **Baseline:** Infinity Ace 990 (80kg, Intermediate, Medium Wind)
+
+        **Adjustments (always applied):**
+        - Lighter riders (<70kg) → smaller foil
+        - Heavier riders (>90kg) → larger foil
+        - Discover level → larger foil
+        - Expert level → smaller foil
+        - Light wind → larger foil
+        - Strong wind → smaller foil
+
+        **Style Preference:**
+        - **More Glide:** Favors Flow Ace (higher aspect ratio for efficiency)
+        - **Balanced:** Equal consideration of Flow and Infinity
+        - **More Maneuverability:** Favors Infinity Ace (more agile and responsive)
+
+        **Ranking by Level:**
+
+        **Discover:**
+        - Rank 1: Pacer (stable, easy to learn)
+        - Rank 2/3: Flow/Infinity based on style preference
+
+        **Intermediate:**
+        - Rank 1: Flow or Infinity (based on style preference)
+        - Rank 2: The other option (Infinity or Flow)
+        - Rank 3: Pacer (learning tool alternative)
+
+        **Expert:**
+        - Rank 1: Flow or Infinity (based on style preference)
+        - Rank 2: The other option (Infinity or Flow)
+        - Rank 3: Smaller size alternative (NO Pacer)
+        """)
