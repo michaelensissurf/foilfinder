@@ -11,11 +11,6 @@ import pandas as pd
 # ------------------------------------------------------------
 
 DISCIPLINES = [
-    "Downwind",
-    "Wingfoil Freeride",
-    "Wavesurfing",
-    "Lightwindfoil",
-    "Pumpfoil",
     "Parawing",
 ]
 
@@ -195,5 +190,5 @@ for combo in itertools.product(DISCIPLINES, LEVELS, GEWICHT, KATEGORIE, WIND, WE
 # ------------------------------------------------------------
 
 df = pd.DataFrame(rows)
-df.to_csv("progress_prefilled_with_discipline copy.csv", index=False)
-print(f"Done. Generated {len(df)} rows.")
+df.to_csv("foilfinder_parawing.csv", index=False)
+print(f"Done. Generated {len(df)} rows for Parawing.")

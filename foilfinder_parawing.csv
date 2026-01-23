@@ -1,0 +1,406 @@
+Disziplin,Level,Gewicht,Kategorie,Wind,Wellen,Infinity Ace 540,Infinity Ace 690,Infinity Ace 840,Infinity Ace 990,Infinity Ace 1140,Infinity Ace 1390,Stride Ace 1360,Stride Ace 1740,Stride 2050,Pacer 950,Pacer 1250,Pacer 1550,Pacer 1850,Pacer 2200,Flow 720,Flow 900,Flow 1080,Flow 1260
+Parawing,Discover,<70,Freeride,Schwach,Flachwasser,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Freeride,Schwach,Kleine Wellen,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Freeride,Schwach,Grosse Wellen,0,0,0,2,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Freeride,Mittel,Flachwasser,0,0,0,2,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Freeride,Mittel,Kleine Wellen,0,0,0,2,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Freeride,Mittel,Grosse Wellen,0,0,2,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Freeride,Stark,Flachwasser,0,0,0,2,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Freeride,Stark,Kleine Wellen,0,0,0,2,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Freeride,Stark,Grosse Wellen,0,0,2,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Jumping,Schwach,Flachwasser,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Jumping,Schwach,Kleine Wellen,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Jumping,Schwach,Grosse Wellen,0,0,0,2,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Jumping,Mittel,Flachwasser,0,0,0,2,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Jumping,Mittel,Kleine Wellen,0,0,0,2,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Jumping,Mittel,Grosse Wellen,0,0,2,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Jumping,Stark,Flachwasser,0,0,0,2,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Jumping,Stark,Kleine Wellen,0,0,0,2,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Jumping,Stark,Grosse Wellen,0,0,2,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Flatwater,Schwach,Flachwasser,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Flatwater,Schwach,Kleine Wellen,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Flatwater,Schwach,Grosse Wellen,0,0,0,2,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Flatwater,Mittel,Flachwasser,0,0,0,2,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Flatwater,Mittel,Kleine Wellen,0,0,0,2,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Flatwater,Mittel,Grosse Wellen,0,0,2,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Flatwater,Stark,Flachwasser,0,0,0,2,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Flatwater,Stark,Kleine Wellen,0,0,0,2,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Flatwater,Stark,Grosse Wellen,0,0,2,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Race,Schwach,Flachwasser,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Race,Schwach,Kleine Wellen,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Race,Schwach,Grosse Wellen,0,0,0,2,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Race,Mittel,Flachwasser,0,0,0,2,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Race,Mittel,Kleine Wellen,0,0,0,2,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Race,Mittel,Grosse Wellen,0,0,2,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Race,Stark,Flachwasser,0,0,0,2,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Race,Stark,Kleine Wellen,0,0,0,2,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Race,Stark,Grosse Wellen,0,0,2,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Downwind-Wave,Schwach,Flachwasser,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Downwind-Wave,Schwach,Kleine Wellen,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Downwind-Wave,Schwach,Grosse Wellen,0,0,0,2,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Downwind-Wave,Mittel,Flachwasser,0,0,0,2,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Downwind-Wave,Mittel,Kleine Wellen,0,0,0,2,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Downwind-Wave,Mittel,Grosse Wellen,0,0,2,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Downwind-Wave,Stark,Flachwasser,0,0,0,2,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Downwind-Wave,Stark,Kleine Wellen,0,0,0,2,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,<70,Downwind-Wave,Stark,Grosse Wellen,0,0,2,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Freeride,Schwach,Flachwasser,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Freeride,Schwach,Kleine Wellen,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Freeride,Schwach,Grosse Wellen,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Freeride,Mittel,Flachwasser,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Freeride,Mittel,Kleine Wellen,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Freeride,Mittel,Grosse Wellen,0,0,0,2,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Freeride,Stark,Flachwasser,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Freeride,Stark,Kleine Wellen,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Freeride,Stark,Grosse Wellen,0,0,0,2,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Jumping,Schwach,Flachwasser,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Jumping,Schwach,Kleine Wellen,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Jumping,Schwach,Grosse Wellen,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Jumping,Mittel,Flachwasser,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Jumping,Mittel,Kleine Wellen,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Jumping,Mittel,Grosse Wellen,0,0,0,2,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Jumping,Stark,Flachwasser,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Jumping,Stark,Kleine Wellen,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Jumping,Stark,Grosse Wellen,0,0,0,2,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Flatwater,Schwach,Flachwasser,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Flatwater,Schwach,Kleine Wellen,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Flatwater,Schwach,Grosse Wellen,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Flatwater,Mittel,Flachwasser,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Flatwater,Mittel,Kleine Wellen,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Flatwater,Mittel,Grosse Wellen,0,0,0,2,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Flatwater,Stark,Flachwasser,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Flatwater,Stark,Kleine Wellen,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Flatwater,Stark,Grosse Wellen,0,0,0,2,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Race,Schwach,Flachwasser,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Race,Schwach,Kleine Wellen,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Race,Schwach,Grosse Wellen,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Race,Mittel,Flachwasser,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Race,Mittel,Kleine Wellen,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Race,Mittel,Grosse Wellen,0,0,0,2,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Race,Stark,Flachwasser,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Race,Stark,Kleine Wellen,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Race,Stark,Grosse Wellen,0,0,0,2,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Downwind-Wave,Schwach,Flachwasser,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Downwind-Wave,Schwach,Kleine Wellen,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Downwind-Wave,Schwach,Grosse Wellen,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Downwind-Wave,Mittel,Flachwasser,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Downwind-Wave,Mittel,Kleine Wellen,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Downwind-Wave,Mittel,Grosse Wellen,0,0,0,2,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Downwind-Wave,Stark,Flachwasser,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Downwind-Wave,Stark,Kleine Wellen,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,70-90,Downwind-Wave,Stark,Grosse Wellen,0,0,0,2,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Freeride,Schwach,Flachwasser,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Freeride,Schwach,Kleine Wellen,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Freeride,Schwach,Grosse Wellen,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Freeride,Mittel,Flachwasser,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Freeride,Mittel,Kleine Wellen,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Freeride,Mittel,Grosse Wellen,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Freeride,Stark,Flachwasser,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Freeride,Stark,Kleine Wellen,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Freeride,Stark,Grosse Wellen,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Jumping,Schwach,Flachwasser,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Jumping,Schwach,Kleine Wellen,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Jumping,Schwach,Grosse Wellen,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Jumping,Mittel,Flachwasser,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Jumping,Mittel,Kleine Wellen,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Jumping,Mittel,Grosse Wellen,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Jumping,Stark,Flachwasser,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Jumping,Stark,Kleine Wellen,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Jumping,Stark,Grosse Wellen,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Flatwater,Schwach,Flachwasser,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Flatwater,Schwach,Kleine Wellen,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Flatwater,Schwach,Grosse Wellen,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Flatwater,Mittel,Flachwasser,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Flatwater,Mittel,Kleine Wellen,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Flatwater,Mittel,Grosse Wellen,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Flatwater,Stark,Flachwasser,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Flatwater,Stark,Kleine Wellen,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Flatwater,Stark,Grosse Wellen,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Race,Schwach,Flachwasser,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Race,Schwach,Kleine Wellen,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Race,Schwach,Grosse Wellen,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Race,Mittel,Flachwasser,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Race,Mittel,Kleine Wellen,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Race,Mittel,Grosse Wellen,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Race,Stark,Flachwasser,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Race,Stark,Kleine Wellen,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Race,Stark,Grosse Wellen,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Downwind-Wave,Schwach,Flachwasser,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Downwind-Wave,Schwach,Kleine Wellen,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Downwind-Wave,Schwach,Grosse Wellen,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Downwind-Wave,Mittel,Flachwasser,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Downwind-Wave,Mittel,Kleine Wellen,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Downwind-Wave,Mittel,Grosse Wellen,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Downwind-Wave,Stark,Flachwasser,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Downwind-Wave,Stark,Kleine Wellen,0,0,0,0,0,2,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Discover,>90,Downwind-Wave,Stark,Grosse Wellen,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0
+Parawing,Intermediate,<70,Freeride,Schwach,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Intermediate,<70,Freeride,Schwach,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Intermediate,<70,Freeride,Schwach,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Intermediate,<70,Freeride,Mittel,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Intermediate,<70,Freeride,Mittel,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Intermediate,<70,Freeride,Mittel,Grosse Wellen,0,0,0,0,0,0,3,1,0,0,0,0,0,0,2,0,0,0
+Parawing,Intermediate,<70,Freeride,Stark,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Intermediate,<70,Freeride,Stark,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Intermediate,<70,Freeride,Stark,Grosse Wellen,0,0,0,0,0,0,3,1,0,0,0,0,0,0,2,0,0,0
+Parawing,Intermediate,<70,Jumping,Schwach,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Intermediate,<70,Jumping,Schwach,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Intermediate,<70,Jumping,Schwach,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Intermediate,<70,Jumping,Mittel,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Intermediate,<70,Jumping,Mittel,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Intermediate,<70,Jumping,Mittel,Grosse Wellen,0,0,0,0,0,0,3,1,0,0,0,0,0,0,2,0,0,0
+Parawing,Intermediate,<70,Jumping,Stark,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Intermediate,<70,Jumping,Stark,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Intermediate,<70,Jumping,Stark,Grosse Wellen,0,0,0,0,0,0,3,1,0,0,0,0,0,0,2,0,0,0
+Parawing,Intermediate,<70,Flatwater,Schwach,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Intermediate,<70,Flatwater,Schwach,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Intermediate,<70,Flatwater,Schwach,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Intermediate,<70,Flatwater,Mittel,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Intermediate,<70,Flatwater,Mittel,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Intermediate,<70,Flatwater,Mittel,Grosse Wellen,0,0,0,0,0,0,3,1,0,0,0,0,0,0,2,0,0,0
+Parawing,Intermediate,<70,Flatwater,Stark,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Intermediate,<70,Flatwater,Stark,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Intermediate,<70,Flatwater,Stark,Grosse Wellen,0,0,0,0,0,0,3,1,0,0,0,0,0,0,2,0,0,0
+Parawing,Intermediate,<70,Race,Schwach,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Intermediate,<70,Race,Schwach,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Intermediate,<70,Race,Schwach,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Intermediate,<70,Race,Mittel,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Intermediate,<70,Race,Mittel,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Intermediate,<70,Race,Mittel,Grosse Wellen,0,0,0,0,0,0,3,1,0,0,0,0,0,0,2,0,0,0
+Parawing,Intermediate,<70,Race,Stark,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Intermediate,<70,Race,Stark,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Intermediate,<70,Race,Stark,Grosse Wellen,0,0,0,0,0,0,3,1,0,0,0,0,0,0,2,0,0,0
+Parawing,Intermediate,<70,Downwind-Wave,Schwach,Flachwasser,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,1,3,0
+Parawing,Intermediate,<70,Downwind-Wave,Schwach,Kleine Wellen,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,1,3,0
+Parawing,Intermediate,<70,Downwind-Wave,Schwach,Grosse Wellen,0,0,0,0,0,0,0,2,0,0,0,0,0,0,1,3,0,0
+Parawing,Intermediate,<70,Downwind-Wave,Mittel,Flachwasser,0,0,0,0,0,0,0,2,0,0,0,0,0,0,1,3,0,0
+Parawing,Intermediate,<70,Downwind-Wave,Mittel,Kleine Wellen,0,0,0,0,0,0,0,2,0,0,0,0,0,0,1,3,0,0
+Parawing,Intermediate,<70,Downwind-Wave,Mittel,Grosse Wellen,0,0,0,0,0,0,2,0,0,0,0,0,0,0,3,1,0,0
+Parawing,Intermediate,<70,Downwind-Wave,Stark,Flachwasser,0,0,0,0,0,0,0,2,0,0,0,0,0,0,1,3,0,0
+Parawing,Intermediate,<70,Downwind-Wave,Stark,Kleine Wellen,0,0,0,0,0,0,0,2,0,0,0,0,0,0,1,3,0,0
+Parawing,Intermediate,<70,Downwind-Wave,Stark,Grosse Wellen,0,0,0,0,0,0,2,0,0,0,0,0,0,0,3,1,0,0
+Parawing,Intermediate,70-90,Freeride,Schwach,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Intermediate,70-90,Freeride,Schwach,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Intermediate,70-90,Freeride,Schwach,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Intermediate,70-90,Freeride,Mittel,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Intermediate,70-90,Freeride,Mittel,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Intermediate,70-90,Freeride,Mittel,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Intermediate,70-90,Freeride,Stark,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Intermediate,70-90,Freeride,Stark,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Intermediate,70-90,Freeride,Stark,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Intermediate,70-90,Jumping,Schwach,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Intermediate,70-90,Jumping,Schwach,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Intermediate,70-90,Jumping,Schwach,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Intermediate,70-90,Jumping,Mittel,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Intermediate,70-90,Jumping,Mittel,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Intermediate,70-90,Jumping,Mittel,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Intermediate,70-90,Jumping,Stark,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Intermediate,70-90,Jumping,Stark,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Intermediate,70-90,Jumping,Stark,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Intermediate,70-90,Flatwater,Schwach,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Intermediate,70-90,Flatwater,Schwach,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Intermediate,70-90,Flatwater,Schwach,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Intermediate,70-90,Flatwater,Mittel,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Intermediate,70-90,Flatwater,Mittel,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Intermediate,70-90,Flatwater,Mittel,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Intermediate,70-90,Flatwater,Stark,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Intermediate,70-90,Flatwater,Stark,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Intermediate,70-90,Flatwater,Stark,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Intermediate,70-90,Race,Schwach,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Intermediate,70-90,Race,Schwach,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Intermediate,70-90,Race,Schwach,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Intermediate,70-90,Race,Mittel,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Intermediate,70-90,Race,Mittel,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Intermediate,70-90,Race,Mittel,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Intermediate,70-90,Race,Stark,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Intermediate,70-90,Race,Stark,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Intermediate,70-90,Race,Stark,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Intermediate,70-90,Downwind-Wave,Schwach,Flachwasser,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,1,3
+Parawing,Intermediate,70-90,Downwind-Wave,Schwach,Kleine Wellen,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,1,3
+Parawing,Intermediate,70-90,Downwind-Wave,Schwach,Grosse Wellen,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,1,3,0
+Parawing,Intermediate,70-90,Downwind-Wave,Mittel,Flachwasser,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,1,3,0
+Parawing,Intermediate,70-90,Downwind-Wave,Mittel,Kleine Wellen,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,1,3,0
+Parawing,Intermediate,70-90,Downwind-Wave,Mittel,Grosse Wellen,0,0,0,0,0,0,0,2,0,0,0,0,0,0,1,3,0,0
+Parawing,Intermediate,70-90,Downwind-Wave,Stark,Flachwasser,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,1,3,0
+Parawing,Intermediate,70-90,Downwind-Wave,Stark,Kleine Wellen,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,1,3,0
+Parawing,Intermediate,70-90,Downwind-Wave,Stark,Grosse Wellen,0,0,0,0,0,0,0,2,0,0,0,0,0,0,1,3,0,0
+Parawing,Intermediate,>90,Freeride,Schwach,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Intermediate,>90,Freeride,Schwach,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Intermediate,>90,Freeride,Schwach,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Intermediate,>90,Freeride,Mittel,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Intermediate,>90,Freeride,Mittel,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Intermediate,>90,Freeride,Mittel,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Intermediate,>90,Freeride,Stark,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Intermediate,>90,Freeride,Stark,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Intermediate,>90,Freeride,Stark,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Intermediate,>90,Jumping,Schwach,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Intermediate,>90,Jumping,Schwach,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Intermediate,>90,Jumping,Schwach,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Intermediate,>90,Jumping,Mittel,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Intermediate,>90,Jumping,Mittel,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Intermediate,>90,Jumping,Mittel,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Intermediate,>90,Jumping,Stark,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Intermediate,>90,Jumping,Stark,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Intermediate,>90,Jumping,Stark,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Intermediate,>90,Flatwater,Schwach,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Intermediate,>90,Flatwater,Schwach,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Intermediate,>90,Flatwater,Schwach,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Intermediate,>90,Flatwater,Mittel,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Intermediate,>90,Flatwater,Mittel,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Intermediate,>90,Flatwater,Mittel,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Intermediate,>90,Flatwater,Stark,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Intermediate,>90,Flatwater,Stark,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Intermediate,>90,Flatwater,Stark,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Intermediate,>90,Race,Schwach,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Intermediate,>90,Race,Schwach,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Intermediate,>90,Race,Schwach,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Intermediate,>90,Race,Mittel,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Intermediate,>90,Race,Mittel,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Intermediate,>90,Race,Mittel,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Intermediate,>90,Race,Stark,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Intermediate,>90,Race,Stark,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Intermediate,>90,Race,Stark,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Intermediate,>90,Downwind-Wave,Schwach,Flachwasser,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,1,3
+Parawing,Intermediate,>90,Downwind-Wave,Schwach,Kleine Wellen,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,1,3
+Parawing,Intermediate,>90,Downwind-Wave,Schwach,Grosse Wellen,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,1,3
+Parawing,Intermediate,>90,Downwind-Wave,Mittel,Flachwasser,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,1,3
+Parawing,Intermediate,>90,Downwind-Wave,Mittel,Kleine Wellen,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,1,3
+Parawing,Intermediate,>90,Downwind-Wave,Mittel,Grosse Wellen,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,1,3,0
+Parawing,Intermediate,>90,Downwind-Wave,Stark,Flachwasser,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,1,3
+Parawing,Intermediate,>90,Downwind-Wave,Stark,Kleine Wellen,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,1,3
+Parawing,Intermediate,>90,Downwind-Wave,Stark,Grosse Wellen,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,1,3,0
+Parawing,Expert,<70,Freeride,Schwach,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Expert,<70,Freeride,Schwach,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Expert,<70,Freeride,Schwach,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Expert,<70,Freeride,Mittel,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Expert,<70,Freeride,Mittel,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Expert,<70,Freeride,Mittel,Grosse Wellen,0,0,0,0,0,0,3,1,0,0,0,0,0,0,2,0,0,0
+Parawing,Expert,<70,Freeride,Stark,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Expert,<70,Freeride,Stark,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Expert,<70,Freeride,Stark,Grosse Wellen,0,0,0,0,0,0,3,1,0,0,0,0,0,0,2,0,0,0
+Parawing,Expert,<70,Jumping,Schwach,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Expert,<70,Jumping,Schwach,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Expert,<70,Jumping,Schwach,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Expert,<70,Jumping,Mittel,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Expert,<70,Jumping,Mittel,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Expert,<70,Jumping,Mittel,Grosse Wellen,0,0,0,0,0,0,3,1,0,0,0,0,0,0,2,0,0,0
+Parawing,Expert,<70,Jumping,Stark,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Expert,<70,Jumping,Stark,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Expert,<70,Jumping,Stark,Grosse Wellen,0,0,0,0,0,0,3,1,0,0,0,0,0,0,2,0,0,0
+Parawing,Expert,<70,Flatwater,Schwach,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Expert,<70,Flatwater,Schwach,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Expert,<70,Flatwater,Schwach,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Expert,<70,Flatwater,Mittel,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Expert,<70,Flatwater,Mittel,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Expert,<70,Flatwater,Mittel,Grosse Wellen,0,0,0,0,0,0,3,1,0,0,0,0,0,0,2,0,0,0
+Parawing,Expert,<70,Flatwater,Stark,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Expert,<70,Flatwater,Stark,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Expert,<70,Flatwater,Stark,Grosse Wellen,0,0,0,0,0,0,3,1,0,0,0,0,0,0,2,0,0,0
+Parawing,Expert,<70,Race,Schwach,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Expert,<70,Race,Schwach,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Expert,<70,Race,Schwach,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Expert,<70,Race,Mittel,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Expert,<70,Race,Mittel,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Expert,<70,Race,Mittel,Grosse Wellen,0,0,0,0,0,0,3,1,0,0,0,0,0,0,2,0,0,0
+Parawing,Expert,<70,Race,Stark,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Expert,<70,Race,Stark,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Expert,<70,Race,Stark,Grosse Wellen,0,0,0,0,0,0,3,1,0,0,0,0,0,0,2,0,0,0
+Parawing,Expert,<70,Downwind-Wave,Schwach,Flachwasser,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,1,3,0
+Parawing,Expert,<70,Downwind-Wave,Schwach,Kleine Wellen,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,1,3,0
+Parawing,Expert,<70,Downwind-Wave,Schwach,Grosse Wellen,0,0,0,0,0,0,0,2,0,0,0,0,0,0,1,3,0,0
+Parawing,Expert,<70,Downwind-Wave,Mittel,Flachwasser,0,0,0,0,0,0,0,2,0,0,0,0,0,0,1,3,0,0
+Parawing,Expert,<70,Downwind-Wave,Mittel,Kleine Wellen,0,0,0,0,0,0,0,2,0,0,0,0,0,0,1,3,0,0
+Parawing,Expert,<70,Downwind-Wave,Mittel,Grosse Wellen,0,0,0,0,0,0,2,0,0,0,0,0,0,0,3,1,0,0
+Parawing,Expert,<70,Downwind-Wave,Stark,Flachwasser,0,0,0,0,0,0,0,2,0,0,0,0,0,0,1,3,0,0
+Parawing,Expert,<70,Downwind-Wave,Stark,Kleine Wellen,0,0,0,0,0,0,0,2,0,0,0,0,0,0,1,3,0,0
+Parawing,Expert,<70,Downwind-Wave,Stark,Grosse Wellen,0,0,0,0,0,0,2,0,0,0,0,0,0,0,3,1,0,0
+Parawing,Expert,70-90,Freeride,Schwach,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Expert,70-90,Freeride,Schwach,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Expert,70-90,Freeride,Schwach,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Expert,70-90,Freeride,Mittel,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Expert,70-90,Freeride,Mittel,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Expert,70-90,Freeride,Mittel,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Expert,70-90,Freeride,Stark,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Expert,70-90,Freeride,Stark,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Expert,70-90,Freeride,Stark,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Expert,70-90,Jumping,Schwach,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Expert,70-90,Jumping,Schwach,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Expert,70-90,Jumping,Schwach,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Expert,70-90,Jumping,Mittel,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Expert,70-90,Jumping,Mittel,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Expert,70-90,Jumping,Mittel,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Expert,70-90,Jumping,Stark,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Expert,70-90,Jumping,Stark,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Expert,70-90,Jumping,Stark,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Expert,70-90,Flatwater,Schwach,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Expert,70-90,Flatwater,Schwach,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Expert,70-90,Flatwater,Schwach,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Expert,70-90,Flatwater,Mittel,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Expert,70-90,Flatwater,Mittel,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Expert,70-90,Flatwater,Mittel,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Expert,70-90,Flatwater,Stark,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Expert,70-90,Flatwater,Stark,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Expert,70-90,Flatwater,Stark,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Expert,70-90,Race,Schwach,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Expert,70-90,Race,Schwach,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Expert,70-90,Race,Schwach,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Expert,70-90,Race,Mittel,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Expert,70-90,Race,Mittel,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Expert,70-90,Race,Mittel,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Expert,70-90,Race,Stark,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Expert,70-90,Race,Stark,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Expert,70-90,Race,Stark,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,2,0,0
+Parawing,Expert,70-90,Downwind-Wave,Schwach,Flachwasser,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,1,3
+Parawing,Expert,70-90,Downwind-Wave,Schwach,Kleine Wellen,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,1,3
+Parawing,Expert,70-90,Downwind-Wave,Schwach,Grosse Wellen,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,1,3,0
+Parawing,Expert,70-90,Downwind-Wave,Mittel,Flachwasser,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,1,3,0
+Parawing,Expert,70-90,Downwind-Wave,Mittel,Kleine Wellen,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,1,3,0
+Parawing,Expert,70-90,Downwind-Wave,Mittel,Grosse Wellen,0,0,0,0,0,0,0,2,0,0,0,0,0,0,1,3,0,0
+Parawing,Expert,70-90,Downwind-Wave,Stark,Flachwasser,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,1,3,0
+Parawing,Expert,70-90,Downwind-Wave,Stark,Kleine Wellen,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,1,3,0
+Parawing,Expert,70-90,Downwind-Wave,Stark,Grosse Wellen,0,0,0,0,0,0,0,2,0,0,0,0,0,0,1,3,0,0
+Parawing,Expert,>90,Freeride,Schwach,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Expert,>90,Freeride,Schwach,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Expert,>90,Freeride,Schwach,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Expert,>90,Freeride,Mittel,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Expert,>90,Freeride,Mittel,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Expert,>90,Freeride,Mittel,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Expert,>90,Freeride,Stark,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Expert,>90,Freeride,Stark,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Expert,>90,Freeride,Stark,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Expert,>90,Jumping,Schwach,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Expert,>90,Jumping,Schwach,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Expert,>90,Jumping,Schwach,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Expert,>90,Jumping,Mittel,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Expert,>90,Jumping,Mittel,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Expert,>90,Jumping,Mittel,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Expert,>90,Jumping,Stark,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Expert,>90,Jumping,Stark,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Expert,>90,Jumping,Stark,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Expert,>90,Flatwater,Schwach,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Expert,>90,Flatwater,Schwach,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Expert,>90,Flatwater,Schwach,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Expert,>90,Flatwater,Mittel,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Expert,>90,Flatwater,Mittel,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Expert,>90,Flatwater,Mittel,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Expert,>90,Flatwater,Stark,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Expert,>90,Flatwater,Stark,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Expert,>90,Flatwater,Stark,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Expert,>90,Race,Schwach,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Expert,>90,Race,Schwach,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Expert,>90,Race,Schwach,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Expert,>90,Race,Mittel,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Expert,>90,Race,Mittel,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Expert,>90,Race,Mittel,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Expert,>90,Race,Stark,Flachwasser,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Expert,>90,Race,Stark,Kleine Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2
+Parawing,Expert,>90,Race,Stark,Grosse Wellen,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,2,0
+Parawing,Expert,>90,Downwind-Wave,Schwach,Flachwasser,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,1,3
+Parawing,Expert,>90,Downwind-Wave,Schwach,Kleine Wellen,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,1,3
+Parawing,Expert,>90,Downwind-Wave,Schwach,Grosse Wellen,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,1,3
+Parawing,Expert,>90,Downwind-Wave,Mittel,Flachwasser,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,1,3
+Parawing,Expert,>90,Downwind-Wave,Mittel,Kleine Wellen,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,1,3
+Parawing,Expert,>90,Downwind-Wave,Mittel,Grosse Wellen,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,1,3,0
+Parawing,Expert,>90,Downwind-Wave,Stark,Flachwasser,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,1,3
+Parawing,Expert,>90,Downwind-Wave,Stark,Kleine Wellen,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,1,3
+Parawing,Expert,>90,Downwind-Wave,Stark,Grosse Wellen,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,1,3,0

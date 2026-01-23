@@ -1,0 +1,82 @@
+Level,Gewicht,Wind,Wellen,Platz_1,Platz_2,Platz_3
+Discover,<70,Schwach,Flachwasser,Stride Ace 1360,Flow 1260,Flow 1080
+Discover,<70,Schwach,Kleine Wellen,Stride Ace 1360,Flow 1260,Flow 1080
+Discover,<70,Schwach,Grosse Wellen,Flow 1080,Flow 900,Flow 1260
+Discover,<70,Mittel,Flachwasser,Stride Ace 1360,Flow 1080,Flow 900
+Discover,<70,Mittel,Kleine Wellen,Flow 1080,Flow 900,Flow 1260
+Discover,<70,Mittel,Grosse Wellen,Flow 900,Flow 720,Flow 1080
+Discover,<70,Stark,Flachwasser,Flow 900,Flow 720,Flow 1080
+Discover,<70,Stark,Kleine Wellen,Flow 900,Flow 720,Flow 1080
+Discover,<70,Stark,Grosse Wellen,Flow 720,Flow 900,
+Discover,70-90,Schwach,Flachwasser,Stride Ace 1740,Stride Ace 1360,Flow 1260
+Discover,70-90,Schwach,Kleine Wellen,Stride Ace 1740,Stride Ace 1360,Flow 1260
+Discover,70-90,Schwach,Grosse Wellen,Flow 1260,Flow 1080,
+Discover,70-90,Mittel,Flachwasser,Stride Ace 1740,Stride Ace 1360,Flow 1260
+Discover,70-90,Mittel,Kleine Wellen,Flow 1260,Flow 1080,
+Discover,70-90,Mittel,Grosse Wellen,Flow 1080,Flow 900,Flow 1260
+Discover,70-90,Stark,Flachwasser,Flow 1080,Flow 900,Flow 1260
+Discover,70-90,Stark,Kleine Wellen,Flow 1080,Flow 900,Flow 1260
+Discover,70-90,Stark,Grosse Wellen,Flow 900,Flow 720,Flow 1080
+Discover,>90,Schwach,Flachwasser,Stride Ace 1740,Stride Ace 1360,Flow 1260
+Discover,>90,Schwach,Kleine Wellen,Stride Ace 1740,Stride Ace 1360,Flow 1260
+Discover,>90,Schwach,Grosse Wellen,Flow 1260,Flow 1080,
+Discover,>90,Mittel,Flachwasser,Stride Ace 1740,Stride Ace 1360,Flow 1260
+Discover,>90,Mittel,Kleine Wellen,Flow 1260,Flow 1080,
+Discover,>90,Mittel,Grosse Wellen,Flow 1260,Flow 1080,
+Discover,>90,Stark,Flachwasser,Flow 1260,Flow 1080,
+Discover,>90,Stark,Kleine Wellen,Flow 1260,Flow 1080,
+Discover,>90,Stark,Grosse Wellen,Flow 1080,Flow 900,Flow 1260
+Intermediate,<70,Schwach,Flachwasser,Flow 1080,Flow 900,Flow 1260
+Intermediate,<70,Schwach,Kleine Wellen,Flow 1080,Flow 900,Flow 1260
+Intermediate,<70,Schwach,Grosse Wellen,Flow 900,Flow 720,Flow 1080
+Intermediate,<70,Mittel,Flachwasser,Flow 900,Flow 720,Flow 1080
+Intermediate,<70,Mittel,Kleine Wellen,Flow 900,Flow 720,Flow 1080
+Intermediate,<70,Mittel,Grosse Wellen,Flow 720,Flow 900,
+Intermediate,<70,Stark,Flachwasser,Flow 720,Flow 900,
+Intermediate,<70,Stark,Kleine Wellen,Flow 720,Flow 900,
+Intermediate,<70,Stark,Grosse Wellen,Flow 720,Flow 900,
+Intermediate,70-90,Schwach,Flachwasser,Flow 1260,Flow 1080,
+Intermediate,70-90,Schwach,Kleine Wellen,Flow 1260,Flow 1080,
+Intermediate,70-90,Schwach,Grosse Wellen,Flow 1080,Flow 900,Flow 1260
+Intermediate,70-90,Mittel,Flachwasser,Flow 1080,Flow 900,Flow 1260
+Intermediate,70-90,Mittel,Kleine Wellen,Flow 1080,Flow 900,Flow 1260
+Intermediate,70-90,Mittel,Grosse Wellen,Flow 900,Flow 720,Flow 1080
+Intermediate,70-90,Stark,Flachwasser,Flow 900,Flow 720,Flow 1080
+Intermediate,70-90,Stark,Kleine Wellen,Flow 900,Flow 720,Flow 1080
+Intermediate,70-90,Stark,Grosse Wellen,Flow 720,Flow 900,
+Intermediate,>90,Schwach,Flachwasser,Flow 1260,Flow 1080,
+Intermediate,>90,Schwach,Kleine Wellen,Flow 1260,Flow 1080,
+Intermediate,>90,Schwach,Grosse Wellen,Flow 1260,Flow 1080,
+Intermediate,>90,Mittel,Flachwasser,Flow 1260,Flow 1080,
+Intermediate,>90,Mittel,Kleine Wellen,Flow 1260,Flow 1080,
+Intermediate,>90,Mittel,Grosse Wellen,Flow 1080,Flow 900,Flow 1260
+Intermediate,>90,Stark,Flachwasser,Flow 1080,Flow 900,Flow 1260
+Intermediate,>90,Stark,Kleine Wellen,Flow 1080,Flow 900,Flow 1260
+Intermediate,>90,Stark,Grosse Wellen,Flow 900,Flow 720,Flow 1080
+Expert,<70,Schwach,Flachwasser,Flow 900,Flow 720,Flow 1080
+Expert,<70,Schwach,Kleine Wellen,Flow 900,Flow 720,Flow 1080
+Expert,<70,Schwach,Grosse Wellen,Flow 720,Flow 900,
+Expert,<70,Mittel,Flachwasser,Flow 720,Flow 900,
+Expert,<70,Mittel,Kleine Wellen,Flow 720,Flow 900,
+Expert,<70,Mittel,Grosse Wellen,Flow 720,Flow 900,
+Expert,<70,Stark,Flachwasser,Flow 720,Flow 900,
+Expert,<70,Stark,Kleine Wellen,Flow 720,Flow 900,
+Expert,<70,Stark,Grosse Wellen,Flow 720,Flow 900,
+Expert,70-90,Schwach,Flachwasser,Flow 1080,Flow 900,Flow 1260
+Expert,70-90,Schwach,Kleine Wellen,Flow 1080,Flow 900,Flow 1260
+Expert,70-90,Schwach,Grosse Wellen,Flow 900,Flow 720,Flow 1080
+Expert,70-90,Mittel,Flachwasser,Flow 900,Flow 720,Flow 1080
+Expert,70-90,Mittel,Kleine Wellen,Flow 900,Flow 720,Flow 1080
+Expert,70-90,Mittel,Grosse Wellen,Flow 720,Flow 900,
+Expert,70-90,Stark,Flachwasser,Flow 720,Flow 900,
+Expert,70-90,Stark,Kleine Wellen,Flow 720,Flow 900,
+Expert,70-90,Stark,Grosse Wellen,Flow 720,Flow 900,
+Expert,>90,Schwach,Flachwasser,Flow 1260,Flow 1080,
+Expert,>90,Schwach,Kleine Wellen,Flow 1260,Flow 1080,
+Expert,>90,Schwach,Grosse Wellen,Flow 1080,Flow 900,Flow 1260
+Expert,>90,Mittel,Flachwasser,Flow 1080,Flow 900,Flow 1260
+Expert,>90,Mittel,Kleine Wellen,Flow 1080,Flow 900,Flow 1260
+Expert,>90,Mittel,Grosse Wellen,Flow 900,Flow 720,Flow 1080
+Expert,>90,Stark,Flachwasser,Flow 900,Flow 720,Flow 1080
+Expert,>90,Stark,Kleine Wellen,Flow 900,Flow 720,Flow 1080
+Expert,>90,Stark,Grosse Wellen,Flow 720,Flow 900,
