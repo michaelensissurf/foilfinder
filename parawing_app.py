@@ -230,22 +230,30 @@ def recommend_top3_wingfoil(level, weight, wind, style_preference):
     """Recommend top 3 foils for Wingfoil Freeride."""
     top3 = []
 
-    # Discover: Pacer is Rank 1
+    # Discover: Only Pacer foils
     if level == "Discover":
         pacer_size = get_optimal_wingfoil_size(level, weight, wind, "Pacer")
+        pacer_index = PACER_SIZES.index(pacer_size)
+
         top3.append({"Foil": f"Pacer {pacer_size}", "Rank": 1})
 
-        # Rank 2 & 3: Flow/Infinity based on slider
-        if style_preference == "More Glide":
-            flow_size = get_optimal_wingfoil_size(level, weight, wind, "Flow")
-            infinity_size = get_optimal_wingfoil_size(level, weight, wind, "Infinity")
-            top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 2})
-            top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 3})
-        else:  # More Maneuverability
-            infinity_size = get_optimal_wingfoil_size(level, weight, wind, "Infinity")
-            flow_size = get_optimal_wingfoil_size(level, weight, wind, "Flow")
-            top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 2})
-            top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 3})
+        # Rank 2: Neighbor Pacer size
+        if pacer_index < len(PACER_SIZES) - 1:
+            top3.append({"Foil": f"Pacer {PACER_SIZES[pacer_index + 1]}", "Rank": 2})
+        elif pacer_index > 0:
+            top3.append({"Foil": f"Pacer {PACER_SIZES[pacer_index - 1]}", "Rank": 2})
+
+        # Rank 3: Another Pacer alternative
+        if pacer_index > 0 and pacer_index < len(PACER_SIZES) - 1:
+            # If in middle, offer smaller or larger based on previous choice
+            if len(top3) > 1 and PACER_SIZES[pacer_index + 1] in top3[1]["Foil"]:
+                top3.append({"Foil": f"Pacer {PACER_SIZES[pacer_index - 1]}", "Rank": 3})
+            else:
+                top3.append({"Foil": f"Pacer {PACER_SIZES[pacer_index + 1]}", "Rank": 3})
+        elif pacer_index == 0 and len(PACER_SIZES) > 2:
+            top3.append({"Foil": f"Pacer {PACER_SIZES[2]}", "Rank": 3})
+        elif pacer_index == len(PACER_SIZES) - 1 and len(PACER_SIZES) > 2:
+            top3.append({"Foil": f"Pacer {PACER_SIZES[pacer_index - 2]}", "Rank": 3})
 
     # Intermediate: Flow/Infinity Rank 1/2 based on slider, Pacer Rank 3
     elif level == "Intermediate":
@@ -469,8 +477,9 @@ with st.expander("ℹ️ How does the recommendation work?"):
         **Ranking by Level:**
 
         **Discover:**
-        - Rank 1: Pacer (stable, easy to learn)
-        - Rank 2/3: Flow/Infinity based on style preference
+        - Rank 1: Pacer (optimal size, stable and easy to learn)
+        - Rank 2: Pacer (alternative size)
+        - Rank 3: Pacer (another alternative size)
 
         **Intermediate:**
         - Rank 1: Flow or Infinity (based on style preference)
