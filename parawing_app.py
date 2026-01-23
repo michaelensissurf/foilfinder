@@ -180,52 +180,48 @@ st.caption("Specialized for Parawing with Flow Ace, Infinity Ace & Stride Ace")
 # =========================================================
 # INPUT FORM
 # =========================================================
-with st.form("finder"):
-    # Row 1: Category
-    kat = st.selectbox("Category", CATEGORIES)
+# Row 1: Category
+kat = st.selectbox("Category", CATEGORIES)
 
-    # Row 2: Level & Weight
-    col1, col2 = st.columns(2)
-    with col1:
-        lvl = st.select_slider("Level", options=LEVELS, value="Intermediate")
-    with col2:
-        weight_kg = st.slider("Weight (kg)", min_value=40, max_value=150, value=80, step=1)
-        # Map to weight category
-        if weight_kg < 70:
-            gw = "<70"
-            weight_info = "Light rider"
-        elif weight_kg <= 90:
-            gw = "70-90"
-            weight_info = "Medium rider"
-        else:
-            gw = ">90"
-            weight_info = "Heavy rider"
-        st.caption(f"📊 {weight_info} ({gw}kg)")
-
-    # Row 3: Wind
-    wind = st.selectbox("Wind", WIND)
-
-    # Row 4: Waves
-    # Wave options depending on category
-    if kat == "Downwind-Wave":
-        wave_options = ["Small Waves", "Big Waves"]
+# Row 2: Level & Weight
+col1, col2 = st.columns(2)
+with col1:
+    lvl = st.select_slider("Level", options=LEVELS, value="Intermediate")
+with col2:
+    weight_kg = st.slider("Weight (kg)", min_value=40, max_value=150, value=80, step=1)
+    # Map to weight category
+    if weight_kg < 70:
+        gw = "<70"
+        weight_info = "Light rider"
+    elif weight_kg <= 90:
+        gw = "70-90"
+        weight_info = "Medium rider"
     else:
-        wave_options = WAVES
-    wl = st.selectbox("Waves", wave_options)
+        gw = ">90"
+        weight_info = "Heavy rider"
+    st.caption(f"📊 {weight_info} ({gw}kg)")
 
-    # Info about category
-    if kat == "Freeride":
-        st.info("💡 For Freeride, wave size is secondary.")
-    else:
-        st.info("🌊 For Downwind-Wave, wave size is primary for foil selection.")
+# Row 3: Wind
+wind = st.selectbox("Wind", WIND)
 
-    submit = st.form_submit_button("🔍 Calculate Foil", use_container_width=True)
+# Row 4: Waves
+# Wave options depending on category
+if kat == "Downwind-Wave":
+    wave_options = ["Small Waves", "Big Waves"]
+else:
+    wave_options = WAVES
+wl = st.selectbox("Waves", wave_options)
+
+# Info about category
+if kat == "Freeride":
+    st.info("💡 For Freeride, wave size is secondary.")
+else:
+    st.info("🌊 For Downwind-Wave, wave size is primary for foil selection.")
 
 # =========================================================
 # CALCULATION
 # =========================================================
-if submit:
-    st.session_state.result = recommend_top3(lvl, gw, kat, wind, wl)
+st.session_state.result = recommend_top3(lvl, gw, kat, wind, wl)
 
 # =========================================================
 # RESULTS
