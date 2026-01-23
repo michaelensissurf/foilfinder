@@ -181,12 +181,14 @@ st.caption("Specialized for Parawing with Flow Ace, Infinity Ace & Stride Ace")
 # INPUT FORM
 # =========================================================
 with st.form("finder"):
-    col1, col2, col3 = st.columns(3)
+    col1, col2, col3, col4 = st.columns(4)
 
     with col1:
-        lvl = st.select_slider("Level", options=LEVELS, value="Intermediate")
+        kat = st.selectbox("Category", CATEGORIES)
 
     with col2:
+        lvl = st.select_slider("Level", options=LEVELS, value="Intermediate")
+
         weight_kg = st.slider("Weight (kg)", min_value=40, max_value=150, value=80, step=1)
         # Map to weight category
         if weight_kg < 70:
@@ -201,14 +203,9 @@ with st.form("finder"):
         st.caption(f"📊 {weight_info} ({gw}kg)")
 
     with col3:
-        kat = st.selectbox("Category", CATEGORIES)
-
-    col4, col5 = st.columns(2)
-
-    with col4:
         wind = st.selectbox("Wind", WIND)
 
-    with col5:
+    with col4:
         # Wave options depending on category
         if kat == "Downwind-Wave":
             wave_options = ["Small Waves", "Big Waves"]
