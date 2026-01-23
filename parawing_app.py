@@ -184,18 +184,7 @@ with st.form("finder"):
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        level_slider = st.slider("Level", min_value=0, max_value=100, value=50, step=1)
-        # Map to level category
-        if level_slider <= 25:
-            lvl = "Discover"
-            level_info = "Beginner"
-        elif level_slider <= 75:
-            lvl = "Intermediate"
-            level_info = "Intermediate"
-        else:
-            lvl = "Expert"
-            level_info = "Advanced"
-        st.caption(f"🎯 {level_info}")
+        lvl = st.select_slider("Level", options=LEVELS, value="Intermediate")
 
     with col2:
         weight_kg = st.slider("Weight (kg)", min_value=40, max_value=150, value=80, step=1)
