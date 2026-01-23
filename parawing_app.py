@@ -349,13 +349,14 @@ if discipline == "Parawing":
         style_preference = None
         st.info("🌊 For Parawing Downwind-Wave, wave size is primary for foil selection.")
 else:  # Wingfoil
-    # Wingfoil Freeride: Wind + Style slider
+    # Wingfoil Freeride: Wind + Style buttons
     wind = st.selectbox("Wind", WIND)
     wl = None
-    style_preference = st.select_slider(
+    style_preference = st.radio(
         "Style Preference",
         options=["More Glide", "More Maneuverability"],
-        value="More Glide"
+        index=0,
+        horizontal=True
     )
     st.info("🪶 For Wingfoil Freeride, wind and style preference determine the optimal foil.")
 
