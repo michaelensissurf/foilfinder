@@ -11,9 +11,18 @@ st.set_page_config(page_title="Parawing Foilfinder", layout="wide")
 # =========================================================
 FLOW_SIZES = [720, 900, 1080, 1260]
 STRIDE_ACE_SIZES = [1360, 1740]
+INFINITY_SIZES = [540, 690, 840, 990, 1140, 1390]
 
 FLOW_STANDARD = 1080
 FLOW_STANDARD_INDEX = FLOW_SIZES.index(FLOW_STANDARD)
+
+# Flow → Infinity Mapping (Infinity etwas größer wegen weniger Lift)
+FLOW_TO_INFINITY = {
+    720: 840,
+    900: 990,
+    1080: 1140,
+    1260: 1390
+}
 
 # =========================================================
 # PARAMETERS
@@ -127,33 +136,31 @@ def recommend_top3(level, gewicht, kategorie, wind, wellen):
     elif level == "Discover":
         top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 1})
 
-        # Nachbargrößen in EINER Richtung (keine Sprünge)
+        # Rang 2: Flow Nachbargröße (sichere Alternative)
         if flow_index > 0:
-            # Es gibt kleinere Foils → zeige kleinere
             top3.append({"Foil": f"Flow Ace {FLOW_SIZES[flow_index - 1]}", "Rank": 2})
-            if flow_index > 1:
-                top3.append({"Foil": f"Flow Ace {FLOW_SIZES[flow_index - 2]}", "Rank": 3})
         elif flow_index < len(FLOW_SIZES) - 1:
-            # Wir sind beim kleinsten → zeige größere
             top3.append({"Foil": f"Flow Ace {FLOW_SIZES[flow_index + 1]}", "Rank": 2})
-            if flow_index < len(FLOW_SIZES) - 2:
-                top3.append({"Foil": f"Flow Ace {FLOW_SIZES[flow_index + 2]}", "Rank": 3})
 
-    # INTERMEDIATE / EXPERT (Flow only)
+        # Rang 3: Infinity Ace (sportliche Alternative)
+        infinity_size = FLOW_TO_INFINITY.get(flow_size)
+        if infinity_size:
+            top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 3})
+
+    # INTERMEDIATE / EXPERT
     else:
         top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 1})
 
-        # Nachbargrößen in EINER Richtung (keine Sprünge)
+        # Rang 2: Flow Nachbargröße (sichere Alternative)
         if flow_index > 0:
-            # Es gibt kleinere Foils → zeige kleinere
             top3.append({"Foil": f"Flow Ace {FLOW_SIZES[flow_index - 1]}", "Rank": 2})
-            if flow_index > 1:
-                top3.append({"Foil": f"Flow Ace {FLOW_SIZES[flow_index - 2]}", "Rank": 3})
         elif flow_index < len(FLOW_SIZES) - 1:
-            # Wir sind beim kleinsten → zeige größere
             top3.append({"Foil": f"Flow Ace {FLOW_SIZES[flow_index + 1]}", "Rank": 2})
-            if flow_index < len(FLOW_SIZES) - 2:
-                top3.append({"Foil": f"Flow Ace {FLOW_SIZES[flow_index + 2]}", "Rank": 3})
+
+        # Rang 3: Infinity Ace (sportliche Alternative)
+        infinity_size = FLOW_TO_INFINITY.get(flow_size)
+        if infinity_size:
+            top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 3})
 
     return top3
 
@@ -161,7 +168,7 @@ def recommend_top3(level, gewicht, kategorie, wind, wellen):
 # UI HEADER
 # =========================================================
 st.title("🪁 Parawing Foilfinder")
-st.caption("Spezialisiert für Parawing mit Flow & Stride Ace")
+st.caption("Spezialisiert für Parawing mit Flow Ace, Infinity Ace & Stride Ace")
 
 # =========================================================
 # INPUT FORM
@@ -258,9 +265,14 @@ with st.expander("ℹ️ Wie funktioniert die Empfehlung?"):
     - **Freeride:** Wellengröße ist sekundär (hat keinen Einfluss auf Empfehlung)
     - **Downwind-Wave:** Wellengröße ist primär (große Wellen → kleinerer Foil)
 
+    **Rangierung:**
+    - **Rang 1:** Flow Ace (optimal für deine Bedingungen)
+    - **Rang 2:** Flow Ace Nachbargröße (sichere Alternative)
+    - **Rang 3:** Infinity Ace (sportliche Alternative - wendiger, etwas größer wegen weniger Lift)
+
     **Stride Ace für Discover:**
     - Bei schwachen Bedingungen (schwacher Wind oder Flachwasser)
     - Stride Ace 1740 für Rider 70-90kg und >90kg
     - Stride Ace 1360 für Rider <70kg
-    - Flow Ace als Alternative auf Platz 2/3
+    - Flow/Infinity als Alternative auf Platz 2/3
     """)
