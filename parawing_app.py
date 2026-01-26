@@ -45,6 +45,54 @@ WIND = ["Light", "Medium", "Strong"]
 WAVES_DOWNWIND = ["Small Waves (<0.5m)", "Medium Waves (0.5-1m)", "Big Waves (>1m)"]
 
 # =========================================================
+# FOIL PROPERTIES (for scoring)
+# =========================================================
+PERFORMANCE_PARAMS = ["Speed", "Lift", "Glide", "Maneuverability", "Pump", "Ease of use"]
+
+FOIL_PROPERTIES = {
+    "Flow Ace": {
+        "Speed": 4.0,
+        "Lift": 4.0,
+        "Glide": 4.5,
+        "Maneuverability": 4.0,
+        "Pump": 4.0,
+        "Ease of use": 3.5,
+    },
+    "Infinity Ace": {
+        "Speed": 5.0,
+        "Lift": 4.0,
+        "Glide": 4.0,
+        "Maneuverability": 5.0,
+        "Pump": 3.5,
+        "Ease of use": 4.5,
+    },
+    "Stride Ace": {
+        "Speed": 3.0,
+        "Lift": 5.0,
+        "Glide": 4.0,
+        "Maneuverability": 3.5,
+        "Pump": 5.0,
+        "Ease of use": 4.0,
+    },
+    "Stride": {  # For Stride 2050
+        "Speed": 3.0,
+        "Lift": 5.0,
+        "Glide": 4.0,
+        "Maneuverability": 3.5,
+        "Pump": 5.0,
+        "Ease of use": 4.0,
+    },
+    "Pacer": {
+        "Speed": 3.5,
+        "Lift": 4.5,
+        "Glide": 3.5,
+        "Maneuverability": 4.5,
+        "Pump": 3.0,
+        "Ease of use": 5.0,
+    },
+}
+
+# =========================================================
 # SESSION STATE
 # =========================================================
 for k in ["result", "selected_foil"]:
@@ -56,6 +104,53 @@ for k in ["result", "selected_foil"]:
 # =========================================================
 def fmt(v):
     return int(v) if float(v).is_integer() else round(v, 1)
+
+def get_foil_type(foil_name):
+    """Extract foil type from full foil name (e.g., 'Flow Ace 1080' -> 'Flow Ace')"""
+    for foil_type in FOIL_PROPERTIES.keys():
+        if foil_type in foil_name:
+            return foil_type
+    return None
+
+def calculate_foil_score(foil_name, user_weights):
+    """Calculate score for a foil based on user preferences"""
+    foil_type = get_foil_type(foil_name)
+    if not foil_type or foil_type not in FOIL_PROPERTIES:
+        return 0
+
+    properties = FOIL_PROPERTIES[foil_type]
+    score = sum(user_weights[param] * properties[param] for param in PERFORMANCE_PARAMS)
+    return score
+
+def rerank_by_score(foils, user_weights):
+    """Re-rank foils based on user preference scores"""
+    # Check if user has customized preferences (any slider != 2.5)
+    default_weight = 2.5
+    has_custom_prefs = any(user_weights[param] != default_weight for param in PERFORMANCE_PARAMS)
+
+    if not has_custom_prefs:
+        # No custom preferences, return original ranking
+        return foils
+
+    # Calculate scores for all foils
+    scored_foils = []
+    for foil_dict in foils:
+        foil_name = foil_dict["Foil"]
+        score = calculate_foil_score(foil_name, user_weights)
+        scored_foils.append({
+            "Foil": foil_name,
+            "Score": score,
+            "Rank": foil_dict["Rank"]  # Keep original rank for reference
+        })
+
+    # Sort by score descending
+    scored_foils.sort(key=lambda x: x["Score"], reverse=True)
+
+    # Re-assign ranks
+    for i, foil in enumerate(scored_foils):
+        foil["Rank"] = i + 1
+
+    return scored_foils
 
 # =========================================================
 # RECOMMENDATION LOGIC
@@ -392,12 +487,36 @@ else:  # Wingfoil
     st.info("🪶 For Wingfoil Freeride, wind and style preference determine the optimal foil.")
 
 # =========================================================
+# PERFORMANCE PREFERENCES (Optional Fine-Tuning)
+# =========================================================
+with st.expander("🎯 Fine-tune your preferences (optional)"):
+    st.caption("Adjust sliders to prioritize specific foil characteristics. Default is 2.5 for all.")
+
+    user_weights = {}
+    cols = st.columns(2)
+
+    for i, param in enumerate(PERFORMANCE_PARAMS):
+        with cols[i % 2]:
+            user_weights[param] = st.slider(
+                param,
+                min_value=0.0,
+                max_value=5.0,
+                value=2.5,
+                step=0.5,
+                key=f"weight_{param}"
+            )
+
+# =========================================================
 # CALCULATION
 # =========================================================
+# Get base recommendations
 if discipline == "Parawing":
-    st.session_state.result = recommend_top3(lvl, gw, kat, wind, wl)
+    base_result = recommend_top3(lvl, gw, kat, wind, wl)
 else:  # Wingfoil
-    st.session_state.result = recommend_top3_wingfoil(lvl, gw, wind, style_preference)
+    base_result = recommend_top3_wingfoil(lvl, gw, wind, style_preference)
+
+# Apply user preference scoring to re-rank
+st.session_state.result = rerank_by_score(base_result, user_weights)
 
 # =========================================================
 # RESULTS
