@@ -37,7 +37,7 @@ FLOW_TO_INFINITY = {
 # PARAMETERS
 # =========================================================
 DISCIPLINES = ["Parawing", "Wingfoil"]
-LEVELS = ["Discover", "Beginner to Intermediate", "Intermediate to Expert", "Expert"]
+LEVELS = ["Discover", "Discover to Intermediate", "Intermediate to Expert", "Expert"]
 WEIGHT = ["<70", "70-90", ">90"]
 CATEGORIES_PARAWING = ["Freeride", "Downwind-Wave"]
 CATEGORIES_WINGFOIL = ["Freeride"]
@@ -72,7 +72,7 @@ def calculate_flow_offset(level, weight, category, wind, waves):
     # Level
     if level == "Discover":
         offset += 2
-    elif level == "Beginner to Intermediate":
+    elif level == "Discover to Intermediate":
         offset += 1
     elif level == "Intermediate to Expert":
         offset += 0
@@ -105,12 +105,12 @@ def get_optimal_flow(level, weight, category, wind, waves):
 
 def should_recommend_stride_ace(level, weight, category, wind, waves, flow_size):
     """
-    Stride Ace only for Discover/Beginner to Intermediate in gentle conditions:
+    Stride Ace only for Discover/Discover to Intermediate in gentle conditions:
     - Freeride: Light wind only
     - Downwind-Wave: Small waves only
     - Only if Flow >= 1080 (generally larger foil needed)
     """
-    if level not in ["Discover", "Beginner to Intermediate"]:
+    if level not in ["Discover", "Discover to Intermediate"]:
         return False
 
     if flow_size < 1080:
@@ -198,7 +198,7 @@ def calculate_wingfoil_offset(level, weight, wind):
     # Level
     if level == "Discover":
         offset += 2
-    elif level == "Beginner to Intermediate":
+    elif level == "Discover to Intermediate":
         offset += 1
     elif level == "Intermediate to Expert":
         offset += 0
@@ -263,8 +263,8 @@ def recommend_top3_wingfoil(level, weight, wind, style_preference):
         elif pacer_index == len(PACER_SIZES) - 1 and len(PACER_SIZES) > 2:
             top3.append({"Foil": f"Pacer {PACER_SIZES[pacer_index - 2]}", "Rank": 3})
 
-    # Beginner to Intermediate: Pacer Rank 1, Flow/Infinity Rank 2/3
-    elif level == "Beginner to Intermediate":
+    # Discover to Intermediate: Pacer Rank 1, Flow/Infinity Rank 2/3
+    elif level == "Discover to Intermediate":
         pacer_size = get_optimal_wingfoil_size(level, weight, wind, "Pacer")
         flow_size = get_optimal_wingfoil_size(level, weight, wind, "Flow")
         infinity_size = get_optimal_wingfoil_size(level, weight, wind, "Infinity")
@@ -452,7 +452,7 @@ with st.expander("ℹ️ How does the recommendation work?"):
         - Lighter riders (<70kg) → smaller foil
         - Heavier riders (>90kg) → larger foil
         - Discover level → much larger foil (+2)
-        - Beginner to Intermediate → larger foil (+1)
+        - Discover to Intermediate → larger foil (+1)
         - Intermediate to Expert → neutral (0)
         - Expert level → smaller foil (-1)
 
@@ -470,7 +470,7 @@ with st.expander("ℹ️ How does the recommendation work?"):
         - **Rank 2:** Flow Ace neighbor size (safe alternative)
         - **Rank 3:** Infinity Ace (sporty alternative - more agile, slightly larger due to less lift)
 
-        **Stride Ace for Discover/Beginner to Intermediate:**
+        **Stride Ace for Discover/Discover to Intermediate:**
         - Only in gentle conditions:
           - Freeride: Light wind
           - Downwind-Wave: Small waves (<0.5m)
@@ -491,7 +491,7 @@ with st.expander("ℹ️ How does the recommendation work?"):
         - Lighter riders (<70kg) → smaller foil
         - Heavier riders (>90kg) → larger foil
         - Discover level → much larger foil (+2)
-        - Beginner to Intermediate → larger foil (+1)
+        - Discover to Intermediate → larger foil (+1)
         - Intermediate to Expert → neutral (0)
         - Expert level → smaller foil (-1)
         - Light wind → larger foil
@@ -508,7 +508,7 @@ with st.expander("ℹ️ How does the recommendation work?"):
         - Rank 2: Pacer (alternative size)
         - Rank 3: Pacer (another alternative size)
 
-        **Beginner to Intermediate:**
+        **Discover to Intermediate:**
         - Rank 1: Pacer (still learning, stable option)
         - Rank 2: Flow or Infinity (based on style preference)
         - Rank 3: The other option (Infinity or Flow)
