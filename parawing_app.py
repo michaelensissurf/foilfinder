@@ -368,14 +368,14 @@ def recommend_top3_wingfoil(level, weight, wind):
         top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 2})
         top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 3})
 
-    # Intermediate to Expert: Flow Rank 1, Infinity Rank 2, Pacer Rank 3
+    # Intermediate to Expert: Infinity Rank 1, Flow Rank 2, Pacer Rank 3
     elif level == "Intermediate to Expert":
         pacer_size = get_optimal_wingfoil_size(level, weight, wind, "Pacer")
         flow_size = get_optimal_wingfoil_size(level, weight, wind, "Flow")
         infinity_size = get_optimal_wingfoil_size(level, weight, wind, "Infinity")
 
-        top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 1})
-        top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 2})
+        top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 1})
+        top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 2})
         top3.append({"Foil": f"Pacer {pacer_size}", "Rank": 3})
 
     # Expert: Infinity Rank 1, Flow Rank 2, smaller alternative Rank 3 (NO Pacer)
