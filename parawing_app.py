@@ -545,7 +545,7 @@ with st.expander("ℹ️ How does the recommendation work?"):
         st.markdown("""
         ### Parawing
 
-        **Baseline:** Flow Ace 1080 (70-90kg, Intermediate)
+        **Baseline:** Flow Ace 1080 (70-90kg, Intermediate, Medium Wind / Medium Waves)
 
         **Adjustments (always applied):**
         - Lighter riders (<70kg) → smaller foil
