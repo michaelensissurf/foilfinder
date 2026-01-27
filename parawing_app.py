@@ -227,17 +227,25 @@ def recommend_top3(level, weight, category, wind, waves):
 
     top3 = []
 
-    # DISCOVER with Stride Ace preference
+    # DISCOVER / DISCOVER TO INTERMEDIATE with Stride Ace preference
     if should_recommend_stride_ace(level, weight, category, wind, waves, flow_size):
 
-        # Heavier riders (70-90 or >90): Stride 1740 possible
-        if weight in ["70-90", ">90"]:
-            top3.append({"Foil": "Stride Ace 1740", "Rank": 1})
-            top3.append({"Foil": "Stride Ace 1360", "Rank": 2})
-            top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 3})
-
-        # Lighter riders (<70): Stride 1740 omitted
+        if level == "Discover":
+            # Discover: Heavier riders (70-90 or >90): Stride 1740 possible
+            if weight in ["70-90", ">90"]:
+                top3.append({"Foil": "Stride Ace 1740", "Rank": 1})
+                top3.append({"Foil": "Stride Ace 1360", "Rank": 2})
+                top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 3})
+            # Discover: Lighter riders (<70): Stride 1740 omitted
+            else:
+                top3.append({"Foil": "Stride Ace 1360", "Rank": 1})
+                top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 2})
+                if flow_index > 0:
+                    top3.append({"Foil": f"Flow Ace {FLOW_SIZES[flow_index - 1]}", "Rank": 3})
+                elif flow_index < len(FLOW_SIZES) - 1:
+                    top3.append({"Foil": f"Flow Ace {FLOW_SIZES[flow_index + 1]}", "Rank": 3})
         else:
+            # Discover to Intermediate: Stride 1360 as base
             top3.append({"Foil": "Stride Ace 1360", "Rank": 1})
             top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 2})
             if flow_index > 0:
