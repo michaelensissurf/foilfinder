@@ -436,7 +436,6 @@ with col2:
     else:
         gw = ">90"
         weight_info = "Heavy rider"
-    st.caption(f"📊 {weight_info} ({gw}kg)")
 
 # Row 4 & 5: Discipline + Category-specific inputs
 if discipline == "Parawing":
