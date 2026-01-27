@@ -59,10 +59,10 @@ FOIL_PROPERTIES = {
         "Ease of use": 3.5,
     },
     "Infinity Ace": {
-        "Speed": 5.0,
+        "Speed": 4.5,
         "Lift": 4.0,
         "Glide": 3.5,
-        "Maneuverability": 5.0,
+        "Maneuverability": 4.5,
         "Pump": 3.5,
         "Ease of use": 4.5,
     },
