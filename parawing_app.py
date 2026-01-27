@@ -425,7 +425,7 @@ col1, col2 = st.columns(2)
 with col1:
     lvl = st.radio("Level", options=LEVELS, index=1, horizontal=False)
 with col2:
-    weight_kg = st.slider("Weight (kg)", min_value=40, max_value=150, value=80, step=1)
+    weight_kg = st.slider("Weight (kg)", min_value=32, max_value=125, value=80, step=1)
     # Map to weight category
     if weight_kg < 70:
         gw = "<70"
