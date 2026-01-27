@@ -124,8 +124,8 @@ def calculate_foil_score(foil_name, user_weights):
 
 def rerank_by_score(foils, user_weights):
     """Re-rank foils based on user preference scores"""
-    # Check if user has customized preferences (any slider != 2.5)
-    default_weight = 2.5
+    # Check if user has customized preferences (any slider != 0)
+    default_weight = 0.0
     has_custom_prefs = any(user_weights[param] != default_weight for param in PERFORMANCE_PARAMS)
 
     if not has_custom_prefs:
@@ -462,7 +462,7 @@ else:  # Wingfoil
 # PERFORMANCE PREFERENCES (Optional Fine-Tuning)
 # =========================================================
 with st.expander("🎯 Fine-tune your preferences (optional)"):
-    st.caption("Adjust sliders to prioritize specific foil characteristics. Default is 2.5 for all.")
+    st.caption("Adjust sliders to prioritize specific foil characteristics.")
 
     user_weights = {}
     cols = st.columns(2)
@@ -473,7 +473,7 @@ with st.expander("🎯 Fine-tune your preferences (optional)"):
                 param,
                 min_value=0.0,
                 max_value=5.0,
-                value=2.5,
+                value=0.0,
                 step=0.5,
                 key=f"weight_{param}"
             )
