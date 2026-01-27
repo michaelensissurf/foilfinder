@@ -391,15 +391,22 @@ def recommend_top3_wingfoil(level, weight, wind):
         top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 2})
         top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 3})
 
-    # Intermediate to Expert: Infinity Rank 1, Flow Rank 2, Pacer Rank 3
+    # Intermediate to Expert: Infinity Rank 1, Flow Rank 2, smaller alternative Rank 3 (NO Pacer)
     elif level == "Intermediate to Expert":
-        pacer_size = get_optimal_wingfoil_size(level, weight, wind, "Pacer")
         flow_size = get_optimal_wingfoil_size(level, weight, wind, "Flow")
         infinity_size = get_optimal_wingfoil_size(level, weight, wind, "Infinity")
 
         top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 1})
         top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 2})
-        top3.append({"Foil": f"Pacer {pacer_size}", "Rank": 3})
+
+        # Rank 3: smaller alternative (prefer Infinity)
+        infinity_index = INFINITY_WINGFOIL_SIZES.index(infinity_size)
+        if infinity_index > 0:
+            top3.append({"Foil": f"Infinity Ace {INFINITY_WINGFOIL_SIZES[infinity_index - 1]}", "Rank": 3})
+        else:
+            flow_index = FLOW_WINGFOIL_SIZES.index(flow_size)
+            if flow_index > 0:
+                top3.append({"Foil": f"Flow Ace {FLOW_WINGFOIL_SIZES[flow_index - 1]}", "Rank": 3})
 
     # Expert: Infinity Rank 1, Flow Rank 2, smaller alternative Rank 3 (NO Pacer)
     else:  # Expert
@@ -639,7 +646,7 @@ with st.expander("ℹ️ How does the recommendation work?"):
         |-------|--------|--------|--------|
         | Discover | Pacer | Pacer | Pacer |
         | Discover to Intermediate | Pacer | Infinity Ace | Flow Ace |
-        | Intermediate to Expert | Infinity Ace | Flow Ace | Pacer |
+        | Intermediate to Expert | Infinity Ace | Flow Ace | smaller alternative |
         | Expert | Infinity Ace | Flow Ace | smaller alternative |
 
         **Why this order?**
