@@ -441,7 +441,7 @@ with col2:
 if discipline == "Parawing":
     if kat == "Freeride":
         # Parawing Freeride: Only wind matters
-        wind = st.selectbox("Wind", WIND)
+        wind = st.selectbox("Wind", WIND, help="Based on your usual riding conditions")
         wl = None
         style_preference = None
         st.info("💡 For Parawing Freeride, wind is primary for getting on the foil.")
@@ -453,7 +453,7 @@ if discipline == "Parawing":
         st.info("🌊 For Parawing Downwind-Wave, wave size is primary for foil selection.")
 else:  # Wingfoil
     # Wingfoil Freeride: Wind only
-    wind = st.selectbox("Wind", WIND)
+    wind = st.selectbox("Wind", WIND, help="Based on your usual riding conditions")
     wl = None
     style_preference = None
     st.info("🪶 For Wingfoil Freeride, wind conditions determine the optimal foil. Use the preference sliders below to fine-tune.")
