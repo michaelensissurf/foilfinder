@@ -62,7 +62,7 @@ FOIL_PROPERTIES = {
         "Speed": 4.5,
         "Lift": 3.5,
         "Glide": 3.5,
-        "Maneuverability": 4.5,
+        "Maneuverability": 5.0,
         "Pump": 3.5,
         "Ease of use": 4.5,
     },
