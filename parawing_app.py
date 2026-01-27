@@ -268,8 +268,8 @@ def recommend_top3(level, weight, category, wind, waves):
         if infinity_size:
             top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 3})
 
-    # INTERMEDIATE / EXPERT
-    else:
+    # DISCOVER TO INTERMEDIATE without Stride (stronger wind / bigger waves)
+    elif level == "Discover to Intermediate":
         top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 1})
 
         # Rank 2: Flow neighbor size (safe alternative)
@@ -282,6 +282,21 @@ def recommend_top3(level, weight, category, wind, waves):
         infinity_size = FLOW_TO_INFINITY.get(flow_size)
         if infinity_size:
             top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 3})
+
+    # INTERMEDIATE TO EXPERT / EXPERT: Flow → Infinity → Flow (andere Größe)
+    else:
+        top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 1})
+
+        # Rank 2: Infinity Ace
+        infinity_size = FLOW_TO_INFINITY.get(flow_size)
+        if infinity_size:
+            top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 2})
+
+        # Rank 3: Flow neighbor size (alternative)
+        if flow_index > 0:
+            top3.append({"Foil": f"Flow Ace {FLOW_SIZES[flow_index - 1]}", "Rank": 3})
+        elif flow_index < len(FLOW_SIZES) - 1:
+            top3.append({"Foil": f"Flow Ace {FLOW_SIZES[flow_index + 1]}", "Rank": 3})
 
     return top3
 
@@ -564,10 +579,17 @@ with st.expander("ℹ️ How does the recommendation work?"):
           - Medium waves (0.5-1m) → neutral
           - Big waves (>1m) → smaller foil
 
-        **Ranking:**
-        - **Rank 1:** Flow Ace (optimal for your conditions)
-        - **Rank 2:** Flow Ace neighbor size (safe alternative)
-        - **Rank 3:** Infinity Ace (sporty alternative - more agile)
+        **Default Ranking by Level:**
+
+        | Level | Rank 1 | Rank 2 | Rank 3 |
+        |-------|--------|--------|--------|
+        | Discover | Flow Ace | Flow Ace (andere Größe) | Infinity Ace |
+        | Discover to Intermediate | Flow Ace | Flow Ace (andere Größe) | Infinity Ace |
+        | Intermediate to Expert | Flow Ace | Infinity Ace | Flow Ace (andere Größe) |
+        | Expert | Flow Ace | Infinity Ace | Flow Ace (andere Größe) |
+
+        **Why Flow first?** Flow has best Glide (5.0) - important for Parawing efficiency.
+        Want more **Speed/Maneuverability/Ease of use**? → Increase sliders to move Infinity up.
 
         **Stride Ace for Discover/Discover to Intermediate (gentle conditions only):**
         - Freeride: Light wind only
