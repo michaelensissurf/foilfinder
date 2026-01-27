@@ -567,15 +567,16 @@ with st.expander("ℹ️ How does the recommendation work?"):
         **Ranking:**
         - **Rank 1:** Flow Ace (optimal for your conditions)
         - **Rank 2:** Flow Ace neighbor size (safe alternative)
-        - **Rank 3:** Infinity Ace (sporty alternative - more agile, slightly larger due to less lift)
+        - **Rank 3:** Infinity Ace (sporty alternative - more agile)
 
-        **Stride Ace for Discover/Discover to Intermediate:**
-        - Only in gentle conditions:
-          - Freeride: Light wind
-          - Downwind-Wave: Small waves (<0.5m)
-        - Stride Ace 1740 for riders 70-90kg and >90kg
-        - Stride Ace 1360 for riders <70kg
-        - Flow/Infinity as alternative on Rank 2/3
+        **Stride Ace for Discover/Discover to Intermediate (gentle conditions only):**
+        - Freeride: Light wind only
+        - Downwind-Wave: Small waves (<0.5m) only
+
+        | Level | Heavy riders (70-90kg, >90kg) | Light riders (<70kg) |
+        |-------|------------------------------|---------------------|
+        | Discover | Stride 1740 → 1360 → Flow | Stride 1360 → Flow |
+        | Discover to Intermediate | Stride 1360 → Flow | Stride 1360 → Flow |
         """)
     else:  # Wingfoil
         st.markdown("""
@@ -584,7 +585,7 @@ with st.expander("ℹ️ How does the recommendation work?"):
         **Baselines:**
         - Pacer 1250 (80kg, Intermediate, Medium Wind)
         - Flow Ace 900 (80kg, Intermediate, Medium Wind)
-        - Infinity Ace 990 (80kg, Intermediate, Medium Wind) - analog to Flow 900
+        - Infinity Ace 990 (80kg, Intermediate, Medium Wind)
 
         **Adjustments (always applied):**
         - Lighter riders (<70kg) → smaller foil
@@ -598,29 +599,30 @@ with st.expander("ℹ️ How does the recommendation work?"):
 
         **Fine-Tuning with Performance Sliders:**
         - Use the optional sliders to prioritize specific characteristics
-        - Higher values (3-5) = more important, lower values (0-2) = less important
-        - Examples: High Glide favors Flow Ace, High Speed/Maneuverability favors Infinity Ace
-        - Default (2.5) = balanced ranking based on level and conditions
+        - Higher values (3-5) = more important to you
+        - Default (0) = use standard ranking based on level
+        - Examples: High Glide/Pump favors Flow Ace, High Speed/Maneuverability favors Infinity Ace
+
+        **Foil Properties:**
+
+        | Foil | Speed | Lift | Glide | Maneuverability | Pump | Ease of use |
+        |------|-------|------|-------|-----------------|------|-------------|
+        | Flow Ace | 4.0 | 4.0 | **5.0** | 4.0 | 4.0 | 3.5 |
+        | Infinity Ace | 4.5 | 3.5 | 3.5 | **5.0** | 3.5 | 4.5 |
+        | Pacer | 3.5 | 4.5 | 3.5 | 4.5 | 3.0 | **5.0** |
 
         **Default Ranking by Level:**
 
-        **Discover:**
-        - Rank 1: Pacer (optimal size, stable and easy to learn)
-        - Rank 2: Pacer (alternative size)
-        - Rank 3: Pacer (another alternative size)
+        | Level | Rank 1 | Rank 2 | Rank 3 |
+        |-------|--------|--------|--------|
+        | Discover | Pacer | Pacer | Pacer |
+        | Discover to Intermediate | Pacer | Infinity Ace | Flow Ace |
+        | Intermediate to Expert | Infinity Ace | Flow Ace | Pacer |
+        | Expert | Infinity Ace | Flow Ace | smaller alternative |
 
-        **Discover to Intermediate:**
-        - Rank 1: Pacer (still learning, stable option)
-        - Rank 2: Flow Ace (balanced performance)
-        - Rank 3: Infinity Ace (more sporty option)
-
-        **Intermediate to Expert:**
-        - Rank 1: Flow Ace (efficient, good glide)
-        - Rank 2: Infinity Ace (faster, more agile)
-        - Rank 3: Pacer (learning tool alternative)
-
-        **Expert:**
-        - Rank 1: Infinity Ace (fast, highly maneuverable)
-        - Rank 2: Flow Ace (efficient alternative)
-        - Rank 3: Smaller size alternative (NO Pacer)
+        **Why this order?**
+        - **Discover:** Pacer only - easiest to use (5.0)
+        - **Discover to Intermediate:** Infinity before Flow - better ease of use (4.5 vs 3.5)
+        - **Intermediate to Expert & Expert:** Infinity first - better speed & maneuverability
+        - Want more **Glide/Pump**? → Increase sliders to move Flow Ace up
         """)
