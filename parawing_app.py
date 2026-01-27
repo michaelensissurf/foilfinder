@@ -545,7 +545,7 @@ with st.expander("ℹ️ How does the recommendation work?"):
         st.markdown("""
         ### Parawing
 
-        **Baseline:** Flow Ace 1080 (70-90kg, Intermediate, Medium Wind / Medium Waves)
+        **Baseline:** Flow Ace 1080 (70-90kg, Intermediate to Expert, Medium Wind / Medium Waves)
 
         **Adjustments (always applied):**
         - Lighter riders (<70kg) → smaller foil
@@ -583,9 +583,9 @@ with st.expander("ℹ️ How does the recommendation work?"):
         ### Wingfoil Freeride
 
         **Baselines:**
-        - Pacer 1250 (80kg, Intermediate, Medium Wind)
-        - Flow Ace 900 (80kg, Intermediate, Medium Wind)
-        - Infinity Ace 990 (80kg, Intermediate, Medium Wind)
+        - Pacer 1250 (80kg, Intermediate to Expert, Medium Wind)
+        - Flow Ace 900 (80kg, Intermediate to Expert, Medium Wind)
+        - Infinity Ace 990 (80kg, Intermediate to Expert, Medium Wind)
 
         **Adjustments (always applied):**
         - Lighter riders (<70kg) → smaller foil
