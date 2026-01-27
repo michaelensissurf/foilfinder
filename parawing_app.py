@@ -60,7 +60,7 @@ FOIL_PROPERTIES = {
     },
     "Infinity Ace": {
         "Speed": 4.5,
-        "Lift": 4.0,
+        "Lift": 3.5,
         "Glide": 3.5,
         "Maneuverability": 4.5,
         "Pump": 3.5,
@@ -68,7 +68,7 @@ FOIL_PROPERTIES = {
     },
     "Stride Ace": {
         "Speed": 3.0,
-        "Lift": 5.0,
+        "Lift": 4.5,
         "Glide": 4.0,
         "Maneuverability": 3.5,
         "Pump": 5.0,
