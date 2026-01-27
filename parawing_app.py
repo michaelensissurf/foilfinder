@@ -53,7 +53,7 @@ FOIL_PROPERTIES = {
     "Flow Ace": {
         "Speed": 4.0,
         "Lift": 4.0,
-        "Glide": 4.5,
+        "Glide": 5.0,
         "Maneuverability": 4.0,
         "Pump": 4.0,
         "Ease of use": 3.5,
@@ -61,7 +61,7 @@ FOIL_PROPERTIES = {
     "Infinity Ace": {
         "Speed": 5.0,
         "Lift": 4.0,
-        "Glide": 4.0,
+        "Glide": 3.5,
         "Maneuverability": 5.0,
         "Pump": 3.5,
         "Ease of use": 4.5,
