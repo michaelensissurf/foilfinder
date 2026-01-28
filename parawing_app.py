@@ -238,20 +238,18 @@ def recommend_top3(level, weight, category, wind, waves):
                 top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 3})
             # Discover: Lighter riders (<70): Stride 1740 omitted
             else:
+                infinity_size = FLOW_TO_INFINITY.get(flow_size)
                 top3.append({"Foil": "Stride Ace 1360", "Rank": 1})
                 top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 2})
-                if flow_index > 0:
-                    top3.append({"Foil": f"Flow Ace {FLOW_SIZES[flow_index - 1]}", "Rank": 3})
-                elif flow_index < len(FLOW_SIZES) - 1:
-                    top3.append({"Foil": f"Flow Ace {FLOW_SIZES[flow_index + 1]}", "Rank": 3})
+                if infinity_size:
+                    top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 3})
         else:
             # Discover to Intermediate: Stride 1360 as base
+            infinity_size = FLOW_TO_INFINITY.get(flow_size)
             top3.append({"Foil": "Stride Ace 1360", "Rank": 1})
             top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 2})
-            if flow_index > 0:
-                top3.append({"Foil": f"Flow Ace {FLOW_SIZES[flow_index - 1]}", "Rank": 3})
-            elif flow_index < len(FLOW_SIZES) - 1:
-                top3.append({"Foil": f"Flow Ace {FLOW_SIZES[flow_index + 1]}", "Rank": 3})
+            if infinity_size:
+                top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 3})
 
     # DISCOVER without Stride (stronger wind / bigger waves)
     elif level == "Discover":
@@ -604,8 +602,8 @@ with st.expander("ℹ️ How does the recommendation work?"):
 
         | Level | Heavy riders (70-90kg, >90kg) | Light riders (<70kg) |
         |-------|------------------------------|---------------------|
-        | Discover | Stride 1740 → 1360 → Flow | Stride 1360 → Flow |
-        | Discover to Intermediate | Stride 1360 → Flow | Stride 1360 → Flow |
+        | Discover | Stride 1740 → 1360 → Flow | Stride 1360 → Flow → Infinity |
+        | Discover to Intermediate | Stride 1360 → Flow → Infinity | Stride 1360 → Flow → Infinity |
         """)
     else:  # Wingfoil
         st.markdown("""
