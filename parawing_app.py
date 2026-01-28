@@ -255,31 +255,31 @@ def recommend_top3(level, weight, category, wind, waves):
     elif level == "Discover":
         top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 1})
 
-        # Rank 2: Flow neighbor size (safe alternative)
-        if flow_index > 0:
-            top3.append({"Foil": f"Flow Ace {FLOW_SIZES[flow_index - 1]}", "Rank": 2})
-        elif flow_index < len(FLOW_SIZES) - 1:
-            top3.append({"Foil": f"Flow Ace {FLOW_SIZES[flow_index + 1]}", "Rank": 2})
-
-        # Rank 3: Infinity Ace (sporty alternative)
+        # Rank 2: Infinity Ace
         infinity_size = FLOW_TO_INFINITY.get(flow_size)
         if infinity_size:
-            top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 3})
+            top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 2})
+
+        # Rank 3: Flow neighbor size (alternative)
+        if flow_index > 0:
+            top3.append({"Foil": f"Flow Ace {FLOW_SIZES[flow_index - 1]}", "Rank": 3})
+        elif flow_index < len(FLOW_SIZES) - 1:
+            top3.append({"Foil": f"Flow Ace {FLOW_SIZES[flow_index + 1]}", "Rank": 3})
 
     # DISCOVER TO INTERMEDIATE without Stride (stronger wind / bigger waves)
     elif level == "Discover to Intermediate":
         top3.append({"Foil": f"Flow Ace {flow_size}", "Rank": 1})
 
-        # Rank 2: Flow neighbor size (safe alternative)
-        if flow_index > 0:
-            top3.append({"Foil": f"Flow Ace {FLOW_SIZES[flow_index - 1]}", "Rank": 2})
-        elif flow_index < len(FLOW_SIZES) - 1:
-            top3.append({"Foil": f"Flow Ace {FLOW_SIZES[flow_index + 1]}", "Rank": 2})
-
-        # Rank 3: Infinity Ace (sporty alternative)
+        # Rank 2: Infinity Ace
         infinity_size = FLOW_TO_INFINITY.get(flow_size)
         if infinity_size:
-            top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 3})
+            top3.append({"Foil": f"Infinity Ace {infinity_size}", "Rank": 2})
+
+        # Rank 3: Flow neighbor size (alternative)
+        if flow_index > 0:
+            top3.append({"Foil": f"Flow Ace {FLOW_SIZES[flow_index - 1]}", "Rank": 3})
+        elif flow_index < len(FLOW_SIZES) - 1:
+            top3.append({"Foil": f"Flow Ace {FLOW_SIZES[flow_index + 1]}", "Rank": 3})
 
     # INTERMEDIATE TO EXPERT / EXPERT: Flow → Infinity → Flow (andere Größe)
     else:
@@ -588,8 +588,8 @@ with st.expander("ℹ️ How does the recommendation work?"):
 
         | Level | Rank 1 | Rank 2 | Rank 3 |
         |-------|--------|--------|--------|
-        | Discover | Flow Ace | Flow Ace (andere Größe) | Infinity Ace |
-        | Discover to Intermediate | Flow Ace | Flow Ace (andere Größe) | Infinity Ace |
+        | Discover | Flow Ace | Infinity Ace | Flow Ace (andere Größe) |
+        | Discover to Intermediate | Flow Ace | Infinity Ace | Flow Ace (andere Größe) |
         | Intermediate to Expert | Flow Ace | Infinity Ace | Flow Ace (andere Größe) |
         | Expert | Flow Ace | Infinity Ace | Flow Ace (andere Größe) |
 
