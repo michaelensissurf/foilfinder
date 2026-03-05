@@ -1,0 +1,183 @@
+<!--
+  FAMILIEN-DASHBOARD – Tailwind Playground Template
+  Einfügen auf: https://play.tailwindcss.com
+  Im HTML-Tab alles ersetzen mit diesem Code
+-->
+
+<div class="min-h-screen bg-slate-950 text-white font-sans p-4 pb-24">
+
+  <!-- HEADER -->
+  <div class="flex items-center justify-between mb-6">
+    <div>
+      <h1 class="text-xl font-black tracking-tight">🏄 Family Surf House</h1>
+      <p class="text-slate-400 text-xs mt-0.5">Mittwoch, 4. März 2026 <span class="ml-2 text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-full text-[10px] font-bold">● LIVE</span></p>
+    </div>
+    <div class="flex gap-2">
+      <div class="w-9 h-9 rounded-full bg-indigo-500/80 flex items-center justify-center text-base shadow-lg shadow-indigo-500/30">👩</div>
+      <div class="w-9 h-9 rounded-full bg-cyan-500/80 flex items-center justify-center text-base shadow-lg shadow-cyan-500/30">👨</div>
+      <div class="w-9 h-9 rounded-full bg-amber-500/80 flex items-center justify-center text-base shadow-lg shadow-amber-500/30">👶</div>
+    </div>
+  </div>
+
+  <!-- HERO BANNER -->
+  <div class="rounded-2xl bg-gradient-to-r from-cyan-500/20 to-orange-500/15 border border-cyan-500/20 p-5 mb-4 flex items-center justify-between">
+    <div>
+      <div class="text-xl font-extrabold tracking-tight">Guten Morgen 🤙</div>
+      <div class="text-slate-400 text-sm mt-1">4 Termine heute · 3 Todos offen</div>
+    </div>
+    <span class="text-5xl">🌊</span>
+  </div>
+
+  <!-- WETTER + ESSEN -->
+  <div class="grid grid-cols-2 gap-3 mb-4">
+
+    <!-- Wetter -->
+    <div class="bg-white/5 backdrop-blur border border-white/8 rounded-2xl p-4">
+      <div class="text-[10px] text-slate-500 font-bold tracking-widest uppercase mb-3">Wetter</div>
+      <div class="flex items-center gap-3">
+        <span class="text-4xl">⛅</span>
+        <div>
+          <div class="text-3xl font-black tracking-tighter leading-none">18°</div>
+          <div class="text-slate-500 text-[11px] mt-0.5">Teilweise bewölkt</div>
+        </div>
+      </div>
+      <div class="flex gap-2 mt-3 pt-3 border-t border-white/8">
+        <div class="flex-1 text-center">
+          <div class="text-slate-500 text-[10px]">Fr</div>
+          <div class="text-lg my-0.5">🌧️</div>
+          <div class="text-xs font-semibold">14°</div>
+        </div>
+        <div class="flex-1 text-center">
+          <div class="text-slate-500 text-[10px]">Sa</div>
+          <div class="text-lg my-0.5">☀️</div>
+          <div class="text-xs font-semibold">22°</div>
+        </div>
+        <div class="flex-1 text-center">
+          <div class="text-slate-500 text-[10px]">So</div>
+          <div class="text-lg my-0.5">☀️</div>
+          <div class="text-xs font-semibold">21°</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Essen -->
+    <div class="bg-white/5 backdrop-blur border border-white/8 rounded-2xl p-4">
+      <div class="text-[10px] text-slate-500 font-bold tracking-widest uppercase mb-3">Essen heute</div>
+      <div class="space-y-2.5">
+        <div>
+          <div class="text-[10px] text-slate-600 font-semibold">🌅 FRÜH</div>
+          <div class="text-slate-300 text-xs font-medium mt-0.5">🥣 Açaí Bowl</div>
+        </div>
+        <div>
+          <div class="text-[10px] text-slate-600 font-semibold">☀️ MITTAG</div>
+          <div class="text-slate-300 text-xs font-medium mt-0.5">🌮 Fish Tacos</div>
+        </div>
+        <div>
+          <div class="text-[10px] text-slate-600 font-semibold">🌙 ABEND</div>
+          <div class="text-slate-300 text-xs font-medium mt-0.5">🥗 Poke Bowl</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TERMINE -->
+  <div class="bg-white/5 backdrop-blur border border-white/8 rounded-2xl p-5 mb-4">
+    <div class="flex items-center justify-between mb-4">
+      <div class="text-[10px] text-slate-500 font-bold tracking-widest uppercase">Termine heute</div>
+      <button class="bg-cyan-500/15 border border-cyan-500/30 text-cyan-400 text-xs font-bold px-3 py-1 rounded-lg hover:bg-cyan-500/25 transition-colors">+ Event</button>
+    </div>
+    <div class="space-y-2">
+      <div class="flex items-center gap-3 bg-indigo-500/8 border border-indigo-500/15 rounded-xl px-3 py-2.5">
+        <span class="text-indigo-400 font-bold text-xs tabular-nums w-10">08:30</span>
+        <span class="flex-1 text-sm">Kindergarten bringen</span>
+        <div class="w-2 h-2 rounded-full bg-indigo-400 shadow shadow-indigo-400"></div>
+      </div>
+      <div class="flex items-center gap-3 bg-emerald-500/8 border border-emerald-500/15 rounded-xl px-3 py-2.5">
+        <span class="text-emerald-400 font-bold text-xs tabular-nums w-10">10:00</span>
+        <span class="flex-1 text-sm">Zahnarzt Papa</span>
+        <div class="w-2 h-2 rounded-full bg-emerald-400 shadow shadow-emerald-400"></div>
+      </div>
+      <div class="flex items-center gap-3 bg-amber-500/8 border border-amber-500/15 rounded-xl px-3 py-2.5">
+        <span class="text-amber-400 font-bold text-xs tabular-nums w-10">14:00</span>
+        <span class="flex-1 text-sm">Spielgruppe Lena</span>
+        <div class="w-2 h-2 rounded-full bg-amber-400 shadow shadow-amber-400"></div>
+      </div>
+      <div class="flex items-center gap-3 bg-indigo-500/8 border border-indigo-500/15 rounded-xl px-3 py-2.5">
+        <span class="text-indigo-400 font-bold text-xs tabular-nums w-10">18:30</span>
+        <span class="flex-1 text-sm">Elternabend</span>
+        <div class="w-2 h-2 rounded-full bg-indigo-400 shadow shadow-indigo-400"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TODOS -->
+  <div class="bg-white/5 backdrop-blur border border-white/8 rounded-2xl p-5 mb-4">
+    <div class="flex items-center justify-between mb-4">
+      <div class="flex items-center gap-2">
+        <span class="text-base">🛒</span>
+        <span class="font-bold text-sm">Einkauf</span>
+        <span class="bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 text-[10px] font-bold px-2 py-0.5 rounded-full">3</span>
+      </div>
+      <button class="bg-cyan-500/15 border border-cyan-500/30 text-cyan-400 text-xs font-bold px-3 py-1 rounded-lg">+ Hinzufügen</button>
+    </div>
+    <div class="space-y-2">
+      <div class="flex items-center gap-3 p-2 rounded-lg hover:bg-white/3 transition-colors">
+        <div class="w-5 h-5 rounded-md border-2 border-indigo-500 flex-shrink-0 cursor-pointer"></div>
+        <span class="flex-1 text-sm text-slate-300">Windeln kaufen</span>
+        <div class="w-2 h-2 rounded-full bg-indigo-400 shadow shadow-indigo-400/50"></div>
+        <button class="text-slate-600 hover:text-red-400 transition-colors text-lg leading-none">×</button>
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded-lg">
+        <div class="w-5 h-5 rounded-md border-2 border-cyan-500 flex-shrink-0 cursor-pointer"></div>
+        <span class="flex-1 text-sm text-slate-300">Äpfel, Milch, Brot</span>
+        <div class="w-2 h-2 rounded-full bg-cyan-400 shadow shadow-cyan-400/50"></div>
+        <button class="text-slate-600 hover:text-red-400 transition-colors text-lg leading-none">×</button>
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded-lg opacity-50">
+        <div class="w-5 h-5 rounded-md border-2 border-emerald-500 bg-emerald-500 flex-shrink-0 flex items-center justify-center">
+          <span class="text-white text-xs font-black">✓</span>
+        </div>
+        <span class="flex-1 text-sm text-slate-500 line-through">Joghurt</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCHNELL-BUTTONS -->
+  <div class="bg-white/5 backdrop-blur border border-white/8 rounded-2xl p-5 mb-4">
+    <div class="text-[10px] text-slate-500 font-bold tracking-widest uppercase mb-4">Schnell-Buttons</div>
+    <div class="grid grid-cols-3 gap-2.5">
+      <button class="bg-cyan-500/12 border border-cyan-500/25 text-cyan-400 font-bold text-sm py-3.5 rounded-2xl hover:bg-cyan-500/25 hover:border-cyan-500/50 transition-all">🛒 Einkauf</button>
+      <button class="bg-orange-500/12 border border-orange-500/25 text-orange-400 font-bold text-sm py-3.5 rounded-2xl hover:bg-orange-500/25 transition-all">🍕 Pizza</button>
+      <button class="bg-emerald-500/12 border border-emerald-500/25 text-emerald-400 font-bold text-sm py-3.5 rounded-2xl hover:bg-emerald-500/25 transition-all">🏥 Arzt</button>
+      <button class="bg-amber-500/12 border border-amber-500/25 text-amber-400 font-bold text-sm py-3.5 rounded-2xl hover:bg-amber-500/25 transition-all">🚗 Fahrt</button>
+      <button class="bg-violet-500/12 border border-violet-500/25 text-violet-400 font-bold text-sm py-3.5 rounded-2xl hover:bg-violet-500/25 transition-all">📦 Paket</button>
+      <button class="bg-pink-500/12 border border-pink-500/25 text-pink-400 font-bold text-sm py-3.5 rounded-2xl hover:bg-pink-500/25 transition-all">🏄 Strand</button>
+    </div>
+  </div>
+
+  <!-- BOTTOM NAV -->
+  <div class="fixed bottom-0 left-0 right-0 bg-slate-950/90 backdrop-blur border-t border-white/8 flex justify-around py-2.5 pb-4">
+    <button class="flex flex-col items-center gap-1 px-4 relative">
+      <span class="text-2xl">🏠</span>
+      <span class="text-[10px] font-bold text-cyan-400">Heute</span>
+      <div class="absolute bottom-[-4px] w-5 h-0.5 bg-gradient-to-r from-cyan-400 to-sky-600 rounded-full shadow shadow-cyan-400"></div>
+    </button>
+    <button class="flex flex-col items-center gap-1 px-4 opacity-50">
+      <span class="text-2xl">📅</span>
+      <span class="text-[10px] text-slate-500">Kalender</span>
+    </button>
+    <button class="flex flex-col items-center gap-1 px-4 opacity-50">
+      <span class="text-2xl">✅</span>
+      <span class="text-[10px] text-slate-500">Todos</span>
+    </button>
+    <button class="flex flex-col items-center gap-1 px-4 opacity-50">
+      <span class="text-2xl">🍽️</span>
+      <span class="text-[10px] text-slate-500">Essen</span>
+    </button>
+    <button class="flex flex-col items-center gap-1 px-4 opacity-50">
+      <span class="text-2xl">🎒</span>
+      <span class="text-[10px] text-slate-500">Schule</span>
+    </button>
+  </div>
+
+</div>

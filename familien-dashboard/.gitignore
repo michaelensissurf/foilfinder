@@ -1,0 +1,6 @@
+dropbox_config.py
+__pycache__/
+*.pyc
+*.db
+design_preview.html
+dashboard.html

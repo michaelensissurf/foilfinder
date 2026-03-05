@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Family Dashboard – Eigene Bilder</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Inter',sans-serif; background:#f5f0e8; }
+    .card { background:#fff; border-radius:20px; padding:20px;
+             box-shadow:0 2px 16px rgba(0,0,0,0.07); border:1.5px solid #ede8e0; }
+    .avatar { border-radius:50%; object-fit:cover; }
+    .btn-img { border-radius:16px; overflow:hidden; object-fit:cover; }
+    ::-webkit-scrollbar { width:4px; }
+    ::-webkit-scrollbar-thumb { background:#d1c4b0; border-radius:2px; }
+  </style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+  // Eigene Bilder (Base64 aus Python eingelesen)
+  const PERSONEN_IMGS = {"kind": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAAeklEQVR4nO3PsQkAIBDAwO/dv3VLe4ewOIRABrjM2evrhgsa0IIGtKABLWhACxrQgga0oAEtaEALGtCCBrSgAS1oQAsa0IIGtKABLWhACxrQgga0oAEtaEALGtCCBrSgAS1oQAsa0IIGtKABLWhACxrQgga0oAEteOwCZsHheEBFQqEAAAAASUVORK5CYII=", "mama": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAAeklEQVR4nO3PUQkAIBTAwJfLbFa2gyH8OITBAtxmr/N1wwUNaEEDWtCAFjSgBQ1oQQNa0IAWNKAFDWhBA1rQgBY0oAUNaEEDWtCAFjSgBQ1oQQNa0IAWNKAFDWhBA1rQgBY0oAUNaEEDWtCAFjSgBQ1oQQNa0IAWPHYBJpwxh1uw6/IAAAAASUVORK5CYII=", "papa": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAAe0lEQVR4nO3PUQkAIBTAwJfA/gUMZwtD+HEIgwW4zdrn64YLGtCCBrSgAS1oQAsa0IIGtKABLWhACxrQgga0oAEtaEALGtCCBrSgAS1oQAsa0IIGtKABLWhACxrQgga0oAEtaEALGtCCBrSgAS1oQAsa0IIGtKABLXjsAufSwXhUeRUPAAAAAElFTkSuQmCC"};
+  const BUTTONS_IMGS  = {"arzt": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAAeklEQVR4nO3PUQkAIBTAwBfBysaynSH8OITBAtxmnf11wwUNaEEDWtCAFjSgBQ1oQQNa0IAWNKAFDWhBA1rQgBY0oAUNaEEDWtCAFjSgBQ1oQQNa0IAWNKAFDWhBA1rQgBY0oAUNaEEDWtCAFjSgBQ1oQQNa0IAWPHYBSTahLbnvpkAAAAAASUVORK5CYII=", "einkauf": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAAeUlEQVR4nO3PUQkAIBTAwNdVsL8NDOHHIQwW4DZrn68bLmhACxrQgga0oAEtaEALGtCCBrSgAS1oQAsa0IIGtKABLWhACxrQgga0oAEtaEALGtCCBrSgAS1oQAsa0IIGtKABLWhACxrQgga0oAEtaEALGtCCBrTgsQtezqGW5Sy6KAAAAABJRU5ErkJggg==", "pizza": "data:image/png;base64,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"};
+  const BUTTONS_DEF   = [{"key": "einkauf", "label": "Einkaufen", "emoji": "\ud83d\uded2", "color": "#6366f1"}, {"key": "pizza", "label": "Pizza", "emoji": "\ud83c\udf55", "color": "#ef4444"}, {"key": "arzt", "label": "Arzt", "emoji": "\ud83c\udfe5", "color": "#10b981"}, {"key": "taxi", "label": "Taxi", "emoji": "\ud83d\ude97", "color": "#f59e0b"}, {"key": "paket", "label": "Paket", "emoji": "\ud83d\udce6", "color": "#8b5cf6"}, {"key": "strand", "label": "Strand", "emoji": "\ud83c\udfc4", "color": "#06b6d4"}];
+</script>
+<script type="text/babel">
+const { useState, useRef } = React;
+
+// ── BILD-KOMPONENTEN ──────────────────────────────────────────────────────────
+function PersonAvatar({ name, size=44 }) {
+  const src = PERSONEN_IMGS[name];
+  const fallback = { mama:"👩", papa:"👨", kind:"👶", family:"🏡" };
+  if (src) return (
+    <img src={src} className="avatar" style={{ width:size, height:size, border:"2.5px solid #e8d5c0" }} alt={name}/>
+  );
+  return (
+    <div style={{ width:size, height:size, borderRadius:"50%", fontSize:size*0.55,
+                   display:"flex", alignItems:"center", justifyContent:"center",
+                   background:"#f0e8dc", border:"2px solid #e0d0c0" }}>
+      {fallback[name] || "👤"}
+    </div>
+  );
+}
+
+function ButtonIcon({ btnKey, size=40 }) {
+  const src = BUTTONS_IMGS[btnKey];
+  if (src) return (
+    <img src={src} className="btn-img" style={{ width:size, height:size, objectFit:"cover" }} alt={btnKey}/>
+  );
+  return null;
+}
+
+// ── UPLOAD BEREICH ────────────────────────────────────────────────────────────
+function UploadHint() {
+  const assetsPath = String.raw`C:\\Users\\micha\\Documents\\Python\\familien-dashboard\\assets`;
+  return (
+    <div className="card" style={{ background:"#fef9f0", border:"2px dashed #f59e0b" }}>
+      <div style={{ fontSize:22, fontWeight:800, marginBottom:8 }}>📁 Eigene Bilder hinzufügen</div>
+      <p style={{ color:"#6b5a40", fontSize:14, marginBottom:12 }}>
+        Lege deine Fotos in diese Ordner und starte das Script neu:
+      </p>
+      <div style={{ background:"#1a1a1a", borderRadius:12, padding:"12px 16px", marginBottom:12 }}>
+        <div style={{ color:"#86efac", fontSize:12, fontFamily:"monospace", lineHeight:2 }}>
+          <div><span style={{color:"#94a3b8"}}>Personen-Avatare:</span></div>
+          <div>  assets/personen/<b style={{color:"#fbbf24"}}>mama</b>.jpg</div>
+          <div>  assets/personen/<b style={{color:"#fbbf24"}}>papa</b>.jpg</div>
+          <div>  assets/personen/<b style={{color:"#fbbf24"}}>kind</b>.jpg</div>
+          <div style={{marginTop:8}}><span style={{color:"#94a3b8"}}>Button-Icons:</span></div>
+          <div>  assets/buttons/<b style={{color:"#fbbf24"}}>pizza</b>.jpg</div>
+          <div>  assets/buttons/<b style={{color:"#fbbf24"}}>einkauf</b>.png</div>
+          <div>  assets/buttons/<b style={{color:"#fbbf24"}}>strand</b>.jpg</div>
+          <div style={{color:"#94a3b8",marginTop:4}}>  ... beliebig viele!</div>
+        </div>
+      </div>
+      <div style={{ background:"#fff", border:"1.5px solid #fde68a", borderRadius:12, padding:"10px 14px",
+                       fontSize:13, color:"#92400e" }}>
+        💡 Tipp: Dateiname = Schlüssel. "mama.jpg" → Avatar für Mama.<br/>
+        "pizza.jpg" → Bild für den Pizza-Button.
+      </div>
+    </div>
+  );
+}
+
+// ── LIVE UPLOAD (Drag & Drop im Browser) ─────────────────────────────────────
+function LiveUpload({ onImageLoaded }) {
+  const [dragging, setDragging] = useState(false);
+  const [uploads,  setUploads]  = useState({});
+  const inputRef = useRef();
+
+  const handleFiles = (files) => {
+    Array.from(files).forEach(file => {
+      if (!file.type.startsWith("image/")) return;
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const name = file.name.replace(/\.[^.]+$/, "").toLowerCase();
+        setUploads(u => ({ ...u, [name]: e.target.result }));
+        onImageLoaded(name, e.target.result);
+      };
+      reader.readAsDataURL(file);
+    });
+  };
+
+  return (
+    <div className="card">
+      <div style={{ fontSize:16, fontWeight:800, marginBottom:12 }}>🖼 Direkt hier hochladen (temporär)</div>
+      <p style={{ color:"#6b5a40", fontSize:13, marginBottom:12 }}>
+        Bilder hier reinziehen – werden sofort als Avatare / Button-Icons verwendet.<br/>
+        <span style={{opacity:.6}}>Dateiname bestimmt Verwendung: mama.jpg → Mama-Avatar</span>
+      </p>
+      <div
+        onDragOver={e => { e.preventDefault(); setDragging(true); }}
+        onDragLeave={() => setDragging(false)}
+        onDrop={e => { e.preventDefault(); setDragging(false); handleFiles(e.dataTransfer.files); }}
+        onClick={() => inputRef.current.click()}
+        style={{
+          border: `2px dashed ${dragging?"#7c3aed":"#c4b5a0"}`,
+          background: dragging ? "#f3f0ff" : "#faf7f2",
+          borderRadius:16, padding:"28px 20px", textAlign:"center", cursor:"pointer",
+          transition:"all 0.15s",
+        }}>
+        <div style={{ fontSize:40, marginBottom:8 }}>📸</div>
+        <div style={{ fontWeight:700, color:"#5a4030" }}>Bilder reinziehen</div>
+        <div style={{ color:"#a08060", fontSize:13, marginTop:4 }}>oder klicken zum Auswählen</div>
+        <input ref={inputRef} type="file" multiple accept="image/*"
+          style={{display:"none"}} onChange={e => handleFiles(e.target.files)}/>
+      </div>
+
+      {Object.keys(uploads).length > 0 && (
+        <div style={{ marginTop:14 }}>
+          <div style={{ fontSize:12, fontWeight:700, color:"#6b5a40", marginBottom:8 }}>GELADEN:</div>
+          <div style={{ display:"flex", flexWrap:"wrap", gap:10 }}>
+            {Object.entries(uploads).map(([name, src]) => (
+              <div key={name} style={{ textAlign:"center" }}>
+                <img src={src} style={{ width:56, height:56, borderRadius:12, objectFit:"cover",
+                                        border:"2px solid #e0d0c0" }} alt={name}/>
+                <div style={{ fontSize:11, color:"#6b5a40", marginTop:3, fontWeight:600 }}>{name}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ── HAUPT-DEMO ────────────────────────────────────────────────────────────────
+function App() {
+  const [extraImgs, setExtraImgs] = useState({});
+
+  // Live-Upload Bilder mergen
+  const allPersonen = { ...PERSONEN_IMGS, ...extraImgs };
+  const allButtons  = { ...BUTTONS_IMGS,  ...extraImgs };
+
+  const PersonAvatarLive = ({ name, size=44 }) => {
+    const src = allPersonen[name];
+    const fallback = { mama:"👩", papa:"👨", kind:"👶", family:"🏡" };
+    if (src) return <img src={src} className="avatar" style={{width:size,height:size,border:"2.5px solid #e8d5c0"}} alt={name}/>;
+    return (
+      <div style={{width:size,height:size,borderRadius:"50%",fontSize:size*0.55,
+                     display:"flex",alignItems:"center",justifyContent:"center",
+                     background:"#f0e8dc",border:"2px solid #e0d0c0"}}>
+        {fallback[name] || "👤"}
+      </div>
+    );
+  };
+
+  return (
+    <div style={{ minHeight:"100vh", display:"flex" }}>
+
+      {/* SIDEBAR */}
+      <div style={{ width:200, background:"#2d2d2d", padding:20, position:"fixed",
+                      top:0, bottom:0, display:"flex", flexDirection:"column", gap:8 }}>
+        <div style={{ color:"#f5f0e8", fontWeight:800, fontSize:18, marginBottom:16, lineHeight:1.2 }}>
+          Family<br/>Dashboard
+        </div>
+
+        {/* Personen-Avatare in Sidebar */}
+        <div style={{ fontSize:11, color:"rgba(255,255,255,0.4)", fontWeight:700,
+                        textTransform:"uppercase", letterSpacing:"0.1em", marginTop:8 }}>Personen</div>
+        {["mama","papa","kind"].map(p => (
+          <div key={p} style={{ display:"flex", alignItems:"center", gap:10 }}>
+            <PersonAvatarLive name={p} size={36}/>
+            <span style={{ color:"#f5f0e8", fontSize:13, textTransform:"capitalize", fontWeight:500 }}>{p}</span>
+          </div>
+        ))}
+
+        <div style={{ flex:1 }}/>
+        <div style={{ color:"rgba(255,255,255,0.3)", fontSize:11 }}>
+          Eigene Fotos → assets/personen/
+        </div>
+      </div>
+
+      {/* CONTENT */}
+      <div style={{ flex:1, marginLeft:200, padding:24, display:"flex", flexDirection:"column", gap:16, maxWidth:720 }}>
+
+        {/* HEADER */}
+        <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center" }}>
+          <div>
+            <div style={{ fontSize:26, fontWeight:900, color:"#2d2015" }}>Guten Morgen! 🤙</div>
+            <div style={{ color:"#6b5a40", fontSize:14 }}>Mittwoch, 4. März 2026</div>
+          </div>
+          <div style={{ display:"flex", gap:10, alignItems:"center" }}>
+            {["mama","papa","kind"].map(p => (
+              <PersonAvatarLive key={p} name={p} size={46}/>
+            ))}
+          </div>
+        </div>
+
+        {/* UPLOAD BEREICH */}
+        <LiveUpload onImageLoaded={(name, src) => setExtraImgs(e => ({...e, [name]:src}))}/>
+
+        {/* QUICK BUTTONS mit eigenen Bildern */}
+        <div className="card">
+          <div style={{ fontSize:12, fontWeight:700, color:"#8a7060", textTransform:"uppercase",
+                          letterSpacing:"0.1em", marginBottom:14 }}>Schnell-Buttons (mit eigenen Icons)</div>
+          <div style={{ display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:12 }}>
+            {BUTTONS_DEF.map(btn => {
+              const imgSrc = allButtons[btn.key];
+              return (
+                <button key={btn.key} style={{
+                  background: imgSrc ? "none" : btn.color+"18",
+                  border:`2px solid ${btn.color}33`, borderRadius:16,
+                  padding:"14px 10px", cursor:"pointer",
+                  display:"flex", flexDirection:"column", alignItems:"center", gap:8,
+                  overflow:"hidden", position:"relative",
+                }}>
+                  {imgSrc ? (
+                    <img src={imgSrc} style={{
+                      width:48, height:48, borderRadius:12, objectFit:"cover",
+                      border:`2px solid ${btn.color}44`,
+                    }} alt={btn.key}/>
+                  ) : (
+                    <span style={{fontSize:28}}>{btn.emoji}</span>
+                  )}
+                  <span style={{ color:btn.color, fontSize:12, fontWeight:700 }}>{btn.label}</span>
+                </button>
+              );
+            })}
+          </div>
+          <div style={{ marginTop:12, padding:"10px 14px", background:"#fef9f0",
+                          border:"1.5px solid #fde68a", borderRadius:12, fontSize:13, color:"#92400e" }}>
+            💡 Eigene Button-Bilder: <code>assets/buttons/pizza.jpg</code> hochladen
+            oder oben reinziehen (Dateiname = <code>pizza</code>)
+          </div>
+        </div>
+
+        {/* HEUTE KARTE */}
+        <div className="card">
+          <div style={{ fontSize:12, fontWeight:700, color:"#8a7060", textTransform:"uppercase",
+                          letterSpacing:"0.1em", marginBottom:14 }}>Termine heute</div>
+          {[
+            {time:"08:30", title:"Kindergarten bringen", person:"mama", color:"#7c3aed"},
+            {time:"10:00", title:"Zahnarzt Papa",         person:"papa", color:"#0ea5e9"},
+            {time:"14:00", title:"Spielgruppe",           person:"kind", color:"#f59e0b"},
+          ].map((e,i) => (
+            <div key={i} style={{ display:"flex", alignItems:"center", gap:12, marginBottom:10,
+                                      background:e.color+"0f", border:`1.5px solid ${e.color}22`,
+                                      borderRadius:14, padding:"10px 14px" }}>
+              <PersonAvatarLive name={e.person} size={32}/>
+              <div style={{ background:e.color, color:"#fff", borderRadius:8, padding:"3px 10px",
+                              fontSize:12, fontWeight:700, minWidth:44, textAlign:"center" }}>
+                {e.time}
+              </div>
+              <span style={{ flex:1, fontSize:14, fontWeight:500, color:"#2d2015" }}>{e.title}</span>
+            </div>
+          ))}
+        </div>
+
+        {/* ANLEITUNG */}
+        <UploadHint/>
+
+      </div>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+</script>
+</body>
+</html>
