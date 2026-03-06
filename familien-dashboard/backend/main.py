@@ -1,8 +1,13 @@
+import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 
 from database import init_db
-from routers import events, todos, reminders
+from routers import events, todos, reminders, jaalee
+
+DASHBOARD_DIR = os.path.join(os.path.dirname(__file__), "..")
 
 app = FastAPI(
     title="Familien-Dashboard API",
@@ -12,12 +17,8 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",   # React (CRA)
-        "http://localhost:5173",   # React (Vite)
-        "http://localhost:8080",   # Allgemein
-    ],
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -25,12 +26,19 @@ app.add_middleware(
 app.include_router(events.router)
 app.include_router(todos.router)
 app.include_router(reminders.router)
+app.include_router(jaalee.router)
 
 
 @app.on_event("startup")
 def on_startup():
     init_db()
 
+
+@app.get("/dashboard", tags=["Dashboard"])
+def serve_dashboard():
+    return FileResponse(os.path.join(DASHBOARD_DIR, "design_preview.html"))
+
+app.mount("/assets", StaticFiles(directory=os.path.join(DASHBOARD_DIR, "assets")), name="assets")
 
 @app.get("/", tags=["Health"])
 def health_check():

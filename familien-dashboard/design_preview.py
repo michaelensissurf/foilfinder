@@ -16,8 +16,8 @@ def load_images(folder, as_path=False):
             continue
         fpath = os.path.join(path, fname)
         if as_path:
-            # Direkte file://-URL – kein Base64, sofort ladend
-            url = "file:///" + fpath.replace("\\", "/")
+            # HTTP-URL über Backend (funktioniert via http://localhost:8000)
+            url = "http://localhost:8000/assets/" + folder + "/" + fname
             name = os.path.splitext(fname)[0].lower()
             result[name] = url
         else:
@@ -55,7 +55,13 @@ HTML = r"""<!DOCTYPE html>
     * { margin:0; padding:0; box-sizing:border-box; }
 
     /* ── BASIS-THEMES ──────────────────────────────────────────────────────── */
-    body { background:#e2dbd0; }
+    body { background:#e2dbd0; overflow:hidden; }
+    #root {
+      transform: scale(1.18);
+      transform-origin: 0 0;
+      width: calc(100% / 1.18);
+      height: calc(100vh / 1.18);
+    }
 
     /* Pastell Cards */
     .card-yellow  { background:#fdf0e8; border:1.5px solid #e8c4a0; }
@@ -192,6 +198,66 @@ const weekMeals = [
 const fmtTime = (dt) => dt ? new Date(dt).toLocaleTimeString("de-DE",{hour:"2-digit",minute:"2-digit"}) : "";
 const todayStr = () => { const n=new Date(); return `${n.getFullYear()}-${String(n.getMonth()+1).padStart(2,"0")}-${String(n.getDate()).padStart(2,"0")}`; };
 const isToday  = (dt) => dt && dt.startsWith(todayStr());
+
+// ── DEMO EVENTS (werden genutzt wenn Backend keine Daten liefert) ─────────────
+const makeDT = (dayOffset, h, m=0) => {
+  const d = new Date(); d.setDate(d.getDate()+dayOffset);
+  d.setHours(h,m,0,0); return d.toISOString();
+};
+const DEMO_EVENTS = [
+  // ── Montag (heute -1 / morgen je nach Wochentag)
+  { id:101, title:"Schule Abgabe",    person:"kind1", color:"#f15bb5", start_datetime:makeDT(-1,8,0),  end_datetime:makeDT(-1,9,0)  },
+  { id:102, title:"Yoga",             person:"mama",  color:"#9b5de5", start_datetime:makeDT(-1,9,0),  end_datetime:makeDT(-1,10,0) },
+  { id:103, title:"Work Meeting",     person:"papa",  color:"#00b4d8", start_datetime:makeDT(-1,10,0), end_datetime:makeDT(-1,11,30)},
+  // ── Heute
+  { id:201, title:"Kita Abholen",     person:"mama",  color:"#9b5de5", start_datetime:makeDT(0,8,30),  end_datetime:makeDT(0,9,0)   },
+  { id:202, title:"Zahnarzt",         person:"papa",  color:"#00b4d8", start_datetime:makeDT(0,11,0),  end_datetime:makeDT(0,12,0)  },
+  { id:203, title:"Fußball Training", person:"kind1", color:"#f15bb5", start_datetime:makeDT(0,14,0),  end_datetime:makeDT(0,15,30) },
+  { id:204, title:"Klavierstunde",    person:"kind2", color:"#fb923c", start_datetime:makeDT(0,16,0),  end_datetime:makeDT(0,17,0)  },
+  { id:205, title:"Familien-Pizza",   person:"family",color:"#10b981", start_datetime:makeDT(0,18,30), end_datetime:makeDT(0,20,0)  },
+  // ── Morgen
+  { id:301, title:"Supermarkt",       person:"mama",  color:"#9b5de5", start_datetime:makeDT(1,9,0),   end_datetime:makeDT(1,10,0)  },
+  { id:302, title:"Homeoffice",       person:"papa",  color:"#00b4d8", start_datetime:makeDT(1,9,0),   end_datetime:makeDT(1,17,0)  },
+  { id:303, title:"Schwimmen",        person:"kind2", color:"#fb923c", start_datetime:makeDT(1,15,0),  end_datetime:makeDT(1,16,30) },
+  // ── Übermorgen
+  { id:401, title:"Arzttermin",       person:"kind1", color:"#f15bb5", start_datetime:makeDT(2,10,0),  end_datetime:makeDT(2,11,0)  },
+  { id:402, title:"Sport",            person:"papa",  color:"#00b4d8", start_datetime:makeDT(2,7,0),   end_datetime:makeDT(2,8,0)   },
+  { id:403, title:"Elternabend",      person:"mama",  color:"#9b5de5", start_datetime:makeDT(2,19,0),  end_datetime:makeDT(2,20,30) },
+  // ── In 3 Tagen
+  { id:501, title:"Geburtstag Oma",   person:"family",color:"#f59e0b", start_datetime:makeDT(3,0,0)   },  // all-day
+  { id:502, title:"Musik AG",         person:"kind2", color:"#fb923c", start_datetime:makeDT(3,13,0),  end_datetime:makeDT(3,14,0)  },
+  { id:503, title:"Einkaufen",        person:"papa",  color:"#00b4d8", start_datetime:makeDT(3,17,0),  end_datetime:makeDT(3,18,0)  },
+  // ── In 4 Tagen
+  { id:601, title:"Yoga",             person:"mama",  color:"#9b5de5", start_datetime:makeDT(4,8,0),   end_datetime:makeDT(4,9,0)   },
+  { id:602, title:"Schulausflug",     person:"kind1", color:"#f15bb5", start_datetime:makeDT(4,0,0)   },  // all-day
+  { id:603, title:"Teammeeting",      person:"papa",  color:"#00b4d8", start_datetime:makeDT(4,14,0),  end_datetime:makeDT(4,15,0)  },
+  // ── In 5 Tagen (Wochenende)
+  { id:701, title:"Fahrradtour",      person:"family",color:"#10b981", start_datetime:makeDT(5,10,0),  end_datetime:makeDT(5,12,0)  },
+  { id:702, title:"Nachhilfe",        person:"kind2", color:"#fb923c", start_datetime:makeDT(5,14,0),  end_datetime:makeDT(5,15,0)  },
+  // ── In 6 Tagen (Wochenende)
+  { id:801, title:"Großeltern Besuch",person:"family",color:"#f59e0b", start_datetime:makeDT(6,13,0),  end_datetime:makeDT(6,17,0)  },
+  { id:802, title:"Joggen",           person:"papa",  color:"#00b4d8", start_datetime:makeDT(6,8,0),   end_datetime:makeDT(6,9,0)   },
+];
+
+const DEMO_TODOS = [
+  // 🛒 Einkauf
+  { id:1001, text:"Milch & Joghurt",      list_name:"Einkauf",    person:"mama",  done:false },
+  { id:1002, text:"Brot vom Bäcker",      list_name:"Einkauf",    person:"papa",  done:false },
+  { id:1003, text:"Obst & Gemüse",        list_name:"Einkauf",    person:"mama",  done:false },
+  { id:1004, text:"Nudeln nachkaufen",    list_name:"Einkauf",    person:"family",done:true  },
+  { id:1005, text:"Waschmittel",          list_name:"Einkauf",    person:"family",done:true  },
+  // 🏡 Haushalt
+  { id:2001, text:"Küche putzen",         list_name:"Haushalt",   person:"mama",  done:false },
+  { id:2002, text:"Wäsche aufhängen",     list_name:"Haushalt",   person:"papa",  done:false },
+  { id:2003, text:"Kinderzimmer aufräumen",list_name:"Haushalt",  person:"kind1", done:false },
+  { id:2004, text:"Geschirrspüler ausräumen",list_name:"Haushalt",person:"kind2", done:true  },
+  { id:2005, text:"Müll rausbringen",     list_name:"Haushalt",   person:"papa",  done:true  },
+  // ✅ Erledigung
+  { id:3001, text:"Arzttermin buchen",    list_name:"Erledigung", person:"mama",  done:false },
+  { id:3002, text:"Schule anrufen",       list_name:"Erledigung", person:"papa",  done:false },
+  { id:3003, text:"Paket abholen",        list_name:"Erledigung", person:"papa",  done:false },
+  { id:3004, text:"Versicherung kündigen",list_name:"Erledigung", person:"mama",  done:true  },
+];
 
 // ── EMOJI SETS ────────────────────────────────────────────────────────────────
 const EMOJI_SETS = [
@@ -343,6 +409,49 @@ function PhotoSlider({ cardBase, T, ff, hf, chalk }) {
   );
 }
 
+// ── JAALEE SENSOR CARD ────────────────────────────────────────────────────────
+function JaaleeSensors({ cardBase, T, ff, hf, chalk }) {
+  const [sensors, setSensors] = useState([]);
+  useEffect(() => {
+    const load = () => apiGet("/jaalee/sensors").then(d => { if (Array.isArray(d) && d.length > 0) setSensors(d); });
+    load();
+    const t = setInterval(load, 60000); // jede Minute aktualisieren
+    return () => clearInterval(t);
+  }, []);
+  const humIcon  = (h) => h < 40 ? "💧" : h < 60 ? "🌡️" : "💦";
+  const tempColor = (t) => t < 16 ? "#60a5fa" : t < 20 ? "#34d399" : t < 24 ? T.accent : "#f87171";
+  return (
+    <div style={{ ...cardBase, background:T.card, border:`1.5px solid ${T.border}` }}>
+      <div style={{ fontSize: chalk?14:11, fontWeight:700, color:T.textSub, opacity:.7,
+                    textTransform:"uppercase", letterSpacing:"0.1em", marginBottom:12, fontFamily:ff }}>
+        🌡️ Sensoren – Jaalee
+      </div>
+      {sensors.length === 0
+        ? <div style={{ color:T.textSub, fontSize: chalk?14:12, fontFamily:ff, opacity:.6 }}>
+            Verbinde mit Backend…
+          </div>
+        : <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
+            {sensors.map(s => (
+              <div key={s.mac} style={{ display:"flex", alignItems:"center", gap:10,
+                                         padding:"8px 12px", borderRadius:12,
+                                         background:T.border+"33", border:`1px solid ${T.border}` }}>
+                <span style={{ fontSize:16, minWidth:20 }}>📍</span>
+                <span style={{ flex:1, fontSize: chalk?15:12, fontWeight:600, color:T.text, fontFamily:ff }}>{s.name}</span>
+                <span style={{ fontSize: chalk?18:14, fontWeight:800, color:tempColor(s.temperature), fontFamily:hf }}>
+                  {s.temperature}°
+                </span>
+                <span style={{ fontSize: chalk?13:11, color:T.textSub, fontFamily:ff }}>
+                  {humIcon(s.humidity)} {s.humidity}%
+                </span>
+                <span style={{ fontSize:10, color:s.power>20?"#10b981":"#f87171", fontFamily:ff, opacity:.7 }}>🔋{s.power}%</span>
+              </div>
+            ))}
+          </div>
+      }
+    </div>
+  );
+}
+
 // ── MAIN ──────────────────────────────────────────────────────────────────────
 function App() {
   const [themeKey, setThemeKey] = useState("planner");
@@ -363,13 +472,18 @@ function App() {
   useEffect(() => {
     const ym = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,"0")}`;
     Promise.all([apiGet(`/events/?date=${ym}`), apiGet("/todos/")])
-      .then(([evts, tds]) => { setEvents(evts); setTodos(tds); setLoading(false); })
-      .catch(() => setLoading(false));
+      .then(([evts, tds]) => {
+        setEvents(evts.length > 0 ? evts : DEMO_EVENTS);
+        setTodos(tds.length  > 0 ? tds  : DEMO_TODOS);
+        setLoading(false);
+      })
+      .catch(() => { setEvents(DEMO_EVENTS); setTodos(DEMO_TODOS); setLoading(false); });
   }, []);
 
   const toggleTodo = async (id) => {
-    const u = await apiPut(`/todos/${id}/done`);
-    if (u) setTodos(ts => ts.map(t => t.id===id ? u : t));
+    // Sofort lokal umschalten, dann Backend (optional)
+    setTodos(ts => ts.map(t => t.id===id ? {...t, done:!t.done} : t));
+    apiPut(`/todos/${id}/done`).then(u => { if (u) setTodos(ts => ts.map(t => t.id===id ? u : t)); });
   };
 
   // Shared styles
@@ -447,66 +561,72 @@ function App() {
           {/* LINKE SPALTE – Tagesplan */}
           <div style={{ display:"flex", flexDirection:"column", gap:16, minHeight:0, overflow:"hidden" }}>
 
-            {/* TERMINE */}
-            <div style={{ ...cardBase, background:T.card, border:`1.5px solid ${T.border}` }}>
-              <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:16 }}>
-                <div style={{ fontSize: chalk?20:13, fontWeight:700, color:T.textSub,
-                              textTransform:"uppercase", letterSpacing:"0.1em", fontFamily:ff }}>
-                  Heute · Tagesplan
-                </div>
-                <span style={{ background:accLight, color:acc, border:`1px solid ${accBorder}`,
-                                borderRadius:20, padding:"3px 10px", fontSize: chalk?14:11, fontWeight:700, fontFamily:ff }}>
-                  {todayEvts.length} Termine
-                </span>
-              </div>
-              {loading
-                ? <div style={{ color:T.textSub, fontFamily:ff }}>Laden…</div>
-                : todayEvts.length === 0
-                ? <div style={{ color:T.textSub, fontSize: chalk?16:14, fontFamily:ff, padding:"12px 0" }}>
-                    Freier Tag – genieß ihn! 🌿
-                  </div>
-                : todayEvts.map((e,i) => {
-                  const col = CAL_COLORS[i % CAL_COLORS.length];
-                  return (
-                    <div key={e.id} style={{ display:"flex", alignItems:"center", gap:12, marginBottom:8,
-                                              borderRadius:14, padding:"12px 14px",
-                                              background:col+"18", borderLeft:`4px solid ${col}` }}>
-                      <span style={{ color:col, fontWeight:800, fontSize: chalk?16:12,
-                                      minWidth:40, fontFamily:ff }}>{fmtTime(e.start_datetime)}</span>
-                      <div style={{ flex:1 }}>
-                        <div style={{ color:T.text, fontSize: chalk?18:14, fontWeight:600, fontFamily:hf }}>{e.title}</div>
-                        {e.description && <div style={{ color:T.textSub, fontSize: chalk?14:11, fontFamily:ff, marginTop:2 }}>{e.description}</div>}
-                      </div>
-                      <div style={{ width:8, height:8, borderRadius:"50%", background:col }}/>
-                    </div>
-                  );
-                })
-              }
-            </div>
+            {/* TERMINE – max 3 sichtbar, Auto-Scroll */}
+            {(() => {
+              const ITEM_H = 58; // px pro Eintrag (padding + Inhalt)
+              const scrollRef = React.useRef(null);
+              useEffect(() => {
+                if (todayEvts.length <= 3) return;
+                const el = scrollRef.current;
+                if (!el) return;
+                let dir = 1;
+                const interval = setInterval(() => {
+                  el.scrollTop += dir;
+                  if (el.scrollTop + el.clientHeight >= el.scrollHeight - 2) {
+                    // kurz warten, dann zurück
+                    setTimeout(() => { dir = -1; }, 1200);
+                  }
+                  if (el.scrollTop <= 0 && dir === -1) {
+                    setTimeout(() => { dir = 1; }, 1200);
+                  }
+                }, 30);
+                return () => clearInterval(interval);
+              }, [todayEvts.length]);
 
-            {/* WETTER */}
-            <div style={{ ...cardBase, background:T.card, border:`1.5px solid ${T.border}` }}>
-              <div style={{ fontSize: chalk?14:11, fontWeight:700, color:T.textSub, opacity:.7,
-                            textTransform:"uppercase", letterSpacing:"0.1em", marginBottom:12, fontFamily:ff }}>Wetter</div>
-              <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between" }}>
-                <div style={{ display:"flex", alignItems:"center", gap:12 }}>
-                  <span style={{ fontSize:48 }}>⛅</span>
-                  <div>
-                    <div style={{ fontSize: chalk?42:32, fontWeight:900, color:T.text, lineHeight:1, fontFamily:hf }}>18°</div>
-                    <div style={{ color:T.textSub, fontSize: chalk?14:11, fontFamily:ff }}>Teilweise bewölkt</div>
+              return (
+                <div style={{ ...cardBase, background:T.card, border:`1.5px solid ${T.border}`,
+                              display:"flex", flexDirection:"column" }}>
+                  <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:12 }}>
+                    <div style={{ fontSize: chalk?20:13, fontWeight:700, color:T.textSub,
+                                  textTransform:"uppercase", letterSpacing:"0.1em", fontFamily:ff }}>
+                      Heute · Tagesplan
+                    </div>
+                    <span style={{ background:accLight, color:acc, border:`1px solid ${accBorder}`,
+                                    borderRadius:20, padding:"3px 10px", fontSize: chalk?14:11, fontWeight:700, fontFamily:ff }}>
+                      {todayEvts.length} Termine
+                    </span>
+                  </div>
+                  <div ref={scrollRef} style={{ overflowY:"auto", height: ITEM_H*3,
+                                                scrollbarWidth:"none", msOverflowStyle:"none" }}>
+                    <style>{`.no-scrollbar::-webkit-scrollbar{display:none}`}</style>
+                    {loading
+                      ? <div style={{ color:T.textSub, fontFamily:ff }}>Laden…</div>
+                      : todayEvts.length === 0
+                      ? <div style={{ color:T.textSub, fontSize: chalk?16:14, fontFamily:ff, padding:"12px 0" }}>
+                          Freier Tag – genieß ihn! 🌿
+                        </div>
+                      : todayEvts.map((e,i) => {
+                        const col = CAL_COLORS[i % CAL_COLORS.length];
+                        return (
+                          <div key={e.id} style={{ display:"flex", alignItems:"center", gap:12, marginBottom:8,
+                                                    borderRadius:14, padding:"10px 14px", height: ITEM_H-8,
+                                                    background:col+"18", borderLeft:`4px solid ${col}` }}>
+                            <span style={{ color:col, fontWeight:800, fontSize: chalk?16:12,
+                                            minWidth:40, fontFamily:ff }}>{fmtTime(e.start_datetime)}</span>
+                            <div style={{ flex:1, overflow:"hidden" }}>
+                              <div style={{ color:T.text, fontSize: chalk?18:14, fontWeight:600, fontFamily:hf,
+                                            whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis" }}>{e.title}</div>
+                              {e.description && <div style={{ color:T.textSub, fontSize: chalk?14:11, fontFamily:ff, marginTop:2 }}>{e.description}</div>}
+                            </div>
+                            <div style={{ width:8, height:8, borderRadius:"50%", background:col, flexShrink:0 }}/>
+                          </div>
+                        );
+                      })
+                    }
                   </div>
                 </div>
-                <div style={{ display:"flex", gap:16 }}>
-                  {[["Fr","🌧","14°"],["Sa","☀️","22°"],["So","☀️","21°"]].map(([d,ic,t])=>(
-                    <div key={d} style={{ textAlign:"center" }}>
-                      <div style={{ color:T.textSub, fontSize: chalk?13:10, fontFamily:ff }}>{d}</div>
-                      <div style={{ fontSize:20, margin:"4px 0" }}>{ic}</div>
-                      <div style={{ color:T.text, fontSize: chalk?15:12, fontWeight:700, fontFamily:ff }}>{t}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+              );
+            })()}
 
             {/* FOTO SLIDER */}
             <PhotoSlider cardBase={cardBase} T={T} ff={ff} hf={hf} chalk={chalk} />
@@ -590,6 +710,9 @@ function App() {
               </div>
             </div>
 
+            {/* JAALEE SENSOREN */}
+            <JaaleeSensors cardBase={cardBase} T={T} ff={ff} hf={hf} chalk={chalk} />
+
           </div>
         </div>
       </div>
@@ -604,12 +727,19 @@ function App() {
     const addTodo = async (list) => {
       const txt = (newText[list]||"").trim();
       if (!txt) return;
-      const c = await apiPost("/todos/", {text:txt, list_name:list, person:"family"});
-      if (c) setTodos(ts => [c,...ts]);
+      // Sofort lokal hinzufügen
+      const local = { id: Date.now(), text:txt, list_name:list, person:"family", done:false };
+      setTodos(ts => [local, ...ts]);
       setNewText(n=>({...n,[list]:""}));
       setAddingTo(null);
+      // Backend optional
+      apiPost("/todos/", {text:txt, list_name:list, person:"family"})
+        .then(c => { if (c) setTodos(ts => ts.map(t => t.id===local.id ? c : t)); });
     };
-    const delTodo = async (id) => { await apiDel(`/todos/${id}`); setTodos(ts=>ts.filter(t=>t.id!==id)); };
+    const delTodo = async (id) => {
+      setTodos(ts => ts.filter(t => t.id!==id));
+      apiDel(`/todos/${id}`);
+    };
 
     return (
       <div style={{ display:"flex", flexDirection:"column", gap:16 }}>
@@ -818,6 +948,218 @@ function App() {
     );
   };
 
+  // ── KALENDER DAY ──────────────────────────────────────────────────────────
+  const KalenderDayPage = () => {
+    const [view,       setView]       = useState("W");
+    const [weekOffset, setWeekOffset] = useState(0);
+    const [weekEvts,   setWeekEvts]   = useState(events.length > 0 ? events : DEMO_EVENTS);
+
+    const PERSONS = [
+      { key:"mama",  name:"Mama",  color:"#9b5de5", emoji:"👩" },
+      { key:"papa",  name:"Papa",  color:"#00b4d8", emoji:"👨" },
+      { key:"kind1", name:"Kind 1",color:"#f15bb5", emoji:"👦" },
+      { key:"kind2", name:"Kind 2",color:"#fb923c", emoji:"👧" },
+    ];
+
+    const HOUR_H  = 56;
+    const START_H = 7;
+    const END_H   = 20;
+    const HOURS   = Array.from({length: END_H - START_H + 1}, (_, i) => START_H + i);
+    const DAY_S   = ["So","Mo","Di","Mi","Do","Fr","Sa"];
+
+    const getWeekDays = (offset) => {
+      const base = new Date();
+      const dow  = base.getDay();
+      const diff = (dow === 0 ? -6 : 1 - dow) + offset * 7;
+      const mon  = new Date(base);
+      mon.setDate(base.getDate() + diff);
+      mon.setHours(0,0,0,0);
+      return Array.from({length:7}, (_, i) => { const d = new Date(mon); d.setDate(mon.getDate()+i); return d; });
+    };
+
+    const weekDays  = getWeekDays(weekOffset);
+    const weekStart = weekDays[0];
+    const weekEnd   = weekDays[6];
+
+    const goWeek = (dir) => {
+      const next = weekOffset + dir;
+      setWeekOffset(next);
+      const d  = getWeekDays(next)[0];
+      const ym = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}`;
+      apiGet(`/events/?date=${ym}`).then(ev => setWeekEvts(ev));
+    };
+
+    const sameDay   = (a,b) => a.getFullYear()===b.getFullYear() && a.getMonth()===b.getMonth() && a.getDate()===b.getDate();
+    const isAllDay  = (e) => { const d=new Date(e.start_datetime); return d.getHours()===0 && d.getMinutes()===0 && !e.end_datetime; };
+    const evDay     = (date, allDay) => weekEvts.filter(e => { const d=new Date(e.start_datetime); return sameDay(d,date) && isAllDay(e)===allDay; });
+    const personCol = (e) => { if(e.color) return e.color; const p=PERSONS.find(p=>p.key===(e.person||"").toLowerCase()); return p?p.color:CAL_COLORS[0]; };
+    const evStyle   = (e) => {
+      const s   = new Date(e.start_datetime);
+      const en  = e.end_datetime ? new Date(e.end_datetime) : new Date(s.getTime()+3600000);
+      const top = ((s.getHours()-START_H)*60 + s.getMinutes())/60*HOUR_H;
+      return { top, height: Math.max((en-s)/3600000*HOUR_H, 24) };
+    };
+    const isTd  = (d) => sameDay(d, now);
+    const fmtWk = () => {
+      const o = {day:"numeric",month:"short"};
+      return `${weekStart.toLocaleDateString("de-DE",o)} – ${weekEnd.toLocaleDateString("de-DE",o)} ${weekEnd.getFullYear()}`;
+    };
+
+    return (
+      <div style={{ display:"flex", flexDirection:"column", height:"100%", gap:12 }}>
+
+        {/* ── PERSON STRIP ── */}
+        <div style={{ ...cardBase, background:T.card, border:`1.5px solid ${T.border}`,
+                      display:"flex", gap:20, alignItems:"center", padding:"14px 24px", flexWrap:"wrap" }}>
+          {PERSONS.map(p => {
+            const img    = window.PER_IMGS?.[p.key];
+            const pTodos = todos.filter(t => !t.done && (t.person||"").toLowerCase()===p.key);
+            return (
+              <div key={p.key} style={{ display:"flex", flexDirection:"column", alignItems:"center", gap:5 }}>
+                <div style={{ width:58, height:58, borderRadius:"50%", overflow:"hidden",
+                              border:`3px solid ${p.color}`, background:p.color+"22",
+                              display:"flex", alignItems:"center", justifyContent:"center" }}>
+                  {img
+                    ? <img src={img} style={{width:"100%",height:"100%",objectFit:"cover"}}/>
+                    : <span style={{fontSize:28}}>{p.emoji}</span>}
+                </div>
+                <span style={{ fontSize: chalk?15:12, fontWeight:700, color:T.text, fontFamily:ff }}>{p.name}</span>
+                <span style={{ fontSize: chalk?12:10, color:p.color, fontWeight:600, fontFamily:ff }}>
+                  ✓ {pTodos.length} to-dos
+                </span>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* ── CALENDAR CARD ── */}
+        <div style={{ ...cardBase, background:T.card, border:`1.5px solid ${T.border}`,
+                      flex:1, minHeight:0, display:"flex", flexDirection:"column",
+                      overflow:"hidden", padding:0 }}>
+
+          {/* Header */}
+          <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between",
+                        padding:"12px 20px", borderBottom:`1px solid ${T.border}` }}>
+            <div style={{ display:"flex", gap:2, background:T.border+"66", borderRadius:10, padding:2 }}>
+              {["D","W","M"].map(v=>(
+                <button key={v} onClick={()=>setView(v)} style={{
+                  padding:"4px 14px", borderRadius:8, border:"none", cursor:"pointer",
+                  background: view===v ? T.accent : "transparent",
+                  color: view===v ? "#fff" : T.textSub,
+                  fontSize:12, fontWeight:700, fontFamily:ff,
+                }}>{v}</button>
+              ))}
+            </div>
+            <span style={{ fontSize: chalk?18:14, fontWeight:700, color:T.text, fontFamily:ff }}>{fmtWk()}</span>
+            <div style={{ display:"flex", gap:6 }}>
+              {[[-1,"‹"],[1,"›"]].map(([d,l])=>(
+                <button key={l} onClick={()=>goWeek(d)} style={{
+                  background:T.card, border:`1.5px solid ${T.border}`,
+                  borderRadius:10, width:32, height:32, cursor:"pointer", fontSize:16,
+                  color:T.accent, display:"flex", alignItems:"center", justifyContent:"center",
+                }}>{l}</button>
+              ))}
+            </div>
+          </div>
+
+          {/* Day name headers */}
+          <div style={{ display:"grid", gridTemplateColumns:`52px repeat(7,1fr)`,
+                        borderBottom:`1px solid ${T.border}` }}>
+            <div/>
+            {weekDays.map((d,i)=>(
+              <div key={i} style={{ textAlign:"center", padding:"8px 4px",
+                                     borderLeft:`1px solid ${T.border}88` }}>
+                <div style={{ fontSize: chalk?13:10, color:T.textSub, fontFamily:ff,
+                               textTransform:"uppercase", letterSpacing:"0.05em" }}>{DAY_S[d.getDay()]}</div>
+                <div style={{
+                  width:28, height:28, borderRadius:"50%", margin:"3px auto 0",
+                  background: isTd(d) ? T.accent : "transparent",
+                  display:"flex", alignItems:"center", justifyContent:"center",
+                  fontSize: chalk?16:13, fontWeight: isTd(d)?800:500,
+                  color: isTd(d)?"#fff":T.text, fontFamily:ff,
+                }}>{d.getDate()}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* ALL-DAY strip */}
+          <div style={{ display:"grid", gridTemplateColumns:`52px repeat(7,1fr)`,
+                        borderBottom:`1px solid ${T.border}`, minHeight:28 }}>
+            <div style={{ display:"flex", alignItems:"center", justifyContent:"flex-end",
+                          paddingRight:8, fontSize: chalk?12:9, color:T.textSub,
+                          fontFamily:ff, opacity:.6, letterSpacing:"0.03em" }}>ALL-DAY</div>
+            {weekDays.map((d,i)=>{
+              const ade = evDay(d, true);
+              return (
+                <div key={i} style={{ borderLeft:`1px solid ${T.border}88`, padding:"2px 3px" }}>
+                  {ade.map(e=>(
+                    <div key={e.id} title={e.title} style={{
+                      background:personCol(e), color:"#fff", borderRadius:4,
+                      fontSize: chalk?11:9, padding:"1px 5px", marginBottom:1,
+                      fontFamily:ff, fontWeight:600,
+                      whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis",
+                    }}>{e.title}</div>
+                  ))}
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Time grid */}
+          <div style={{ flex:1, overflowY:"auto" }}>
+            <div style={{ display:"grid", gridTemplateColumns:`52px repeat(7,1fr)`,
+                          position:"relative", minHeight: HOURS.length * HOUR_H }}>
+              {/* Hour labels */}
+              <div style={{ position:"relative" }}>
+                {HOURS.map(h=>(
+                  <div key={h} style={{
+                    position:"absolute", top:(h-START_H)*HOUR_H-8, right:8,
+                    width:44, textAlign:"right",
+                    fontSize: chalk?13:10, color:T.textSub, fontFamily:ff, opacity:.7,
+                  }}>{h}:00</div>
+                ))}
+              </div>
+
+              {/* Day columns */}
+              {weekDays.map((d,di)=>{
+                const de = evDay(d, false);
+                return (
+                  <div key={di} style={{ position:"relative", borderLeft:`1px solid ${T.border}88` }}>
+                    {HOURS.map(h=>(
+                      <div key={h} style={{
+                        position:"absolute", top:(h-START_H)*HOUR_H, left:0, right:0,
+                        borderTop:`1px solid ${T.border}55`, height:HOUR_H,
+                      }}/>
+                    ))}
+                    {de.map(e=>{
+                      const {top,height} = evStyle(e);
+                      const col = personCol(e);
+                      return (
+                        <div key={e.id} title={e.title} style={{
+                          position:"absolute", top, left:2, right:2, height,
+                          background:col, borderRadius:6, padding:"3px 6px",
+                          overflow:"hidden", zIndex:2,
+                          boxShadow:`0 2px 6px ${col}55`, cursor:"pointer",
+                        }}>
+                          <div style={{ fontSize: chalk?12:10, color:"#fff", fontWeight:700, fontFamily:ff, lineHeight:1.3 }}>
+                            {fmtTime(e.start_datetime)}
+                          </div>
+                          <div style={{ fontSize: chalk?13:11, color:"#fff", fontFamily:ff, fontWeight:600, lineHeight:1.2 }}>
+                            {e.title}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   // ── SPEISEPLAN ─────────────────────────────────────────────────────────────
   const SpeisePage = () => (
     <div className="card-cream" style={cardBase}>
@@ -841,13 +1183,14 @@ function App() {
 
   // ── NAV ITEMS ─────────────────────────────────────────────────────────────
   const navItems = [
-    { id:"heute",    icon:"🏠", label:"Heute"    },
-    { id:"kalender", icon:"📅", label:"Kalender" },
-    { id:"todos",    icon:"✅", label:"Todos"    },
-    { id:"speise",   icon:"🍽️", label:"Essen"    },
+    { id:"heute",       icon:"🏠", label:"Heute"        },
+    { id:"kalenderday", icon:"📆", label:"Kalender Day" },
+    { id:"kalender",    icon:"📅", label:"Kalender"     },
+    { id:"todos",       icon:"✅", label:"Todos"        },
+    { id:"speise",      icon:"🍽️", label:"Essen"        },
   ];
 
-  const pages = { heute:<HeutePage/>, kalender:<KalenderPage/>, todos:<TodosPage/>, speise:<SpeisePage/> };
+  const pages = { heute:<HeutePage/>, kalenderday:<KalenderDayPage/>, kalender:<KalenderPage/>, todos:<TodosPage/>, speise:<SpeisePage/> };
 
   return (
     <div style={{ minHeight:"100vh", background:T.bg, display:"flex", fontFamily:ff }}>
@@ -970,6 +1313,6 @@ with open(output_path, "w", encoding="utf-8") as f:
 
 print("Dashboard erstellt:", output_path)
 print("Oeffne Browser...")
-webbrowser.open(f"file:///{output_path.replace(os.sep, '/')}")
+webbrowser.open("http://localhost:8000/dashboard")
 print()
 print("Sidebar links: Theme wechseln + Kreide-Schrift an/aus")
