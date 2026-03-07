@@ -43,6 +43,7 @@ HTML = r"""<!DOCTYPE html>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Inter:wght@300;400;500;600;700;800;900&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
   <!-- Twemoji = Twitter/WhatsApp-style Emojis (kostenlos, CDN) -->
   <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+  <script src="/assets/sbbUhr.js"></script>
 
   <style>
     /* Twemoji: alle Emojis als hübsche SVG-Bilder */
@@ -341,30 +342,40 @@ function EmojiToggle({ sidebarText }) {
 // ── FOTO SLIDER ───────────────────────────────────────────────────────────────
 function PhotoSlider({ cardBase, T, ff, hf, chalk }) {
   const photos = window.PHOTOS || [];
-  const [idx,  setIdx] = useState(0);
-  const [fade, setFade] = useState(true);
+  const [cur,  setCur]  = useState(0);
+  const [next, setNext] = useState(null);
+  const [loaded, setLoaded] = useState({});
   const acc = T.accent || "#c2855a";
+  const FADE_MS = 800;
+
+  // Nächste 2 Fotos vorausladen
+  useEffect(() => {
+    [1, 2].forEach(offset => {
+      const i = (cur + offset) % photos.length;
+      if (!loaded[i]) {
+        const img = new Image();
+        img.src = photos[i];
+        img.onload = () => setLoaded(l => ({ ...l, [i]: true }));
+      }
+    });
+  }, [cur, photos.length]);
 
   useEffect(() => {
     if (photos.length < 2) return;
     const t = setInterval(() => go(1), 5000);
     return () => clearInterval(t);
-  }, [idx, photos.length]);
+  }, [cur, photos.length]);
 
   const go = (dir) => {
-    setFade(false);
-    setTimeout(() => { setIdx(i => (i + dir + photos.length) % photos.length); setFade(true); }, 180);
+    const n = (cur + dir + photos.length) % photos.length;
+    setNext(n);
+    setTimeout(() => { setCur(n); setNext(null); }, FADE_MS);
   };
+  const goTo = (i) => { if (i === cur) return; setNext(i); setTimeout(() => { setCur(i); setNext(null); }, FADE_MS); };
 
   return (
-    <div style={{ ...cardBase, background:T.card, border:`1.5px solid ${T.border}`,
-                  flex:1, minHeight:0, display:"flex", flexDirection:"column" }}>
-      <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:12 }}>
-        <div style={{ fontSize: chalk?14:11, fontWeight:700, color:T.textSub, opacity:.7,
-                      textTransform:"uppercase", letterSpacing:"0.1em", fontFamily:ff }}>Familienfotos</div>
-        {photos.length > 1 &&
-          <span style={{ color:T.textSub, fontSize: chalk?13:10, fontFamily:ff }}>{idx+1} / {photos.length}</span>}
-      </div>
+    <div style={{ ...cardBase, padding:0, background:T.card, border:`1.5px solid ${T.border}`,
+                  flex:1, minHeight:0, display:"flex", flexDirection:"column", overflow:"hidden" }}>
 
       {photos.length === 0 ? (
         <div style={{ flex:1, minHeight:200, display:"flex", flexDirection:"column", alignItems:"center",
@@ -375,31 +386,39 @@ function PhotoSlider({ cardBase, T, ff, hf, chalk }) {
           </div>
         </div>
       ) : (
-        <div style={{ position:"relative", flex:1, minHeight:0, display:"flex", flexDirection:"column",
-                      background:"#ffffff", borderRadius:14, overflow:"hidden",
-                      alignItems:"center", justifyContent:"center" }}>
-          <img src={photos[idx]} alt="" style={{
-            maxWidth:"100%", maxHeight:"100%", objectFit:"contain", borderRadius:10, display:"block",
-            opacity: fade?1:0, transition:"opacity 0.18s ease",
+        <div style={{ position:"relative", flex:1, minHeight:0, overflow:"hidden", borderRadius:14 }}>
+          {/* Aktuelles Foto (unten) */}
+          <img src={photos[cur]} alt="" style={{
+            position:"absolute", inset:0, width:"100%", height:"100%", objectFit:"cover",
           }}/>
+          {/* Nächstes Foto blendet ein (oben) */}
+          {next !== null && (
+            <img src={photos[next]} alt="" style={{
+              position:"absolute", inset:0, width:"100%", height:"100%", objectFit:"cover",
+              opacity: 0, animation:`xfade ${FADE_MS}ms ease-in-out forwards`,
+            }}/>
+          )}
+          <style>{`@keyframes xfade { from { opacity:0 } to { opacity:1 } }`}</style>
+
           {photos.length > 1 && (<>
             <button onClick={()=>go(-1)} style={{
               position:"absolute", left:8, top:"50%", transform:"translateY(-50%)",
               width:34, height:34, borderRadius:10, border:"none",
               background:"rgba(0,0,0,0.38)", color:"#fff", fontSize:20,
-              cursor:"pointer", display:"flex", alignItems:"center", justifyContent:"center",
+              cursor:"pointer", display:"flex", alignItems:"center", justifyContent:"center", zIndex:2,
             }}>‹</button>
             <button onClick={()=>go(1)} style={{
               position:"absolute", right:8, top:"50%", transform:"translateY(-50%)",
               width:34, height:34, borderRadius:10, border:"none",
               background:"rgba(0,0,0,0.38)", color:"#fff", fontSize:20,
-              cursor:"pointer", display:"flex", alignItems:"center", justifyContent:"center",
+              cursor:"pointer", display:"flex", alignItems:"center", justifyContent:"center", zIndex:2,
             }}>›</button>
-            <div style={{ display:"flex", justifyContent:"center", gap:6, marginTop:10 }}>
+            <div style={{ position:"absolute", bottom:10, left:0, right:0,
+                          display:"flex", justifyContent:"center", gap:6, zIndex:2 }}>
               {photos.map((_,i) => (
-                <div key={i} onClick={()=>{setFade(false);setTimeout(()=>{setIdx(i);setFade(true);},150);}}
-                  style={{ width:i===idx?20:7, height:7, borderRadius:4, cursor:"pointer",
-                            background:i===idx?acc:T.border, transition:"all 0.3s" }}/>
+                <div key={i} onClick={()=>goTo(i)}
+                  style={{ width:i===cur?20:7, height:7, borderRadius:4, cursor:"pointer",
+                            background:i===cur?"#fff":"rgba(255,255,255,0.5)", transition:"all 0.3s" }}/>
               ))}
             </div>
           </>)}
@@ -500,6 +519,22 @@ function App() {
     </span>
   );
 
+  // ── SBB Uhr (lokale sbbUhr.js, setTimeout entfernt → reines rAF) ──
+  const SbbClock = React.memo(({ isDark }) => {
+    const containerRef = React.useRef(null);
+    const clockRef     = React.useRef(null);
+    useEffect(() => {
+      if (!containerRef.current) return;
+      if (typeof sbbUhr === "undefined") return;
+      const id = "sbb-clock-" + Math.random().toString(36).slice(2);
+      containerRef.current.id = id;
+      clockRef.current = new sbbUhr(id, isDark, false);
+      clockRef.current.start();
+      return () => { try { clockRef.current?.stop(); } catch(e){} };
+    }, []);
+    return <div ref={containerRef} style={{ width:"100%", height:"100%" }} />;
+  });
+
   // ── HEUTE ──────────────────────────────────────────────────────────────────
   const HeutePage = () => {
     const todayEvts = events.filter(e => isToday(e.start_datetime))
@@ -509,212 +544,331 @@ function App() {
     const accLight = acc + "22";
     const accBorder = acc + "55";
 
-    // Tageszeit-Gruß
-    const h = now.getHours();
-    const gruss = h < 12 ? "Guten Morgen" : h < 17 ? "Guten Tag" : "Guten Abend";
+    const isDark = T.bg === "#1a1a2e" || T.bg === "#0f172a" || T.bg?.startsWith("#0") || T.bg?.startsWith("#1");
 
-    return (
-      <div style={{ display:"flex", flexDirection:"column", gap:16, height:"100%" }}>
-
-        {/* ── BANNER ── */}
-        <div style={{ ...cardBase, padding:"22px 28px",
-                      background:`linear-gradient(120deg, ${acc}, ${acc}cc)`,
-                      border:"none", display:"flex", justifyContent:"space-between", alignItems:"center",
-                      boxShadow:`0 4px 24px ${acc}44` }}>
-          <div>
-            <div style={{ fontSize: chalk?13:10, fontWeight:700, color:"rgba(255,255,255,0.65)",
-                          letterSpacing:"0.12em", textTransform:"uppercase", fontFamily:ff, marginBottom:4 }}>
-              {dateStr}
-            </div>
-            <div style={{ fontSize: chalk?44:34, fontWeight:700, color:"#fff", fontFamily:hf, lineHeight:1.1 }}>
-              {gruss}! 🤙
-            </div>
-            <div style={{ marginTop:10, display:"flex", gap:8 }}>
-              <span style={{ background:"rgba(255,255,255,0.2)", color:"#fff", borderRadius:20,
-                              padding:"4px 12px", fontSize: chalk?14:11, fontWeight:600, fontFamily:ff }}>
-                📅 {loading?"…":todayEvts.length} Termine
-              </span>
-              <span style={{ background:"rgba(255,255,255,0.2)", color:"#fff", borderRadius:20,
-                              padding:"4px 12px", fontSize: chalk?14:11, fontWeight:600, fontFamily:ff }}>
-                ✅ {loading?"…":openTodos.length} offen
-              </span>
-              <span style={{ background:"rgba(255,255,255,0.2)", color:"#fff", borderRadius:20,
-                              padding:"4px 12px", fontSize: chalk?14:11, fontWeight:600, fontFamily:ff }}>
-                ⛅ 18°
-              </span>
-            </div>
+    // ── Mini-Kalender ──
+    const MiniCalendar = () => {
+      const [offset, setOffset] = useState(0);
+      const d = new Date(now.getFullYear(), now.getMonth()+offset, 1);
+      const year = d.getFullYear(), month = d.getMonth();
+      const monthName = d.toLocaleDateString("de-DE",{month:"long",year:"numeric"});
+      const firstDow = (d.getDay()+6)%7; // Mo=0
+      const daysInMonth = new Date(year, month+1, 0).getDate();
+      const cells = [...Array(firstDow).fill(null),
+                     ...Array.from({length:daysInMonth},(_,i)=>i+1)];
+      const isToday2 = day => offset===0 && day===now.getDate();
+      const DOW = ["Mo","Di","Mi","Do","Fr","Sa","So"];
+      return (
+        <div style={{ display:"flex", flexDirection:"column", height:"100%" }}>
+          <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:8 }}>
+            <button onClick={()=>setOffset(o=>o-1)} style={{ background:"none", border:"none", cursor:"pointer",
+              color:T.textSub, fontSize:18, padding:"0 4px" }}>‹</button>
+            <span style={{ fontSize:chalk?15:13, fontWeight:700, color:T.text, fontFamily:ff }}>{monthName}</span>
+            <button onClick={()=>setOffset(o=>o+1)} style={{ background:"none", border:"none", cursor:"pointer",
+              color:T.textSub, fontSize:18, padding:"0 4px" }}>›</button>
           </div>
-          <div style={{ display:"flex", gap:10 }}>
-            {[["👩","#7c3aed"],["👨","#0ea5e9"],["👶","#c2855a"]].map(([e,c])=>(
-              <div key={e} style={{ width:44, height:44, borderRadius:"50%",
-                                     background:"rgba(255,255,255,0.25)",
-                                     display:"flex", alignItems:"center", justifyContent:"center",
-                                     fontSize:22, border:"2px solid rgba(255,255,255,0.4)" }}>{e}</div>
+          <div style={{ display:"grid", gridTemplateColumns:"repeat(7,1fr)", gap:2, flex:1 }}>
+            {DOW.map(d => <div key={d} style={{ textAlign:"center", fontSize:chalk?12:11,
+              fontWeight:700, color:T.textSub, fontFamily:ff, paddingBottom:4 }}>{d}</div>)}
+            {cells.map((day,i) => (
+              <div key={i} style={{ textAlign:"center", fontSize:chalk?14:12, fontFamily:ff,
+                aspectRatio:"1", display:"flex", alignItems:"center", justifyContent:"center",
+                borderRadius:"50%",
+                background: isToday2(day) ? acc : "transparent",
+                color: isToday2(day) ? "#fff" : day ? T.text : "transparent",
+                fontWeight: isToday2(day) ? 700 : 400,
+              }}>{day||""}</div>
             ))}
           </div>
         </div>
+      );
+    };
 
-        {/* ── HAUPTINHALT: 2 SPALTEN ── */}
-        <div style={{ display:"grid", gridTemplateColumns:"1.1fr 0.9fr", gap:16, alignItems:"stretch",
-                      flex:1, overflow:"hidden" }}>
-
-          {/* LINKE SPALTE – Tagesplan */}
-          <div style={{ display:"flex", flexDirection:"column", gap:16, minHeight:0, overflow:"hidden" }}>
-
-            {/* TERMINE – max 3 sichtbar, Auto-Scroll */}
-            {(() => {
-              const ITEM_H = 58; // px pro Eintrag (padding + Inhalt)
-              const scrollRef = React.useRef(null);
-              useEffect(() => {
-                if (todayEvts.length <= 3) return;
-                const el = scrollRef.current;
-                if (!el) return;
-                let dir = 1;
-                const interval = setInterval(() => {
-                  el.scrollTop += dir;
-                  if (el.scrollTop + el.clientHeight >= el.scrollHeight - 2) {
-                    // kurz warten, dann zurück
-                    setTimeout(() => { dir = -1; }, 1200);
-                  }
-                  if (el.scrollTop <= 0 && dir === -1) {
-                    setTimeout(() => { dir = 1; }, 1200);
-                  }
-                }, 30);
-                return () => clearInterval(interval);
-              }, [todayEvts.length]);
-
-              return (
-                <div style={{ ...cardBase, background:T.card, border:`1.5px solid ${T.border}`,
-                              display:"flex", flexDirection:"column" }}>
-                  <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:12 }}>
-                    <div style={{ fontSize: chalk?20:13, fontWeight:700, color:T.textSub,
-                                  textTransform:"uppercase", letterSpacing:"0.1em", fontFamily:ff }}>
-                      Heute · Tagesplan
-                    </div>
-                    <span style={{ background:accLight, color:acc, border:`1px solid ${accBorder}`,
-                                    borderRadius:20, padding:"3px 10px", fontSize: chalk?14:11, fontWeight:700, fontFamily:ff }}>
-                      {todayEvts.length} Termine
-                    </span>
-                  </div>
-                  <div ref={scrollRef} style={{ overflowY:"auto", height: ITEM_H*3,
-                                                scrollbarWidth:"none", msOverflowStyle:"none" }}>
-                    <style>{`.no-scrollbar::-webkit-scrollbar{display:none}`}</style>
-                    {loading
-                      ? <div style={{ color:T.textSub, fontFamily:ff }}>Laden…</div>
-                      : todayEvts.length === 0
-                      ? <div style={{ color:T.textSub, fontSize: chalk?16:14, fontFamily:ff, padding:"12px 0" }}>
-                          Freier Tag – genieß ihn! 🌿
-                        </div>
-                      : todayEvts.map((e,i) => {
-                        const col = CAL_COLORS[i % CAL_COLORS.length];
-                        return (
-                          <div key={e.id} style={{ display:"flex", alignItems:"center", gap:12, marginBottom:8,
-                                                    borderRadius:14, padding:"10px 14px", height: ITEM_H-8,
-                                                    background:col+"18", borderLeft:`4px solid ${col}` }}>
-                            <span style={{ color:col, fontWeight:800, fontSize: chalk?16:12,
-                                            minWidth:40, fontFamily:ff }}>{fmtTime(e.start_datetime)}</span>
-                            <div style={{ flex:1, overflow:"hidden" }}>
-                              <div style={{ color:T.text, fontSize: chalk?18:14, fontWeight:600, fontFamily:hf,
-                                            whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis" }}>{e.title}</div>
-                              {e.description && <div style={{ color:T.textSub, fontSize: chalk?14:11, fontFamily:ff, marginTop:2 }}>{e.description}</div>}
-                            </div>
-                            <div style={{ width:8, height:8, borderRadius:"50%", background:col, flexShrink:0 }}/>
-                          </div>
-                        );
-                      })
-                    }
-                  </div>
-                </div>
-              );
-            })()}
-
-            {/* FOTO SLIDER */}
-            <PhotoSlider cardBase={cardBase} T={T} ff={ff} hf={hf} chalk={chalk} />
-
-          </div>{/* Ende linke Spalte */}
-
-          {/* RECHTE SPALTE – Todos + Essen + Buttons */}
-          <div style={{ display:"flex", flexDirection:"column", gap:16, overflow:"hidden" }}>
-
-            {/* OFFENE TODOS */}
-            <div style={{ ...cardBase, background:T.card, border:`1.5px solid ${T.border}` }}>
-              <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:14 }}>
-                <div style={{ fontSize: chalk?20:13, fontWeight:700, color:T.textSub,
-                              textTransform:"uppercase", letterSpacing:"0.1em", fontFamily:ff }}>
-                  Offene Aufgaben
-                </div>
-                <span style={{ background:accLight, color:acc, border:`1px solid ${accBorder}`,
-                                borderRadius:20, padding:"3px 10px", fontSize: chalk?14:11, fontWeight:700, fontFamily:ff }}>
-                  {openTodos.length}
-                </span>
+    // ── Wetter Widget (aktuell + 3-Tage Forecast) ──
+    const WeatherWidget = () => {
+      const h2 = now.getHours();
+      const [icon, desc, temp] = h2 < 7  ? ["🌙","Klar & kühl","8°"]
+                                : h2 < 10 ? ["🌤️","Morgen","12°"]
+                                : h2 < 17 ? ["☀️","Sonnig","18°"]
+                                : h2 < 20 ? ["🌅","Abend","15°"]
+                                :           ["🌙","Nacht","10°"];
+      const forecast = [
+        { day:"Mo", icon:"🌤️", hi:"19°", lo:"9°" },
+        { day:"Di", icon:"🌧️", hi:"14°", lo:"8°" },
+        { day:"Mi", icon:"☀️",  hi:"22°", lo:"11°" },
+      ];
+      return (
+        <div style={{ display:"flex", flexDirection:"column", height:"100%", gap:6 }}>
+          {/* Aktuell */}
+          <div style={{ display:"flex", flexDirection:"column", alignItems:"center",
+                        justifyContent:"center", flex:1 }}>
+            <div style={{ fontSize:chalk?56:44 }}>{icon}</div>
+            <div style={{ fontSize:chalk?46:36, fontWeight:900, color:T.text, fontFamily:hf, lineHeight:1 }}>{temp}</div>
+            <div style={{ fontSize:chalk?15:13, color:T.textSub, fontFamily:ff, marginTop:4 }}>{desc}</div>
+          </div>
+          {/* 3-Tage */}
+          <div style={{ borderTop:`1px solid ${T.border}`, paddingTop:8,
+                        display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:4 }}>
+            {forecast.map(f => (
+              <div key={f.day} style={{ display:"flex", flexDirection:"column", alignItems:"center", gap:2 }}>
+                <div style={{ fontSize:chalk?13:12, fontWeight:700, color:T.textSub, fontFamily:ff }}>{f.day}</div>
+                <div style={{ fontSize:chalk?26:22 }}>{f.icon}</div>
+                <div style={{ fontSize:chalk?14:13, fontWeight:700, color:T.text, fontFamily:ff }}>{f.hi}</div>
+                <div style={{ fontSize:chalk?12:11, color:T.textSub, fontFamily:ff }}>{f.lo}</div>
               </div>
-              {openTodos.length === 0
-                ? <div style={{ color:T.textSub, fontSize: chalk?16:13, fontFamily:ff }}>Alles erledigt! 🎉</div>
-                : openTodos.slice(0,5).map(t => (
-                  <div key={t.id} style={{ display:"flex", alignItems:"center", gap:10, marginBottom:8,
-                                            padding:"8px 0", borderBottom:`1px solid ${T.border}` }}>
-                    <div onClick={()=>toggleTodo(t.id)} style={{
-                      width:20, height:20, borderRadius:6, border:`2px solid ${acc}`,
-                      background: t.done ? acc : "transparent",
-                      display:"flex", alignItems:"center", justifyContent:"center",
-                      cursor:"pointer", flexShrink:0,
-                    }}>
-                      {t.done && <span style={{ color:"#fff", fontSize:11, fontWeight:900 }}>✓</span>}
-                    </div>
-                    <span style={{ flex:1, color: t.done ? T.textSub : T.text,
-                                    fontSize: chalk?16:13, fontFamily:ff,
-                                    textDecoration: t.done ? "line-through" : "none" }}>{t.text}</span>
-                    <span style={{ fontSize: chalk?12:10, color:T.textSub, fontFamily:ff, opacity:.6 }}>{t.list_name}</span>
-                  </div>
-                ))
-              }
-            </div>
+            ))}
+          </div>
+        </div>
+      );
+    };
 
-            {/* ESSEN */}
-            <div style={{ ...cardBase, background:T.card, border:`1.5px solid ${T.border}` }}>
-              <div style={{ fontSize: chalk?14:11, fontWeight:700, color:T.textSub, opacity:.7,
-                            textTransform:"uppercase", letterSpacing:"0.1em", marginBottom:12, fontFamily:ff }}>Essen heute</div>
-              {[["🌅 Früh","Açaí Bowl"],["☀️ Mittag","Fish Tacos"],["🌙 Abend","Poke Bowl"]].map(([label,meal])=>(
-                <div key={meal} style={{ display:"flex", justifyContent:"space-between", alignItems:"center",
-                                          padding:"8px 0", borderBottom:`1px solid ${T.border}` }}>
-                  <span style={{ color:T.textSub, fontSize: chalk?14:11, fontFamily:ff }}>{label}</span>
-                  <span style={{ color:T.text, fontSize: chalk?16:13, fontWeight:600, fontFamily:ff }}>{meal}</span>
+    // ── Geburtstage ──
+    const BIRTHDAYS = [
+      { name:"Mama",  date:"08-03", emoji:"👩" },
+      { name:"Papa",  date:"05-21", emoji:"👨" },
+      { name:"Kind",  date:"12-03", emoji:"👶" },
+    ];
+    const BirthdayWidget = () => {
+      const today = `${String(now.getMonth()+1).padStart(2,"0")}-${String(now.getDate()).padStart(2,"0")}`;
+      const upcoming = BIRTHDAYS.map(b => {
+        const [m,d] = b.date.split("-").map(Number);
+        const next = new Date(now.getFullYear(), m-1, d);
+        if (next < now) next.setFullYear(now.getFullYear()+1);
+        const days = Math.ceil((next - now) / 86400000);
+        return { ...b, days };
+      }).sort((a,b)=>a.days-b.days);
+      return (
+        <div style={{ display:"flex", flexDirection:"column", gap:8, height:"100%" }}>
+          {upcoming.map(b => (
+            <div key={b.name} style={{ display:"flex", alignItems:"center", gap:10,
+              padding:"8px 10px", borderRadius:12,
+              background: b.days<=7 ? acc+"22" : T.border+"33",
+              border: b.days<=7 ? `1.5px solid ${acc}55` : `1.5px solid transparent` }}>
+              <span style={{ fontSize:20 }}>{b.emoji}</span>
+              <div style={{ flex:1 }}>
+                <div style={{ fontSize:chalk?17:14, fontWeight:700, color:T.text, fontFamily:ff }}>{b.name}</div>
+                <div style={{ fontSize:chalk?13:11, color:T.textSub, fontFamily:ff }}>{b.date.replace("-",".")}</div>
+              </div>
+              <span style={{ fontSize:chalk?14:12, fontWeight:700, fontFamily:ff,
+                             color: b.days===0 ? acc : b.days<=7 ? acc : T.textSub }}>
+                {b.days===0 ? "🎂 Heute!" : `in ${b.days}d`}
+              </span>
+            </div>
+          ))}
+        </div>
+      );
+    };
+
+    // ── Auto-Scroll Helper ──
+    const useAutoScroll = (ref, len, max) => {
+      useEffect(() => {
+        if (len <= max) return;
+        const el = ref.current; if (!el) return;
+        let dir = 1;
+        const iv = setInterval(() => {
+          el.scrollTop += dir;
+          if (el.scrollTop + el.clientHeight >= el.scrollHeight - 2) setTimeout(()=>{ dir=-1; },1200);
+          if (el.scrollTop <= 0 && dir===-1) setTimeout(()=>{ dir=1; },1200);
+        }, 30);
+        return () => clearInterval(iv);
+      }, [len]);
+    };
+
+    const evtRef = React.useRef(null);  useAutoScroll(evtRef, todayEvts.length, 3);
+    const todoRef = React.useRef(null); useAutoScroll(todoRef, openTodos.length, 3);
+
+    const CARD = { ...cardBase, background:T.card, border:`1.5px solid ${T.border}` };
+    const SectionLabel = ({children}) => (
+      <div style={{ fontSize:chalk?14:12, fontWeight:700, color:T.textSub, textTransform:"uppercase",
+                    letterSpacing:"0.1em", fontFamily:ff, marginBottom:8 }}>{children}</div>
+    );
+
+    // Portrait: simple stacked layout
+    if (portrait) return (
+      <div style={{ display:"flex", flexDirection:"column", height:"100%", gap:10 }}>
+        <div style={{ ...CARD, padding:"14px 20px",
+                      background:`linear-gradient(120deg,${acc},${acc}bb)`, border:"none",
+                      display:"flex", justifyContent:"space-between", alignItems:"center" }}>
+          <div>
+            <div style={{ fontSize:12, color:"rgba(255,255,255,0.7)", fontFamily:ff,
+                          textTransform:"uppercase", letterSpacing:"0.1em" }}>{dateStr}</div>
+            <div style={{ fontSize:22, fontWeight:800, color:"#fff", fontFamily:hf, lineHeight:1.1 }}>
+              {now.getHours()<12?"Guten Morgen":now.getHours()<17?"Guten Tag":"Guten Abend"}! 🤙
+            </div>
+          </div>
+          <div style={{ display:"flex", gap:10 }}>
+            {["👩","👨","👶"].map(e=>(
+              <div key={e} style={{ width:36, height:36, borderRadius:"50%",
+                background:"rgba(255,255,255,0.25)", display:"flex", alignItems:"center",
+                justifyContent:"center", fontSize:18, border:"2px solid rgba(255,255,255,0.4)" }}>{e}</div>
+            ))}
+          </div>
+        </div>
+        <div style={{ flex:1, minHeight:0 }}>
+          <PhotoSlider cardBase={cardBase} T={T} ff={ff} hf={hf} chalk={chalk} />
+        </div>
+        <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:10 }}>
+          <div style={{ ...CARD, padding:12 }}>
+            <SectionLabel>✅ Aufgaben ({openTodos.length})</SectionLabel>
+            <div ref={todoRef} style={{ overflowY:"auto", maxHeight:120, scrollbarWidth:"none" }}>
+              {openTodos.map(t => (
+                <div key={t.id} style={{ display:"flex", alignItems:"center", gap:6, marginBottom:4,
+                  padding:"3px 0", borderBottom:`1px solid ${T.border}` }}>
+                  <div onClick={()=>toggleTodo(t.id)} style={{
+                    width:16, height:16, borderRadius:4, border:`2px solid ${acc}`,
+                    background:t.done?acc:"transparent", cursor:"pointer", flexShrink:0 }}/>
+                  <span style={{ flex:1, color:T.text, fontSize:11, fontFamily:ff,
+                    overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>{t.text}</span>
                 </div>
               ))}
             </div>
-
-            {/* SCHNELL-BUTTONS */}
-            <div style={{ ...cardBase, background:T.card, border:`1.5px solid ${T.border}` }}>
-              <div style={{ fontSize: chalk?14:11, fontWeight:700, color:T.textSub, opacity:.7,
-                            textTransform:"uppercase", letterSpacing:"0.1em", marginBottom:12, fontFamily:ff }}>Schnell-Buttons</div>
-              <div style={{ display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:8 }}>
-                {[["🛒 Einkauf","einkauf"],["🍕 Pizza","pizza"],
-                  ["🏥 Arzt","arzt"],["🚗 Fahrt","fahrt"],
-                  ["📦 Paket","paket"],["🏄 Strand","strand"]].map(([l,key])=>{
-                  const img = window.BTN_IMGS?.[key];
-                  return (
-                    <button key={l} style={{ background:T.card, border:`1.5px solid ${accBorder}`,
-                                              borderRadius:12, padding: chalk?"14px 6px":"11px 6px",
-                                              color:acc, fontSize: chalk?16:12, fontWeight:700,
-                                              cursor:"pointer", fontFamily:ff,
-                                              display:"flex", flexDirection:"column", alignItems:"center", gap:4 }}
-                      onMouseEnter={e=>{ e.currentTarget.style.background=acc; e.currentTarget.style.color="#fff"; }}
-                      onMouseLeave={e=>{ e.currentTarget.style.background=T.card; e.currentTarget.style.color=acc; }}>
-                      {img
-                        ? <img src={img} style={{ width:28, height:28, objectFit:"contain" }} />
-                        : <span style={{ fontSize:20 }}>{l.split(" ")[0]}</span>}
-                      <span style={{ fontSize: chalk?12:10 }}>{l.split(" ").slice(1).join(" ")}</span>
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* JAALEE SENSOREN */}
-            <JaaleeSensors cardBase={cardBase} T={T} ff={ff} hf={hf} chalk={chalk} />
-
+          </div>
+          <div style={{ ...CARD, padding:12 }}>
+            <SectionLabel>🎂 Geburtstage</SectionLabel>
+            <BirthdayWidget />
           </div>
         </div>
+      </div>
+    );
+
+    // Landscape: 3-column proportional layout
+    return (
+      <div style={{ display:"grid", height:"100%", gap:10,
+                    gridTemplateColumns:"1fr 3fr 1fr" }}>
+
+        {/* ── LINKE SPALTE: Uhr 2/5 · Kalender 2/5 · TagesPlan 1/5 ── */}
+        <div style={{ display:"flex", flexDirection:"column", gap:10, minHeight:0 }}>
+
+          {/* SBB Uhr */}
+          <div style={{ ...CARD, flex:2, padding:8, minHeight:0 }}>
+            <SbbClock isDark={isDark} />
+          </div>
+
+          {/* Mini-Kalender */}
+          <div style={{ ...CARD, flex:2, padding:14, minHeight:0 }}>
+            <MiniCalendar />
+          </div>
+
+          {/* Tagesplan */}
+          <div style={{ ...CARD, flex:1, padding:14, minHeight:0, overflow:"hidden" }}>
+            <SectionLabel>📅 Tagesplan</SectionLabel>
+            <div ref={evtRef} style={{ overflowY:"auto", height:"calc(100% - 26px)", scrollbarWidth:"none" }}>
+              {loading ? <div style={{ color:T.textSub, fontFamily:ff, fontSize:chalk?16:13 }}>…</div>
+               : todayEvts.length===0
+               ? <div style={{ color:T.textSub, fontSize:chalk?15:13, fontFamily:ff }}>Freier Tag 🌿</div>
+               : todayEvts.map((e,i) => {
+                  const col = CAL_COLORS[i%CAL_COLORS.length];
+                  return (
+                    <div key={e.id} style={{ display:"flex", gap:6, alignItems:"center", marginBottom:5,
+                      padding:"5px 8px", borderRadius:8, background:col+"18", borderLeft:`3px solid ${col}` }}>
+                      <span style={{ color:col, fontWeight:700, fontSize:chalk?14:12, fontFamily:ff, minWidth:36 }}>
+                        {fmtTime(e.start_datetime)}</span>
+                      <span style={{ color:T.text, fontSize:chalk?15:13, fontFamily:hf,
+                        flex:1, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>{e.title}</span>
+                    </div>
+                  );
+                })
+              }
+            </div>
+          </div>
+        </div>
+
+        {/* ── MITTLERE SPALTE: Header 1/5 · Foto 3/5 · Aufgaben+Geburtstage 1/5 ── */}
+        <div style={{ display:"flex", flexDirection:"column", gap:10, minHeight:0 }}>
+
+          {/* Header */}
+          <div style={{ ...CARD, flex:1, padding:"12px 20px",
+                        background:`linear-gradient(120deg,${acc},${acc}bb)`, border:"none",
+                        display:"flex", justifyContent:"space-between", alignItems:"center", minHeight:0 }}>
+            <div>
+              <div style={{ fontSize:chalk?15:12, color:"rgba(255,255,255,0.7)", fontFamily:ff,
+                            textTransform:"uppercase", letterSpacing:"0.1em" }}>{dateStr}</div>
+              <div style={{ fontSize:chalk?34:26, fontWeight:800, color:"#fff", fontFamily:hf, lineHeight:1.1 }}>
+                {now.getHours()<12?"Guten Morgen":now.getHours()<17?"Guten Tag":"Guten Abend"}! 🤙
+              </div>
+            </div>
+            <div style={{ display:"flex", gap:12, alignItems:"center" }}>
+              {[["👩","#7c3aed"],["👨","#0ea5e9"],["👶","#c2855a"]].map(([e,c])=>(
+                <div key={e} style={{ width:chalk?48:36, height:chalk?48:36, borderRadius:"50%",
+                  background:"rgba(255,255,255,0.25)", display:"flex", alignItems:"center",
+                  justifyContent:"center", fontSize:chalk?24:18, border:"2px solid rgba(255,255,255,0.4)" }}>{e}</div>
+              ))}
+            </div>
+          </div>
+
+          {/* Foto */}
+          <div style={{ flex:3, minHeight:0, display:"flex", flexDirection:"column" }}>
+            <PhotoSlider cardBase={cardBase} T={T} ff={ff} hf={hf} chalk={chalk} />
+          </div>
+
+          {/* Offene Aufgaben + Geburtstage nebeneinander */}
+          <div style={{ flex:1, display:"grid", gridTemplateColumns:"1fr 1fr", gap:10, minHeight:0 }}>
+            <div style={{ ...CARD, padding:12, minHeight:0, overflow:"hidden" }}>
+              <SectionLabel>✅ Aufgaben <span style={{ color:acc }}>({openTodos.length})</span></SectionLabel>
+              <div ref={todoRef} style={{ overflowY:"auto", height:"calc(100% - 24px)", scrollbarWidth:"none" }}>
+                {openTodos.length===0
+                  ? <div style={{ color:T.textSub, fontSize:chalk?15:13, fontFamily:ff }}>Alles erledigt! 🎉</div>
+                  : openTodos.map(t => (
+                    <div key={t.id} style={{ display:"flex", alignItems:"center", gap:7, marginBottom:5,
+                      padding:"3px 0", borderBottom:`1px solid ${T.border}` }}>
+                      <div onClick={()=>toggleTodo(t.id)} style={{
+                        width:18, height:18, borderRadius:5, border:`2px solid ${acc}`,
+                        background:t.done?acc:"transparent", cursor:"pointer", flexShrink:0,
+                        display:"flex", alignItems:"center", justifyContent:"center" }}>
+                        {t.done && <span style={{ color:"#fff", fontSize:11, fontWeight:900 }}>✓</span>}
+                      </div>
+                      <span style={{ flex:1, color:T.text, fontSize:chalk?15:13, fontFamily:ff,
+                        overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>{t.text}</span>
+                    </div>
+                  ))
+                }
+              </div>
+            </div>
+            <div style={{ ...CARD, padding:12, minHeight:0, overflow:"hidden" }}>
+              <SectionLabel>🎂 Geburtstage</SectionLabel>
+              <div style={{ overflowY:"auto", height:"calc(100% - 24px)", scrollbarWidth:"none" }}>
+                <BirthdayWidget />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* ── RECHTE SPALTE: Wetter 2/5 · Sensoren 2/5 · Buttons 1/5 ── */}
+        <div style={{ display:"flex", flexDirection:"column", gap:10, minHeight:0 }}>
+
+          {/* Wetter aktuell + 3-Tage Forecast */}
+          <div style={{ ...CARD, flex:2, padding:14, minHeight:0, overflow:"hidden" }}>
+            <WeatherWidget />
+          </div>
+
+          {/* Sensoren */}
+          <div style={{ flex:2, minHeight:0, overflow:"hidden" }}>
+            <JaaleeSensors cardBase={cardBase} T={T} ff={ff} hf={hf} chalk={chalk} />
+          </div>
+
+          {/* Schnell-Buttons */}
+          <div style={{ ...CARD, flex:1, padding:12, minHeight:0, overflow:"hidden" }}>
+            <SectionLabel>⚡ Schnell-Buttons</SectionLabel>
+            <div style={{ display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:5 }}>
+              {[["🛒","Einkauf","einkauf"],["🍕","Pizza","pizza"],
+                ["🏥","Arzt","arzt"],["🚗","Fahrt","fahrt"],
+                ["📦","Paket","paket"],["🏄","Strand","strand"]].map(([em,l,key])=>{
+                const img = window.BTN_IMGS?.[key];
+                return (
+                  <button key={l} style={{ background:T.card, border:`1.5px solid ${accBorder}`,
+                    borderRadius:8, padding:"6px 3px", color:acc, cursor:"pointer", fontFamily:ff,
+                    display:"flex", flexDirection:"column", alignItems:"center", gap:2 }}
+                    onMouseEnter={e=>{ e.currentTarget.style.background=acc; e.currentTarget.style.color="#fff"; }}
+                    onMouseLeave={e=>{ e.currentTarget.style.background=T.card; e.currentTarget.style.color=acc; }}>
+                    {img ? <img src={img} style={{ width:20, height:20, objectFit:"contain" }}/> : <span style={{ fontSize:16 }}>{em}</span>}
+                    <span style={{ fontSize:chalk?12:11, fontWeight:700 }}>{l}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+
       </div>
     );
   };
@@ -1160,6 +1314,323 @@ function App() {
     );
   };
 
+  // ── KLIMA ──────────────────────────────────────────────────────────────────
+  const KlimaPage = () => {
+    const [sensors,    setSensors]    = useState([]);
+    const [selMac,     setSelMac]     = useState("overview");
+    const [history,    setHistory]    = useState([]);
+    const [loading,    setLoading]    = useState(false);
+    const [statsMap,   setStatsMap]   = useState({});   // mac → {maxT,minT,maxH,minH}
+
+    useEffect(() => {
+      apiGet("/jaalee/sensors").then(d => {
+        if (Array.isArray(d) && d.length > 0) setSensors(d);
+      });
+    }, []);
+
+    // Tages-Stats für Übersicht laden (1 Tag History pro Sensor)
+    useEffect(() => {
+      if (selMac !== "overview" || sensors.length === 0) return;
+      const todayStart = new Date(); todayStart.setHours(0,0,0,0);
+      const cutMs = todayStart.getTime();
+      sensors.forEach(s => {
+        apiGet(`/jaalee/history?mac=${s.mac}&days=1`).then(rows => {
+          if (!Array.isArray(rows)) return;
+          const today = rows.filter(r => r.t >= cutMs);
+          const temps = today.map(r => r.temp);
+          const hums  = today.map(r => r.hum);
+          setStatsMap(prev => ({ ...prev, [s.mac]: {
+            maxT: temps.length ? Math.max(...temps) : null,
+            minT: temps.length ? Math.min(...temps) : null,
+            maxH: hums.length  ? Math.max(...hums)  : null,
+            minH: hums.length  ? Math.min(...hums)  : null,
+          }}));
+        });
+      });
+    }, [selMac, sensors]);
+
+    useEffect(() => {
+      if (!selMac || selMac === "overview") return;
+      setLoading(true); setHistory([]);
+      apiGet(`/jaalee/history?mac=${selMac}`).then(d => {
+        if (Array.isArray(d)) setHistory(d);
+        setLoading(false);
+      });
+    }, [selMac]);
+
+    const accent = T.accent || "#6bbdb5";
+    const DAY_S  = ["So","Mo","Di","Mi","Do","Fr","Sa"];
+
+    // ── SVG Linien-Chart ──────────────────────────────────────────────────────
+    const DualChart = ({ data }) => {
+      if (!data.length) return <div style={{ color:T.textSub, fontFamily:ff, padding:20 }}>Keine Daten</div>;
+
+      // Downsample: max 200 Punkte
+      const step = Math.max(1, Math.floor(data.length / 200));
+      const pts  = data.filter((_, i) => i % step === 0);
+
+      const W = 800, H = 240;
+      const pad = { t:20, b:62, l:52, r:52 };
+      const cW  = W - pad.l - pad.r;
+      const cH  = H - pad.t - pad.b;
+      const tStart = pts[0].t, tEnd = pts[pts.length-1].t;
+      const tRange = (tEnd - tStart) || 1;
+      const xT  = t => pad.l + ((t - tStart) / tRange) * cW;
+
+      // Temperatur (linke Achse)
+      const temps = pts.map(d => d.temp);
+      const minT = Math.min(...temps), maxT = Math.max(...temps);
+      const rangeT = (maxT - minT) || 1;
+      const yT   = v => pad.t + (1 - (v - minT) / rangeT) * cH;
+      const lineT = pts.map(d => `${xT(d.t).toFixed(1)},${yT(d.temp).toFixed(1)}`).join(" ");
+
+      // Feuchte (rechte Achse)
+      const hums  = pts.map(d => d.hum);
+      const minH  = Math.min(...hums), maxH = Math.max(...hums);
+      const rangeH = (maxH - minH) || 1;
+      const yH   = v => pad.t + (1 - (v - minH) / rangeH) * cH;
+      const lineH = pts.map(d => `${xT(d.t).toFixed(1)},${yH(d.hum).toFixed(1)}`).join(" ");
+
+      // 3h-Ticks
+      const h3ms = 3 * 3600 * 1000;
+      const firstTick = Math.ceil(tStart / h3ms) * h3ms;
+      const hourTicks = [];
+      for (let t = firstTick; t <= tEnd + 1000; t += h3ms) {
+        const dt = new Date(t);
+        const h  = dt.getHours();
+        hourTicks.push({ t, xp: xT(t), h, isMidnight: h === 0,
+                         label: String(h).padStart(2,'0') + ':00' });
+      }
+
+      // Tag-Labels
+      const dayMarks = [];
+      let lastDay = -1;
+      pts.forEach(d => {
+        const dt = new Date(d.t);
+        if (dt.getDay() !== lastDay) {
+          lastDay = dt.getDay();
+          dayMarks.push({ t: d.t, xPos: xT(d.t), label: DAY_S[dt.getDay()] });
+        }
+      });
+      const dayLabels = dayMarks.map((m, mi) => {
+        const nextX = mi+1 < dayMarks.length ? dayMarks[mi+1].xPos : pad.l + cW;
+        return { ...m, xMid: (m.xPos + nextX) / 2 };
+      });
+
+      // Y-Achsen Ticks
+      const yTicksT = [0,0.2,0.4,0.6,0.8,1].map(f => ({ y: pad.t + f*cH, val: (maxT - f*rangeT).toFixed(1) }));
+      const yTicksH = [0,0.2,0.4,0.6,0.8,1].map(f => ({ y: pad.t + f*cH, val: (maxH - f*rangeH).toFixed(0) }));
+
+      const areaT = `${pad.l},${pad.t+cH} ${lineT} ${xT(tEnd)},${pad.t+cH}`;
+      const areaH = `${pad.l},${pad.t+cH} ${lineH} ${xT(tEnd)},${pad.t+cH}`;
+      const lastT = temps[temps.length-1], lastH = hums[hums.length-1];
+      const avgT  = (temps.reduce((a,b)=>a+b,0)/temps.length).toFixed(1);
+      const avgH  = (hums.reduce((a,b)=>a+b,0)/hums.length).toFixed(1);
+
+      return (
+        <div style={{ height:"100%", display:"flex", flexDirection:"column" }}>
+          {/* Legende */}
+          <div style={{ display:"flex", gap:24, marginBottom:8, flexWrap:"wrap", flexShrink:0 }}>
+            <div style={{ display:"flex", alignItems:"center", gap:8 }}>
+              <span style={{ width:20, height:3, background:"#f87171", display:"inline-block", borderRadius:2 }}/>
+              <span style={{ fontSize:chalk?15:12, color:"#f87171", fontWeight:700, fontFamily:ff }}>
+                Temperatur: {lastT.toFixed(1)}°C &nbsp;↑{maxT.toFixed(1)} ↓{minT.toFixed(1)} ⌀{avgT}
+              </span>
+            </div>
+            <div style={{ display:"flex", alignItems:"center", gap:8 }}>
+              <span style={{ width:20, height:3, background:"#60a5fa", borderTop:"2px dashed #60a5fa",
+                             display:"inline-block", borderRadius:2 }}/>
+              <span style={{ fontSize:chalk?15:12, color:"#60a5fa", fontWeight:700, fontFamily:ff }}>
+                Luftfeuchte: {lastH.toFixed(1)}% &nbsp;↑{maxH.toFixed(1)} ↓{minH.toFixed(1)} ⌀{avgH}
+              </span>
+            </div>
+          </div>
+          <svg viewBox={`0 0 ${W} ${H}`} style={{ width:"100%", flex:1, display:"block", overflow:"visible" }}>
+            {/* Gitter + linke Y-Achse (Temp) */}
+            {yTicksT.map((t, i) => (
+              <g key={i}>
+                <line x1={pad.l} y1={t.y} x2={W-pad.r} y2={t.y}
+                      stroke={T.border} strokeWidth={0.8} strokeDasharray="4,3"/>
+                <text x={pad.l-6} y={t.y+4} textAnchor="end" fontSize={11} fill="#f87171"
+                      fontFamily="Inter,sans-serif">{t.val}°</text>
+              </g>
+            ))}
+            {/* Rechte Y-Achse (Feuchte) */}
+            {yTicksH.map((t, i) => (
+              <text key={i} x={W-pad.r+6} y={t.y+4} textAnchor="start" fontSize={11} fill="#60a5fa"
+                    fontFamily="Inter,sans-serif">{t.val}%</text>
+            ))}
+            {/* 3h-Ticks + Mitternacht-Linien */}
+            {hourTicks.map((tk, i) => (
+              <g key={i}>
+                {tk.isMidnight
+                  ? <line x1={tk.xp} y1={pad.t} x2={tk.xp} y2={pad.t+cH}
+                          stroke={T.border} strokeWidth={1.2} strokeDasharray="3,4"/>
+                  : <line x1={tk.xp} y1={pad.t+cH} x2={tk.xp} y2={pad.t+cH+5}
+                          stroke={T.border} strokeWidth={1}/>
+                }
+                <text x={tk.xp} y={pad.t+cH+17} textAnchor="middle" fontSize={11}
+                      fill={T.text} fontFamily="Inter,sans-serif"
+                      opacity={tk.isMidnight ? 0 : 1}>{tk.label}</text>
+              </g>
+            ))}
+            {/* Tag-Labels */}
+            {dayLabels.map((m, i) => (
+              <g key={i}>
+                <rect x={m.xMid-16} y={pad.t+cH+24} width={32} height={16}
+                      rx={4} fill={T.border+"44"}/>
+                <text x={m.xMid} y={pad.t+cH+36} textAnchor="middle" fontSize={11}
+                      fill={T.text} fontWeight="700" fontFamily="Inter,sans-serif">{m.label}</text>
+              </g>
+            ))}
+            {/* Feuchte-Fläche + gestrichelte Linie */}
+            <polygon points={areaH} fill="#60a5fa" opacity={0.08}/>
+            <polyline points={lineH} fill="none" stroke="#60a5fa" strokeWidth={2}
+                      strokeLinejoin="round" strokeLinecap="round" strokeDasharray="6,3"/>
+            {/* Temp-Fläche + Linie */}
+            <polygon points={areaT} fill="#f87171" opacity={0.12}/>
+            <polyline points={lineT} fill="none" stroke="#f87171" strokeWidth={2.5}
+                      strokeLinejoin="round" strokeLinecap="round"/>
+            {/* Endpunkt-Dots */}
+            <circle cx={xT(tEnd)} cy={yT(lastT)} r={4} fill="#f87171"/>
+            <circle cx={xT(tEnd)} cy={yH(lastH)} r={4} fill="#60a5fa"/>
+          </svg>
+        </div>
+      );
+    };
+
+    const selSensor = sensors.find(s => s.mac === selMac);
+
+    return (
+      <div style={{ display:"flex", flexDirection:"column", gap:12, height:"100%" }}>
+
+        {/* SENSOR TABS */}
+        <div style={{ ...cardBase, background:T.card, border:`1.5px solid ${T.border}`,
+                      display:"flex", alignItems:"center", gap:8, padding:"12px 20px", flexWrap:"wrap", flexShrink:0 }}>
+          <button onClick={() => setSelMac("overview")} style={{
+            padding:"5px 14px", borderRadius:10, border:"none", cursor:"pointer",
+            background: selMac==="overview" ? accent : T.border+"55",
+            color: selMac==="overview" ? "#fff" : T.text,
+            fontSize: chalk?15:12, fontWeight:700, fontFamily:ff,
+          }}>📋 Übersicht</button>
+          <span style={{ width:1, height:20, background:T.border, margin:"0 4px" }}/>
+          {sensors.map(s => (
+            <button key={s.mac} onClick={() => setSelMac(s.mac)} style={{
+              padding:"5px 14px", borderRadius:10, border:"none", cursor:"pointer",
+              background: selMac===s.mac ? accent : T.border+"55",
+              color: selMac===s.mac ? "#fff" : T.text,
+              fontSize: chalk?15:12, fontWeight:700, fontFamily:ff,
+            }}>{s.name}</button>
+          ))}
+        </div>
+
+        {selMac === "overview" ? (
+          /* ── ÜBERSICHT ALLE SENSOREN ── */
+          <div style={{ flex:1, minHeight:0, overflow:"auto",
+                        display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(260px,1fr))", gap:14 }}>
+            {sensors.map(s => {
+              const st = statsMap[s.mac] || {};
+              return (
+                <div key={s.mac} onClick={() => setSelMac(s.mac)} style={{
+                  ...cardBase, background:T.card, border:`1.5px solid ${T.border}`,
+                  cursor:"pointer", display:"flex", flexDirection:"column", gap:12,
+                }}>
+                  {/* Sensor-Name */}
+                  <div style={{ fontSize:chalk?16:13, fontWeight:700, color:T.textSub,
+                                textTransform:"uppercase", letterSpacing:"0.08em", fontFamily:ff }}>
+                    {s.name}
+                    <span style={{ float:"right", fontSize:chalk?12:10, fontWeight:400,
+                                   color:T.textSub, opacity:.6 }}>🔋{s.power}%</span>
+                  </div>
+                  {/* Aktuelle Werte */}
+                  <div style={{ display:"flex", gap:16, alignItems:"flex-end" }}>
+                    <div>
+                      <div style={{ fontSize:chalk?13:10, color:"#f87171", fontWeight:600,
+                                    fontFamily:ff, textTransform:"uppercase" }}>Temperatur</div>
+                      <div style={{ fontSize:chalk?42:32, fontWeight:900, color:"#f87171",
+                                    fontFamily:hf, lineHeight:1 }}>{s.temperature}°</div>
+                    </div>
+                    <div style={{ width:1, height:40, background:T.border }}/>
+                    <div>
+                      <div style={{ fontSize:chalk?13:10, color:"#60a5fa", fontWeight:600,
+                                    fontFamily:ff, textTransform:"uppercase" }}>Feuchte</div>
+                      <div style={{ fontSize:chalk?34:26, fontWeight:800, color:"#60a5fa",
+                                    fontFamily:hf, lineHeight:1 }}>{s.humidity}%</div>
+                    </div>
+                  </div>
+                  {/* Tages-Max / Min */}
+                  <div style={{ display:"flex", gap:8, borderTop:`1px solid ${T.border}`, paddingTop:10 }}>
+                    <div style={{ flex:1, textAlign:"center" }}>
+                      <div style={{ fontSize:chalk?11:9, color:T.textSub, fontFamily:ff,
+                                    textTransform:"uppercase", letterSpacing:"0.06em" }}>Tages-Max</div>
+                      <div style={{ fontSize:chalk?18:14, fontWeight:700, fontFamily:hf, color:"#f87171" }}>
+                        {st.maxT != null ? st.maxT.toFixed(1)+"°" : "—"}
+                        <span style={{ fontSize:chalk?14:11, color:"#60a5fa", marginLeft:6 }}>
+                          {st.maxH != null ? st.maxH.toFixed(0)+"%" : ""}
+                        </span>
+                      </div>
+                    </div>
+                    <div style={{ width:1, background:T.border }}/>
+                    <div style={{ flex:1, textAlign:"center" }}>
+                      <div style={{ fontSize:chalk?11:9, color:T.textSub, fontFamily:ff,
+                                    textTransform:"uppercase", letterSpacing:"0.06em" }}>Tages-Min</div>
+                      <div style={{ fontSize:chalk?18:14, fontWeight:700, fontFamily:hf, color:"#f87171" }}>
+                        {st.minT != null ? st.minT.toFixed(1)+"°" : "—"}
+                        <span style={{ fontSize:chalk?14:11, color:"#60a5fa", marginLeft:6 }}>
+                          {st.minH != null ? st.minH.toFixed(0)+"%" : ""}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        ) : (
+          <>
+            {/* AKTUELLER WERT */}
+            {selSensor && (
+              <div style={{ ...cardBase, background:`linear-gradient(120deg,${accent},${accent}bb)`,
+                            border:"none", padding:"14px 20px", flexShrink:0,
+                            display:"flex", gap:32, alignItems:"center" }}>
+                <div>
+                  <div style={{ fontSize: chalk?13:10, color:"rgba(255,255,255,0.7)", fontFamily:ff,
+                                 textTransform:"uppercase", letterSpacing:"0.1em" }}>{selSensor.name} – aktuell</div>
+                  <div style={{ fontSize: chalk?38:28, fontWeight:900, color:"#fff", fontFamily:hf, lineHeight:1.1 }}>
+                    {selSensor.temperature}°C
+                  </div>
+                </div>
+                <div style={{ width:1, height:40, background:"rgba(255,255,255,0.3)" }}/>
+                <div>
+                  <div style={{ fontSize: chalk?13:10, color:"rgba(255,255,255,0.7)", fontFamily:ff,
+                                 textTransform:"uppercase", letterSpacing:"0.1em" }}>Luftfeuchte</div>
+                  <div style={{ fontSize: chalk?28:20, fontWeight:800, color:"#fff", fontFamily:hf }}>
+                    {selSensor.humidity}%
+                  </div>
+                </div>
+                <div style={{ marginLeft:"auto", fontSize: chalk?13:10, color:"rgba(255,255,255,0.6)", fontFamily:ff }}>
+                  🔋 {selSensor.power}% · {history.length} Messwerte (7 Tage)
+                </div>
+              </div>
+            )}
+            {/* CHART */}
+            <div style={{ ...cardBase, background:T.card, border:`1.5px solid ${T.border}`,
+                          flex:1, minHeight:0, display:"flex", flexDirection:"column" }}>
+              {loading
+                ? <div style={{ color:T.textSub, fontFamily:ff, padding:20 }}>Lade Verlauf…</div>
+                : history.length === 0
+                ? <div style={{ color:T.textSub, fontFamily:ff, padding:20, opacity:.6 }}>
+                    Keine Verlaufsdaten verfügbar
+                  </div>
+                : <DualChart data={history} />
+              }
+            </div>
+          </>
+        )}
+      </div>
+    );
+  };
+
   // ── SPEISEPLAN ─────────────────────────────────────────────────────────────
   const SpeisePage = () => (
     <div className="card-cream" style={cardBase}>
@@ -1188,12 +1659,80 @@ function App() {
     { id:"kalender",    icon:"📅", label:"Kalender"     },
     { id:"todos",       icon:"✅", label:"Todos"        },
     { id:"speise",      icon:"🍽️", label:"Essen"        },
+    { id:"klima",       icon:"🌡️", label:"Klima"        },
   ];
 
-  const pages = { heute:<HeutePage/>, kalenderday:<KalenderDayPage/>, kalender:<KalenderPage/>, todos:<TodosPage/>, speise:<SpeisePage/> };
+  const pages = { heute:<HeutePage/>, kalenderday:<KalenderDayPage/>, kalender:<KalenderPage/>, todos:<TodosPage/>, speise:<SpeisePage/>, klima:<KlimaPage/> };
+
+  const [portrait, setPortrait] = useState(window.innerHeight > window.innerWidth);
+  useEffect(() => {
+    const onResize = () => setPortrait(window.innerHeight > window.innerWidth);
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
+  const [isFullscreen, setIsFullscreen] = useState(!!document.fullscreenElement);
+  useEffect(() => {
+    const onFsChange = () => setIsFullscreen(!!document.fullscreenElement);
+    document.addEventListener("fullscreenchange", onFsChange);
+    return () => document.removeEventListener("fullscreenchange", onFsChange);
+  }, []);
+  const toggleFullscreen = () => {
+    if (!document.fullscreenElement) document.documentElement.requestFullscreen();
+    else document.exitFullscreen();
+  };
+
+  const BOTTOM_NAV_H = 80;
+
+  if (portrait) return (
+    <div style={{ height:"100%", background:T.bg, display:"flex", flexDirection:"column", fontFamily:ff }}>
+
+      {/* ── CONTENT ── */}
+      <div style={{ flex:1, minHeight:0, overflow:"hidden", padding:16,
+                    display:"flex", flexDirection:"column" }}>
+        {pages[page]}
+      </div>
+
+      {/* ── BOTTOM NAV ── */}
+      <div style={{ height:BOTTOM_NAV_H, background:T.sidebar, display:"flex", alignItems:"stretch",
+                    boxShadow:"0 -4px 20px rgba(0,0,0,0.15)", flexShrink:0, zIndex:50 }}>
+        {navItems.map(n=>(
+          <div key={n.id} onClick={()=>setPage(n.id)} style={{
+            flex:1, display:"flex", flexDirection:"column", alignItems:"center",
+            justifyContent:"center", gap:4, cursor:"pointer",
+            borderTop: page===n.id ? `3px solid ${T.accent||"#6bbdb5"}` : "3px solid transparent",
+            background: page===n.id ? "rgba(255,255,255,0.08)" : "transparent",
+          }}>
+            <span style={{ fontSize:22 }}>{n.icon}</span>
+            <span style={{ fontSize:chalk?13:10, fontWeight:page===n.id?700:400,
+                           color:T.sidebarText, opacity:page===n.id?1:.55,
+                           fontFamily:ff }}>{n.label}</span>
+          </div>
+        ))}
+        {/* Theme-Knopf */}
+        <div style={{ width:54, display:"flex", flexDirection:"column", alignItems:"center",
+                      justifyContent:"center", gap:4, cursor:"pointer",
+                      borderLeft:`1px solid rgba(255,255,255,0.1)` }}
+             onClick={()=>{ const keys=Object.keys(THEMES); setThemeKey(keys[(keys.indexOf(themeKey)+1)%keys.length]); }}>
+          <span style={{ fontSize:20 }}>🎨</span>
+          <span style={{ fontSize:chalk?11:9, color:T.sidebarText, opacity:.5, fontFamily:ff }}>Theme</span>
+        </div>
+        {/* Fullscreen */}
+        <div style={{ width:54, display:"flex", flexDirection:"column", alignItems:"center",
+                      justifyContent:"center", gap:4, cursor:"pointer",
+                      borderLeft:`1px solid rgba(255,255,255,0.1)` }}
+             onClick={toggleFullscreen}>
+          <span style={{ fontSize:20 }}>{isFullscreen ? "🗗" : "⛶"}</span>
+          <span style={{ fontSize:chalk?11:9, color:T.sidebarText, opacity:.5, fontFamily:ff }}>
+            {isFullscreen ? "Fenster" : "Fullscr"}
+          </span>
+        </div>
+      </div>
+    </div>
+  );
 
   return (
-    <div style={{ minHeight:"100vh", background:T.bg, display:"flex", fontFamily:ff }}>
+    <div style={{ height:"100%", background:T.bg, display:"flex", fontFamily:ff }}>
 
       {/* ── SIDEBAR ── */}
       <div style={{ width:200, background:T.sidebar, display:"flex", flexDirection:"column",
@@ -1263,11 +1802,22 @@ function App() {
                                     fontSize:16, boxShadow:`0 0 8px ${c}66` }}>{e}</div>
           ))}
         </div>
+
+        {/* Fullscreen */}
+        <button onClick={toggleFullscreen} style={{
+          marginTop:12, width:"100%", background:"rgba(255,255,255,0.08)",
+          border:"1px solid rgba(255,255,255,0.15)", borderRadius:10,
+          color:T.sidebarText, cursor:"pointer", padding:"8px 0",
+          fontSize:chalk?16:13, fontFamily:ff, fontWeight:600,
+          display:"flex", alignItems:"center", justifyContent:"center", gap:8,
+        }}>
+          {isFullscreen ? "⛶ Fenster" : "⛶ Fullscreen"}
+        </button>
       </div>
 
       {/* ── CONTENT ── */}
       <div style={{ flex:1, marginLeft:200, overflow:"hidden", padding:24,
-                    height:"100vh", display:"flex", flexDirection:"column" }}>
+                    height:"100%", display:"flex", flexDirection:"column" }}>
         {pages[page]}
       </div>
     </div>
@@ -1296,8 +1846,26 @@ per_imgs   = load_images("personen")
 photos     = load_images("photos", as_path=True)  # Direkte Pfade, kein Base64
 print(f"  {len(btn_imgs)} Button-Bilder, {len(per_imgs)} Personen-Bilder, {len(photos)} Fotos")
 
-all_photos = list(photos.values())
-print(f"  Gesamt Fotos: {len(all_photos)}")
+try:
+    from PIL import Image as PILImage
+    landscape_photos = []
+    for fname, url in photos.items():
+        fpath = os.path.join(ASSETS, "photos", next(
+            f for f in os.listdir(os.path.join(ASSETS, "photos"))
+            if os.path.splitext(f)[0].lower() == fname
+        ))
+        try:
+            with PILImage.open(fpath) as im:
+                w, h = im.size
+                if w >= h:
+                    landscape_photos.append(url)
+        except Exception:
+            landscape_photos.append(url)
+    all_photos = landscape_photos
+    print(f"  Querformat-Fotos: {len(all_photos)} (von {len(photos)} gesamt)")
+except ImportError:
+    all_photos = list(photos.values())
+    print(f"  Gesamt Fotos: {len(all_photos)} (Pillow nicht installiert, kein Filter)")
 
 # Bilder als JS-Variablen vor dem React-Code einschleusen
 img_script = f"""<script>

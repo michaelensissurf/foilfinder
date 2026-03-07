@@ -1,4 +1,4 @@
-from sqlalchemy import Boolean, Column, DateTime, ForeignKey, Integer, String, Text
+from sqlalchemy import Boolean, Column, DateTime, Float, ForeignKey, Integer, String, Text
 from sqlalchemy.sql import func
 from database import Base
 
@@ -27,6 +27,16 @@ class Todo(Base):
     list_name  = Column(String(50), default="Einkauf")  # Einkauf | Haushalt | Erledigung
     due_date   = Column(DateTime, nullable=True)
     created_at = Column(DateTime, server_default=func.now())
+
+
+class SensorReading(Base):
+    __tablename__ = "sensor_readings"
+
+    id          = Column(Integer, primary_key=True, index=True)
+    mac         = Column(String(20), nullable=False, index=True)
+    temperature = Column(Float, nullable=True)
+    humidity    = Column(Float, nullable=True)
+    created_at  = Column(Integer, nullable=False, index=True)  # Unix ms
 
 
 class Reminder(Base):

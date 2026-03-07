@@ -30,8 +30,22 @@ app.include_router(jaalee.router)
 
 
 @app.on_event("startup")
-def on_startup():
+async def on_startup():
+    import asyncio
     init_db()
+
+    async def collect_sensors():
+        """Alle 70s Sensordaten holen und in DB speichern."""
+        from routers.jaalee import get_sensors
+        await asyncio.sleep(5)  # kurz warten bis alles bereit ist
+        while True:
+            try:
+                await get_sensors()
+            except Exception:
+                pass
+            await asyncio.sleep(70)
+
+    asyncio.create_task(collect_sensors())
 
 
 @app.get("/dashboard", tags=["Dashboard"])
