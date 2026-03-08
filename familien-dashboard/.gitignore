@@ -5,3 +5,6 @@ __pycache__/
 design_preview.html
 dashboard.html
 assets/photos/
+backend/gcal_ics_url.txt
+backend/hue_bridge.txt
+backend/hue_api_key.txt

@@ -5,7 +5,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 
 from database import init_db
-from routers import events, todos, reminders, jaalee
+from routers import events, todos, reminders, jaalee, hue
 
 DASHBOARD_DIR = os.path.join(os.path.dirname(__file__), "..")
 
@@ -27,6 +27,7 @@ app.include_router(events.router)
 app.include_router(todos.router)
 app.include_router(reminders.router)
 app.include_router(jaalee.router)
+app.include_router(hue.router)
 
 
 @app.on_event("startup")
@@ -52,7 +53,7 @@ async def on_startup():
                 await get_sensors()
             except Exception:
                 pass
-            await asyncio.sleep(70)
+            await asyncio.sleep(60)
 
     async def sync_calendar():
         from routers.gcal import sync_gcal

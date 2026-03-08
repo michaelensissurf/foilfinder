@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Chart-Vergleich</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uplot/dist/uPlot.min.css">
+<script src="https://cdn.jsdelivr.net/npm/uplot/dist/uPlot.iife.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0f1117; color: #e2e8f0; font-family: Inter, sans-serif; padding: 24px; }
+  h1 { font-size: 22px; margin-bottom: 24px; color: #94a3b8; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .card { background: #1e2130; border: 1px solid #2d3148; border-radius: 12px; padding: 20px; }
+  .card h2 { font-size: 14px; color: #64748b; margin-bottom: 4px; text-transform: uppercase; letter-spacing: .08em; }
+  .card .tag { display: inline-block; font-size: 11px; background: #2d3148; color: #94a3b8;
+               border-radius: 4px; padding: 2px 8px; margin-bottom: 14px; }
+  .card canvas { width: 100% !important; }
+  #apex1, #apex2 { min-height: 220px; }
+  .uplot { width: 100% !important; }
+  .uplot canvas { width: 100% !important; }
+</style>
+</head>
+<body>
+<h1>📊 Chart-Bibliotheken Vergleich — Sensordaten</h1>
+<div class="grid">
+
+  <!-- 1. Chart.js -->
+  <div class="card">
+    <h2>Chart.js</h2>
+    <div class="tag">canvas · ~60KB · sehr verbreitet</div>
+    <canvas id="chartjs" height="220"></canvas>
+  </div>
+
+  <!-- 2. Chart.js Bar -->
+  <div class="card">
+    <h2>Chart.js — Balken + Linie kombiniert</h2>
+    <div class="tag">Mixed Chart · Dual Achse</div>
+    <canvas id="chartjs2" height="220"></canvas>
+  </div>
+
+  <!-- 3. ApexCharts -->
+  <div class="card">
+    <h2>ApexCharts</h2>
+    <div class="tag">canvas · ~300KB · schöne Tooltips · Zoom</div>
+    <div id="apex1"></div>
+  </div>
+
+  <!-- 4. ApexCharts Area -->
+  <div class="card">
+    <h2>ApexCharts — Area + Brush (Zoom)</h2>
+    <div class="tag">interaktiver Zoom-Bereich</div>
+    <div id="apex2"></div>
+  </div>
+
+  <!-- 5. uPlot -->
+  <div class="card" style="grid-column:1/-1">
+    <h2>uPlot</h2>
+    <div class="tag">canvas · ~40KB · ultraschnell · minimalistisch</div>
+    <div id="uplot"></div>
+  </div>
+
+</div>
+
+<script>
+// ── Beispiel-Daten generieren (7 Tage, alle 30 min) ──────────────────────────
+const now = Date.now();
+const pts = 336; // 7 Tage × 48 = 336 Punkte
+const labels = [], temps = [], hums = [], temps2 = [], hums2 = [];
+const tsArr = [], tArr = [], hArr = [];
+
+for (let i = 0; i < pts; i++) {
+  const t = new Date(now - (pts - i) * 30 * 60 * 1000);
+  const h = t.getHours() + t.getMinutes() / 60;
+  const dayVar = Math.sin(i / 48 * Math.PI * 2) * 0.5;
+  const temp = 21 + 3 * Math.sin((h - 6) / 24 * Math.PI * 2) + dayVar + (Math.random() - 0.5) * 0.4;
+  const hum  = 55 - 8 * Math.sin((h - 6) / 24 * Math.PI * 2) + dayVar * 2 + (Math.random() - 0.5) * 1;
+  labels.push(t.toLocaleTimeString('de', { hour:'2-digit', minute:'2-digit' }));
+  temps.push(+temp.toFixed(2));
+  hums.push(+hum.toFixed(1));
+  // Zweiter Sensor (etwas kälter)
+  temps2.push(+(temp - 1.5 + (Math.random()-0.5)*0.3).toFixed(2));
+  hums2.push(+(hum + 5 + (Math.random()-0.5)*0.8).toFixed(1));
+  tsArr.push(t.getTime() / 1000); // Unix seconds für uPlot
+  tArr.push(temp);
+  hArr.push(hum);
+}
+
+const ACCENT_RED  = '#f87171';
+const ACCENT_BLUE = '#60a5fa';
+const ACCENT_GRN  = '#34d399';
+const BG          = '#1e2130';
+const GRID        = '#2d314888';
+const TEXT        = '#94a3b8';
+
+// ─── 1. Chart.js: Linie dual ─────────────────────────────────────────────────
+new Chart(document.getElementById('chartjs'), {
+  data: {
+    labels,
+    datasets: [
+      {
+        type: 'line', label: 'Temp °C', data: temps,
+        borderColor: ACCENT_RED, backgroundColor: ACCENT_RED + '18',
+        borderWidth: 1.5, pointRadius: 0, fill: true, tension: 0.3,
+        yAxisID: 'yT',
+      },
+      {
+        type: 'line', label: 'Feuchte %', data: hums,
+        borderColor: ACCENT_BLUE, backgroundColor: 'transparent',
+        borderWidth: 1.5, pointRadius: 0, fill: false, tension: 0.3,
+        borderDash: [6,3], yAxisID: 'yH',
+      },
+    ]
+  },
+  options: {
+    animation: false,
+    responsive: true,
+    interaction: { mode: 'index', intersect: false },
+    plugins: {
+      legend: { labels: { color: TEXT, font: { size: 11 } } },
+      tooltip: { backgroundColor: '#0f1117', borderColor: '#2d3148', borderWidth: 1 }
+    },
+    scales: {
+      x: { ticks: { color: TEXT, maxTicksLimit: 8, font:{size:10} }, grid: { color: GRID }, border:{color:GRID} },
+      yT: { position:'left',  min:15, max:30, ticks:{color:ACCENT_RED,  font:{size:10}}, grid:{color:GRID}, border:{color:GRID} },
+      yH: { position:'right', min:20, max:80, ticks:{color:ACCENT_BLUE, font:{size:10}}, grid:{display:false}, border:{color:GRID} },
+    }
+  }
+});
+
+// ─── 2. Chart.js Mixed: Bar Feuchtigkeit + Linie Temperatur ─────────────────
+// Downsample für Balken (zu viele Punkte → nehme jeden 6.)
+const bLabels = labels.filter((_,i)=>i%6===0);
+const bHums   = hums.filter((_,i)=>i%6===0);
+const bTemps  = temps.filter((_,i)=>i%6===0);
+new Chart(document.getElementById('chartjs2'), {
+  data: {
+    labels: bLabels,
+    datasets: [
+      {
+        type: 'bar', label: 'Feuchte %', data: bHums,
+        backgroundColor: ACCENT_BLUE + '55', borderColor: ACCENT_BLUE,
+        borderWidth: 1, yAxisID: 'yH',
+      },
+      {
+        type: 'line', label: 'Temp °C', data: bTemps,
+        borderColor: ACCENT_RED, backgroundColor: 'transparent',
+        borderWidth: 2, pointRadius: 3, pointBackgroundColor: ACCENT_RED,
+        tension: 0.3, yAxisID: 'yT',
+      },
+    ]
+  },
+  options: {
+    animation: false, responsive: true,
+    interaction: { mode:'index', intersect:false },
+    plugins: {
+      legend: { labels:{ color:TEXT, font:{size:11} } },
+      tooltip: { backgroundColor:'#0f1117', borderColor:'#2d3148', borderWidth:1 }
+    },
+    scales: {
+      x: { ticks:{color:TEXT, font:{size:9}, maxTicksLimit:8}, grid:{color:GRID}, border:{color:GRID} },
+      yT: { position:'left',  min:15, max:30, ticks:{color:ACCENT_RED,  font:{size:10}}, grid:{color:GRID} },
+      yH: { position:'right', min:20, max:80, ticks:{color:ACCENT_BLUE, font:{size:10}}, grid:{display:false} },
+    }
+  }
+});
+
+// ─── 3. ApexCharts: Line dual axis ───────────────────────────────────────────
+// Downsample für Apex (nimmt jeden 3.)
+const apTs    = labels.filter((_,i)=>i%3===0);
+const apTemps = temps.filter((_,i)=>i%3===0);
+const apHums  = hums.filter((_,i)=>i%3===0);
+
+new ApexCharts(document.getElementById('apex1'), {
+  chart: { type:'line', height:240, background:'transparent', toolbar:{show:false},
+           animations:{enabled:false} },
+  theme: { mode:'dark' },
+  series: [
+    { name:'Temp °C',   data: apTemps },
+    { name:'Feuchte %', data: apHums  },
+  ],
+  xaxis: { categories: apTs, tickAmount:8, labels:{style:{colors:TEXT, fontSize:'10px'}} },
+  yaxis: [
+    { min:15, max:30, labels:{style:{colors:ACCENT_RED},  formatter:v=>v.toFixed(1)+'°'} },
+    { opposite:true, min:20, max:80, labels:{style:{colors:ACCENT_BLUE}, formatter:v=>v+'%'} },
+  ],
+  colors: [ACCENT_RED, ACCENT_BLUE],
+  stroke: { width:[2,2], dashArray:[0,5], curve:'smooth' },
+  fill:   { type:['gradient','solid'], gradient:{shadeIntensity:.3, opacityFrom:.4, opacityTo:.05} },
+  grid:   { borderColor: GRID },
+  tooltip:{ theme:'dark', shared:true, intersect:false },
+  legend: { labels:{colors:TEXT} },
+}).render();
+
+// ─── 4. ApexCharts: Area mit Brush-Zoom ──────────────────────────────────────
+const apTs2    = labels.filter((_,i)=>i%2===0);
+const apTemps2 = temps.filter((_,i)=>i%2===0);
+
+new ApexCharts(document.getElementById('apex2'), {
+  chart: { id:'main', type:'area', height:180, background:'transparent',
+           toolbar:{show:false}, animations:{enabled:false},
+           brush:{ enabled:false }, selection:{ enabled:false } },
+  theme: { mode:'dark' },
+  series: [{ name:'Temp S1', data:apTemps2 }, { name:'Temp S2', data:temps2.filter((_,i)=>i%2===0) }],
+  xaxis: { categories:apTs2, tickAmount:8, labels:{style:{colors:TEXT,fontSize:'10px'}} },
+  yaxis: { min:15, max:30, labels:{style:{colors:TEXT}, formatter:v=>v.toFixed(1)+'°'} },
+  colors: [ACCENT_RED, ACCENT_GRN],
+  stroke: { width:2, curve:'smooth' },
+  fill:   { type:'gradient', gradient:{shadeIntensity:.4, opacityFrom:.4, opacityTo:.05} },
+  grid:   { borderColor: GRID },
+  tooltip:{ theme:'dark', shared:true, intersect:false },
+  legend: { labels:{colors:TEXT} },
+  annotations: {
+    yaxis: [{ y:21, borderColor:'#f59e0b', borderWidth:1, strokeDashArray:4,
+              label:{text:'Ziel', style:{color:'#f59e0b',background:'transparent',fontSize:'10px'}} }]
+  }
+}).render();
+
+// ─── 5. uPlot ────────────────────────────────────────────────────────────────
+const uData = [
+  new Float64Array(tsArr),
+  new Float64Array(tArr),
+  new Float64Array(hArr),
+];
+const uContainer = document.getElementById('uplot');
+const uWidth = uContainer.offsetWidth || 800;
+
+const uplot = new uPlot({
+  width: uWidth,
+  height: 220,
+  cursor: { show:true },
+  series: [
+    {},
+    { label:'Temp °C',   stroke:ACCENT_RED,  width:2, fill:ACCENT_RED+'18',  scale:'T' },
+    { label:'Feuchte %', stroke:ACCENT_BLUE, width:2, fill:ACCENT_BLUE+'18', scale:'H', dash:[6,3] },
+  ],
+  axes: [
+    { stroke:TEXT, ticks:{stroke:GRID}, grid:{stroke:GRID},
+      values:(u,vals)=>vals.map(v=>v==null?'':new Date(v*1000).toLocaleTimeString('de',{hour:'2-digit',minute:'2-digit'})) },
+    { scale:'T', stroke:ACCENT_RED,  ticks:{stroke:GRID}, grid:{stroke:GRID},
+      values:(u,vals)=>vals.map(v=>v==null?'':v.toFixed(1)+'°'), side:3 },
+    { scale:'H', stroke:ACCENT_BLUE, ticks:{stroke:GRID}, grid:{show:false},
+      values:(u,vals)=>vals.map(v=>v==null?'':v.toFixed(0)+'%'), side:1 },
+  ],
+  scales: {
+    T: { range:[15,30] },
+    H: { range:[20,80] },
+  },
+}, uData, uContainer);
+</script>
+</body>
+</html>

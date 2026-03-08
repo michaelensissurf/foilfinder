@@ -44,6 +44,7 @@ HTML = r"""<!DOCTYPE html>
   <!-- Twemoji = Twitter/WhatsApp-style Emojis (kostenlos, CDN) -->
   <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
   <script src="/assets/sbbUhr.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <style>
     /* Twemoji: alle Emojis als hübsche SVG-Bilder */
@@ -114,7 +115,7 @@ const { useState, useEffect } = React;
 const API = "http://localhost:8000";
 const apiGet  = (p)    => fetch(API+p).then(r=>r.json()).catch(()=>[]);
 const apiPost = (p,b)  => fetch(API+p,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(b)}).then(r=>r.json()).catch(()=>null);
-const apiPut  = (p)    => fetch(API+p,{method:"PUT"}).then(r=>r.json()).catch(()=>null);
+const apiPut  = (p,b)  => fetch(API+p,{method:"PUT",...(b?{headers:{"Content-Type":"application/json"},body:JSON.stringify(b)}:{})}).then(r=>r.json()).catch(()=>null);
 const apiDel  = (p)    => fetch(API+p,{method:"DELETE"}).catch(()=>null);
 
 // ── THEMES ───────────────────────────────────────────────────────────────────
@@ -1106,6 +1107,8 @@ function App() {
   const KalenderDayPage = () => {
     const [view,       setView]       = useState("W");
     const [weekOffset, setWeekOffset] = useState(0);
+    const [dayOffset,  setDayOffset]  = useState(0);
+    const [monthOff,   setMonthOff]   = useState(0);
     const [weekEvts,   setWeekEvts]   = useState(events.length > 0 ? events : DEMO_EVENTS);
 
     const PERSONS = [
@@ -1135,12 +1138,42 @@ function App() {
     const weekStart = weekDays[0];
     const weekEnd   = weekDays[6];
 
+    // Aktueller Tag (D-Ansicht)
+    const curDay = (() => { const d = new Date(now); d.setDate(d.getDate()+dayOffset); d.setHours(0,0,0,0); return d; })();
+
+    // Aktueller Monat (M-Ansicht)
+    const mYear  = new Date(now.getFullYear(), now.getMonth()+monthOff, 1).getFullYear();
+    const mMonth = new Date(now.getFullYear(), now.getMonth()+monthOff, 1).getMonth()+1;
+    const MONTHS_DE = ["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"];
+
+    const loadEvts = (d) => {
+      const ym = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}`;
+      apiGet(`/events/?date=${ym}`).then(ev => setWeekEvts(ev));
+    };
+
     const goWeek = (dir) => {
       const next = weekOffset + dir;
       setWeekOffset(next);
-      const d  = getWeekDays(next)[0];
-      const ym = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}`;
-      apiGet(`/events/?date=${ym}`).then(ev => setWeekEvts(ev));
+      loadEvts(getWeekDays(next)[0]);
+    };
+    const goDay = (dir) => {
+      const next = dayOffset + dir;
+      setDayOffset(next);
+      const d = new Date(now); d.setDate(d.getDate()+next);
+      loadEvts(d);
+    };
+    const goMonth = (dir) => {
+      const next = monthOff + dir;
+      setMonthOff(next);
+      loadEvts(new Date(now.getFullYear(), now.getMonth()+next, 1));
+    };
+
+    const navigate = (dir) => view==="D" ? goDay(dir) : view==="W" ? goWeek(dir) : goMonth(dir);
+
+    const headerLabel = () => {
+      if (view==="D") return curDay.toLocaleDateString("de-DE",{weekday:"long",day:"numeric",month:"long",year:"numeric"});
+      if (view==="W") { const o={day:"numeric",month:"short"}; return `${weekStart.toLocaleDateString("de-DE",o)} – ${weekEnd.toLocaleDateString("de-DE",o)} ${weekEnd.getFullYear()}`; }
+      return `${MONTHS_DE[mMonth-1]} ${mYear}`;
     };
 
     const sameDay   = (a,b) => a.getFullYear()===b.getFullYear() && a.getMonth()===b.getMonth() && a.getDate()===b.getDate();
@@ -1153,11 +1186,7 @@ function App() {
       const top = ((s.getHours()-START_H)*60 + s.getMinutes())/60*HOUR_H;
       return { top, height: Math.max((en-s)/3600000*HOUR_H, 24) };
     };
-    const isTd  = (d) => sameDay(d, now);
-    const fmtWk = () => {
-      const o = {day:"numeric",month:"short"};
-      return `${weekStart.toLocaleDateString("de-DE",o)} – ${weekEnd.toLocaleDateString("de-DE",o)} ${weekEnd.getFullYear()}`;
-    };
+    const isTd = (d) => sameDay(d, now);
 
     return (
       <div style={{ display:"flex", flexDirection:"column", height:"100%", gap:12 }}>
@@ -1197,118 +1226,183 @@ function App() {
             <div style={{ display:"flex", gap:2, background:T.border+"66", borderRadius:10, padding:2 }}>
               {["D","W","M"].map(v=>(
                 <button key={v} onClick={()=>setView(v)} style={{
-                  padding:"4px 14px", borderRadius:8, border:"none", cursor:"pointer",
+                  padding:"6px 16px", borderRadius:8, border:"none", cursor:"pointer",
                   background: view===v ? T.accent : "transparent",
                   color: view===v ? "#fff" : T.textSub,
-                  fontSize:12, fontWeight:700, fontFamily:ff,
+                  fontSize: chalk?14:12, fontWeight:700, fontFamily:ff,
                 }}>{v}</button>
               ))}
             </div>
-            <span style={{ fontSize: chalk?18:14, fontWeight:700, color:T.text, fontFamily:ff }}>{fmtWk()}</span>
+            <span style={{ fontSize: chalk?17:13, fontWeight:700, color:T.text, fontFamily:ff }}>{headerLabel()}</span>
             <div style={{ display:"flex", gap:6 }}>
               {[[-1,"‹"],[1,"›"]].map(([d,l])=>(
-                <button key={l} onClick={()=>goWeek(d)} style={{
+                <button key={l} onClick={()=>navigate(d)} style={{
                   background:T.card, border:`1.5px solid ${T.border}`,
-                  borderRadius:10, width:32, height:32, cursor:"pointer", fontSize:16,
+                  borderRadius:10, width:34, height:34, cursor:"pointer", fontSize:18,
                   color:T.accent, display:"flex", alignItems:"center", justifyContent:"center",
                 }}>{l}</button>
               ))}
             </div>
           </div>
 
-          {/* Day name headers */}
-          <div style={{ display:"grid", gridTemplateColumns:`52px repeat(7,1fr)`,
-                        borderBottom:`1px solid ${T.border}` }}>
-            <div/>
-            {weekDays.map((d,i)=>(
-              <div key={i} style={{ textAlign:"center", padding:"8px 4px",
-                                     borderLeft:`1px solid ${T.border}88` }}>
-                <div style={{ fontSize: chalk?13:10, color:T.textSub, fontFamily:ff,
-                               textTransform:"uppercase", letterSpacing:"0.05em" }}>{DAY_S[d.getDay()]}</div>
-                <div style={{
-                  width:28, height:28, borderRadius:"50%", margin:"3px auto 0",
-                  background: isTd(d) ? T.accent : "transparent",
-                  display:"flex", alignItems:"center", justifyContent:"center",
-                  fontSize: chalk?16:13, fontWeight: isTd(d)?800:500,
-                  color: isTd(d)?"#fff":T.text, fontFamily:ff,
-                }}>{d.getDate()}</div>
-              </div>
-            ))}
-          </div>
-
-          {/* ALL-DAY strip */}
-          <div style={{ display:"grid", gridTemplateColumns:`52px repeat(7,1fr)`,
-                        borderBottom:`1px solid ${T.border}`, minHeight:28 }}>
-            <div style={{ display:"flex", alignItems:"center", justifyContent:"flex-end",
-                          paddingRight:8, fontSize: chalk?12:9, color:T.textSub,
-                          fontFamily:ff, opacity:.6, letterSpacing:"0.03em" }}>ALL-DAY</div>
-            {weekDays.map((d,i)=>{
-              const ade = evDay(d, true);
-              return (
-                <div key={i} style={{ borderLeft:`1px solid ${T.border}88`, padding:"2px 3px" }}>
-                  {ade.map(e=>(
-                    <div key={e.id} title={e.title} style={{
-                      background:personCol(e), color:"#fff", borderRadius:4,
-                      fontSize: chalk?11:9, padding:"1px 5px", marginBottom:1,
-                      fontFamily:ff, fontWeight:600,
-                      whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis",
-                    }}>{e.title}</div>
-                  ))}
+          {/* ── TAGES-ANSICHT (D) ── */}
+          {view==="D" && (() => {
+            const dayEvts = weekEvts.filter(e => { const d=new Date(e.start_datetime); return sameDay(d,curDay); });
+            const allDay  = dayEvts.filter(e => isAllDay(e));
+            const timed   = dayEvts.filter(e => !isAllDay(e));
+            return (
+              <React.Fragment>
+                {allDay.length > 0 && (
+                  <div style={{ padding:"6px 16px", borderBottom:`1px solid ${T.border}`, display:"flex", flexWrap:"wrap", gap:4 }}>
+                    {allDay.map(e=>(
+                      <div key={e.id} style={{ background:personCol(e), color:"#fff", borderRadius:6,
+                        padding:"2px 10px", fontSize:chalk?13:11, fontFamily:ff, fontWeight:600 }}>{e.title}</div>
+                    ))}
+                  </div>
+                )}
+                <div style={{ flex:1, overflowY:"auto" }}>
+                  <div style={{ position:"relative", minHeight: HOURS.length*HOUR_H, display:"grid",
+                                gridTemplateColumns:"52px 1fr" }}>
+                    <div style={{ position:"relative" }}>
+                      {HOURS.map(h=>(
+                        <div key={h} style={{ position:"absolute", top:(h-START_H)*HOUR_H-8, right:8,
+                          fontSize:chalk?13:10, color:T.textSub, fontFamily:ff, opacity:.7 }}>{h}:00</div>
+                      ))}
+                    </div>
+                    <div style={{ position:"relative", borderLeft:`1px solid ${T.border}88` }}>
+                      {HOURS.map(h=>(
+                        <div key={h} style={{ position:"absolute", top:(h-START_H)*HOUR_H, left:0, right:0,
+                          borderTop:`1px solid ${T.border}55`, height:HOUR_H }}/>
+                      ))}
+                      {timed.map(e=>{
+                        const {top,height}=evStyle(e); const col=personCol(e);
+                        return (
+                          <div key={e.id} style={{ position:"absolute", top, left:4, right:4, height,
+                            background:col, borderRadius:8, padding:"4px 10px", overflow:"hidden",
+                            zIndex:2, boxShadow:`0 2px 8px ${col}55` }}>
+                            <div style={{ fontSize:chalk?13:11, color:"#fff", fontWeight:700, fontFamily:ff }}>{fmtTime(e.start_datetime)} – {e.title}</div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
                 </div>
-              );
-            })}
-          </div>
+              </React.Fragment>
+            );
+          })()}
 
-          {/* Time grid */}
-          <div style={{ flex:1, overflowY:"auto" }}>
-            <div style={{ display:"grid", gridTemplateColumns:`52px repeat(7,1fr)`,
-                          position:"relative", minHeight: HOURS.length * HOUR_H }}>
-              {/* Hour labels */}
-              <div style={{ position:"relative" }}>
-                {HOURS.map(h=>(
-                  <div key={h} style={{
-                    position:"absolute", top:(h-START_H)*HOUR_H-8, right:8,
-                    width:44, textAlign:"right",
-                    fontSize: chalk?13:10, color:T.textSub, fontFamily:ff, opacity:.7,
-                  }}>{h}:00</div>
+          {/* ── WOCHEN-ANSICHT (W) ── */}
+          {view==="W" && (
+            <React.Fragment>
+              <div style={{ display:"grid", gridTemplateColumns:`52px repeat(7,1fr)`,
+                            borderBottom:`1px solid ${T.border}` }}>
+                <div/>
+                {weekDays.map((d,i)=>(
+                  <div key={i} style={{ textAlign:"center", padding:"8px 4px", borderLeft:`1px solid ${T.border}88` }}>
+                    <div style={{ fontSize:chalk?12:10, color:T.textSub, fontFamily:ff,
+                                   textTransform:"uppercase", letterSpacing:"0.05em" }}>{DAY_S[d.getDay()]}</div>
+                    <div style={{ width:28, height:28, borderRadius:"50%", margin:"3px auto 0",
+                      background:isTd(d)?T.accent:"transparent", display:"flex", alignItems:"center",
+                      justifyContent:"center", fontSize:chalk?15:12, fontWeight:isTd(d)?800:500,
+                      color:isTd(d)?"#fff":T.text, fontFamily:ff }}>{d.getDate()}</div>
+                  </div>
                 ))}
               </div>
-
-              {/* Day columns */}
-              {weekDays.map((d,di)=>{
-                const de = evDay(d, false);
-                return (
-                  <div key={di} style={{ position:"relative", borderLeft:`1px solid ${T.border}88` }}>
-                    {HOURS.map(h=>(
-                      <div key={h} style={{
-                        position:"absolute", top:(h-START_H)*HOUR_H, left:0, right:0,
-                        borderTop:`1px solid ${T.border}55`, height:HOUR_H,
-                      }}/>
+              <div style={{ display:"grid", gridTemplateColumns:`52px repeat(7,1fr)`,
+                            borderBottom:`1px solid ${T.border}`, minHeight:28 }}>
+                <div style={{ display:"flex", alignItems:"center", justifyContent:"flex-end",
+                              paddingRight:8, fontSize:chalk?11:9, color:T.textSub,
+                              fontFamily:ff, opacity:.6 }}>ALL-DAY</div>
+                {weekDays.map((d,i)=>(
+                  <div key={i} style={{ borderLeft:`1px solid ${T.border}88`, padding:"2px 3px" }}>
+                    {evDay(d,true).map(e=>(
+                      <div key={e.id} style={{ background:personCol(e), color:"#fff", borderRadius:4,
+                        fontSize:chalk?11:9, padding:"1px 5px", marginBottom:1, fontFamily:ff,
+                        fontWeight:600, whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis"
+                      }}>{e.title}</div>
                     ))}
-                    {de.map(e=>{
-                      const {top,height} = evStyle(e);
-                      const col = personCol(e);
-                      return (
-                        <div key={e.id} title={e.title} style={{
-                          position:"absolute", top, left:2, right:2, height,
-                          background:col, borderRadius:6, padding:"3px 6px",
-                          overflow:"hidden", zIndex:2,
-                          boxShadow:`0 2px 6px ${col}55`, cursor:"pointer",
-                        }}>
-                          <div style={{ fontSize: chalk?12:10, color:"#fff", fontWeight:700, fontFamily:ff, lineHeight:1.3 }}>
-                            {fmtTime(e.start_datetime)}
-                          </div>
-                          <div style={{ fontSize: chalk?13:11, color:"#fff", fontFamily:ff, fontWeight:600, lineHeight:1.2 }}>
-                            {e.title}
-                          </div>
-                        </div>
-                      );
-                    })}
                   </div>
-                );
-              })}
-            </div>
-          </div>
+                ))}
+              </div>
+              <div style={{ flex:1, overflowY:"auto" }}>
+                <div style={{ display:"grid", gridTemplateColumns:`52px repeat(7,1fr)`,
+                              position:"relative", minHeight:HOURS.length*HOUR_H }}>
+                  <div style={{ position:"relative" }}>
+                    {HOURS.map(h=>(
+                      <div key={h} style={{ position:"absolute", top:(h-START_H)*HOUR_H-8, right:8,
+                        width:44, textAlign:"right", fontSize:chalk?13:10,
+                        color:T.textSub, fontFamily:ff, opacity:.7 }}>{h}:00</div>
+                    ))}
+                  </div>
+                  {weekDays.map((d,di)=>(
+                    <div key={di} style={{ position:"relative", borderLeft:`1px solid ${T.border}88` }}>
+                      {HOURS.map(h=>(
+                        <div key={h} style={{ position:"absolute", top:(h-START_H)*HOUR_H, left:0, right:0,
+                          borderTop:`1px solid ${T.border}55`, height:HOUR_H }}/>
+                      ))}
+                      {evDay(d,false).map(e=>{
+                        const {top,height}=evStyle(e); const col=personCol(e);
+                        return (
+                          <div key={e.id} style={{ position:"absolute", top, left:2, right:2, height,
+                            background:col, borderRadius:6, padding:"3px 6px", overflow:"hidden",
+                            zIndex:2, boxShadow:`0 2px 6px ${col}55`, cursor:"pointer" }}>
+                            <div style={{ fontSize:chalk?12:10, color:"#fff", fontWeight:700, fontFamily:ff, lineHeight:1.3 }}>{fmtTime(e.start_datetime)}</div>
+                            <div style={{ fontSize:chalk?13:11, color:"#fff", fontFamily:ff, fontWeight:600, lineHeight:1.2 }}>{e.title}</div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </React.Fragment>
+          )}
+
+          {/* ── MONATS-ANSICHT (M) ── */}
+          {view==="M" && (() => {
+            const firstDow   = (new Date(mYear, mMonth-1, 1).getDay()+6)%7;
+            const daysInMon  = new Date(mYear, mMonth, 0).getDate();
+            const cells      = [...Array(firstDow).fill(null), ...Array.from({length:daysInMon},(_,i)=>i+1)];
+            const isTodayM   = d => d && mYear===now.getFullYear() && mMonth===(now.getMonth()+1) && d===now.getDate();
+            const evForDay   = d => weekEvts.filter(e => {
+              const dt=new Date(e.start_datetime);
+              return dt.getFullYear()===mYear && (dt.getMonth()+1)===mMonth && dt.getDate()===d;
+            });
+            return (
+              <div style={{ flex:1, overflowY:"auto", padding:"8px 12px" }}>
+                <div style={{ display:"grid", gridTemplateColumns:"repeat(7,1fr)", marginBottom:6 }}>
+                  {["Mo","Di","Mi","Do","Fr","Sa","So"].map(d=>(
+                    <div key={d} style={{ textAlign:"center", fontSize:chalk?13:11, fontWeight:700,
+                      color:T.textSub, fontFamily:ff, paddingBottom:4 }}>{d}</div>
+                  ))}
+                </div>
+                <div style={{ display:"grid", gridTemplateColumns:"repeat(7,1fr)", gap:3 }}>
+                  {cells.map((d,i)=>{
+                    const de=d?evForDay(d):[];
+                    const td=isTodayM(d);
+                    return (
+                      <div key={i} style={{ minHeight:64, borderRadius:10, padding:"4px 6px",
+                        background: td ? T.accent+"22" : T.border+"22",
+                        border: td ? `2px solid ${T.accent}` : `1px solid ${T.border}44` }}>
+                        {d && <>
+                          <div style={{ fontSize:chalk?14:12, fontWeight:td?800:500,
+                            color:td?T.accent:T.text, fontFamily:ff, marginBottom:2 }}>{d}</div>
+                          {de.slice(0,3).map((e,j)=>(
+                            <div key={j} style={{ background:personCol(e), color:"#fff",
+                              borderRadius:4, fontSize:chalk?11:9, padding:"1px 4px", marginBottom:1,
+                              fontFamily:ff, fontWeight:600, whiteSpace:"nowrap",
+                              overflow:"hidden", textOverflow:"ellipsis" }}>{e.title}</div>
+                          ))}
+                          {de.length>3 && <div style={{ fontSize:chalk?10:8, color:T.textSub, fontFamily:ff }}>+{de.length-3}</div>}
+                        </>}
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })()}
+
         </div>
       </div>
     );
@@ -1362,139 +1456,283 @@ function App() {
     const DAY_S  = ["So","Mo","Di","Mi","Do","Fr","Sa"];
 
     // ── SVG Linien-Chart ──────────────────────────────────────────────────────
-    const DualChart = ({ data }) => {
+    const DualChart = ({ data, sensorName }) => {
       if (!data.length) return <div style={{ color:T.textSub, fontFamily:ff, padding:20 }}>Keine Daten</div>;
 
-      // Downsample: max 200 Punkte
-      const step = Math.max(1, Math.floor(data.length / 200));
-      const pts  = data.filter((_, i) => i % step === 0);
+      const canvasRef = React.useRef(null);
+      const chartRef  = React.useRef(null);
 
-      const W = 800, H = 240;
-      const pad = { t:20, b:62, l:52, r:52 };
-      const cW  = W - pad.l - pad.r;
-      const cH  = H - pad.t - pad.b;
-      const tStart = pts[0].t, tEnd = pts[pts.length-1].t;
-      const tRange = (tEnd - tStart) || 1;
-      const xT  = t => pad.l + ((t - tStart) / tRange) * cW;
+      // Skala je nach Sensor: "Camper" = Aussen, sonst Innen
+      const isOutdoor = (sensorName||"").toLowerCase().includes("camper");
+      const [minT, maxT] = isOutdoor ? [-10, 40] : [15, 30];
+      const [minH, maxH] = [20, 80];
 
-      // Temperatur (linke Achse)
-      const temps = pts.map(d => d.temp);
-      const minT = Math.min(...temps), maxT = Math.max(...temps);
-      const rangeT = (maxT - minT) || 1;
-      const yT   = v => pad.t + (1 - (v - minT) / rangeT) * cH;
-      const lineT = pts.map(d => `${xT(d.t).toFixed(1)},${yT(d.temp).toFixed(1)}`).join(" ");
+      // Alle Rohdaten behalten für gleitenden Mittelwert (kein Downsample zuerst)
+      const WIN_MS = 10 * 60 * 1000;
 
-      // Feuchte (rechte Achse)
-      const hums  = pts.map(d => d.hum);
-      const minH  = Math.min(...hums), maxH = Math.max(...hums);
-      const rangeH = (maxH - minH) || 1;
-      const yH   = v => pad.t + (1 - (v - minH) / rangeH) * cH;
-      const lineH = pts.map(d => `${xT(d.t).toFixed(1)},${yH(d.hum).toFixed(1)}`).join(" ");
-
-      // 3h-Ticks
-      const h3ms = 3 * 3600 * 1000;
-      const firstTick = Math.ceil(tStart / h3ms) * h3ms;
-      const hourTicks = [];
-      for (let t = firstTick; t <= tEnd + 1000; t += h3ms) {
-        const dt = new Date(t);
-        const h  = dt.getHours();
-        hourTicks.push({ t, xp: xT(t), h, isMidnight: h === 0,
-                         label: String(h).padStart(2,'0') + ':00' });
-      }
-
-      // Tag-Labels
-      const dayMarks = [];
-      let lastDay = -1;
-      pts.forEach(d => {
-        const dt = new Date(d.t);
-        if (dt.getDay() !== lastDay) {
-          lastDay = dt.getDay();
-          dayMarks.push({ t: d.t, xPos: xT(d.t), label: DAY_S[dt.getDay()] });
+      const slidingAvg = (arr, key) => arr.map((d, i) => {
+        let sum = 0, cnt = 0;
+        for (let j = i; j >= 0; j--) {
+          if (d.t - arr[j].t > WIN_MS) break;
+          sum += arr[j][key]; cnt++;
         }
-      });
-      const dayLabels = dayMarks.map((m, mi) => {
-        const nextX = mi+1 < dayMarks.length ? dayMarks[mi+1].xPos : pad.l + cW;
-        return { ...m, xMid: (m.xPos + nextX) / 2 };
+        return { x: d.t, y: cnt ? sum / cnt : d[key] };
       });
 
-      // Y-Achsen Ticks
-      const yTicksT = [0,0.2,0.4,0.6,0.8,1].map(f => ({ y: pad.t + f*cH, val: (maxT - f*rangeT).toFixed(1) }));
-      const yTicksH = [0,0.2,0.4,0.6,0.8,1].map(f => ({ y: pad.t + f*cH, val: (maxH - f*rangeH).toFixed(0) }));
+      const avgT_line = slidingAvg(data, "temp");
+      const avgH_line = slidingAvg(data, "hum");
 
-      const areaT = `${pad.l},${pad.t+cH} ${lineT} ${xT(tEnd)},${pad.t+cH}`;
-      const areaH = `${pad.l},${pad.t+cH} ${lineH} ${xT(tEnd)},${pad.t+cH}`;
-      const lastT = temps[temps.length-1], lastH = hums[hums.length-1];
-      const avgT  = (temps.reduce((a,b)=>a+b,0)/temps.length).toFixed(1);
-      const avgH  = (hums.reduce((a,b)=>a+b,0)/hums.length).toFixed(1);
+      const temps  = data.map(d => d.temp);
+      const hums   = data.map(d => d.hum);
+      const lastT  = avgT_line[avgT_line.length-1].y;
+      const lastH  = avgH_line[avgH_line.length-1].y;
+      const measMaxT = Math.max(...temps), measMinT = Math.min(...temps);
+      const measMaxH = Math.max(...hums),  measMinH = Math.min(...hums);
+      const meanT  = (temps.reduce((a,b)=>a+b,0)/temps.length).toFixed(2);
+      const meanH  = (hums.reduce ((a,b)=>a+b,0)/hums.length).toFixed(2);
+
+      const bgIsDark  = T.bg?.startsWith("#0") || T.bg?.startsWith("#1");
+      const axisColor = bgIsDark ? "#cbd5e1" : "#334155";
+      const gridColor = bgIsDark ? "#334155" : "#e2e8f0";
+      const midGrid   = bgIsDark ? "#1e293b" : "#f1f5f9";
+      const tStart    = data[0].t, tEnd = data[data.length-1].t;
+      const h3ms      = 3 * 3600 * 1000;
+
+      // Farben: Elsevier-Style
+      const C_TEMP = "#c0392b";   // dunkelrot
+      const C_HUM  = "#1a6fb5";   // stahlblau
+
+      useEffect(() => {
+        if (!canvasRef.current) return;
+        if (chartRef.current) { chartRef.current.destroy(); chartRef.current = null; }
+
+        const d0 = new Date(tStart); d0.setHours(0,0,0,0);
+        const localTicks = [];
+        for (let t = d0.getTime(); t <= tEnd; t += h3ms) {
+          if (t >= tStart) localTicks.push({ value: t });
+        }
+
+        const scaleBase = {
+          ticks: { font: { size: 13, family: "Inter,sans-serif" } },
+          border: { color: axisColor, width: 1.2 },
+        };
+
+        // Plugin: Hilfslinien + Zwischenticks
+        const h1ms   = 3600 * 1000;
+        const minorPlugin = {
+          id: "minorGrid",
+          afterDraw(chart) {
+            const ctx  = chart.ctx;
+            const xSc  = chart.scales.x;
+            const yTSc = chart.scales.yT;
+            const yHSc = chart.scales.yH;
+            const top  = yTSc.top, bot = yTSc.bottom;
+
+            ctx.save();
+
+            // ── X: 1h Zwischenticks + feine Hilfslinien ──────────────────
+            const d0x = new Date(xSc.min); d0x.setHours(0,0,0,0);
+            for (let t = d0x.getTime(); t <= xSc.max; t += h1ms) {
+              if (t < xSc.min) continue;
+              const h3 = new Date(t).getHours() % 3 === 0;
+              if (h3) continue; // 3h-Ticks schon vorhanden
+              const px = xSc.getPixelForValue(t);
+              // feine gestrichelte Linie
+              ctx.strokeStyle = gridColor + "55";
+              ctx.lineWidth   = 0.5;
+              ctx.setLineDash([2, 4]);
+              ctx.beginPath(); ctx.moveTo(px, top); ctx.lineTo(px, bot); ctx.stroke();
+              // kleiner Tick unten
+              ctx.setLineDash([]);
+              ctx.strokeStyle = axisColor + "88";
+              ctx.lineWidth   = 0.8;
+              ctx.beginPath(); ctx.moveTo(px, bot); ctx.lineTo(px, bot + 4); ctx.stroke();
+            }
+
+            // ── Y links (Temp): Hilfslinien + Zwischenticks je 2.5°C ─────
+            for (let v = minT; v <= maxT + 0.01; v += 2.5) {
+              const isMajor = (Math.round(v * 10) % 50 === 0); // vielfache von 5
+              if (isMajor) continue; // Hauptticks schon gezeichnet
+              const py = yTSc.getPixelForValue(v);
+              ctx.strokeStyle = C_TEMP + "33";
+              ctx.lineWidth   = 0.4;
+              ctx.setLineDash([1, 5]);
+              ctx.beginPath(); ctx.moveTo(xSc.left, py); ctx.lineTo(xSc.right, py); ctx.stroke();
+              // Tick links
+              ctx.setLineDash([]);
+              ctx.strokeStyle = C_TEMP + "99";
+              ctx.lineWidth   = 0.8;
+              ctx.beginPath(); ctx.moveTo(xSc.left - 4, py); ctx.lineTo(xSc.left, py); ctx.stroke();
+            }
+
+            // ── Y rechts (Feuchte): Hilfslinien + Zwischenticks je 2% ────
+            for (let v = minH; v <= maxH; v += 2) {
+              const isMajor = (v % 10 === 0);
+              if (isMajor) continue;
+              const py = yHSc.getPixelForValue(v);
+              ctx.strokeStyle = C_HUM + "22";
+              ctx.lineWidth   = 0.4;
+              ctx.setLineDash([1, 5]);
+              ctx.beginPath(); ctx.moveTo(xSc.left, py); ctx.lineTo(xSc.right, py); ctx.stroke();
+              // Tick rechts
+              ctx.setLineDash([]);
+              ctx.strokeStyle = C_HUM + "99";
+              ctx.lineWidth   = 0.8;
+              ctx.beginPath(); ctx.moveTo(xSc.right, py); ctx.lineTo(xSc.right + 4, py); ctx.stroke();
+            }
+
+            ctx.restore();
+          },
+        };
+
+        chartRef.current = new Chart(canvasRef.current, {
+          plugins: [minorPlugin],
+          data: {
+            datasets: [
+              {
+                type: "line", label: "Temperatur (°C)",
+                data: avgT_line,
+                borderColor: C_TEMP, backgroundColor: "transparent",
+                borderWidth: 2, pointRadius: 0, fill: false, tension: 0.2,
+                yAxisID: "yT",
+              },
+              {
+                type: "line", label: "Rel. Feuchte (%)",
+                data: avgH_line,
+                borderColor: C_HUM, backgroundColor: "transparent",
+                borderWidth: 2, pointRadius: 0, fill: false, tension: 0.2,
+                yAxisID: "yH",
+              },
+            ],
+          },
+          options: {
+            animation: false,
+            responsive: true,
+            maintainAspectRatio: false,
+            interaction: { mode: "index", intersect: false },
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                backgroundColor: bgIsDark ? "#0f172a" : "#ffffff",
+                borderColor: axisColor + "88",
+                borderWidth: 1,
+                titleColor: axisColor,
+                bodyColor: axisColor,
+                titleFont: { size: 13, family:"Inter,sans-serif", weight:"600" },
+                bodyFont:  { size: 13, family:"Inter,sans-serif" },
+                padding: 10,
+                callbacks: {
+                  title: items => {
+                    const dt = new Date(items[0].parsed.x);
+                    return dt.toLocaleString("de", { weekday:"short", day:"2-digit",
+                      month:"2-digit", hour:"2-digit", minute:"2-digit" });
+                  },
+                  label: ctx => ctx.datasetIndex === 0
+                    ? `  T̄ = ${ctx.parsed.y.toFixed(2)} °C`
+                    : `  φ̄ = ${ctx.parsed.y.toFixed(2)} %`,
+                },
+              },
+            },
+            scales: {
+              x: {
+                ...scaleBase,
+                type: "linear", min: tStart, max: tEnd,
+                afterBuildTicks: axis => { axis.ticks = localTicks; },
+                ticks: {
+                  ...scaleBase.ticks,
+                  maxRotation: 0,
+                  color: ctx => new Date(ctx.tick?.value??0).getHours()===0 ? axisColor : axisColor+"99",
+                  font: ctx => ({
+                    size: 13, family:"Inter,sans-serif",
+                    weight: new Date(ctx.tick?.value??0).getHours()===0 ? "700" : "400",
+                  }),
+                  callback: val => {
+                    const dt = new Date(val), h = dt.getHours();
+                    return h === 0 ? DAY_S[dt.getDay()] : String(h).padStart(2,"0")+":00";
+                  },
+                },
+                grid: {
+                  color: ctx => new Date(ctx.tick?.value??0).getHours()===0 ? axisColor+"55" : gridColor,
+                  lineWidth: ctx => new Date(ctx.tick?.value??0).getHours()===0 ? 1.2 : 0.6,
+                },
+              },
+              yT: {
+                ...scaleBase,
+                position: "left", min: minT, max: maxT,
+                title: { display:true, text:"Temperatur (°C)", color:C_TEMP,
+                         font:{ size:13, family:"Inter,sans-serif", weight:"600" } },
+                afterBuildTicks: axis => {
+                  const ticks = [];
+                  for (let v = minT; v <= maxT + 0.01; v += 1) ticks.push({ value: v });
+                  axis.ticks = ticks;
+                },
+                ticks: {
+                  ...scaleBase.ticks,
+                  color:    ctx => (ctx.tick?.value??0) % 5 === 0 ? C_TEMP : C_TEMP + "99",
+                  font:     ctx => ({ size: (ctx.tick?.value??0) % 5 === 0 ? 13 : 10,
+                                      weight: (ctx.tick?.value??0) % 5 === 0 ? "600" : "400",
+                                      family: "Inter,sans-serif" }),
+                  callback: v => v.toFixed(0),
+                },
+                grid: {
+                  color:     ctx => (ctx.tick?.value??0) % 5 === 0 ? gridColor : C_TEMP + "22",
+                  lineWidth: ctx => (ctx.tick?.value??0) % 5 === 0 ? 0.8 : 0.4,
+                },
+              },
+              yH: {
+                ...scaleBase,
+                position: "right", min: minH, max: maxH,
+                title: { display:true, text:"Rel. Feuchte (%)", color:C_HUM,
+                         font:{ size:13, family:"Inter,sans-serif", weight:"600" } },
+                afterBuildTicks: axis => {
+                  const ticks = [];
+                  for (let v = minH; v <= maxH + 0.01; v += 5) ticks.push({ value: v });
+                  axis.ticks = ticks;
+                },
+                ticks: {
+                  ...scaleBase.ticks,
+                  color: ctx => (ctx.tick?.value??0) % 10 === 0 ? C_HUM : C_HUM+"88",
+                  font:  ctx => ({ size: (ctx.tick?.value??0) % 10 === 0 ? 13 : 10,
+                                   family:"Inter,sans-serif" }),
+                  callback: v => v % 10 === 0 ? v.toFixed(0) : "",
+                },
+                grid: { display: false },
+              },
+            },
+          },
+        });
+        return () => { chartRef.current?.destroy(); chartRef.current = null; };
+      }, [data, sensorName, bgIsDark]);
+
+      // Wissenschaftliche Statistik-Tabelle
+      const statRow = (label, color, last, min, max, mean) => (
+        <div style={{ display:"flex", alignItems:"baseline", gap:16, fontFamily:"Inter,sans-serif" }}>
+          <span style={{ width:14, height:2, background:color, display:"inline-block",
+                         flexShrink:0, marginBottom:2 }}/>
+          <span style={{ fontSize:13, color:axisColor+"aa", minWidth:140 }}>{label}</span>
+          <span style={{ fontSize:15, color:color, fontWeight:700, minWidth:64 }}>
+            {last.toFixed(2)}
+          </span>
+          <span style={{ fontSize:12, color:axisColor+"88" }}>
+            min&nbsp;<b style={{color:axisColor}}>{min.toFixed(1)}</b>
+            &nbsp;&nbsp;max&nbsp;<b style={{color:axisColor}}>{max.toFixed(1)}</b>
+            &nbsp;&nbsp;μ&nbsp;<b style={{color:axisColor}}>{mean}</b>
+            &nbsp;&nbsp;<span style={{opacity:.5}}>⌀ 10 min</span>
+          </span>
+        </div>
+      );
 
       return (
-        <div style={{ height:"100%", display:"flex", flexDirection:"column" }}>
-          {/* Legende */}
-          <div style={{ display:"flex", gap:24, marginBottom:8, flexWrap:"wrap", flexShrink:0 }}>
-            <div style={{ display:"flex", alignItems:"center", gap:8 }}>
-              <span style={{ width:20, height:3, background:"#f87171", display:"inline-block", borderRadius:2 }}/>
-              <span style={{ fontSize:chalk?15:12, color:"#f87171", fontWeight:700, fontFamily:ff }}>
-                Temperatur: {lastT.toFixed(1)}°C &nbsp;↑{maxT.toFixed(1)} ↓{minT.toFixed(1)} ⌀{avgT}
-              </span>
-            </div>
-            <div style={{ display:"flex", alignItems:"center", gap:8 }}>
-              <span style={{ width:20, height:3, background:"#60a5fa", borderTop:"2px dashed #60a5fa",
-                             display:"inline-block", borderRadius:2 }}/>
-              <span style={{ fontSize:chalk?15:12, color:"#60a5fa", fontWeight:700, fontFamily:ff }}>
-                Luftfeuchte: {lastH.toFixed(1)}% &nbsp;↑{maxH.toFixed(1)} ↓{minH.toFixed(1)} ⌀{avgH}
-              </span>
-            </div>
+        <div style={{ height:"100%", display:"flex", flexDirection:"column", gap:6 }}>
+          {/* Statistik-Header */}
+          <div style={{ display:"flex", flexDirection:"column", gap:4,
+                        borderBottom:`1px solid ${gridColor}`, paddingBottom:6, flexShrink:0 }}>
+            {statRow("Temperatur (°C)", C_TEMP, lastT, measMinT, measMaxT, meanT)}
+            {statRow("Rel. Feuchte (%)", C_HUM,  lastH, measMinH, measMaxH, meanH)}
           </div>
-          <svg viewBox={`0 0 ${W} ${H}`} style={{ width:"100%", flex:1, display:"block", overflow:"visible" }}>
-            {/* Gitter + linke Y-Achse (Temp) */}
-            {yTicksT.map((t, i) => (
-              <g key={i}>
-                <line x1={pad.l} y1={t.y} x2={W-pad.r} y2={t.y}
-                      stroke={T.border} strokeWidth={0.8} strokeDasharray="4,3"/>
-                <text x={pad.l-6} y={t.y+4} textAnchor="end" fontSize={11} fill="#f87171"
-                      fontFamily="Inter,sans-serif">{t.val}°</text>
-              </g>
-            ))}
-            {/* Rechte Y-Achse (Feuchte) */}
-            {yTicksH.map((t, i) => (
-              <text key={i} x={W-pad.r+6} y={t.y+4} textAnchor="start" fontSize={11} fill="#60a5fa"
-                    fontFamily="Inter,sans-serif">{t.val}%</text>
-            ))}
-            {/* 3h-Ticks + Mitternacht-Linien */}
-            {hourTicks.map((tk, i) => (
-              <g key={i}>
-                {tk.isMidnight
-                  ? <line x1={tk.xp} y1={pad.t} x2={tk.xp} y2={pad.t+cH}
-                          stroke={T.border} strokeWidth={1.2} strokeDasharray="3,4"/>
-                  : <line x1={tk.xp} y1={pad.t+cH} x2={tk.xp} y2={pad.t+cH+5}
-                          stroke={T.border} strokeWidth={1}/>
-                }
-                <text x={tk.xp} y={pad.t+cH+17} textAnchor="middle" fontSize={11}
-                      fill={T.text} fontFamily="Inter,sans-serif"
-                      opacity={tk.isMidnight ? 0 : 1}>{tk.label}</text>
-              </g>
-            ))}
-            {/* Tag-Labels */}
-            {dayLabels.map((m, i) => (
-              <g key={i}>
-                <rect x={m.xMid-16} y={pad.t+cH+24} width={32} height={16}
-                      rx={4} fill={T.border+"44"}/>
-                <text x={m.xMid} y={pad.t+cH+36} textAnchor="middle" fontSize={11}
-                      fill={T.text} fontWeight="700" fontFamily="Inter,sans-serif">{m.label}</text>
-              </g>
-            ))}
-            {/* Feuchte-Fläche + gestrichelte Linie */}
-            <polygon points={areaH} fill="#60a5fa" opacity={0.08}/>
-            <polyline points={lineH} fill="none" stroke="#60a5fa" strokeWidth={2}
-                      strokeLinejoin="round" strokeLinecap="round" strokeDasharray="6,3"/>
-            {/* Temp-Fläche + Linie */}
-            <polygon points={areaT} fill="#f87171" opacity={0.12}/>
-            <polyline points={lineT} fill="none" stroke="#f87171" strokeWidth={2.5}
-                      strokeLinejoin="round" strokeLinecap="round"/>
-            {/* Endpunkt-Dots */}
-            <circle cx={xT(tEnd)} cy={yT(lastT)} r={4} fill="#f87171"/>
-            <circle cx={xT(tEnd)} cy={yH(lastH)} r={4} fill="#60a5fa"/>
-          </svg>
+          <div style={{ flex:1, minHeight:180, position:"relative" }}>
+            <canvas ref={canvasRef} style={{ display:"block", width:"100%", height:"100%" }} />
+          </div>
         </div>
       );
     };
@@ -1622,7 +1860,7 @@ function App() {
                 ? <div style={{ color:T.textSub, fontFamily:ff, padding:20, opacity:.6 }}>
                     Keine Verlaufsdaten verfügbar
                   </div>
-                : <DualChart data={history} />
+                : <DualChart data={history} sensorName={selSensor?.name} />
               }
             </div>
           </>
@@ -1652,6 +1890,169 @@ function App() {
     </div>
   );
 
+  // ── LICHTER ────────────────────────────────────────────────────────────────
+  const LichterPage = () => {
+    const [rooms,   setRooms]   = useState([]);
+    const [status,  setStatus]  = useState(null);   // {bridge_ip, api_key}
+    const [loading, setLoading] = useState(true);
+    const [setupMsg,setSetupMsg]= useState("");
+
+    const load = () => {
+      apiGet("/hue/status").then(s => {
+        setStatus(s);
+        if (s.api_key) {
+          apiGet("/hue/rooms").then(r => { if (Array.isArray(r)) setRooms(r); setLoading(false); })
+                              .catch(() => setLoading(false));
+        } else {
+          setLoading(false);
+        }
+      }).catch(() => setLoading(false));
+    };
+    useEffect(() => { load(); }, []);
+
+    const doSetup = () => {
+      setSetupMsg("Verbinde…");
+      apiPost("/hue/setup", {}).then(r => {
+        if (r.ok) { setSetupMsg("✓ Verbunden! Lade Räume…"); load(); }
+        else       setSetupMsg("Fehler: " + JSON.stringify(r));
+      }).catch(e => setSetupMsg("Fehler – Knopf auf Bridge gedrückt? " + e));
+    };
+
+    const toggle = (room) => {
+      const next = !room.on;
+      setRooms(rs => rs.map(r => r.id === room.id ? {...r, on: next} : r));
+      apiPut(`/hue/rooms/${room.id}`, { on: next });
+    };
+
+    const setBri = (room, pct) => {
+      const bri = Math.round(pct * 2.54);
+      setRooms(rs => rs.map(r => r.id === room.id ? {...r, bri} : r));
+      apiPut(`/hue/rooms/${room.id}`, { bri });
+    };
+
+    // Raum-Icons nach Name
+    const roomIcon = name => {
+      const n = name.toLowerCase();
+      if (n.includes("schlaf"))   return "🛏️";
+      if (n.includes("kind") || n.includes("baby")) return "🧸";
+      if (n.includes("küche") || n.includes("kueche")) return "🍳";
+      if (n.includes("bad"))      return "🚿";
+      if (n.includes("wohn") || n.includes("stube")) return "🛋️";
+      if (n.includes("ess"))      return "🪑";
+      if (n.includes("büro") || n.includes("arbeit")) return "💼";
+      if (n.includes("gang") || n.includes("flur"))   return "🚪";
+      if (n.includes("garten") || n.includes("aussen")) return "🌿";
+      return "💡";
+    };
+
+    const briPct = bri => Math.round(bri / 2.54);
+
+    if (loading) return (
+      <div style={{ display:"flex", alignItems:"center", justifyContent:"center",
+                    height:"100%", color:T.textSub, fontFamily:ff, fontSize:16 }}>
+        Lade Philips Hue…
+      </div>
+    );
+
+    if (!status?.bridge_ip) return (
+      <div style={{ padding:32, color:T.textSub, fontFamily:ff }}>
+        <div style={{ fontSize:18, fontWeight:700, marginBottom:8, color:T.text }}>
+          Philips Hue – Bridge nicht konfiguriert
+        </div>
+        <div style={{ fontSize:14, opacity:.7 }}>
+          Bitte Bridge-IP in <code>backend/hue_bridge.txt</code> eintragen und Backend neu starten.
+        </div>
+      </div>
+    );
+
+    if (!status?.api_key) return (
+      <div style={{ padding:32, fontFamily:ff }}>
+        <div style={{ fontSize:22, marginBottom:16 }}>💡 Philips Hue verbinden</div>
+        <div style={{ fontSize:15, color:T.textSub, marginBottom:24, lineHeight:1.6 }}>
+          1. Drücke den <b style={{color:T.text}}>Knopf auf der Bridge</b><br/>
+          2. Klicke dann sofort auf Verbinden
+        </div>
+        <button onClick={doSetup} style={{
+          background: T.accent, color:"#fff", border:"none", borderRadius:12,
+          padding:"14px 32px", fontSize:16, fontWeight:700, cursor:"pointer",
+        }}>
+          Bridge verbinden
+        </button>
+        {setupMsg && <div style={{ marginTop:16, fontSize:14, color:T.textSub }}>{setupMsg}</div>}
+      </div>
+    );
+
+    return (
+      <div style={{ padding:16, height:"100%", overflowY:"auto" }}>
+        <div style={{ fontSize: chalk?22:16, fontWeight:700, color:T.textSub, fontFamily:ff,
+                      textTransform:"uppercase", letterSpacing:"0.08em", marginBottom:16 }}>
+          Philips Hue — Räume
+        </div>
+        <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(220px, 1fr))", gap:14 }}>
+          {rooms.map(room => {
+            const pct = briPct(room.bri);
+            return (
+              <div key={room.id} style={{
+                background: room.on
+                  ? `linear-gradient(135deg, ${T.accent}22, ${T.accent}08)`
+                  : T.card,
+                border: `1.5px solid ${room.on ? T.accent+"66" : T.border}`,
+                borderRadius:16, padding:"18px 20px",
+                transition:"all .2s",
+              }}>
+                {/* Header */}
+                <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:14 }}>
+                  <span style={{ fontSize:28 }}>{roomIcon(room.name)}</span>
+                  <div>
+                    <div style={{ fontSize: chalk?18:14, fontWeight:700, color:T.text, fontFamily:ff }}>
+                      {room.name}
+                    </div>
+                    <div style={{ fontSize:11, color:T.textSub, fontFamily:ff }}>
+                      {room.lights} Licht{room.lights !== 1 ? "er" : ""}
+                    </div>
+                  </div>
+                  {/* Toggle */}
+                  <div onClick={() => toggle(room)} style={{
+                    marginLeft:"auto", width:48, height:26, borderRadius:13,
+                    background: room.on ? T.accent : T.border,
+                    position:"relative", cursor:"pointer", transition:"background .2s", flexShrink:0,
+                  }}>
+                    <div style={{
+                      position:"absolute", top:3, left: room.on ? 25 : 3,
+                      width:20, height:20, borderRadius:10, background:"#fff",
+                      transition:"left .2s", boxShadow:"0 1px 4px #0004",
+                    }}/>
+                  </div>
+                </div>
+                {/* Brightness Slider */}
+                {room.on && (
+                  <div>
+                    <div style={{ display:"flex", justifyContent:"space-between",
+                                  fontSize:11, color:T.textSub, fontFamily:ff, marginBottom:4 }}>
+                      <span>Helligkeit</span>
+                      <span style={{ fontWeight:700, color:T.text }}>{pct}%</span>
+                    </div>
+                    <input type="range" min={1} max={100} value={pct}
+                      onChange={e => setBri(room, parseInt(e.target.value))}
+                      onMouseUp={e  => setBri(room, parseInt(e.target.value))}
+                      onTouchEnd={e => setBri(room, parseInt(e.target.closest("input").value))}
+                      style={{ width:"100%", accentColor: T.accent, cursor:"pointer" }}
+                    />
+                  </div>
+                )}
+                {!room.on && (
+                  <div style={{ fontSize:12, color:T.textSub, fontFamily:ff, opacity:.5 }}>
+                    Ausgeschaltet
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    );
+  };
+
   // ── NAV ITEMS ─────────────────────────────────────────────────────────────
   const navItems = [
     { id:"heute",       icon:"🏠", label:"Heute"        },
@@ -1660,9 +2061,10 @@ function App() {
     { id:"todos",       icon:"✅", label:"Todos"        },
     { id:"speise",      icon:"🍽️", label:"Essen"        },
     { id:"klima",       icon:"🌡️", label:"Klima"        },
+    { id:"lichter",     icon:"💡", label:"Lichter"      },
   ];
 
-  const pages = { heute:<HeutePage/>, kalenderday:<KalenderDayPage/>, kalender:<KalenderPage/>, todos:<TodosPage/>, speise:<SpeisePage/>, klima:<KlimaPage/> };
+  const pages = { heute:<HeutePage/>, kalenderday:<KalenderDayPage/>, kalender:<KalenderPage/>, todos:<TodosPage/>, speise:<SpeisePage/>, klima:<KlimaPage/>, lichter:<LichterPage/> };
 
   const [portrait, setPortrait] = useState(window.innerHeight > window.innerWidth);
   useEffect(() => {
