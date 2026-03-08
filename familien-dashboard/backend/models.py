@@ -14,6 +14,7 @@ class Event(Base):
     person         = Column(String(20), default="family")  # mama | papa | kind | family
     color          = Column(String(10), default="#6366f1")
     all_day        = Column(Boolean, default=False)
+    gcal_uid       = Column(String(500), nullable=True, unique=True, index=True)
     created_at     = Column(DateTime, server_default=func.now())
 
 

@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.pyo
+.env
+*.db
+*.log
+gcal_ics_url.txt
