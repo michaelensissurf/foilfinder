@@ -8,3 +8,4 @@ assets/photos/
 backend/gcal_ics_url.txt
 backend/hue_bridge.txt
 backend/hue_api_key.txt
+backend/sonos_devices.txt

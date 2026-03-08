@@ -112,7 +112,9 @@ HTML = r"""<!DOCTYPE html>
 const { useState, useEffect } = React;
 
 // ── API CLIENT ────────────────────────────────────────────────────────────────
-const API = "http://localhost:8000";
+const API = window.location.port === "8000"
+  ? `${window.location.protocol}//${window.location.hostname}:8000`
+  : "http://localhost:8000";
 const apiGet  = (p)    => fetch(API+p).then(r=>r.json()).catch(()=>[]);
 const apiPost = (p,b)  => fetch(API+p,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(b)}).then(r=>r.json()).catch(()=>null);
 const apiPut  = (p,b)  => fetch(API+p,{method:"PUT",...(b?{headers:{"Content-Type":"application/json"},body:JSON.stringify(b)}:{})}).then(r=>r.json()).catch(()=>null);
@@ -547,6 +549,33 @@ function App() {
 
     const isDark = T.bg === "#1a1a2e" || T.bg === "#0f172a" || T.bg?.startsWith("#0") || T.bg?.startsWith("#1");
 
+    // ── Musik (Sonos) ──
+    const [musicOn,      setMusicOn]      = useState(false);
+    const [sonosDevices, setSonosDevices] = useState([]);
+    useEffect(() => {
+      const check = () => apiGet("/sonos/devices").then(d => {
+        if (!Array.isArray(d)) return;
+        setSonosDevices(d);
+        setMusicOn(d.some(x => x.state === "PLAYING"));
+      });
+      check();
+      const iv = setInterval(check, 8000);
+      return () => clearInterval(iv);
+    }, []);
+    const VOL_DEF = { "wohnzimmer": 20, "küche": 20, "fernseh": 4 };
+    const defVol = name => { const n = name.toLowerCase(); for (const [k,v] of Object.entries(VOL_DEF)) if (n.includes(k)) return v; return 20; };
+    const musikAN = async () => {
+      for (const d of sonosDevices) {
+        await apiPut(`/sonos/devices/${d.uid}/volume`, {volume: defVol(d.name)});
+        await apiPost(`/sonos/devices/${d.uid}/play`);
+      }
+      setMusicOn(true);
+    };
+    const musikAUS = async () => {
+      for (const d of sonosDevices) await apiPost(`/sonos/devices/${d.uid}/pause`);
+      setMusicOn(false);
+    };
+
     // ── Mini-Kalender ──
     const MiniCalendar = () => {
       const [offset, setOffset] = useState(0);
@@ -850,22 +879,27 @@ function App() {
           {/* Schnell-Buttons */}
           <div style={{ ...CARD, flex:1, padding:12, minHeight:0, overflow:"hidden" }}>
             <SectionLabel>⚡ Schnell-Buttons</SectionLabel>
-            <div style={{ display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:5 }}>
-              {[["🛒","Einkauf","einkauf"],["🍕","Pizza","pizza"],
-                ["🏥","Arzt","arzt"],["🚗","Fahrt","fahrt"],
-                ["📦","Paket","paket"],["🏄","Strand","strand"]].map(([em,l,key])=>{
-                const img = window.BTN_IMGS?.[key];
-                return (
-                  <button key={l} style={{ background:T.card, border:`1.5px solid ${accBorder}`,
-                    borderRadius:8, padding:"6px 3px", color:acc, cursor:"pointer", fontFamily:ff,
-                    display:"flex", flexDirection:"column", alignItems:"center", gap:2 }}
-                    onMouseEnter={e=>{ e.currentTarget.style.background=acc; e.currentTarget.style.color="#fff"; }}
-                    onMouseLeave={e=>{ e.currentTarget.style.background=T.card; e.currentTarget.style.color=acc; }}>
-                    {img ? <img src={img} style={{ width:20, height:20, objectFit:"contain" }}/> : <span style={{ fontSize:16 }}>{em}</span>}
-                    <span style={{ fontSize:chalk?12:11, fontWeight:700 }}>{l}</span>
-                  </button>
-                );
-              })}
+            <div style={{ display:"grid", gridTemplateColumns:"repeat(2,1fr)", gap:5 }}>
+              {/* Musik AN */}
+              <button onClick={musikAN}
+                style={{ background: musicOn ? "#16a34a" : T.card,
+                         border:`1.5px solid ${musicOn ? "#16a34a" : "#16a34a55"}`,
+                         borderRadius:8, padding:"6px 3px", color: musicOn ? "#fff" : "#16a34a",
+                         cursor:"pointer", fontFamily:ff,
+                         display:"flex", flexDirection:"column", alignItems:"center", gap:2 }}>
+                <span style={{ fontSize:16 }}>🎵</span>
+                <span style={{ fontSize:chalk?12:11, fontWeight:700 }}>Musik AN</span>
+              </button>
+              {/* Musik AUS */}
+              <button onClick={musikAUS}
+                style={{ background: !musicOn && sonosDevices.length > 0 ? "#dc2626" : T.card,
+                         border:`1.5px solid ${!musicOn && sonosDevices.length > 0 ? "#dc2626" : "#dc262655"}`,
+                         borderRadius:8, padding:"6px 3px", color: !musicOn && sonosDevices.length > 0 ? "#fff" : "#dc2626",
+                         cursor:"pointer", fontFamily:ff,
+                         display:"flex", flexDirection:"column", alignItems:"center", gap:2 }}>
+                <span style={{ fontSize:16 }}>🔇</span>
+                <span style={{ fontSize:chalk?12:11, fontWeight:700 }}>Musik AUS</span>
+              </button>
             </div>
           </div>
         </div>
@@ -1890,6 +1924,162 @@ function App() {
     </div>
   );
 
+  // ── SONOS ──────────────────────────────────────────────────────────────────
+  const SonosPage = () => {
+    const [devices,   setDevices]   = useState([]);
+    const [favorites, setFavorites] = useState([]);
+    const [loading,   setLoading]   = useState(true);
+    const [error,     setError]     = useState("");
+    const [selUid,    setSelUid]    = useState(null); // for favorites target
+
+    const load = () => {
+      apiGet("/sonos/devices").then(d => {
+        if (!d) { setError("Backend nicht erreichbar"); setLoading(false); return; }
+        if (d.detail) { setError(d.detail); setLoading(false); return; }
+        setDevices(d);
+        if (d.length > 0 && !selUid) setSelUid(d[0].uid);
+        setError("");
+        setLoading(false);
+      });
+      apiGet("/sonos/favorites").then(f => { if (Array.isArray(f)) setFavorites(f); });
+    };
+
+    useEffect(() => {
+      load();
+      const iv = setInterval(load, 5000);
+      return () => clearInterval(iv);
+    }, []);
+
+    const doPlay  = uid => apiPost(`/sonos/devices/${uid}/play`).then(load);
+    const doPause = uid => apiPost(`/sonos/devices/${uid}/pause`).then(load);
+    const doStop  = uid => apiPost(`/sonos/devices/${uid}/stop`).then(load);
+    const doVol   = (uid, v) => apiPut(`/sonos/devices/${uid}/volume`, {volume:v});
+    const doFav   = title => {
+      const uid = selUid || (devices[0] && devices[0].uid);
+      if (!uid) return;
+      apiPost(`/sonos/devices/${uid}/play_favorite`, {title}).then(load);
+    };
+
+    const stateIcon = s => s === "PLAYING" ? "▶" : s === "PAUSED_PLAYBACK" ? "⏸" : "⏹";
+    const stateColor = (s, T) => s === "PLAYING" ? "#34d399" : T.muted;
+
+    const VOL_DEFAULTS = { "Wohnzimmer": 20, "Küche": 20, "Fernsehraum": 4, "Fernseh": 4 };
+    const defaultVol = name => {
+      for (const [k, v] of Object.entries(VOL_DEFAULTS))
+        if (name.toLowerCase().includes(k.toLowerCase())) return v;
+      return 20;
+    };
+    const doAllOn = async () => {
+      for (const d of devices) {
+        await apiPut(`/sonos/devices/${d.uid}/volume`, {volume: defaultVol(d.name)});
+        await apiPost(`/sonos/devices/${d.uid}/play`);
+      }
+      load();
+    };
+
+    return (
+      <div style={{padding:"20px", overflowY:"auto", height:"100%"}}>
+        <div style={{display:"flex", alignItems:"center", gap:12, marginBottom:16}}>
+          <h2 style={{color:T.text, fontSize:20, margin:0}}>🔊 Sonos</h2>
+          {devices.length > 0 && (
+            <button onClick={doAllOn}
+              style={{padding:"6px 16px", borderRadius:8, border:"none", background:"#6366f1",
+                      color:"#fff", cursor:"pointer", fontSize:13, fontWeight:600}}>
+              ▶ Alle starten
+            </button>
+          )}
+          <button onClick={() => apiPost("/sonos/rediscover").then(load)}
+            style={{padding:"6px 12px", borderRadius:8, border:`1px solid ${T.border}`,
+                    background:"none", color:T.muted, cursor:"pointer", fontSize:12}}>
+            🔍 Neu suchen
+          </button>
+        </div>
+
+        {loading && <p style={{color:T.muted}}>Suche Geräte…</p>}
+        {error   && <p style={{color:"#f87171"}}>{error}</p>}
+
+        {/* Geräte-Grid */}
+        {!loading && devices.length === 0 && !error &&
+          <p style={{color:T.muted}}>Keine Sonos-Geräte gefunden. Sind sie eingeschaltet?</p>}
+
+        <div style={{display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(280px,1fr))", gap:16, marginBottom:24}}>
+          {devices.map(d => (
+            <div key={d.uid}
+              onClick={() => setSelUid(d.uid)}
+              style={{background:T.card, border:`1px solid ${selUid===d.uid ? "#6366f1" : T.border}`,
+                      borderRadius:12, padding:16, cursor:"pointer",
+                      boxShadow: selUid===d.uid ? "0 0 0 2px #6366f144" : "none"}}>
+
+              {/* Header */}
+              <div style={{display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:10}}>
+                <span style={{fontWeight:600, color:T.text, fontSize:16}}>🔊 {d.name}</span>
+                <span style={{fontSize:13, color:stateColor(d.state,T), fontWeight:600}}>{stateIcon(d.state)} {d.state === "PLAYING" ? "Spielt" : d.state === "PAUSED_PLAYBACK" ? "Pause" : "Gestoppt"}</span>
+              </div>
+
+              {/* Track Info */}
+              {d.track && (d.track.title || d.track.artist) ? (
+                <div style={{display:"flex", gap:10, marginBottom:12, alignItems:"center"}}>
+                  {d.track.art && <img src={d.track.art} style={{width:48, height:48, borderRadius:6, objectFit:"cover", flexShrink:0}} onError={e=>e.target.style.display="none"}/>}
+                  <div style={{overflow:"hidden"}}>
+                    <div style={{color:T.text, fontSize:14, fontWeight:500, whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis"}}>{d.track.title || "–"}</div>
+                    <div style={{color:T.muted, fontSize:12, whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis"}}>{d.track.artist || ""}</div>
+                  </div>
+                </div>
+              ) : (
+                <div style={{color:T.muted, fontSize:13, marginBottom:12}}>Keine Wiedergabe</div>
+              )}
+
+              {/* Steuerbuttons */}
+              <div style={{display:"flex", gap:8, marginBottom:12}}>
+                {[["▶", ()=>doPlay(d.uid),  d.state==="PLAYING"],
+                  ["⏹", ()=>doStop(d.uid),  false],
+                  ["🔇", ()=>doVol(d.uid, d.volume===0 ? defaultVol(d.name) : 0), d.volume===0]].map(([icon, action, active], i) => (
+                  <button key={i}
+                    onClick={e=>{e.stopPropagation(); action();}}
+                    style={{flex:1, padding:"8px 0", borderRadius:8, border:"none", cursor:"pointer",
+                            background: active ? "#6366f1" : T.border, color: active ? "#fff" : T.text, fontSize:16}}>
+                    {icon}
+                  </button>
+                ))}
+              </div>
+
+              {/* Lautstärke */}
+              <div style={{display:"flex", alignItems:"center", gap:8}}>
+                <span style={{color:T.muted, fontSize:13}}>🔈</span>
+                <input type="range" min={0} max={100} defaultValue={d.volume}
+                  onChange={e => doVol(d.uid, +e.target.value)}
+                  onClick={e => e.stopPropagation()}
+                  style={{flex:1, accentColor:"#6366f1"}}/>
+                <span style={{color:T.muted, fontSize:12, width:28, textAlign:"right"}}>{d.volume}%</span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Favoriten */}
+        {favorites.length > 0 && (
+          <div>
+            <h3 style={{color:T.muted, fontSize:13, textTransform:"uppercase", letterSpacing:"0.08em", marginBottom:10}}>
+              Favoriten {selUid && devices.find(d=>d.uid===selUid) ? `→ ${devices.find(d=>d.uid===selUid).name}` : ""}
+            </h3>
+            <div style={{display:"flex", flexWrap:"wrap", gap:8}}>
+              {favorites.map((fav,i) => (
+                <button key={i}
+                  onClick={() => doFav(fav.title)}
+                  style={{display:"flex", alignItems:"center", gap:6, padding:"6px 12px",
+                          borderRadius:20, border:`1px solid ${T.border}`, background:T.card,
+                          color:T.text, cursor:"pointer", fontSize:13}}>
+                  {fav.art && <img src={fav.art} style={{width:20, height:20, borderRadius:3, objectFit:"cover"}} onError={e=>e.target.style.display="none"}/>}
+                  {fav.title}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    );
+  };
+
   // ── LICHTER ────────────────────────────────────────────────────────────────
   const LichterPage = () => {
     const [rooms,   setRooms]   = useState([]);
@@ -2061,10 +2251,11 @@ function App() {
     { id:"todos",       icon:"✅", label:"Todos"        },
     { id:"speise",      icon:"🍽️", label:"Essen"        },
     { id:"klima",       icon:"🌡️", label:"Klima"        },
+    { id:"sonos",       icon:"🔊", label:"Sonos"        },
     { id:"lichter",     icon:"💡", label:"Lichter"      },
   ];
 
-  const pages = { heute:<HeutePage/>, kalenderday:<KalenderDayPage/>, kalender:<KalenderPage/>, todos:<TodosPage/>, speise:<SpeisePage/>, klima:<KlimaPage/>, lichter:<LichterPage/> };
+  const pages = { heute:<HeutePage/>, kalenderday:<KalenderDayPage/>, kalender:<KalenderPage/>, todos:<TodosPage/>, speise:<SpeisePage/>, klima:<KlimaPage/>, sonos:<SonosPage/>, lichter:<LichterPage/> };
 
   const [portrait, setPortrait] = useState(window.innerHeight > window.innerWidth);
   useEffect(() => {
